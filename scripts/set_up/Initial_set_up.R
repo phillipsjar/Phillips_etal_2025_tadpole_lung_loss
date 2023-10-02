@@ -2,13 +2,13 @@
 ### R version 
 
 # set working directory
-setwd("/Users/jack/desktop/Research/lunglessness/2021_dataspace/final_dataspace_for_paper")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
 
 
 # uploading data
 {
-  data_original <- read.csv("git/data/Full_data_matrix.csv")                         #full dataset with all columns
+  data_original <- read.csv("raw_data/Full_data_matrix.csv")                         #full dataset with all columns
   keep_cols <- c("Family", "Genus", "Taxa", "Portik", "guild", "ecology", "lung", "Spec_lotic")
   data_original <- data_original[,match(keep_cols, colnames(data_original))] # keep only relevant columns
   
@@ -28,10 +28,8 @@ data_original$state[which(data_original$ecology == 0 & data_original$lung == 1)]
 data_original$state[which(data_original$ecology == 1 & data_original$lung == 0)] <- 3
 data_original$state[which(data_original$ecology == 1 & data_original$lung == 1)] <- 4
 
-data <- data_original[which(data_original$lung %in% 0:1),]  #full dataset with lung data
-#data_vis <- data_original[which(data_original$lung %in% c(0,1,"?")),]  
-data_vis$lung[which(data_vis$lung == "?")] <- NA
-  
+data <- data_original[which(data_original$lung %in% c(0,1,"-")),]  
+
 rm(list = c("data_original", "keep_cols"))}
   
 #data <- data_vis
@@ -41,13 +39,13 @@ rm(list = c("data_original", "keep_cols"))}
 ######################################################
 
 # number of taxa with lung data:
-#dim(data)[1]
+dim(data)[1]
 # 513 species
 
 # 47 families represented
 #length(unique(data$Family))
 # taxa distribution within families
-#table(data$Family)
+table(data$Family)
 
 # 249 genera represented
 #length(unique(data$Genus))
@@ -60,10 +58,10 @@ rm(list = c("data_original", "keep_cols"))}
 ######################################################
 require(ape)
 # MaxLH tree from Portik et al (2022) 
-ML_tree <- read.tree("git/trees/original_trees/TreePL/Rooted_Anura_bestTree.tre")
+ML_tree <- read.tree("lung_loss_git/trees/original_trees/TreePL/Rooted_Anura_bestTree.tre")
 
 # set of 100 trees from the posterior distribution of tree space in Portik et al (2022)
-tree_set <- read.tree("git/trees/original_trees/TreePL/TreePL-Rooted_Anura_bootstraps.tre")
+tree_set <- read.tree("lung_loss_git/trees/original_trees/TreePL/TreePL-Rooted_Anura_bootstraps.tre")
 
 ######################################################
 ############## match datasets to trees ###############
@@ -121,19 +119,19 @@ for(i in 1:100){
 
 #write nexus files to bayestraits folder 
 
-write.nexus(BT_ML_tree, file = "git/bayestraits/trees/maxLH_tree.nex", translate = TRUE)
-write.nexus(BT_tree_set_trimmed, file = "git/bayestraits/trees/tree_set.nex", translate = TRUE)
+write.nexus(BT_ML_tree, file = "bayestraits/trees/maxLH_tree.nex", translate = TRUE)
+write.nexus(BT_tree_set_trimmed, file = "bayestraits/trees/tree_set.nex", translate = TRUE)
 
 #write tree files (with node labels) to another folder for later visualization
-write.tree(Full_sampled_tree, file = "git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
-write.tree(BT_ML_tree, file = "git/trees/edited_trees/maxLH_BT_vis_tree.tre")        #removes endotrophs
+write.tree(Full_sampled_tree, file = "lung_loss_git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
+write.tree(BT_ML_tree, file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.tre")        #removes endotrophs
 
 
 
 rm(list = c("tree_set", "ML_tree", "i", "new_tree", "BT_tree_set_trimmed"))
 
-write.csv(data, file = "git/data/full_lung_data.csv")
-write.csv(data_no_endo, file = "git/data/no_endo_lung_data.csv")
+write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_lung_data.csv")
+write.csv(data_no_endo, file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 
 rm(list = c("BT_ML_tree", "data", "data_no_endo", "Full_sampled_tree"))
 
