@@ -85,7 +85,7 @@ plot(BT_ML_tree, show.tip.label = TRUE, cex = .25,
 
 nodelabels(node = nodes_to_keep, frame = "circle", cex = .2)
 
-rm(list = c("A", "B", "i", "j", "ML_node_check", "ML_nodes", "data", "treedata", "cols"))
+rm(list = c("A", "B", "i", "j", "ML_node_check", "ML_nodes", "treedata", "cols"))
 
 # these functions actually write out the taxa names as needed by bayestraits for tags and nodes
 

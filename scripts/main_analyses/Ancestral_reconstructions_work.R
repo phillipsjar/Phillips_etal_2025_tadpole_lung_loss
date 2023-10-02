@@ -4,13 +4,13 @@
 #######################################################################################################
 require(ape)
 require(phytools)
-data <- read.csv("git/data/no_endo_lung_data.csv")                              # load in tip data
-BT_ML_tree <- read.tree(file = "git/trees/edited_trees/maxLH_BT_vis_tree.tre")  # load in ML_tree
-treedata <- data[data$Taxa %in% BT_ML_tree$tip.label,]; rm(data)                # trim tip data to tree and remove extra file
+data_no_endo <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
+BT_ML_tree <- read.tree(file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.tre")  # load in ML_tree
+treedata <- data_no_endo[data_no_endo$Taxa %in% BT_ML_tree$tip.label,]               # trim tip data to tree
 
 cols <- c("magenta", "blue", "red", "green")
 
-load(file = "git/data/ASE_R_formatted.R")                                       # load in ASE for reconstructed nodes (from setup/BT_data_set)
+load(file = "lung_loss_git/processed_data/BT_output/ASE_R_formatted.R")                                       # load in ASE for reconstructed nodes (from setup/BT_data_set)
 
 ######################################################################################################################
 ##############                  plotting BT reconstructions
@@ -28,8 +28,12 @@ tiplabels(cex = .5, pch = 21, bg = cols[treedata$state[match(BT_ML_tree$tip.labe
 # using the BT posterior to generate Q_matrices while incorporating uncertainty
 
 #              Draw rate matrices from 100 different runs of posterior
-data <- read.csv(file = "dep_mcmc_test.txt", sep = "\t")
-data_no_endo <- read.csv(file = "git/data/no_endo_lung_data.csv")
+data_no_endo <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
+
+load(file = "bayestraits_exports/master_dep_export.Rdata")
+load(file = "bayestraits_exports/master_indep_export.Rdata")
+data <- master_dep_export
+rm(master_indep_export)
 
 set.seed(123)
 
@@ -43,12 +47,13 @@ for(i in 0:99){
   rate_values[i+1] <- list(data[(run),start:(start+7)])
 }
 
-# phytools does not have a native dependent model, but this can easily be dealt with by treating the 
-# dependent model as a constrained 4 state model, with each combination of the two binary states treated
-# as one of four states (lungless stream; lunged, stream; lungless, pond; lunged, pond)
+# phytools does not have a native model for two discrete binary traits, but this can easily be dealt with by treating the 
+# (in)dependent model as a constrained 4 state model, with each combination of the two binary states treated
+# as one of four states (lungless stream; lunged, stream; lungless, pond; lunged, pond) This can also be used for the independent,
+# since we're giving the analysis a completed Q matrix
 rm(i, run, start)
 
-source("git/scripts/extra_scripts/custom_Q.R")
+source("lung_loss_git/scripts/functions/custom_Q.R")
 
 custom_Q(rate_values[1])  #example Q matrix from one run of the posterior
 
@@ -59,7 +64,7 @@ custom_Q(rate_values[1])  #example Q matrix from one run of the posterior
 # data_4062 loaded above.
 # simmap requires a specific way data are input, which we create below with a quick function
 
-source("git/scripts/extra_scripts/make_simmap_data_function.R")
+source("lung_loss_git/scripts/functions/make_simmap_data_function.R")
 
 lung_eco_matrix <- make_simmap_data(data_no_endo, BT_ML_tree)
 

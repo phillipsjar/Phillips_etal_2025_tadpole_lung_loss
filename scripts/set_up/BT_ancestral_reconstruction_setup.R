@@ -1,9 +1,15 @@
-data <- read.csv(file = "dep_mcmc_test.txt", sep = "\t")
+#Load in combined Bayestraits posterior
+
+load(file = "bayestraits_exports/master_dep_export.Rdata")    #dependent
+load(file = "bayestraits_exports/master_indep_export.Rdata")  #independent
+
+data_no_endo <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
+
 
 require(ape)
 
-BT_ML_tree <- read.tree(file = "git/trees/edited_trees/maxLH_BT_vis_tree.tre")
-load(file = "git/bayestraits/data/nodes_to_keep.Rdata")      # nodes actually estimated in BayesTraits
+BT_ML_tree <- read.tree(file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.tre")
+load(file = "bayestraits/data/nodes_to_keep.Rdata")      # nodes actually estimated in BayesTraits
 
 
 nodes <- as.data.frame(matrix(nrow = length(nodes_to_keep), ncol = 8))     # matrix of reconstructions. Each row corresponds to an internal node
