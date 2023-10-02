@@ -6,8 +6,8 @@ require(ape)
 
 data_no_endo <- read.csv("lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 
-BT_ML_tree <- read.nexus(file = "bayestraits/trees/maxLH_tree.nex")
-BT_tree_set <- read.nexus(file = "bayestraits/trees/tree_set.nex")
+BT_ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree.nex")
+BT_tree_set <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set.nex")
 ###########################################################################
 ################## HOW TO Make Bayestraits data matrices ##################
 ###########################################################################
@@ -32,8 +32,8 @@ dim(BT_mat) # check that the numbers match set up
 dim(six_state_mat)
 
 #export tables in BT-friendly format
-write.table(BT_mat,row.names=F, col.names=F, file = "bayestraits/data/data_matrix.txt", sep = "\t",quote = FALSE)
-write.table(six_state_mat,row.names=F, col.names=F, file = "bayestraits/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
+write.table(BT_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/data_matrix.txt", sep = "\t",quote = FALSE)
+write.table(six_state_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
 
 
 rm(list = c("BT_mat", "six_state_mat", "BT_data_mat", "data_no_endo"))
@@ -71,8 +71,8 @@ for(i in 1:100){                                                         # itera
 }
 
 nodes_to_keep <- BT_ML_tree$Nnode + 1 + which(is.na(ML_node_check))     # change to reflect the way R keeps track of nodes vs. tips (assumes tree is bifurcating)
-save(nodes_to_keep, file = "bayestraits/data/nodes_to_keep.Rdata")      # save this for later plotting, since it takes a while to calculate
-#load(file = "bayestraits/data/nodes_to_keep.Rdata")
+save(nodes_to_keep, file = "lung_loss_git/bayestraits_trees_data/data/nodes_to_keep.Rdata")      # save this for later plotting, since it takes a while to calculate
+#load(file = "lung_loss_git/bayestraits_trees_data/data/nodes_to_keep.Rdata")
 
 data <- read.csv("lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 treedata <- data[data$Taxa %in% BT_ML_tree$tip.label,]; rm(data)
@@ -123,7 +123,7 @@ namelist(desc_list,nodes_to_keep)
 
 ### creates and writes portion of command file into a new file named 4062_node_list.txt
 
-sink("Bayestraits/node_list.txt")
+sink("lung_loss_git/bayestraits_trees_data/node_list.txt")
 cat("\n","\n")
 fnlist(desc_list)
 cat("\n","\n")

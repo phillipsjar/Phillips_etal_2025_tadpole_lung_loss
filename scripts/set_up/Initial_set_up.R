@@ -119,8 +119,8 @@ for(i in 1:100){
 
 #write nexus files to bayestraits folder 
 
-write.nexus(BT_ML_tree, file = "bayestraits/trees/maxLH_tree.nex", translate = TRUE)
-write.nexus(BT_tree_set_trimmed, file = "bayestraits/trees/tree_set.nex", translate = TRUE)
+write.nexus(BT_ML_tree, file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree.nex", translate = TRUE)
+write.nexus(BT_tree_set_trimmed, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set.nex", translate = TRUE)
 
 #write tree files (with node labels) to another folder for later visualization
 write.tree(Full_sampled_tree, file = "lung_loss_git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
