@@ -4,10 +4,10 @@
 #Requires having run through the set_up script to generate the data_no_endo files and correct trees
 require(ape)
 
-data_no_endo <- read.csv("git/data/no_endo_lung_data.csv")
+data_no_endo <- read.csv("lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 
-BT_ML_tree <- read.nexus(file = "git/bayestraits/trees/maxLH_tree.nex")
-BT_tree_set <- read.nexus(file = "git/bayestraits/trees/tree_set.nex")
+BT_ML_tree <- read.nexus(file = "bayestraits/trees/maxLH_tree.nex")
+BT_tree_set <- read.nexus(file = "bayestraits/trees/tree_set.nex")
 ###########################################################################
 ################## HOW TO Make Bayestraits data matrices ##################
 ###########################################################################
@@ -32,8 +32,8 @@ dim(BT_mat) # check that the numbers match set up
 dim(six_state_mat)
 
 #export tables in BT-friendly format
-write.table(BT_mat,row.names=F, col.names=F, file = "git/bayestraits/data/data_matrix.txt", sep = "\t",quote = FALSE)
-write.table(six_state_mat,row.names=F, col.names=F, file = "git/bayestraits/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
+write.table(BT_mat,row.names=F, col.names=F, file = "bayestraits/data/data_matrix.txt", sep = "\t",quote = FALSE)
+write.table(six_state_mat,row.names=F, col.names=F, file = "bayestraits/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
 
 
 rm(list = c("BT_mat", "six_state_mat", "BT_data_mat", "data_no_endo"))
@@ -64,18 +64,18 @@ ML_node_check <- rep(NA, BT_ML_tree$Nnode)                               # vecto
 #################################################
 for(i in 1:100){                                                         # iterate across 100 trees
     for(j in 1:BT_ML_tree$Nnode){                                        # iterate across all nodes of ML tree
-      if(!(is.monophyletic(BT_tree_set[[i]], ML_nodes[[j]]))){           # if a group in the ML_tree is not monophyletic in at least 1 tree in the treeset,
+      if(!(is.monophyletic(BT_tree_set[[i]], ML_nodes[[j]]))){           # if a clade in ML_tree is not monophyletic in at least 1 tree in the treeset,
         ML_node_check[j] <- 1                                            # then mark it as such (can take a while, a lot of comparisons, especially for big trees)
       }
   }
 }
 
 nodes_to_keep <- BT_ML_tree$Nnode + 1 + which(is.na(ML_node_check))     # change to reflect the way R keeps track of nodes vs. tips (assumes tree is bifurcating)
-save(nodes_to_keep, file = "git/bayestraits/data/nodes_to_keep.Rdata")      # save this for later plotting, since it takes a while to calculate
-#load(file = "git/bayestraits/data/nodes_to_keep.Rdata")
+save(nodes_to_keep, file = "bayestraits/data/nodes_to_keep.Rdata")      # save this for later plotting, since it takes a while to calculate
+#load(file = "bayestraits/data/nodes_to_keep.Rdata")
 
-data <- read.csv("git/data/no_endo_lung_data.csv")
-treedata <- data[data$Taxa %in% tree$tip.label,]; rm(data)
+data <- read.csv("lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
+treedata <- data[data$Taxa %in% BT_ML_tree$tip.label,]; rm(data)
 cols <- c("magenta", "blue", "red", "green")
 
 plot(BT_ML_tree, show.tip.label = TRUE, cex = .25, 
@@ -83,7 +83,7 @@ plot(BT_ML_tree, show.tip.label = TRUE, cex = .25,
 
 nodelabels(node = nodes_to_keep, frame = "circle", cex = .2)
 
-rm(list = c("A", "B", "i", "j", "ML_node_check", "ML_nodes", "data", "treedata"))
+rm(list = c("A", "B", "i", "j", "ML_node_check", "ML_nodes", "data", "treedata", "cols"))
 
 # these functions actually write out the taxa names as needed by bayestraits for tags and nodes
 
@@ -123,7 +123,7 @@ namelist(desc_list,nodes_to_keep)
 
 ### creates and writes portion of command file into a new file named 4062_node_list.txt
 
-sink("git/Bayestraits/node_list.txt")
+sink("Bayestraits/node_list.txt")
 cat("\n","\n")
 fnlist(desc_list)
 cat("\n","\n")
