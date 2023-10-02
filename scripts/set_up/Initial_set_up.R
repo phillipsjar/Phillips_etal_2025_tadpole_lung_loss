@@ -5,7 +5,6 @@
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
 
-
 # uploading data
 {
   data_original <- read.csv("raw_data/Full_data_matrix.csv")                         #full dataset with all columns
@@ -143,8 +142,3 @@ rm(list = c("BT_ML_tree", "data", "data_no_endo", "Full_sampled_tree"))
 ####################################################################################################
 
 # this script completes set up, creating trees for bayestraits analyses and organizing data
-
-
-
-
-

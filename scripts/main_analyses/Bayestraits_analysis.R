@@ -8,22 +8,19 @@ library(readr) #version ‘2.1.4’ used for function read_file
 # perform burnin
 
 # 2 - check for convergence of main models
-# visually examine posterior distribution of different model runs to check convergence
-# create_single_master posterior for converged models
+# within-runs - visually examine posterior distributions of key model parameters
+# across-runs - compare violin plots of model params for three runs of same model
+
+# create single master posterior for converged models and downsample for export
 
 # 3 - correlated evolution test
 #            - use Log Marginal likelihoods to calculate Bayesfactors for comparison of independent and dependent models
 
-# 4 - summarize posterior of the supported model
+# 4 - Dollo's Law test of reversible evolution - how much support is there for some rates to be zero?
 #     4a - examine model strings to see which rates are estimated at zero
 #     4b - create figure of a representative posterior
 
 # 5 - perform stochastic character mapping using bayestraits rate matrices
-
-load("Bayestraits/data/master_export.Rdata")
-load("Bayestraits/results/maxLH_dep_master_export.Rdata")
-load("Bayestraits/results/tree_set_dep_master_export.Rdata")
-load("Bayestraits/results/portik_dep_master_export.Rdata")
 
 
 #######################################################################################
@@ -32,40 +29,31 @@ load("Bayestraits/results/portik_dep_master_export.Rdata")
 # allowing direct importing of Bayestraits output files as .csv files
 # there are three runs per model and each model is run on three different trees
 
-six_state <- read.csv("Bayestraits/results/six_state_test.txt",sep = "\t")
-ML_dep1 <- read.csv("Bayestraits/output/test.txt",sep = "\t")
+dep_mcmc_1 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
+dep_mcmc_2 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
+dep_mcmc_3 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
 
+indep_mcmc_1 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_1.txt",sep = "\t")
+indep_mcmc_2 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_2.txt",sep = "\t")
+indep_mcmc_3 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_3.txt",sep = "\t")
 
-
-
-
-ML_dep2 <- read.csv("Bayestraits/output/test2.txt",sep = "\t")
-
-max_LH_dep1 <- read.csv("Bayestraits/results/max_LH_dep1.txt",sep = "\t")
-max_LH_dep2 <- read.csv("Bayestraits/results/max_LH_dep2.txt",sep = "\t")
-max_LH_dep3 <- read.csv("Bayestraits/results/max_LH_dep3.txt",sep = "\t")
-max_LH_indep1 <- read.csv("Bayestraits/results/max_LH_indep1.txt",sep = "\t")
-max_LH_indep2 <- read.csv("Bayestraits/results/max_LH_indep2.txt",sep = "\t")
-max_LH_indep3 <- read.csv("Bayestraits/results/max_LH_indep3.txt",sep = "\t")
-
-tree_set_dep1 <- read.csv("Bayestraits/results/tree_set_dep1.txt",sep = "\t")
-tree_set_dep2 <- read.csv("Bayestraits/results/tree_set_dep2.txt",sep = "\t")
-tree_set_dep3 <- read.csv("Bayestraits/results/tree_set_dep3.txt",sep = "\t")
-tree_set_indep1 <- read.csv("Bayestraits/results/tree_set_indep1.txt",sep = "\t")
-tree_set_indep2 <- read.csv("Bayestraits/results/tree_set_indep2.txt",sep = "\t")
-tree_set_indep3 <- read.csv("Bayestraits/results/tree_set_indep3.txt",sep = "\t")
-
-portik_dep1 <- read.csv("Bayestraits/results/portik_dep1.txt",sep = "\t")
-portik_dep2 <- read.csv("Bayestraits/results/portik_dep2.txt",sep = "\t")
-portik_dep3 <- read.csv("Bayestraits/results/portik_dep3.txt",sep = "\t")
-portik_indep1 <- read.csv("Bayestraits/results/portik_indep1.txt",sep = "\t")
-portik_indep2 <- read.csv("Bayestraits/results/portik_indep2.txt",sep = "\t")
-portik_indep3 <- read.csv("Bayestraits/results/portik_indep3.txt",sep = "\t")
 
 
 #perform burnins
 {
-  six_state <- six_state[round(dim(six_state)[1]*.25) : dim(six_state)[1],]
+  
+dep_mcmc_1      <- dep_mcmc_1[round(dim(dep_mcmc_1)[1]*.25) : dim(dep_mcmc_1)[1],]
+dep_mcmc_2      <- dep_mcmc_2[round(dim(dep_mcmc_2)[1]*.25) : dim(dep_mcmc_2)[1],]
+dep_mcmc_3      <- dep_mcmc_3[round(dim(dep_mcmc_3)[1]*.25) : dim(dep_mcmc_3)[1],]
+
+indep_mcmc_1    <- indep_mcmc_1[round(dim(indep_mcmc_1)[1]*.25) : dim(indep_mcmc_1)[1],]
+indep_mcmc_2    <- indep_mcmc_2[round(dim(indep_mcmc_2)[1]*.25) : dim(indep_mcmc_2)[1],]
+indep_mcmc_3    <- indep_mcmc_3[round(dim(indep_mcmc_3)[1]*.25) : dim(indep_mcmc_3)[1],]
+}
+
+  
+{
+six_state <- six_state[round(dim(six_state)[1]*.25) : dim(six_state)[1],]
   
   
 max_LH_dep1      <- max_LH_dep1[round(dim(max_LH_dep1)[1]*.25) : dim(max_LH_dep1)[1],]
@@ -87,37 +75,77 @@ portik_indep1    <- portik_indep1[round(dim(portik_indep1)[1]*.25) : dim(portik_
 portik_indep2    <- portik_indep2[round(dim(portik_indep2)[1]*.25) : dim(portik_indep2)[1],]
 portik_indep3    <- portik_indep3[round(dim(portik_indep3)[1]*.25) : dim(portik_indep3)[1],]}
 
+
 #######################################################################################
-############################# Check model convergence #################################
+############################# Check within-run model convergence #################################
+#######################################################################################
+
+posterior_summary = function(data,column.names){
+  if (sum(dim(data)[2]) != 0){
+    cols <- match(column.names, colnames(data))
+    par(mfrow = c(dim(data[cols])[2]/4, 4))
+    for(i in 1:dim(data[,cols])[2]){
+      smoothScatter(data$Iteration, data[,cols[i]], ylim = c(0,max(data[,cols])),
+                    cex=4,nr=500, xlab = "iter", 
+                    ylab = colnames(data)[cols[i]])}} else{
+                      par(mfrow = c(1,1))
+                      smoothScatter(data$Iteration, data[,cols],cex=4,nr=500, xlab = "iter", ylab = colnames(rows))
+                    }
+}
+
+posterior_summary(dep_mcmc_1, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
+posterior_summary(dep_mcmc_2, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
+posterior_summary(dep_mcmc_3, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
+
+posterior_summary(indep_mcmc_1, c("alpha1", "beta1", "alpha2", "beta2"))
+posterior_summary(indep_mcmc_2, c("alpha1", "beta1", "alpha2", "beta2"))
+posterior_summary(indep_mcmc_3, c("alpha1", "beta1", "alpha2", "beta2"))
+
+
+#######################################################################################
+############################# Check across run model convergence #################################
 #######################################################################################
 
 #little function to reduce clutter (found in extra_scripts)
 
-source("scripts/final_scripts/extra_scripts/violin_comparison_function.R")
+source("git/scripts/extra_scripts/violin_comparison_function.R")
 
-violin_comparison(max_LH_dep1, max_LH_dep1, max_LH_dep1, "Max_LH_dep")
-violin_comparison(max_LH_indep1, max_LH_indep2, max_LH_indep3, "Max_LH_indep")
+violin_comparison_dep(dep_mcmc_1, dep_mcmc_2, dep_mcmc_3, "dep")
+violin_comparison_indep(max_LH_indep1, max_LH_indep2, max_LH_indep3, "Max_LH_indep")
 
-violin_comparison(tree_set_dep1, tree_set_dep2, tree_set_dep3, "tree_set_dep")
-violin_comparison(tree_set_indep1, tree_set_indep2, tree_set_indep3, "tree_set_indep")
-
-violin_comparison(portik_dep1, portik_dep2, portik_dep3, "Portik_dep")
-violin_comparison(portik_indep1, portik_indep2, portik_indep3, "Portik_indep")
 
 
 ######################################################################################################
 # for each converged run, create a master 
 
+master_export = function(data1, data2, data3){
+  master <- as.data.frame(matrix(ncol = dim(data1)[2], nrow = (dim(data1)[1]*3)))
+  colnames(master) <- colnames(data1)
+  master$run_number <- c(rep(1,dim(data1)[1]), rep(2,dim(data2)[1]), rep(3,dim(data3)[1]))
+  
+  master[which(master$run_number == 1),1:dim(data1)[2]] <- data1[1:dim(data1)[2]]
+  master[which(master$run_number == 2),1:dim(data2)[2]] <- data2[1:dim(data2)[2]]
+  master[which(master$run_number == 3),1:dim(data3)[2]] <- data3[1:dim(data3)[2]]
+  master <- as.data.frame(master)
+  return(master)
+}
 
-# add this code in later
+master_dep <- master_export(dep_mcmc_1, dep_mcmc_2, dep_mcmc_3)
+master_indep <- master_export(indep_mcmc_1, indep_mcmc_2, indep_mcmc_3)
+
+master_dep_export  <-  master_dep[seq(1,dim(master_dep)[1], length.out = 100000),]
+master_indep_export <- master_indep[seq(1,dim(master_indep)[1], length.out = 100000),]
+
+
+save(master_dep_export, file = "lung_loss_git/processed_data/BT_output/master_dep_export.Rdata")
+save(master_indep_export, file = "lung_loss_git/processed_data/BT_output/master_indep_export.Rdata")
+
 
 
 #remove actual runs to de-clutter
 
-rm(list = c("max_LH_dep1", "max_LH_dep2", "max_LH_dep3", "max_LH_indep1", "max_LH_indep2", 
-            "max_LH_indep3", "tree_set_dep1", "tree_set_dep2", "tree_set_dep3", "tree_set_indep1", 
-            "tree_set_indep2", "tree_set_indep3", "portik_dep1", "portik_dep2", "portik_dep3", 
-            "portik_indep1", "portik_indep2", "portik_indep3", "violin_comparison"))
+rm(list = c("dep_mcmc_1", "dep_mcmc_2", "dep_mcmc_3", "indep_mcmc_1", "indep_mcmc_2", 
+            "indep_mcmc_3", "posterior_summary", "violin_comparison"))
 
 #####################################################################################################
 
@@ -139,30 +167,23 @@ RJ_model_testing = function(data){
   runs <- dim(data)[1]
   
   model_matrix[,3] <- (as.numeric(model_matrix[,2])/runs)
-  output <- rep(NA,3)
-  names(output) <- c("q12 & q34", "q34", "q43")
-  output[1] <- sum(as.numeric(model_matrix[grep("Z . . . . Z . .", model_matrix[,1]),3]))
-  output[2] <- sum(as.numeric(model_matrix[grep(". . . . . Z . .", model_matrix[,1]),3]))
-  output[3] <- sum(as.numeric(model_matrix[grep(". . . . . . . Z", model_matrix[,1]),3]))
-  #output[4] <- 1 - sum(as.numeric(model_matrix[grep("Z . . . . Z . Z", model_matrix[,1]),3]))
+  output <- matrix(NA,nrow = 2, ncol = 3)
+  colnames(output) <- c("No regains", "No lentic regains", "No lentic losses")
+  rownames(output) <- c("posterior odds", "BayesFactor")
+  output[1,1] <- sum(as.numeric(model_matrix[grep("Z . . . . Z . .", model_matrix[,1]),3]))
+  output[1,2] <- sum(as.numeric(model_matrix[grep(". . . . . Z . .", model_matrix[,1]),3]))
+  output[1,3] <- sum(as.numeric(model_matrix[grep(". . . . . . . Z", model_matrix[,1]),3]))
+  output[2,1] <- output[1,1]/(1-output[1,1])
+  output[2,2] <- output[1,2]/(1-output[1,2])
+  output[2,3] <- output[1,3]/(1-output[1,3])
   
   return(output)
 }
 
-max_LH_RJ <- RJ_model_testing(ML_dep1)
-max_LH_RJ2 <- RJ_model_testing(master_export)
-max_LH_RJ3 <- RJ_model_testing(master_export)
-
-master_RJ <- matrix(nrow = 3, ncol = 3)
-rownames(master_RJ) <- c("MaxLH", "tree_set", "Portik")
-colnames(master_RJ) <- names(max_LH_RJ)
-
-master_RJ[1,] <- max_LH_RJ
-master_RJ[2,] <- max_LH_RJ2+.1
-master_RJ[3,] <- max_LH_RJ3+.2
+RJ_model_testing(master_dep)
 
 
- #######################################################################################
+#######################################################################################
 ########################### Test of correlated evolution ##############################
 library(readr) #version ‘2.1.4’ used for function read_file
 
@@ -188,14 +209,15 @@ dep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "dep"
 indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "indep")]))
 
 # Bayesfactor test:
-#                     BF = 2*(LML_complex - mod2_simple)
+#                     2logBF = 2*(LML_complex - LML_simple)
 #                     higher BF's mean more support for more complex models
 
-BF = 2*(dep - indep)
+logBF = (dep - indep)
 
 #just for fun
 BF_vis = function(complex, simple){
-  BF = 2*(complex - simple)
+  BF = (complex - simple)
+  BF = 2*BF
   if(BF < 2){paste("no support for complex model")}
   if(5 > BF & BF >= 2){paste("positive evidence for complex model")}
   if(10 > BF & BF > 5){paste("strong evidence for complex model")}
@@ -212,93 +234,7 @@ rm(list = c("BF_matrix", "BF", "dep", "indep", "i"))
 load("Bayestraits/data/master_export.Rdata")
 master_maxLH_dep <- master_export
 
-
 rm(master_export)
 
 
-
 #################################################################################
-####                visualize posterior for figure 3A
-library(HDInterval)
-library(vioplot)
-# calculate highest density intervals of the master posterior
-#BT_data <- master_maxLH_dep
-#states_OI <- c("q12", "q13", "q15", "q21", "q24", "q31", "q34", "q36", "q42", "q43", "q51", "q56", "q63", "q65")
-states_OI <- c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43")
-BT_data <- ML_dep1[,match(states_OI, colnames(ML_dep1))]*.001
-
-BT_data <- master_export_maxLH_dep[,match(states_OI, colnames(master_export_maxLH_dep))]*.001
-BT_data <- master_export_portik_dep[,match(states_OI, colnames(master_export_portik_dep))]*.001
-BT_data <- master_export_tree_set_dep[,match(states_OI, colnames(master_export_tree_set_dep))]*.001
-
-posterior_intervals <- hdi(BT_data, credMass = .95)
-
-#lungless
-
-{pdf(file = "figures/rate_violin_plots.pdf", bg = "transparent", width = 5, height = 3.5)
-colorBlindGrey8   <- c("#999999", "#E69F00", "#56B4E9", "#009E73", 
-                                "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-                                
-labels <- c("gain lungs (lotic)", "lotic to lentic (no lungs)", "lose lungs (lotic)",
-            "lotic to lentic (lunged)", "lentic to lotic (no lungs)", "gain lungs (lentic)",
-            "lentic to lotic (lunged)", "lose lungs (lentic)")
-par(mar = c(5.1,4.1,4.1,2.1)) #reset default margins
-par(mfrow=c(1,1))
-  par(xpd = TRUE)
-  vioplot(BT_data, lineCol = "transparent", rectCol = "transparent",  xaxt = "n", yaxt = "n",
-          colMed = "transparent", col = "darkgrey", main = "",
-          ylab = "")
-  #segments(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[3], col = "white", lwd = 2)  
-  text(x = (1:length(labels))+((par("usr")[2]-par("usr")[1])*.05), y = par("usr")[3]-(par("usr")[4]-par("usr")[3])*.05,
-       labels = labels, xpd = NA, adj = 1, srt = 25, cex = .65)
-  
-  axis(2,cex.axis=.75)
-  
-  #legend(0,((par("usr")[3]) - (par("usr")[3])*.025), legend = labels, ncol = 3, fill = "darkgray", bty = "n", cex = .75)
-  for(i in 1:dim(posterior_intervals)[2]){
-    #segments(i, 0, i, par("usr")[3]-(par("usr")[4]-par("usr")[3])*.05, lty = "dashed")
-    segments(i, posterior_intervals[2,i], i,posterior_intervals[1,i], lwd = 1.75, col = "white")
-    segments(i, posterior_intervals[2,i], i,posterior_intervals[1,i], lwd = 1.5, col = "black")
-    segments(i - ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[1,i], 
-             i + ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[1,i], lwd = 1.75, col = "white")
-    segments(i - ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[2,i], 
-             i + ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[2,i], lwd = 1.75, col = "white")
-    segments(i - ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[1,i], 
-             i + ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[1,i], lwd = 1.5, col = "black")
-    segments(i - ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[2,i], 
-             i + ((par("usr")[2] - par("usr")[1])/(length(labels)*4)), posterior_intervals[2,i], lwd = 1.5, col = "black")
-    points(i, median(BT_data[,i]), pch = 21, bg = "white", cex = 1.25)
-  }
-dev.off()}
-   
-
-avgs_maxLH_dep <- sapply(master_export_maxLH_dep[,grep("q12", colnames(master_export_maxLH_dep)):(grep("q12", colnames(master_export_maxLH_dep))+7)], "mean");
-avgs_tree_set_dep <- sapply(master_export_tree_set_dep[,grep("q12", colnames(master_export_tree_set_dep)):(grep("q12", colnames(master_export_tree_set_dep))+7)], "mean");
-avgs_portik_dep <- sapply(master_export_portik_dep[,grep("q12", colnames(master_export_portik_dep)):(grep("q12", colnames(master_export_portik_dep))+7)], "mean");
-
-avgs_maxLH_indep <- sapply(master_export_maxLH_indep[,grep("q12", colnames(master_export_maxLH_indep)):(grep("q12", colnames(master_export_maxLH_indep))+7)], "mean");
-avgs_tree_set_indep <- sapply(master_export_tree_set_indep[,grep("q12", colnames(master_export_tree_set_indep)):(grep("q12", colnames(master_export_tree_set_indep))+7)], "mean");
-avgs_portik_indep <- sapply(master_export_portik_indep[,grep("q12", colnames(master_export_portik_indep)):(grep("q12", colnames(master_export_portik_indep))+7)], "mean");
-
-
-require(scales)
-avgs_scaled <- round(rescale(avgs_maxLH_dep,c(.5,7.5),c(0,5)),2)
-
-round(avgs_maxLH_dep,2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
