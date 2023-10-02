@@ -1,6 +1,8 @@
 # This script creates data matrices for Bayestraits and automates listing out taxa for
 # Bayestraits ancestral reconstruction.
 
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
+
 #Requires having run through the set_up script to generate the data_no_endo files and correct trees
 require(ape)
 
