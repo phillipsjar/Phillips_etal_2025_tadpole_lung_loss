@@ -2,150 +2,90 @@
 library(readr) #version ‘2.1.4’ used for function read_file
 
 #######################################################################################
-#                             Code overview
-
-# 1 - upload data 
-# perform burnin
-
-# 2 - check for convergence of main models
-# within-runs - visually examine posterior distributions of key model parameters
-# across-runs - compare violin plots of model params for three runs of same model
-
-# create single master posterior for converged models and downsample for export
-
-# 3 - correlated evolution test
+# 1 - correlated evolution test
 #            - use Log Marginal likelihoods to calculate Bayesfactors for comparison of independent and dependent models
 
-# 4 - Dollo's Law test of reversible evolution - how much support is there for some rates to be zero?
+# 2 - Dollo's Law test of reversible evolution - how much support is there for some rates to be zero?
 #     4a - examine model strings to see which rates are estimated at zero
 #     4b - create figure of a representative posterior
 
-# 5 - perform stochastic character mapping using bayestraits rate matrices
+# 3 - perform stochastic character mapping using bayestraits rate matrices
 
 
 #######################################################################################
-############################ upload and clean up data #################################
-# these files have been edited using shell scripts (process_logs.sh in extra_scripts) to remove other text, 
-# allowing direct importing of Bayestraits output files as .csv files
-# there are three runs per model and each model is run on three different trees
+############################ upload data #################################
 
-dep_mcmc_1 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
-dep_mcmc_2 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
-dep_mcmc_3 <- read.csv("bayestraits/output/processed_logs/dep_mcmc_1.txt",sep = "\t")
+# first locate cleaned up and exported BayesTraits posteriors
 
-indep_mcmc_1 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_1.txt",sep = "\t")
-indep_mcmc_2 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_2.txt",sep = "\t")
-indep_mcmc_3 <- read.csv("bayestraits/output/processed_logs/indep_mcmc_3.txt",sep = "\t")
+load(file = "bayestraits_exports/master_dep_export.Rdata")
+load(file = "bayestraits_exports/master_indep_export.Rdata")
+load(file = "bayestraits_exports/master_six_state_dep_export.Rdata")
+load(file = "bayestraits_exports/master_six_state_indep_export.Rdata")
 
-
-
-#perform burnins
-{
-  
-dep_mcmc_1      <- dep_mcmc_1[round(dim(dep_mcmc_1)[1]*.25) : dim(dep_mcmc_1)[1],]
-dep_mcmc_2      <- dep_mcmc_2[round(dim(dep_mcmc_2)[1]*.25) : dim(dep_mcmc_2)[1],]
-dep_mcmc_3      <- dep_mcmc_3[round(dim(dep_mcmc_3)[1]*.25) : dim(dep_mcmc_3)[1],]
-
-indep_mcmc_1    <- indep_mcmc_1[round(dim(indep_mcmc_1)[1]*.25) : dim(indep_mcmc_1)[1],]
-indep_mcmc_2    <- indep_mcmc_2[round(dim(indep_mcmc_2)[1]*.25) : dim(indep_mcmc_2)[1],]
-indep_mcmc_3    <- indep_mcmc_3[round(dim(indep_mcmc_3)[1]*.25) : dim(indep_mcmc_3)[1],]
-}
-
-  
-{
-six_state <- six_state[round(dim(six_state)[1]*.25) : dim(six_state)[1],]
-  
-  
-max_LH_dep1      <- max_LH_dep1[round(dim(max_LH_dep1)[1]*.25) : dim(max_LH_dep1)[1],]
-max_LH_dep2      <- max_LH_dep2[round(dim(max_LH_dep2)[1]*.25) : dim(max_LH_dep2)[1],]
-max_LH_dep3      <- max_LH_dep3[round(dim(max_LH_dep3)[1]*.25) : dim(max_LH_dep3)[1],]
-max_LH_indep1    <- max_LH_indep1[round(dim(max_LH_indep1)[1]*.25) : dim(max_LH_indep1)[1],]
-max_LH_indep2    <- max_LH_indep2[round(dim(max_LH_indep2)[1]*.25) : dim(max_LH_indep2)[1],]
-max_LH_indep3    <- max_LH_indep3[round(dim(max_LH_indep3)[1]*.25) : dim(max_LH_indep3)[1],]
-tree_set_dep1    <- tree_set_dep1[round(dim(tree_set_dep1)[1]*.25) : dim(tree_set_dep1)[1],]
-tree_set_dep2    <- tree_set_dep2[round(dim(tree_set_dep2)[1]*.25) : dim(tree_set_dep2)[1],]
-tree_set_dep3    <- tree_set_dep3[round(dim(tree_set_dep3)[1]*.25) : dim(tree_set_dep3)[1],]
-tree_set_indep1  <- tree_set_indep1[round(dim(tree_set_indep1)[1]*.25) : dim(tree_set_indep1)[1],]
-tree_set_indep2  <- tree_set_indep2[round(dim(tree_set_indep2)[1]*.25) : dim(tree_set_indep2)[1],]
-tree_set_indep3  <- tree_set_indep3[round(dim(tree_set_indep3)[1]*.25) : dim(tree_set_indep3)[1],]
-portik_dep1      <- portik_dep1[round(dim(portik_dep1)[1]*.25) : dim(portik_dep1)[1],]
-portik_dep2      <- portik_dep2[round(dim(portik_dep2)[1]*.25) : dim(portik_dep2)[1],]
-portik_dep3      <- portik_dep3[round(dim(portik_dep3)[1]*.25) : dim(portik_dep3)[1],]
-portik_indep1    <- portik_indep1[round(dim(portik_indep1)[1]*.25) : dim(portik_indep1)[1],]
-portik_indep2    <- portik_indep2[round(dim(portik_indep2)[1]*.25) : dim(portik_indep2)[1],]
-portik_indep3    <- portik_indep3[round(dim(portik_indep3)[1]*.25) : dim(portik_indep3)[1],]}
-
-
+master_dep_export <- master_dep
+master_indep_export <- master_indep
+rm(list = c("master_dep", "master_indep"))
 #######################################################################################
-############################# Check within-run model convergence #################################
-#######################################################################################
+########################### Test of correlated evolution ##############################
+library(readr) #version ‘2.1.4’ used for function read_file
 
-posterior_summary = function(data,column.names){
-  if (sum(dim(data)[2]) != 0){
-    cols <- match(column.names, colnames(data))
-    par(mfrow = c(dim(data[cols])[2]/4, 4))
-    for(i in 1:dim(data[,cols])[2]){
-      smoothScatter(data$Iteration, data[,cols[i]], ylim = c(0,max(data[,cols])),
-                    cex=4,nr=500, xlab = "iter", 
-                    ylab = colnames(data)[cols[i]])}} else{
-                      par(mfrow = c(1,1))
-                      smoothScatter(data$Iteration, data[,cols],cex=4,nr=500, xlab = "iter", ylab = colnames(rows))
-                    }
-}
+# Bayestraits outputs a .stones file upon the stones command with an estimate log marginal likl
+# those files have  been edited by a shell script (process_stones.sh in extra_scripts) to pull
+# out only the log marginal likelihood as a single number and provide a specific naming convention
+# model_replicate_LML.txt -> dep_1_LML.txt for example
 
-posterior_summary(dep_mcmc_1, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
-posterior_summary(dep_mcmc_2, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
-posterior_summary(dep_mcmc_3, c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43"))
+# master matrix of marginal likelihoods for Bayesfactor testing
 
-posterior_summary(indep_mcmc_1, c("alpha1", "beta1", "alpha2", "beta2"))
-posterior_summary(indep_mcmc_2, c("alpha1", "beta1", "alpha2", "beta2"))
-posterior_summary(indep_mcmc_3, c("alpha1", "beta1", "alpha2", "beta2"))
+BF_matrix <- as.data.frame(matrix(nrow = 12, ncol = 3))
+colnames(BF_matrix) <- c("Model_class", "replicate", "LogMargLik")
+BF_matrix$Model_class <- c(rep("dep", 3), rep("indep", 3), rep("six_state_dep", 3), rep("six_state_indep", 3))
+BF_matrix$replicate <- c(rep(1:3, 2))
 
-
-#######################################################################################
-############################# Check across run model convergence #################################
-#######################################################################################
-
-#little function to reduce clutter (found in extra_scripts)
-
-source("git/scripts/extra_scripts/violin_comparison_function.R")
-
-violin_comparison_dep(dep_mcmc_1, dep_mcmc_2, dep_mcmc_3, "dep")
-violin_comparison_indep(max_LH_indep1, max_LH_indep2, max_LH_indep3, "Max_LH_indep")
+for(i in 1:dim(BF_matrix)[1]){
+              A <- read_file(paste("bayestraits_exports/stones/", BF_matrix$Model_class[i], 
+                                      "_", BF_matrix$replicate[i], ".stones.txt", sep = ""))
+              BF_matrix$LogMargLik[i] <- as.numeric(gsub("Log marginal likelihood:\t", "", 
+                                                         gsub("\r\n", "", A)))
+      }
 
 
 
-######################################################################################################
-# for each converged run, create a master 
-
-master_export = function(data1, data2, data3){
-  master <- as.data.frame(matrix(ncol = dim(data1)[2], nrow = (dim(data1)[1]*3)))
-  colnames(master) <- colnames(data1)
-  master$run_number <- c(rep(1,dim(data1)[1]), rep(2,dim(data2)[1]), rep(3,dim(data3)[1]))
-  
-  master[which(master$run_number == 1),1:dim(data1)[2]] <- data1[1:dim(data1)[2]]
-  master[which(master$run_number == 2),1:dim(data2)[2]] <- data2[1:dim(data2)[2]]
-  master[which(master$run_number == 3),1:dim(data3)[2]] <- data3[1:dim(data3)[2]]
-  master <- as.data.frame(master)
-  return(master)
-}
-
-master_dep <- master_export(dep_mcmc_1, dep_mcmc_2, dep_mcmc_3)
-master_indep <- master_export(indep_mcmc_1, indep_mcmc_2, indep_mcmc_3)
-
-master_dep_export  <-  master_dep[seq(1,dim(master_dep)[1], length.out = 100000),]
-master_indep_export <- master_indep[seq(1,dim(master_indep)[1], length.out = 100000),]
-
-
-save(master_dep_export, file = "lung_loss_git/processed_data/BT_output/master_dep_export.Rdata")
-save(master_indep_export, file = "lung_loss_git/processed_data/BT_output/master_indep_export.Rdata")
 
 
 
-#remove actual runs to de-clutter
 
-rm(list = c("dep_mcmc_1", "dep_mcmc_2", "dep_mcmc_3", "indep_mcmc_1", "indep_mcmc_2", 
-            "indep_mcmc_3", "posterior_summary", "violin_comparison"))
+# For actual Bayesfactor test, we use averages of each model class (if converged)
+dep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "dep")]))
+indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "indep")]))
+six_dep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "six_state_dep")]))
+six_indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "six_state_indep")]))
+
+# Bayesfactor test:
+#                     2logBF = 2*(LML_complex - LML_simple)
+#                     higher BF's mean more support for more complex models
+
+2*(dep - indep)
+2*(six_dep - six_indep)
+
+#just for fun
+
+BF_vis = function(complex, simple){
+  BF = (complex - simple)
+  BF = 2*BF
+  if(BF < 2.2){paste("no support for complex model")}
+  if(6 > BF & BF >= 2.2){paste("positive evidence for complex model")}
+  if(10 > BF & BF > 6){paste("strong evidence for complex model")}
+  if(BF > 10){paste("very strong evidence for complex model")}}
+
+BF_vis(dep, indep)
+BF_vis(six_dep, six_indep)
+
+
+##### we get strong evidence for the dependent model, suggesting there is correlated evolution happening
+
+rm(list = c("BF_matrix", "BF", "dep", "indep", "six_dep", "six_indep", "i",
+            "complex", "simple", "BF_vis", "A"))
+
 
 #####################################################################################################
 
@@ -154,87 +94,11 @@ rm(list = c("dep_mcmc_1", "dep_mcmc_2", "dep_mcmc_3", "indep_mcmc_1", "indep_mcm
 #use reverse jump to test what proportion of the posterior is spent in a true Dollo's Law frame (no regains),
 # or else no regains in certain conditions, and if lungs are ever lost outside streams
 
-#function meant for cleaned up BT output with model string intact
-RJ_model_testing = function(data){
-  models <- unique(data$Model.string)
-  model_matrix <- matrix(nrow = length(models), ncol = 3)
-  colnames(model_matrix) <- c("model_string", "number_observed", "percent_of_posterior")
-  rownames(model_matrix) <- 1:length(models)
-  model_matrix[,1] <- models
-  for(i in 1:length(models)){
-    model_matrix[i,2] <- length(which(data$Model.string %in% model_matrix[i,1]))
-  }
-  runs <- dim(data)[1]
-  
-  model_matrix[,3] <- (as.numeric(model_matrix[,2])/runs)
-  output <- matrix(NA,nrow = 2, ncol = 3)
-  colnames(output) <- c("No regains", "No lentic regains", "No lentic losses")
-  rownames(output) <- c("posterior odds", "BayesFactor")
-  output[1,1] <- sum(as.numeric(model_matrix[grep("Z . . . . Z . .", model_matrix[,1]),3]))
-  output[1,2] <- sum(as.numeric(model_matrix[grep(". . . . . Z . .", model_matrix[,1]),3]))
-  output[1,3] <- sum(as.numeric(model_matrix[grep(". . . . . . . Z", model_matrix[,1]),3]))
-  output[2,1] <- output[1,1]/(1-output[1,1])
-  output[2,2] <- output[1,2]/(1-output[1,2])
-  output[2,3] <- output[1,3]/(1-output[1,3])
-  
-  return(output)
-}
+source("lung_loss_git/scripts/functions/Dollo_check.R")
 
-RJ_model_testing(master_dep)
+RJ_model_testing(master_dep_export, model = "dependent")
+RJ_model_testing(master_indep_export, model = "independent")
+RJ_model_testing(master_six_state_dep_export, model = "six_state")
+RJ_model_testing(master_six_state_indep_export, model = "six_state")
 
 
-#######################################################################################
-########################### Test of correlated evolution ##############################
-library(readr) #version ‘2.1.4’ used for function read_file
-
-# Bayestraits outputs a .stones file upon the stones command with an estimate log marginal likl
-# those files have  been edited by a shell script (process_stones.sh in extra_scripts) to pull
-# out only the log marginal likelihood as a single number and provide a specific naming convention
-# tree_model_replicate_LML.txt -> portik_dep_1_LML.txt for example
-
-# master matrix of marginal likelihoods for Bayesfactor testing
-
-BF_matrix <- as.data.frame(matrix(nrow = 18, ncol = 4))
-colnames(BF_matrix) <- c("Model_class", "tree", "replicate", "LogMargLik")
-BF_matrix$Model_class <- rep(c(rep("dep", 3), rep("indep", 3)),3)
-BF_matrix$tree <- c(rep("maxLH", 6), rep("tree_set", 6), rep("portik", 6))
-BF_matrix$replicate <- c(rep(1:3, 2))
-
-for(i in 1:6){
-  BF_matrix$LogMargLik[i] <- read_file(paste("stones/", BF_matrix$tree[i], "_", BF_matrix$Model_class[i], 
-                                  "_", BF_matrix$replicate[i], "_LML.txt", sep = ""))}
-
-# For actual Bayesfactor test, we use averages of each model class (if converged)
-dep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "dep")]))
-indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "indep")]))
-
-# Bayesfactor test:
-#                     2logBF = 2*(LML_complex - LML_simple)
-#                     higher BF's mean more support for more complex models
-
-logBF = (dep - indep)
-
-#just for fun
-BF_vis = function(complex, simple){
-  BF = (complex - simple)
-  BF = 2*BF
-  if(BF < 2){paste("no support for complex model")}
-  if(5 > BF & BF >= 2){paste("positive evidence for complex model")}
-  if(10 > BF & BF > 5){paste("strong evidence for complex model")}
-  if(BF > 10){paste("very strong evidence for complex model")}}
-
-BF_vis(dep, indep)
-##### we get strong evidence for the dependent model, suggesting there is correlated evolution happening
-
-rm(list = c("BF_matrix", "BF", "dep", "indep", "i"))
-########################################################################################################
-### Examine the dependent run in more detail, using the master log file of the posterior distribution
-########################################################################################################
-
-load("Bayestraits/data/master_export.Rdata")
-master_maxLH_dep <- master_export
-
-rm(master_export)
-
-
-#################################################################################
