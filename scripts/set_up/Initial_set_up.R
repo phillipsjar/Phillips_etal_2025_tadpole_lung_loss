@@ -3,7 +3,7 @@
 
 # set working directory
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
-setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
+#setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
 
 # uploading data
 {
