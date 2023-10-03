@@ -73,6 +73,7 @@ for(i in 1:100){                                                         # itera
 }
 
 nodes_to_keep <- BT_ML_tree$Nnode + 1 + which(is.na(ML_node_check))     # change to reflect the way R keeps track of nodes vs. tips (assumes tree is bifurcating)
+nodes_to_keep <- nodes_to_keep[2:length(nodes_to_keep)]
 save(nodes_to_keep, file = "lung_loss_git/bayestraits_trees_data/data/nodes_to_keep.Rdata")      # save this for later plotting, since it takes a while to calculate
 #load(file = "lung_loss_git/bayestraits_trees_data/data/nodes_to_keep.Rdata")
 

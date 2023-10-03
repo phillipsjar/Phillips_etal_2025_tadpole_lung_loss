@@ -49,11 +49,6 @@ for(i in 1:dim(BF_matrix)[1]){
       }
 
 
-
-
-
-
-
 # For actual Bayesfactor test, we use averages of each model class (if converged)
 dep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "dep")]))
 indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class == "indep")]))
