@@ -16,8 +16,8 @@
 "19","Arthroleptidae","Leptodactylodon","Leptodactylodon_mertensi","","lotic, fossorial",0,"1",1,4,2,"Leptodactylodon_mertensi"
 "21","Arthroleptidae","Leptopelis","Leptopelis_boulengeri","","lotic",0,"1",0,3,2,"Leptopelis_boulengeri"
 "23","Arthroleptidae","Leptopelis","Leptopelis_natalensis","","lotic",0,"1",0,3,2,"Leptopelis_natalensis"
-"25","Arthroleptidae","Leptopelis","Leptopelis_vermiculatus","","lentic, benthic",1,"1",0,6,4,"Leptopelis_vermiculatus"
-"31","Arthroleptidae","Trichobatrachus","Trichobatrachus_robustus","","lotic, suctorial",0,"1",1,4,2,"Trichobatrachus_robustus"
+"26","Arthroleptidae","Leptopelis","Leptopelis_vermiculatus","","lentic, benthic",1,"1",0,6,4,"Leptopelis_vermiculatus"
+"32","Arthroleptidae","Trichobatrachus","Trichobatrachus_robustus","","lotic, suctorial",0,"1",1,4,2,"Trichobatrachus_robustus"
 "33","Ascaphidae","Ascaphus","Ascaphus_montanus","","lotic, suctorial",0,"0",1,2,1,"Ascaphus_montanus"
 "34","Ascaphidae","Ascaphus","Ascaphus_truei","","lotic, suctorial",0,"0",1,2,1,"Ascaphus_truei"
 "35","Batrachylidae","Atelognathus","Atelognathus_reverberii","","lentic, benthic",1,"1",0,6,4,"Atelognathus_reverberii"
@@ -59,7 +59,7 @@
 "107","Bufonidae","Rhaebo","Rhaebo_caeruleostictus","?","lentic",1,"0",0,5,3,NA
 "108","Bufonidae","Rhaebo","Rhaebo_glaberrimus","","lotic",0,"0",0,1,1,"Rhaebo_glaberrimus"
 "112","Bufonidae","Rhinella","Rhinella_acutirostris","","lentic, benthic",1,"0",0,5,3,"Rhinella_acutirostris"
-"113","Bufonidae","Rhinella","Rhinella_amabilis","Rhinella_limensis","",NA,"0",NA,NA,NA,"Rhinella_limensis"
+"113","Bufonidae","Rhinella","Rhinella_amabilis","Rhinella_limensis","",NA,"0",0,NA,NA,"Rhinella_limensis"
 "114","Bufonidae","Rhinella","Rhinella_arenarum","","lentic, benthic",1,"0",0,5,3,"Rhinella_arenarum"
 "116","Bufonidae","Rhinella","Rhinella_castaneotica","","lentic, arboreal",1,"0",0,5,3,"Rhinella_castaneotica"
 "117","Bufonidae","Rhinella","Rhinella_chrysophora","?","lotic, gastromyzophorous",0,"0",1,2,1,NA
@@ -109,7 +109,7 @@
 "186","Cycloramphidae","Thoropa","Thoropa_taophora","","lotic, semiterrestrial",0,"0",1,2,1,"Thoropa_taophora"
 "188","Dendrobatidae","Adelphobates","Adelphobates_galactonotus","","lentic, arboreal",1,"1",0,6,4,"Adelphobates_galactonotus"
 "189","Dendrobatidae","Adelphobates","Adelphobates_quinquevittatus","","lentic",1,"1",0,6,4,"Adelphobates_quinquevittatus"
-"190","Dendrobatidae","Allobates","Allobates_grillisimilis","","",NA,"1",NA,NA,NA,"Allobates_grillisimilis"
+"190","Dendrobatidae","Allobates","Allobates_grillisimilis","","",NA,"1",0,NA,NA,"Allobates_grillisimilis"
 "191","Dendrobatidae","Allobates","Allobates_insperatus","","lentic",1,"1",0,6,4,"Allobates_insperatus"
 "192","Dendrobatidae","Allobates","Allobates_nidicola","","endotroph",2,"0",0,NA,NA,"Allobates_nidicola"
 "193","Dendrobatidae","Ameerega","Ameerega_trivittata","","lentic",1,"1",0,6,4,"Ameerega_trivittata"
@@ -118,7 +118,7 @@
 "196","Dendrobatidae","Anomaloglossus","Anomaloglossus_tepuyensis","","lotic",0,"1",0,3,2,"Anomaloglossus_tepuyensis"
 "197","Dendrobatidae","Aromobates","Aromobates_mayorgai","Aromobates_meridensis","lotic, sidepools",0,"1",0,3,2,"Aromobates_meridensis"
 "198","Dendrobatidae","Aromobates","Aromobates_saltuensis","","lotic",0,"1",0,3,2,"Aromobates_saltuensis"
-"199","Dendrobatidae","Colostethus","Colostethus_dunni","?","",NA,"1",NA,NA,NA,NA
+"199","Dendrobatidae","Colostethus","Colostethus_dunni","?","",NA,"1",0,NA,NA,NA
 "200","Dendrobatidae","Colostethus","Colostethus_imbricolus","","lentic",1,"1",0,6,4,"Colostethus_imbricolus"
 "201","Dendrobatidae","Dendrobates","Dendrobates_tinctorius","","lentic, arboreal",1,"1",0,6,4,"Dendrobates_tinctorius"
 "202","Dendrobatidae","Dendrobates","Dendrobates_truncatus","","lentic, arboreal",1,"1",0,6,4,"Dendrobates_truncatus"
@@ -415,7 +415,7 @@
 "650","Pyxicephalidae","Strongylopus","Strongylopus_grayii","","lentic",1,"1",0,6,4,"Strongylopus_grayii"
 "651","Pyxicephalidae","Tomopterna","Tomopterna_cryptotis","","lentic",1,"1",0,6,4,"Tomopterna_cryptotis"
 "652","Pyxicephalidae","Tomopterna","Tomopterna_luganga","","lentic",1,"1",0,6,4,"Tomopterna_luganga"
-"656","Ranidae","Amolops","Amolops_ricketti","","lotic, gastromyzophorous",0,"0",1,2,1,"Amolops_ricketti"
+"655","Ranidae","Amolops","Amolops_ricketti","","lotic, gastromyzophorous",0,"0",1,2,1,"Amolops_ricketti"
 "658","Ranidae","Chalcorana","Chalcorana_chalconota","","lotic",0,"1",0,3,2,"Chalcorana_chalconota"
 "659","Ranidae","Chalcorana","Chalcorana_megalonesa","","lentic",1,"1",0,6,4,"Chalcorana_megalonesa"
 "660","Ranidae","Clinotarsus","Clinotarsus_alticola","","lotic, benthic",0,"-",0,NA,NA,"Clinotarsus_alticola"
@@ -460,7 +460,7 @@
 "711","Ranidae","Sylvirana","Sylvirana_maosonensis","","lentic",1,"1",0,6,4,"Sylvirana_maosonensis"
 "712","Ranidae","Sylvirana","Sylvirana_nigrovittata","","lotic",0,"1",0,3,2,"Sylvirana_nigrovittata"
 "717","Rhacophoridae","Buergeria","Buergeria_japonica","","lotic, benthic, hot springs",0,"1",0,3,2,"Buergeria_japonica"
-"718","Rhacophoridae","Chirixalus","Chirixalus_sp.","?","",NA,"1",NA,NA,NA,NA
+"718","Rhacophoridae","Chirixalus","Chirixalus_sp.","?","",NA,"1",0,NA,NA,NA
 "719","Rhacophoridae","Chiromantis","Chiromantis_nongkhorensis","","lentic",1,"1",0,6,4,"Chiromantis_nongkhorensis"
 "720","Rhacophoridae","Chiromantis","Chiromantis_xerampelina","","lentic, benthic",1,"1",0,6,4,"Chiromantis_xerampelina"
 "721","Rhacophoridae","Feihyla","Feihyla_kajau","","lentic",1,"1",0,6,4,"Feihyla_kajau"

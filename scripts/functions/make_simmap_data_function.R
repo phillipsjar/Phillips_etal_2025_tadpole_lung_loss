@@ -1,44 +1,140 @@
-## function to create a dataset phytools is comfortable with two binary traits allowing missing data
+## function to create a dataset phytools is comfortable with more than one binary traits, allowing missing data
 
-make_simmap_data = function(data, tree){
-  data <- data[data$Taxa %in% tree$tip.label,] #trim data to tree
-  lung <- (data$lung)                                          #lung data
-  eco <- (data$ecology)                                        #ecology data binary    
-  lung_eco <- cbind(lung, eco)                                              #stick 'em together    
-  lung_eco_matrix <- matrix(0, nrow = dim(lung_eco)[1], ncol = 4)           #empty matrix (for simmap with all zeroes)
-  rownames(lung_eco_matrix) <- data$Taxa                               #rownames for later
-  colnames(lung_eco_matrix) <- c("X_S", "Lu_S", "X_P", "Lu_P")              #col names will reflect states
+make_simmap_data = function(data, tree, mode = "double binary", 
+                            state_labels, trait_col_names){
   
-  # this loop populates the matrix to indicate which state each taxon is in, allowing for unknowns
+  data <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
+  rownames(data) <- data$Taxa
+  tree <- read.tree(file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.tre")  # load in ML_tree
   
-  for(i in 1:dim(lung_eco)[1]){
-    if(!anyNA(lung_eco[i,])){ 
-      if(lung_eco[i,1] == 0 & lung_eco[i,2] == 0){
-        lung_eco_matrix[i,1] <- 1}    
-      if(lung_eco[i,1] == 1 & lung_eco[i,2] == 0){
-        lung_eco_matrix[i,2] <- 1}
-      if(lung_eco[i,1] == 0 & lung_eco[i,2] == 1){
-        lung_eco_matrix[i,3] <- 1}
-      if(lung_eco[i,1] == 1 & lung_eco[i,2] == 1){
-        lung_eco_matrix[i,4] <- 1}}
-    if(is.na(lung_eco[i,2])){
-      dummy_lung_status <- lung_eco[i,1]
-      if(dummy_lung_status == 0){
-        lung_eco_matrix[i,1] <- .5
-        lung_eco_matrix[i,3] <- .5}
-      if(dummy_lung_status == 1){
-        lung_eco_matrix[i,2] <- .5
-        lung_eco_matrix[i,4] <- .5}}
-    if(is.na(lung_eco[i,1])){
-      dummy_eco_status <- lung_eco[i,2]
-      if(dummy_eco_status == 0){
-        lung_eco_matrix[i,1] <- .5
-        lung_eco_matrix[i,2] <- .5}
-      if(dummy_eco_status == 1){
-        lung_eco_matrix[i,3] <- .5
-        lung_eco_matrix[i,4] <- .5}}
+  data <- data[rownames(data) %in% tree$tip.label,] #trim data to tree
+  names <- data$Taxa
+  if(dim(data)[1] < 1){
+    stop("Rownames do not match tip labels")
+  }
+  data <- data[,match(trait_col_names, colnames(data))] # keep only relevant columns
+  
+  N_states <- length(state_labels)
+  
+  if(mode == "double binary"){
+    if(N_states != 4){
+      stop("double binary mode used (default), but number of states does not
+           equal four")}
+    if(length(trait_col_names) != 2){
+      stop("double binary mode used (default), but number of traits does not
+           equal two")}
+  
+    state_matrix <- matrix(0, nrow = dim(data)[1], ncol = N_states)           #empty matrix (for simmap with all zeroes)
+    rownames(state_matrix) <- rownames(data)                               #rownames for later
+    colnames(state_matrix) <- state_labels                                 #col names will reflect states
     
+    for(i in 1:dim(state_matrix)[1]){
+      if(!anyNA(data[i,])){
+        if(data[i,1] == 0 & data[i,2] == 0){
+          state_matrix[i,1] <- 1}
+        if(data[i,1] == 1 & data[i,2] == 0){
+          state_matrix[i,2] <- 1}
+        if(data[i,1] == 0 & data[i,2] == 1){
+          state_matrix[i,3] <- 1}
+        if(data[i,1] == 1 & data[i,2] == 1){
+          state_matrix[i,4] <- 1}
+      }
+      if(is.na(data[i,1]) & data[i,2] == 0){
+        state_matrix[i,1] <- .5
+        state_matrix[i,3] <- .5
+        }
+      if(is.na(data[i,1]) & data[i,2] == 1){
+        state_matrix[i,2] <- .5
+        state_matrix[i,4] <- .5
+      }
+      if(is.na(data[i,2]) & data[i,1] == 0){
+        state_matrix[i,1] <- .5
+        state_matrix[i,2] <- .5
+      }
+      if(is.na(data[i,2]) & data[i,1] == 1){
+        state_matrix[i,3] <- .5
+        state_matrix[i,4] <- .5
+      }
+      if(is.na(data[i,1]) & is.na(data[i,2])){
+        state_matrix[i,1:4] <- (1/N_states)
+      }}}
+  
+  
+  if(mode == "six_state"){
+    if(N_states != 6){
+      stop("six state mode used, which was developed for a very specific use-case")}
+    if(length(trait_col_names) != 3){
+      stop("three binary traits needed")}
     
-  } # loop to manually make a broken up matrix so simmap is happy
-  return(lung_eco_matrix)
+    state_matrix <- matrix(0, nrow = dim(data)[1], ncol = N_states)           #empty matrix (for simmap with all zeroes)
+    rownames(state_matrix) <- rownames(data)                               #rownames for later
+    colnames(state_matrix) <- state_labels                                 #col names will reflect states
+  
+    for(i in 1:dim(data)[1]){
+      if(!anyNA(data[i,])){      
+        if(data[i,1] == 0 & data[i,2] == 0 & data[i,3] == 0){
+          state_matrix[i,1] <- 1}    
+        if(data[i,1] == 0 & data[i,2] == 0 & data[i,3] == 1){
+          state_matrix[i,2] <- 1}
+        if(data[i,1] == 0 & data[i,2] == 1 & data[i,3] == 0){
+          state_matrix[i,3] <- 1}
+        if(data[i,1] == 0 & data[i,2] == 1 & data[i,3] == 1){
+          state_matrix[i,4] <- 1}
+        if(data[i,1] == 1 & data[i,2] == 0 & data[i,3] == 0){
+          state_matrix[i,5] <- 1}      
+        if(data[i,1] == 1 & data[i,2] == 1 & data[i,3] == 0){
+          state_matrix[i,6] <- 1}}
+      
+      if(is.na(data[i,1]) & data[i,2] == 0 & data[i,3] == 0){
+        state_matrix[i,1] <- .5
+        state_matrix[i,5] <- .5}
+      if(is.na(data[i,1]) & data[i,2] == 1 & data[i,3] == 0){
+        state_matrix[i,3] <- .5
+        state_matrix[i,6] <- .5}
+      if(data[i,2] == "-" & data[i,1] == 0 & data[i,3] == 0){
+        state_matrix[i,1] <- .5
+        state_matrix[i,3] <- .5}
+      if(data[i,2] == "-" & data[i,1] == 0 & data[i,3] == 1){
+        state_matrix[i,2] <- .5
+        state_matrix[i,4] <- .5}
+      if(data[i,2] == "-" & data[i,1] == 1 & data[i,3] == 0){
+        state_matrix[i,5] <- .5
+        state_matrix[i,6] <- .5}
+    }
+    }
+    
+  return(state_matrix)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
