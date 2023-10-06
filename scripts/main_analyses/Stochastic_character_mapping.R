@@ -44,7 +44,7 @@ rm(list = c("four_state_col", "four_state_state", "six_state_col", "six_state_st
 cols <- setNames(c("#990099", "#3399FF", "#FF3333","#EBFFE1", "grey"), c("X_S", "Lu_S", "X_P", "Lu_P"))
 cols2 <- setNames(c("gold", "purple", "#99CCFF", "blue", "red", "#EBFFE1"), 
                   c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P"))
-
+require(phytools)
 #tester of one run to see if colors look good
 plotSimmap(t1[[1]], cols, pts=F, ftype="off", fsize = .2, 
            outline = TRUE, type = "fan", add=FALSE, lwd=2, offset=0.5)

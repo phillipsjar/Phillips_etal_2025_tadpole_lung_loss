@@ -6,7 +6,7 @@
 
 #              Draw rate matrices from 100 different runs of posterior
 BayesTraits_simmap = function(BT_output, Nsim, data, model, trees, state_labels, trait_col_names){
-
+  require(phytools)
 if(class(trees) == "phylo"){
   stop("currently implemented for Bayestraits runs that use multiple trees")
 }
