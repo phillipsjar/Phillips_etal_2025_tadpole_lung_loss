@@ -29,21 +29,22 @@ custom_Q = function(rates, state_labels = c("X_S", "Lu_S", "X_P", "Lu_P"), model
     rate_matrix[4,3] <- as.numeric(rates[4]*.001)
   }
   
+  
   if(model == "six_state"){
     rate_matrix[1,2] <- as.numeric(rates[1]*.01)                   # rates are multiplied by .01 to counteract scaling in BT
     rate_matrix[1,3] <- as.numeric(rates[2]*.01)
-    rate_matrix[1,5] <- as.numeric(rates[3]*.01)
-    rate_matrix[2,1] <- as.numeric(rates[4]*.01)
-    rate_matrix[2,4] <- as.numeric(rates[5]*.01)
-    rate_matrix[3,1] <- as.numeric(rates[6]*.01)
-    rate_matrix[3,4] <- as.numeric(rates[7]*.01)
-    rate_matrix[3,6] <- as.numeric(rates[8]*.01)
-    rate_matrix[4,2] <- as.numeric(rates[9]*.01)
-    rate_matrix[4,3] <- as.numeric(rates[10]*.01)
-    rate_matrix[5,1] <- as.numeric(rates[11]*.01)
-    rate_matrix[5,6] <- as.numeric(rates[12]*.01)
-    rate_matrix[6,3] <- as.numeric(rates[13]*.01)
-    rate_matrix[6,5] <- as.numeric(rates[14]*.01)
+    rate_matrix[1,5] <- as.numeric(rates[4]*.01)
+    rate_matrix[2,1] <- as.numeric(rates[6]*.01)
+    rate_matrix[2,4] <- as.numeric(rates[8]*.01)
+    rate_matrix[3,1] <- as.numeric(rates[11]*.01)
+    rate_matrix[3,4] <- as.numeric(rates[13]*.01)
+    rate_matrix[3,6] <- as.numeric(rates[15]*.01)
+    rate_matrix[4,2] <- as.numeric(rates[17]*.01)
+    rate_matrix[4,3] <- as.numeric(rates[18]*.01)
+    rate_matrix[5,1] <- as.numeric(rates[21]*.01)
+    rate_matrix[5,6] <- as.numeric(rates[26]*.01)
+    rate_matrix[6,3] <- as.numeric(rates[28]*.01)
+    rate_matrix[6,5] <- as.numeric(rates[30]*.01)
   }
   
   for(i in 1:Q_dim){
