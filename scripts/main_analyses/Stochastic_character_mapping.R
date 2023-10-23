@@ -5,8 +5,8 @@ load(file = "bayestraits_exports/master_dep_export.Rdata")
 load(file = "bayestraits_exports/master_indep_export.Rdata")
 load(file = "bayestraits_exports/master_six_state_dep_export.Rdata")
 load(file = "bayestraits_exports/master_six_state_indep_export.Rdata")
-Nsim <- 10
-Nruns <- 100
+Nsim <- 1
+Nruns <- 50
 data <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 trees <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set.nex")
 
@@ -69,14 +69,6 @@ title(main="six_dependent model",font.main=3,
       line=-1)}
 
 
-
-t_indep_count <- countSimmap(t_indep[[3]])
-t_dep_count <- countSimmap(t_dep[[1]])
-t_six_indep_count <- countSimmap(t_six_indep[[1]])
-t_six_dep_count <- countSimmap(t_six_dep[[1]])
-
-
-
 avg_simmap_counts = function(simmap){
   require(phytools)
   N <- length(simmap)
@@ -111,8 +103,13 @@ avg_simmap_counts(t_indep)
 sd_simmap_counts(t_indep)
 
 avg_simmap_counts(t_dep)
+sd_simmap_counts(t_dep)
+
 avg_simmap_counts(t_six_indep)
+sd_simmap_counts(t_six_indep)
+
 avg_simmap_counts(t_six_dep)
+sd_simmap_counts(t_six_dep)
 
 
 

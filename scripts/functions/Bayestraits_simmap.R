@@ -67,7 +67,6 @@ if(model == "dependent" | model == "independent"){
                                    Q = custom_Q(rate_values[[i]], model = model, 
                                    state_labels = state_labels), pi=rep(.25,4))
     }}
-  print(Nruns-i) # count down for sanity
 }
 
 
@@ -78,7 +77,6 @@ if(model == "six_state"){
       master_simmap[[j]] <- make.simmap(trees[[tree_numbers[i]]], sim_data, nsim = 1,
                             Q = custom_Q(rate_values[[i]], model = model, 
                               state_labels = state_labels), pi=rep((1/6),6))}
-    print(Nruns-i) # count down for sanity
 }}
 
 
