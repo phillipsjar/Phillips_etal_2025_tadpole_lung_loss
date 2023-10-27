@@ -35,6 +35,7 @@ Atelopus_nanay	2
 Atelopus_tricolor	2
 Barbarophryne_brongersmai	5
 Bufo_bufo	5
+Bufo_torrenticola	2
 Capensibufo_tradouwi	5
 Dendrophryniscus_brevipollicatus	5
 Duttaphrynus_melanostictus	5
@@ -152,6 +153,7 @@ Agalychnis_moreletii	6
 Triprion_spinosus	6
 Aparasphenodon_brunoi	6
 Aplastodiscus_perviridis	6
+Boana_boans	3
 Boana_cordobae	3
 Boana_geographica	6
 Boana_heilprini	3
@@ -353,6 +355,8 @@ Neobatrachus_wilsmorei	6
 Notaden_melanoscaphus	6
 Notaden_nichollsi	6
 Platyplectrum_ornatum	6
+Crinia_insignifera	5
+Crinia_riparia	1
 Crinia_signifera	5
 Crinia_tasmaniensis	5
 Mixophyes_balbus	4
@@ -393,11 +397,12 @@ Pyxicephalus_adspersus	6
 Strongylopus_grayii	6
 Tomopterna_cryptotis	6
 Tomopterna_luganga	6
+Amnirana_albolabris	6
 Amolops_ricketti	2
 Chalcorana_chalconota	3
 Chalcorana_megalonesa	6
 Clinotarsus_alticola	-
-Clinotarsus_penelope	-
+Clinotarsus_penelope	6
 Huia_cavitympanum	2
 Meristogenys_jerboa	2
 Papurana_kreffti	6
@@ -461,8 +466,14 @@ Spea_bombifrons	6
 Spea_hammondii	6
 Spea_intermontana	6
 Spea_multiplicata	6
+Telmatobius_atahualpai	4
 Telmatobius_macrostomus	6
 Telmatobius_marmoratus	6
 Telmatobius_peruvianus	3
 Rhinella_amabilis	-
 Allobates_grillisimilis	-
+Litoria_dahlii	-
+Litoria_peronii	-
+Litoria_jervisiensis	-
+Litoria_eucnemis	-
+Litoria_electrica	-

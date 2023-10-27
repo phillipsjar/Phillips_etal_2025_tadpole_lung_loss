@@ -35,6 +35,7 @@ Atelopus_nanay	0	0
 Atelopus_tricolor	0	0
 Barbarophryne_brongersmai	1	0
 Bufo_bufo	1	0
+Bufo_torrenticola	0	0
 Capensibufo_tradouwi	1	0
 Dendrophryniscus_brevipollicatus	1	0
 Duttaphrynus_melanostictus	1	0
@@ -152,6 +153,7 @@ Agalychnis_moreletii	1	1
 Triprion_spinosus	1	1
 Aparasphenodon_brunoi	1	1
 Aplastodiscus_perviridis	1	1
+Boana_boans	0	1
 Boana_cordobae	0	1
 Boana_geographica	1	1
 Boana_heilprini	0	1
@@ -353,6 +355,8 @@ Neobatrachus_wilsmorei	1	1
 Notaden_melanoscaphus	1	1
 Notaden_nichollsi	1	1
 Platyplectrum_ornatum	1	1
+Crinia_insignifera	1	0
+Crinia_riparia	0	0
 Crinia_signifera	1	0
 Crinia_tasmaniensis	1	0
 Mixophyes_balbus	0	1
@@ -393,11 +397,12 @@ Pyxicephalus_adspersus	1	1
 Strongylopus_grayii	1	1
 Tomopterna_cryptotis	1	1
 Tomopterna_luganga	1	1
+Amnirana_albolabris	1	1
 Amolops_ricketti	0	0
 Chalcorana_chalconota	0	1
 Chalcorana_megalonesa	1	1
 Clinotarsus_alticola	0	-
-Clinotarsus_penelope	1	-
+Clinotarsus_penelope	1	1
 Huia_cavitympanum	0	0
 Meristogenys_jerboa	0	0
 Papurana_kreffti	1	1
@@ -461,8 +466,14 @@ Spea_bombifrons	1	1
 Spea_hammondii	1	1
 Spea_intermontana	1	1
 Spea_multiplicata	1	1
+Telmatobius_atahualpai	0	1
 Telmatobius_macrostomus	1	1
 Telmatobius_marmoratus	1	1
 Telmatobius_peruvianus	0	1
 Rhinella_amabilis	-	0
 Allobates_grillisimilis	-	1
+Litoria_dahlii	-	1
+Litoria_peronii	-	1
+Litoria_jervisiensis	-	1
+Litoria_eucnemis	-	1
+Litoria_electrica	-	1
