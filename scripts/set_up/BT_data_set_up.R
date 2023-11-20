@@ -3,7 +3,12 @@
 
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
+
+
 #Requires having run through the set_up script to generate the data_no_endo files and correct trees
+source("lung_loss_git/scripts/set_up/Initial_set_up.R")
+
+
 require(ape)
 
 data_no_endo <- read.csv("lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")

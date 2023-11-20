@@ -47,9 +47,9 @@ dim(data)[1]
 table(data$Family)
 
 # 249 genera represented
-#length(unique(data$Genus))
+length(unique(data$Genus))
 # taxa distribution within genera
-#table(data$Genus)
+table(data$Genus)
 
 
 ######################################################
@@ -74,6 +74,12 @@ for(i in 1:dim(data)[1]){
   if(!(data$Taxa[i] %in% ML_tree$tip.label) & data$Portik[i] %in% ML_tree$tip.label){
     data$tree_names[i] <- data$Portik[i]}}
     
+data[is.na(data$tree_names),c(1,2,3,4)]
+
+ML_tree$tip.label[grep("Plectrohyla", ML_tree$tip.label)]
+
+
+
 #remove 10 endotroph taxa
 data_no_endo <- data[c(which(data$ecology != 2), which(is.na(data$ecology))),]       #remove endotrophs but keep taxa with unknown ecology
 

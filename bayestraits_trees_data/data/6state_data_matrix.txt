@@ -1,7 +1,7 @@
 Allophryne_ruthveni	6
 Alsodes_monticola	6
 Alsodes_neuquensis	6
-Alsodes_nodosus	6
+Alsodes_nodosus	3
 Limnomedusa_macroglossa	6
 Alytes_dickhilleni	6
 Alytes_obstetricans	6
@@ -183,6 +183,8 @@ Hyla_suweonensis	6
 Hyla_versicolor	6
 Hyloscirtus_armatus	4
 Hyloscirtus_colymba	4
+Isthmohyla_lancasteri	-
+Isthmohyla_tica	4
 Isthmohyla_zeteki	6
 Itapotihyla_langsdorffii	6
 Litoria_adelaidensis	6
@@ -190,17 +192,23 @@ Litoria_aurea	6
 Litoria_booroolongensis	4
 Litoria_citropa	4
 Litoria_coplandi	3
+Litoria_dahlii	6
+Litoria_electrica	6
+Litoria_eucnemis	6
 Litoria_inermis	6
+Litoria_jervisiensis	6
 Litoria_lesueurii	4
 Litoria_moorei	6
 Litoria_nannotis	2
 Litoria_nyakalensis	2
+Litoria_peronii	6
 Litoria_rheocola	2
 Litoria_serrata	3
 Litoria_subglandulosa	4
 Litoria_xanthomera	6
 Megastomatohyla_mixe	2
 Megastomatohyla_mixomaculata	2
+Nyctimystes_cheesmani	2
 Osteocephalus_oophagus	6
 Osteocephalus_planiceps	6
 Osteopilus_dominicensis	6
@@ -213,11 +221,13 @@ Phasmahyla_guttata	6
 Phyllomedusa_distincta	6
 Phyllomedusa_vaillantii	6
 Plectrohyla_guatemalensis	3
+Plectrohyla_teuchestes	4
 Pseudacris_crucifer	6
 Pseudacris_ornata	6
 Pseudacris_regilla	6
 Pseudis_minuta	6
 Pseudis_paradoxa	6
+Ptychohyla_hypomykter	3
 Ptychohyla_zophodes	3
 Litoria_caerulea	6
 Litoria_rubella	6
@@ -298,6 +308,7 @@ Mantidactylus_opiparis	3
 Spinomantis_fimbriatus	3
 Boulenophrys_minor	3
 Leptobrachella_gracilis	2
+Leptobrachella_pelodytoides	2
 Leptobrachella_sp.	2
 Leptobrachium_cf_hasseltii	3
 Leptobrachium_montanum	3
@@ -375,7 +386,6 @@ Proceratophrys_brauni	3
 Pelobates_cultripes	6
 Pelobates_fuscus	6
 Pelodytes_caucasicus	6
-Petropedetes_cf_palmipes	4
 Petropedetes_perreti	4
 Phrynobatrachus_guineensis	6
 Phrynobatrachus_natalensis	6
@@ -392,6 +402,7 @@ Amietia_fuscigula	3
 Amietia_vertebralis	3
 Cacosternum_namaquense	6
 Natalobatrachus_bonebergi	3
+Nothophryne_inagoensis	2
 Poyntonia_paludicola	6
 Pyxicephalus_adspersus	6
 Strongylopus_grayii	6
@@ -399,6 +410,7 @@ Tomopterna_cryptotis	6
 Tomopterna_luganga	6
 Amnirana_albolabris	6
 Amolops_ricketti	2
+Amolops_sp.	2
 Chalcorana_chalconota	3
 Chalcorana_megalonesa	6
 Clinotarsus_alticola	-
@@ -472,8 +484,3 @@ Telmatobius_marmoratus	6
 Telmatobius_peruvianus	3
 Rhinella_amabilis	-
 Allobates_grillisimilis	-
-Litoria_dahlii	-
-Litoria_peronii	-
-Litoria_jervisiensis	-
-Litoria_eucnemis	-
-Litoria_electrica	-

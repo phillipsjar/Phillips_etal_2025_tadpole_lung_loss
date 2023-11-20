@@ -1,4 +1,4 @@
-setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
+#setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
 #######################################################################################################
 ######      Stochastic Character Mapping in Phytools using Bayestraits Rate Matrices      #############

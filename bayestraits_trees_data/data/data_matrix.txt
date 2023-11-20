@@ -1,7 +1,7 @@
 Allophryne_ruthveni	1	1
 Alsodes_monticola	1	1
 Alsodes_neuquensis	1	1
-Alsodes_nodosus	1	1
+Alsodes_nodosus	0	1
 Limnomedusa_macroglossa	1	1
 Alytes_dickhilleni	1	1
 Alytes_obstetricans	1	1
@@ -183,6 +183,8 @@ Hyla_suweonensis	1	1
 Hyla_versicolor	1	1
 Hyloscirtus_armatus	0	1
 Hyloscirtus_colymba	0	1
+Isthmohyla_lancasteri	0	-
+Isthmohyla_tica	0	1
 Isthmohyla_zeteki	1	1
 Itapotihyla_langsdorffii	1	1
 Litoria_adelaidensis	1	1
@@ -190,17 +192,23 @@ Litoria_aurea	1	1
 Litoria_booroolongensis	0	1
 Litoria_citropa	0	1
 Litoria_coplandi	0	1
+Litoria_dahlii	1	1
+Litoria_electrica	1	1
+Litoria_eucnemis	1	1
 Litoria_inermis	1	1
+Litoria_jervisiensis	1	1
 Litoria_lesueurii	0	1
 Litoria_moorei	1	1
 Litoria_nannotis	0	0
 Litoria_nyakalensis	0	0
+Litoria_peronii	1	1
 Litoria_rheocola	0	0
 Litoria_serrata	0	1
 Litoria_subglandulosa	0	1
 Litoria_xanthomera	1	1
 Megastomatohyla_mixe	0	0
 Megastomatohyla_mixomaculata	0	0
+Nyctimystes_cheesmani	0	0
 Osteocephalus_oophagus	1	1
 Osteocephalus_planiceps	1	1
 Osteopilus_dominicensis	1	1
@@ -213,11 +221,13 @@ Phasmahyla_guttata	1	1
 Phyllomedusa_distincta	1	1
 Phyllomedusa_vaillantii	1	1
 Plectrohyla_guatemalensis	0	1
+Plectrohyla_teuchestes	0	1
 Pseudacris_crucifer	1	1
 Pseudacris_ornata	1	1
 Pseudacris_regilla	1	1
 Pseudis_minuta	1	1
 Pseudis_paradoxa	1	1
+Ptychohyla_hypomykter	0	1
 Ptychohyla_zophodes	0	1
 Litoria_caerulea	1	1
 Litoria_rubella	1	1
@@ -298,6 +308,7 @@ Mantidactylus_opiparis	0	1
 Spinomantis_fimbriatus	0	1
 Boulenophrys_minor	0	1
 Leptobrachella_gracilis	0	0
+Leptobrachella_pelodytoides	0	0
 Leptobrachella_sp.	0	0
 Leptobrachium_cf_hasseltii	0	1
 Leptobrachium_montanum	0	1
@@ -375,7 +386,6 @@ Proceratophrys_brauni	0	1
 Pelobates_cultripes	1	1
 Pelobates_fuscus	1	1
 Pelodytes_caucasicus	1	1
-Petropedetes_cf_palmipes	0	1
 Petropedetes_perreti	0	1
 Phrynobatrachus_guineensis	1	1
 Phrynobatrachus_natalensis	1	1
@@ -392,6 +402,7 @@ Amietia_fuscigula	0	1
 Amietia_vertebralis	0	1
 Cacosternum_namaquense	1	1
 Natalobatrachus_bonebergi	0	1
+Nothophryne_inagoensis	0	0
 Poyntonia_paludicola	1	1
 Pyxicephalus_adspersus	1	1
 Strongylopus_grayii	1	1
@@ -399,6 +410,7 @@ Tomopterna_cryptotis	1	1
 Tomopterna_luganga	1	1
 Amnirana_albolabris	1	1
 Amolops_ricketti	0	0
+Amolops_sp.	0	0
 Chalcorana_chalconota	0	1
 Chalcorana_megalonesa	1	1
 Clinotarsus_alticola	0	-
@@ -472,8 +484,3 @@ Telmatobius_marmoratus	1	1
 Telmatobius_peruvianus	0	1
 Rhinella_amabilis	-	0
 Allobates_grillisimilis	-	1
-Litoria_dahlii	-	1
-Litoria_peronii	-	1
-Litoria_jervisiensis	-	1
-Litoria_eucnemis	-	1
-Litoria_electrica	-	1
