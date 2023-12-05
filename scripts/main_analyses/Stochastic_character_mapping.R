@@ -77,7 +77,7 @@ title(main="six_dependent model",font.main=3,
       line=-1)}
 
 
-{plotSimmap(t_six_dep[[3]], cols2, pts=F, ftype="off", fsize = .2, 
+{plotSimmap(t_six_dep[[1]], cols2, pts=F, ftype="off", fsize = .2, 
             outline = TRUE, type = "fan", add=FALSE, lwd=2, offset=0.5)
   title(main="six_dependent model",font.main=3,
         line=-1)}
