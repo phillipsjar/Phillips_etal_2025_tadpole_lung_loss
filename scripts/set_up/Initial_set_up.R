@@ -73,6 +73,8 @@ tree_set <- read.tree("lung_loss_git/trees/original_trees/TreePL/TreePL-Rooted_A
 ############## match datasets to trees ###############
 ######################################################
 
+#ML_tree$tip.label[grep("Indira", ML_tree$tip.label)]
+
 data$tree_names <- rep(NA)
 
 for(i in 1:dim(data)[1]){ 

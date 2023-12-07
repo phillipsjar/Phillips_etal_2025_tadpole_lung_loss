@@ -1,7 +1,7 @@
-data <- read.csv(file = "data/full_lung_data.csv")
-tree <- read.tree(file = "Trees/edited_trees/All_taxa_vis_tree.tre")
+data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
+full_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_full.nex")
 
-tree_data <- data[data$Taxa %in% tree$tip.label,]
+tree_data <- data_full[data_full$Taxa %in% full_tree$tip.label,]
 row.names(tree_data) <- tree_data$Taxa
 
 x <- tree_data$lung
@@ -9,7 +9,7 @@ names(x) <- tree_data$Taxa
 
 library(phytools)
 
-t <- make.simmap(tree, x, model = "ARD", nsim = 10, pi = c(0,1))
+t <- make.simmap(full_tree, x, model = "ARD", nsim = 10, pi = c(0,1))
 cols <- setNames(c("red", "black"), c(0,1))
 
 c <- countSimmap(t)
@@ -32,8 +32,8 @@ plot(t2, type = "fan", ftype="off", lwd=2.5, offset = .5,
 
 ########### to fix ancestor of leiopelmatoidea to lunged
 
-tip <- getMRCA(tree, c("Ascaphus_truei", "Leiopelma_hochstetteri"))
-tree2 <- bind.tip(tree, "Leio_anc" ,edge.length=0,where=tip)
+tip <- getMRCA(full_tree, c("Ascaphus_truei", "Leiopelma_hochstetteri"))
+tree2 <- bind.tip(full_tree, "Leio_anc" ,edge.length=0,where=tip)
 x2 <- c(x,1)
 names(x2) <- c(names(x), "Leio_anc")
 
@@ -50,7 +50,10 @@ class(trees)<-"multiPhylo"
 
 cols <- setNames(c("red", "black"), c(0,1))
 plot(trees[[3]], type = "fan", ftype = "off", colors = cols)
+plot(trees[[3]], type = "fan", colors = cols, fsize = .2)
 
+
+?plot.simmap
 
 #########################################################
 
