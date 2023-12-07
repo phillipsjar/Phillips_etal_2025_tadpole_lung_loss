@@ -138,7 +138,7 @@ Fejervarya_limnocharis	6
 Hoplobatrachus_occipitalis	6
 Hoplobatrachus_tigerinus	6
 Limnonectes_kuhlii	6
-Limnonectes_leporinus	8
+Limnonectes_leporinus	6
 Limnonectes_macrocephalus	6
 Limnonectes_magnus	3
 Limnonectes_palavanensis	6

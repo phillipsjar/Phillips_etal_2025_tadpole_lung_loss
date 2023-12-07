@@ -33,7 +33,11 @@ data_original$state[which(data_original$ecology == 1 & data_original$lung == 1)]
 data <- data_original[which(data_original$lung %in% c(0,1,"-")),]  
 
 rm(list = c("data_original", "keep_cols"))}
-  
+
+table(data$eight_state)  
+
+data[which(data$eight_state == 8),]
+
 #data <- data_vis
 
 ######################################################
@@ -85,6 +89,9 @@ dim(data)
 data_aqu <- data[which(data$terrestrial != 1),]  #remove terrestrial taxa but keep taxa with unknown ecology
 dim(data_aqu)
 
+
+data_terr <- data[!(is.na(data$eight_state)),]
+
 ##############################################################
 #             Trim trees to those datasets
 ##############################################################
@@ -105,7 +112,7 @@ new_tree = function(tree, data){
 ### Trim trees for different purposes
 
 # Visualization tree of all sampled taxa that can be placed in tree
-Full_tree <- new_tree(ML_tree, data[data$tree_names %in% ML_tree$tip.label,] )
+Full_tree <- new_tree(ML_tree, data_terr[data_terr$tree_names %in% ML_tree$tip.label,] )
 #lose taxa that can't fit in tree
 
 ### Bayestraits analysis I - only no terrestrial species for a binary comparison
@@ -125,7 +132,7 @@ aqu_tree <- new_tree(ML_tree, data_aqu[data_aqu$tree_names %in% ML_tree$tip.labe
 # full tree set of 100 trees (all possible taxa)
 {tree_set_full <- tree_set #dummy tree set to be written over
 for(i in 1:100){
-  tree_set_full[[i]] <- new_tree(tree_set[[i]], data[data$tree_names %in% tree_set[[i]]$tip.label,])
+  tree_set_full[[i]] <- new_tree(tree_set[[i]], data_terr[data_terr$tree_names %in% tree_set[[i]]$tip.label,])
   tree_set_full[[i]]$node.label <- NULL
   if((i/10) == round((i/10))){print((100 - i)*.1)}} # counter down to zero as loop finishes
 }
@@ -146,7 +153,7 @@ write.tree(aqu_tree, file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.
 rm(list = c("tree_set", "ML_tree", "i", "new_tree", 
             "tree_set_aqu", "tree_set_full", "Full_tree", "aqu_tree"))
 
-write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_lung_data.csv")
+write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_data.csv")
 write.csv(data_aqu, file = "lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 
 rm(list = c("data", "data_aqu"))

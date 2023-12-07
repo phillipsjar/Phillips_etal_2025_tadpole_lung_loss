@@ -135,6 +135,7 @@ Fejervarya_limnocharis	1	1
 Hoplobatrachus_occipitalis	1	1
 Hoplobatrachus_tigerinus	1	1
 Limnonectes_kuhlii	1	1
+Limnonectes_leporinus	1	1
 Limnonectes_macrocephalus	1	1
 Limnonectes_magnus	0	1
 Limnonectes_palavanensis	1	1

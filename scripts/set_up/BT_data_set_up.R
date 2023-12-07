@@ -14,7 +14,7 @@ require(ape)
 data_aqu <- read.csv("lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 aqu_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex")
 
-data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_lung_data.csv")
+data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
 full_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_full.nex")
 
 tree_set_aqu <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex")
@@ -37,7 +37,6 @@ BT_data_mat = function(data, tree, traits){
 
 
 data_eight <- data_full[!(is.na(data_full$eight_state)),]
-
 
 BT_aqu_mat <- BT_data_mat(data_aqu, aqu_tree, c("ecology", "lung"))
 

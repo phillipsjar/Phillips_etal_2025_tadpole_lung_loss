@@ -9,6 +9,8 @@ load(file = "bayestraits_exports/master_dep_export.Rdata")
 load(file = "bayestraits_exports/master_indep_export.Rdata")
 load(file = "bayestraits_exports/master_six_state_dep_export.Rdata")
 load(file = "bayestraits_exports/master_six_state_indep_export.Rdata")
+
+
 Nruns <- 10
 data <- read.csv(file = "lung_loss_git/processed_data/lung_data/no_endo_lung_data.csv")
 trees <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set.nex")
