@@ -46,7 +46,7 @@ data[which(data$eight_state == 8),]
 
 # number of taxa with lung data:
 dim(data)[1]
-# 513 species
+# 524 species
 
 # 51 families represented
 length(unique(data$Family))
@@ -72,8 +72,7 @@ tree_set <- read.tree("lung_loss_git/trees/original_trees/TreePL/TreePL-Rooted_A
 ######################################################
 ############## match datasets to trees ###############
 ######################################################
-
-#ML_tree$tip.label[grep("Indira", ML_tree$tip.label)]
+#ML_tree$tip.label[grep("melasma", ML_tree$tip.label)]
 
 data$tree_names <- rep(NA)
 
