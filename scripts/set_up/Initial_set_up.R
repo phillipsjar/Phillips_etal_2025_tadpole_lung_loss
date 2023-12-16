@@ -36,7 +36,7 @@ rm(list = c("data_original", "keep_cols"))}
 
 table(data$eight_state)  
 
-data[which(data$eight_state == 8),]
+data[which(data$eight_state == 7),]
 
 #data <- data_vis
 
@@ -92,6 +92,7 @@ dim(data_aqu)
 
 
 data_terr <- data[!(is.na(data$eight_state)),]
+
 
 ##############################################################
 #             Trim trees to those datasets
@@ -157,7 +158,7 @@ rm(list = c("tree_set", "ML_tree", "i", "new_tree",
 write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_data.csv")
 write.csv(data_aqu, file = "lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 
-rm(list = c("data", "data_aqu"))
+rm(list = c("data", "data_aqu", "data_terr"))
 
 
 ####################################################################################################

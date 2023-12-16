@@ -7,7 +7,7 @@ Alytes_dickhilleni	1	1
 Alytes_obstetricans	1	1
 Discoglossus_galganoi	1	1
 Discoglossus_pictus	1	1
-Astylosternus_occidentalis	0	-
+Astylosternus_diadematus	0	1
 Astylosternus_rheophilus	0	1
 Cardioglossa_manengouba	0	0
 Cardioglossa_sp.	0	0
@@ -15,10 +15,10 @@ Leptodactylodon_bicolor	0	1
 Leptodactylodon_boulengeri	0	0
 Leptodactylodon_mertensi	0	1
 Leptopelis_boulengeri	0	1
-Leptopelis_kivuensis	1	-
+Leptopelis_kivuensis	1	1
 Leptopelis_natalensis	0	1
 Leptopelis_vermiculatus	1	1
-Nyctibates_corrugatus	0	-
+Nyctibates_corrugatus	0	1
 Trichobatrachus_robustus	0	1
 Ascaphus_montanus	0	0
 Ascaphus_truei	0	0
@@ -52,7 +52,6 @@ Incilius_coniferus	1	0
 Ingerophrynus_parvus	1	0
 Melanophryniscus_moreirae	1	0
 Melanophryniscus_pachyrhynus	0	0
-Melanophryniscus_setiba	1	-
 Mertensophryne_micranotis	1	0
 Nannophryne_cophotis	1	0
 Peltophryne_lemur	1	0
@@ -60,6 +59,8 @@ Peltophryne_peltocephala	1	0
 Phrynoidis_asper	0	0
 Rentapia_hosii	0	0
 Rhaebo_glaberrimus	0	0
+Rhaebo_guttatus	1	0
+Rhaebo_haematiticus	0	0
 Rhinella_acutirostris	1	0
 Rhinella_amabilis	-	0
 Rhinella_arenarum	1	0
@@ -83,7 +84,7 @@ Strauchbufo_raddei	1	0
 Vandijkophrynus_amatolicus	1	0
 Vandijkophrynus_angusticeps	1	0
 Vandijkophrynus_gariepensis	1	0
-Werneria_bambutensis	0	-
+Werneria_bambutensis	0	0
 Calyptocephalella_gayi	1	1
 Centrolene_geckoideum	0	0
 Centrolene_quindianum	0	1
@@ -201,7 +202,6 @@ Hyla_suweonensis	1	1
 Hyla_versicolor	1	1
 Hyloscirtus_armatus	0	1
 Hyloscirtus_colymba	0	1
-Isthmohyla_lancasteri	0	-
 Isthmohyla_rivularis	0	1
 Isthmohyla_tica	0	1
 Isthmohyla_zeteki	1	1
@@ -215,7 +215,7 @@ Litoria_dahlii	1	1
 Litoria_electrica	1	1
 Litoria_eucnemis	1	1
 Litoria_inermis	1	1
-Litoria_infrafrenata	1	-
+Litoria_infrafrenata	1	1
 Litoria_iris	1	1
 Litoria_jervisiensis	1	1
 Litoria_lesueurii	0	1
@@ -229,6 +229,7 @@ Litoria_subglandulosa	0	1
 Litoria_xanthomera	1	1
 Megastomatohyla_mixe	0	0
 Megastomatohyla_mixomaculata	0	0
+Myersiohyla_chamaeleo	0	1
 Nyctimystes_cheesmani	0	0
 Osteocephalus_oophagus	1	1
 Osteocephalus_planiceps	1	1
@@ -261,6 +262,7 @@ Scinax_ruber	1	1
 Smilisca_baudinii	1	1
 Smilisca_phaeota	1	1
 Sphaenorhynchus_dorisae	1	1
+Tepuihyla_edelcae	1	1
 Tlalocohyla_loquax	1	1
 Trachycephalus_resinifictrix	1	1
 Trachycephalus_typhonius	1	1
@@ -353,6 +355,8 @@ Oreolalax_rhodostigmatus	1	1
 Pelobatrachus_ligayae	0	1
 Pelobatrachus_nasuta	0	1
 Pelobatrachus_stejnegeri	0	1
+Scutiger_boulengeri	0	0
+Scutiger_chintingensis	0	0
 Chaperina_fusca	1	1
 Glyphoglossus_guttulatus	1	1
 Glyphoglossus_molossus	1	1
@@ -375,7 +379,6 @@ Mixophyes_balbus	0	1
 Mixophyes_schevilli	0	1
 Pseudophryne_bibronii	1	0
 Taudactylus_diurnus	0	1
-Nyctibatrachus_major	0	-
 Odontobatrachus_fouta	0	0
 Odontobatrachus_natator	0	0
 Macrogenioglottus_alipioi	1	1
@@ -386,6 +389,7 @@ Proceratophrys_bigibbosa	1	1
 Proceratophrys_boiei	0	1
 Proceratophrys_brauni	0	1
 Otophryne_robusta	0	0
+Otophryne_sp	0	0
 Pelobates_cultripes	1	1
 Pelobates_fuscus	1	1
 Pelodytes_caucasicus	1	1
@@ -403,6 +407,7 @@ Ptychadena_mascareniensis	1	1
 Amietia_angolensis	1	1
 Amietia_delalandii	1	1
 Amietia_fuscigula	0	1
+Amietia_ruwenzorica	0	1
 Amietia_vertebralis	0	1
 Cacosternum_namaquense	1	1
 Natalobatrachus_bonebergi	0	1
@@ -416,7 +421,7 @@ Amolops_ricketti	0	0
 Amolops_sp.	0	0
 Chalcorana_chalconota	0	1
 Chalcorana_megalonesa	1	1
-Clinotarsus_alticola	0	-
+Clinotarsus_alticola	0	1
 Clinotarsus_penelope	1	1
 Huia_cavitympanum	0	0
 Meristogenys_jerboa	0	0
@@ -457,6 +462,7 @@ Sanguirana_mearnsi	0	1
 Staurois_parvus	0	1
 Sylvirana_maosonensis	1	1
 Sylvirana_nigrovittata	0	1
+Wijayarana_melasma	0	0
 Buergeria_japonica	0	1
 Chiromantis_nongkhorensis	1	1
 Chiromantis_xerampelina	1	1

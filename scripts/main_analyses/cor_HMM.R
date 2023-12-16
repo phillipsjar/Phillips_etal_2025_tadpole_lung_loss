@@ -2,19 +2,19 @@ library(corHMM)
 library(ape)
 
 #BT_tree_set <- read.nexus(file = "bayestraits/trees/tree_set.nex")
-BT_ML_tree <- read.nexus(file = "git/bayestraits/trees/maxLH_tree.nex")
+BT_ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex")
 
-data_no_endo <- read.csv(file = "git/data/no_endo_lung_data.csv")
-data_no_endo$ecology[is.na(data_no_endo$ecology)] <- "?"
+data_aqu <- read.csv("lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
+data_aqu$ecology[is.na(data_aqu$ecology)] <- "?"
 
 #trim data to taxa present in trees
-data_corHMM <- data_no_endo[data_no_endo$Taxa %in% BT_ML_tree$tip.label,]
+data_corHMM <- data_aqu[data_aqu$Taxa %in% BT_ML_tree$tip.label,]
 
 dataset_corHMM <- as.data.frame(cbind(data_corHMM$Taxa, data_corHMM$ecology, data_corHMM$lung))
 colnames(dataset_corHMM) <- c("Genus_sp", "eco", "lung")
 
 
-corHMMtest <- fitCorrelationTest(BT_ML_tree, dataset_corHMM_ML, simplified_models = TRUE)
+corHMMtest <- fitCorrelationTest(BT_ML_tree, dataset_corHMM, simplified_models = TRUE)
 
 {
 AIC_indep_simp <- corHMMtest$simplified_independent_model_fit$AIC

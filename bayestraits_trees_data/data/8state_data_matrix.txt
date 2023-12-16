@@ -7,6 +7,7 @@ Alytes_dickhilleni	6
 Alytes_obstetricans	6
 Discoglossus_galganoi	6
 Discoglossus_pictus	6
+Astylosternus_diadematus	3
 Astylosternus_rheophilus	3
 Cardioglossa_manengouba	2
 Cardioglossa_sp.	2
@@ -14,8 +15,10 @@ Leptodactylodon_bicolor	4
 Leptodactylodon_boulengeri	2
 Leptodactylodon_mertensi	4
 Leptopelis_boulengeri	3
+Leptopelis_kivuensis	6
 Leptopelis_natalensis	3
 Leptopelis_vermiculatus	6
+Nyctibates_corrugatus	4
 Trichobatrachus_robustus	4
 Ascaphus_montanus	2
 Ascaphus_truei	2
@@ -57,6 +60,8 @@ Peltophryne_peltocephala	5
 Phrynoidis_asper	2
 Rentapia_hosii	1
 Rhaebo_glaberrimus	1
+Rhaebo_guttatus	5
+Rhaebo_haematiticus	1
 Rhinella_acutirostris	5
 Rhinella_arenarum	5
 Rhinella_castaneotica	5
@@ -79,6 +84,7 @@ Strauchbufo_raddei	5
 Vandijkophrynus_amatolicus	5
 Vandijkophrynus_angusticeps	5
 Vandijkophrynus_gariepensis	5
+Werneria_bambutensis	2
 Calyptocephalella_gayi	6
 Centrolene_geckoideum	2
 Centrolene_quindianum	4
@@ -217,6 +223,7 @@ Litoria_dahlii	6
 Litoria_electrica	6
 Litoria_eucnemis	6
 Litoria_inermis	6
+Litoria_infrafrenata	6
 Litoria_iris	6
 Litoria_jervisiensis	6
 Litoria_lesueurii	4
@@ -230,6 +237,7 @@ Litoria_subglandulosa	4
 Litoria_xanthomera	6
 Megastomatohyla_mixe	2
 Megastomatohyla_mixomaculata	2
+Myersiohyla_chamaeleo	3
 Nyctimystes_cheesmani	2
 Osteocephalus_oophagus	6
 Osteocephalus_planiceps	6
@@ -262,6 +270,7 @@ Scinax_ruber	6
 Smilisca_baudinii	6
 Smilisca_phaeota	6
 Sphaenorhynchus_dorisae	6
+Tepuihyla_edelcae	6
 Tlalocohyla_loquax	6
 Trachycephalus_resinifictrix	6
 Trachycephalus_typhonius	6
@@ -300,6 +309,7 @@ Leptodactylus_gracilis	6
 Leptodactylus_knudseni	6
 Leptodactylus_latinasus	6
 Leptodactylus_latrans	6
+Leptodactylus_lithonaetes	8
 Leptodactylus_mystaceus	6
 Leptodactylus_mystacinus	6
 Leptodactylus_podicipinus	6
@@ -356,6 +366,8 @@ Oreolalax_rhodostigmatus	6
 Pelobatrachus_ligayae	3
 Pelobatrachus_nasuta	3
 Pelobatrachus_stejnegeri	3
+Scutiger_boulengeri	1
+Scutiger_chintingensis	1
 Chaperina_fusca	6
 Glyphoglossus_guttulatus	6
 Glyphoglossus_molossus	6
@@ -388,9 +400,11 @@ Proceratophrys_bigibbosa	6
 Proceratophrys_boiei	3
 Proceratophrys_brauni	3
 Otophryne_robusta	2
+Otophryne_sp	2
 Pelobates_cultripes	6
 Pelobates_fuscus	6
 Pelodytes_caucasicus	6
+Arthroleptides_martiensseni	7
 Petropedetes_perreti	8
 Phrynobatrachus_guineensis	6
 Phrynobatrachus_natalensis	6
@@ -406,6 +420,7 @@ Ptychadena_mascareniensis	6
 Amietia_angolensis	6
 Amietia_delalandii	6
 Amietia_fuscigula	3
+Amietia_ruwenzorica	4
 Amietia_vertebralis	3
 Cacosternum_namaquense	6
 Natalobatrachus_bonebergi	3
@@ -420,6 +435,7 @@ Amolops_ricketti	2
 Amolops_sp.	2
 Chalcorana_chalconota	3
 Chalcorana_megalonesa	6
+Clinotarsus_alticola	3
 Clinotarsus_penelope	6
 Huia_cavitympanum	2
 Meristogenys_jerboa	2
@@ -460,6 +476,8 @@ Sanguirana_mearnsi	3
 Staurois_parvus	4
 Sylvirana_maosonensis	6
 Sylvirana_nigrovittata	3
+Wijayarana_melasma	2
+Indirana_beddomii	7
 Buergeria_japonica	3
 Chiromantis_nongkhorensis	6
 Chiromantis_xerampelina	6

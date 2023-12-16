@@ -14,8 +14,12 @@ require(ape)
 data_aqu <- read.csv("lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 aqu_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex")
 
+aqu_tree
+
 data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
 full_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_full.nex")
+
+full_tree
 
 tree_set_aqu <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex")
 tree_set_full <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_full.nex")
@@ -117,15 +121,17 @@ save(nodes_to_keep_full, file = "lung_loss_git/bayestraits_trees_data/data/nodes
 aqu_data <- read.csv("lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 aqu_data <- aqu_data[aqu_data$Taxa %in% aqu_tree$tip.label,]
 cols <- c("magenta", "blue", "red", "green")
-
+par(xpd = TRUE)
 plot(aqu_tree, show.tip.label = TRUE, cex = .25, 
      tip.color = cols[aqu_data$state[match(aqu_tree$tip.label, aqu_data$Taxa)]], type = "f")
+
 
 nodelabels(node = nodes_to_keep_aqu, frame = "circle", cex = .2)
 
 
-full_data <- read.csv("lung_loss_git/processed_data/lung_data/full_lung_data.csv")
+full_data <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
 full_data <- full_data[full_data$Taxa %in% full_tree$tip.label,]
+
 cols2 <- c("gold", "purple", "#99CCFF", "blue", "red", "lightgreen", "#844200", "#D28231")
 
 plot(full_tree, show.tip.label = TRUE, cex = .25, 
