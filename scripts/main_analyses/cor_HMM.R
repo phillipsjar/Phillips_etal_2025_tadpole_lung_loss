@@ -40,4 +40,10 @@ for(i in 1:length(AIC_values)){
 
 maxLH_deltas
 
+corHMMtest$simplified_hidden_Markov_correlated_model_fit
+
+
+
+
+
 
