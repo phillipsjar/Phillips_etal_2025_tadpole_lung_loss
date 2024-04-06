@@ -13,6 +13,15 @@ setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
   
 ####################################################
 
+data_original$six_state <- rep(NA)
+data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 0)] <- 1
+data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 1)] <- 2
+data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 1 & data_original$Spec_lotic == 0)] <- 3
+data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 1 & data_original$Spec_lotic == 1)] <- 4
+data_original$six_state[which(data_original$ecology == 1 & data_original$lung == 0)] <- 5
+data_original$six_state[which(data_original$ecology == 1 & data_original$lung == 1)] <- 6
+  
+
 data_original$eight_state <- rep(NA)
 data_original$eight_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 0)] <- 1
 data_original$eight_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 1)] <- 2
@@ -36,7 +45,11 @@ rm(list = c("data_original", "keep_cols"))}
 
 table(data$eight_state)  
 
+
 data[which(data$eight_state == 7),]
+
+
+
 
 #data <- data_vis
 
@@ -46,15 +59,43 @@ data[which(data$eight_state == 7),]
 
 # number of taxa with lung data:
 dim(data)[1]
-# 524 species
+length(which(data$lung == 0))
+length(which(data$lung == 1))
 
-# 51 families represented
+# 530 species
+
+# 44 families represented
 length(unique(data$Family))
+length(unique(data$Family[which(data$lung == 1)]))
+fams <- rep(NA, length(unique(data$Family)))
+names(fams) <- unique(data$Family)
+
+for(i in 1:length(fams)){
+  a <- data$lung[which(data$Family == names(fams)[i])]
+  if(0 %in% a){
+    fams[i] <- "has lungless"
+  }else{fams[i] <- "lunged"}}
+length(which(fams == "lunged"))
+length(which(fams == "has lungless"))
+
 # taxa distribution within families
 table(data$Family)
 
-# 249 genera represented
+# 252 genera represented
 length(unique(data$Genus))
+length(unique(data$Genus[which(data$lung == 1)]))
+
+genera <- rep(NA, length(unique(data$Genus)))
+names(genera) <- unique(data$Genus)
+
+for(i in 1:length(genera)){
+  a <- data$lung[which(data$Genus == names(genera)[i])]
+  if(0 %in% a){
+    genera[i] <- "has lungless"
+  }else{genera[i] <- "lunged"}}
+length(which(genera == "lunged"))
+
+
 # taxa distribution within genera
 table(data$Genus)
 
@@ -90,7 +131,7 @@ dim(data)
 data_aqu <- data[which(data$terrestrial != 1),]  #remove terrestrial taxa but keep taxa with unknown ecology
 dim(data_aqu)
 
-
+data_six <- data[!(is.na(data$six_state)),]
 data_terr <- data[!(is.na(data$eight_state)),]
 
 
@@ -117,27 +158,49 @@ new_tree = function(tree, data){
 Full_tree <- new_tree(ML_tree, data_terr[data_terr$tree_names %in% ML_tree$tip.label,] )
 #lose taxa that can't fit in tree
 
-### Bayestraits analysis I - only no terrestrial species for a binary comparison
+### Bayestraits analysis I - no terrestrial species for a binary comparison
 
 aqu_tree <- new_tree(ML_tree, data_aqu[data_aqu$tree_names %in% ML_tree$tip.label,] )
 #no terrestrial taxa and lose taxa that can't be placed in tree
 
 
 # BT analysis I - set of 100 trees (no terrestrial)
-{tree_set_aqu <- tree_set #dummy tree set to be written over
-  for(i in 1:100){
-    tree_set_aqu[[i]] <- new_tree(tree_set[[i]], data_aqu[data_aqu$tree_names %in% tree_set[[i]]$tip.label,])
+{tree_set_aqu <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+  class(tree_set_aqu) <- "Multiphylo"
+  samples <- sample(100, length(tree_set_aqu))
+
+  for(i in 1:length(tree_set_aqu)){
+    a <- samples[i]
+    tree_set_aqu[[i]] <- new_tree(tree_set[[a]], data_aqu[data_aqu$tree_names %in% tree_set[[a]]$tip.label,])
     tree_set_aqu[[i]]$node.label <- NULL
-    if((i/10) == round((i/10))){print((100 - i)*.1)}} # counter down to zero as loop finishes
+    if((i/10) == round((i/(length(tree_set_aqu)/10)))){print((length(tree_set_aqu) - i)*.1)}} # counter down to zero as loop finishes
 }
 
 # full tree set of 100 trees (all possible taxa)
-{tree_set_full <- tree_set #dummy tree set to be written over
-for(i in 1:100){
-  tree_set_full[[i]] <- new_tree(tree_set[[i]], data_terr[data_terr$tree_names %in% tree_set[[i]]$tip.label,])
+{tree_set_full <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+class(tree_set_full) <- "Multiphylo"
+  samples <- sample(100, length(tree_set_full))
+
+  for(i in 1:length(tree_set_full)){
+  a <- samples[i]
+  tree_set_full[[i]] <- new_tree(tree_set[[a]], data_terr[data_terr$tree_names %in% tree_set[[a]]$tip.label,])
   tree_set_full[[i]]$node.label <- NULL
-  if((i/10) == round((i/10))){print((100 - i)*.1)}} # counter down to zero as loop finishes
+  if((i/10) == round((i/(length(tree_set_full)/10)))){print((length(tree_set_full) - i)*.1)}} # counter down to zero as loop finishes
 }
+
+{tree_set_six <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+  class(tree_set_six) <- "Multiphylo"
+  samples <- sample(100, length(tree_set_six))
+  
+  for(i in 1:length(tree_set_six)){
+    a <- samples[i]
+    tree_set_six[[i]] <- new_tree(tree_set[[a]], data_six[data_six$tree_names %in% tree_set[[a]]$tip.label,])
+    tree_set_six[[i]]$node.label <- NULL
+    if((i/10) == round((i/(length(tree_set_six)/10)))){print((length(tree_set_six) - i)*.1)}} # counter down to zero as loop finishes
+}
+
+
+
 
 #write nexus files to bayestraits folder 
 
@@ -145,6 +208,7 @@ write.nexus(Full_tree, file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_
 write.nexus(aqu_tree, file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex", translate = TRUE)
 write.nexus(tree_set_full, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_full.nex", translate = TRUE)
 write.nexus(tree_set_aqu, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex", translate = TRUE)
+write.nexus(tree_set_six, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_six.nex", translate = TRUE)
 
 #write tree files (with node labels) to another folder for later visualization
 write.tree(Full_tree, file = "lung_loss_git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
@@ -152,13 +216,13 @@ write.tree(aqu_tree, file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.
 
 
 
-rm(list = c("tree_set", "ML_tree", "i", "new_tree", 
+rm(list = c("tree_set", "ML_tree", "i", "new_tree", "a", "samples", "tree_set_six",
             "tree_set_aqu", "tree_set_full", "Full_tree", "aqu_tree"))
 
 write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_data.csv")
 write.csv(data_aqu, file = "lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 
-rm(list = c("data", "data_aqu", "data_terr"))
+rm(list = c("data", "data_aqu", "data_terr", "data_six"))
 
 
 ####################################################################################################

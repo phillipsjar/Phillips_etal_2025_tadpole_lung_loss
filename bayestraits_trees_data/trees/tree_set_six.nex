@@ -1,0 +1,1038 @@
+#NEXUS
+[R-package APE, Fri Mar 22 00:16:11 2024]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 508;
+	TAXLABELS
+		Ascaphus_truei
+		Ascaphus_montanus
+		Alytes_obstetricans
+		Alytes_dickhilleni
+		Discoglossus_galganoi
+		Discoglossus_pictus
+		Bombina_orientalis
+		Bombina_variegata
+		Bombina_maxima
+		Rhinophrynus_dorsalis
+		Pipa_myersi
+		Pipa_carvalhoi
+		Xenopus_tropicalis
+		Xenopus_laevis
+		Hymenochirus_boettgeri
+		Scaphiopus_holbrookii
+		Spea_bombifrons
+		Spea_multiplicata
+		Spea_hammondii
+		Spea_intermontana
+		Pelodytes_caucasicus
+		Pelobates_fuscus
+		Pelobates_cultripes
+		Leptobrachella_pelodytoides
+		Leptobrachella_sp.
+		Leptobrachella_gracilis
+		Leptobrachium_montanum
+		Leptobrachium_cf_hasseltii
+		Leptobrachium_nigrops
+		Scutiger_boulengeri
+		Scutiger_chintingensis
+		Oreolalax_rhodostigmatus
+		Megophrys_montana
+		Boulenophrys_minor
+		Pelobatrachus_stejnegeri
+		Pelobatrachus_ligayae
+		Pelobatrachus_nasuta
+		Hadromophryne_natalensis
+		Heleophryne_purcelli
+		Heleophryne_regis
+		Telmatobius_macrostomus
+		Telmatobius_marmoratus
+		Telmatobius_peruvianus
+		Telmatobius_atahualpai
+		Ikakogi_ispacue
+		Ikakogi_tayrona
+		Hyalinobatrachium_chirripoi
+		Hyalinobatrachium_fleischmanni
+		Hyalinobatrachium_tricolor
+		Vitreorana_uranoscopa
+		Cochranella_granulosa
+		Espadarana_prosoblepon
+		Centrolene_geckoideum
+		Centrolene_quindianum
+		Nymphargus_griffithsi
+		Allophryne_ruthveni
+		Pleurodema_brachyops
+		Pleurodema_borellii
+		Pleurodema_cinereum
+		Pleurodema_kriegi
+		Pleurodema_bufoninum
+		Pleurodema_nebulosum
+		Engystomops_petersi
+		Engystomops_pustulosus
+		Physalaemus_cuvieri
+		Physalaemus_biligonigerus
+		Pseudopaludicola_falcipes
+		Adenomera_hylaedactyla
+		Leptodactylus_latrans
+		Leptodactylus_wagneri
+		Leptodactylus_podicipinus
+		Leptodactylus_flavopictus
+		Leptodactylus_knudseni
+		Leptodactylus_lithonaetes
+		Leptodactylus_mystacinus
+		Leptodactylus_mystaceus
+		Leptodactylus_latinasus
+		Leptodactylus_gracilis
+		Leptodactylus_fuscus
+		Rupirana_cardosoi
+		Crossodactylodes_itambe
+		Paratelmatobius_mantiqueira
+		Limnomedusa_macroglossa
+		Proceratophrys_brauni
+		Proceratophrys_bigibbosa
+		Proceratophrys_appendiculata
+		Proceratophrys_boiei
+		Odontophrynus_occidentalis
+		Odontophrynus_americanus
+		Macrogenioglottus_alipioi
+		Melanophryniscus_moreirae
+		Melanophryniscus_pachyrhynus
+		Dendrophryniscus_brevipollicatus
+		Amazophrynella_minuta
+		Nannophryne_cophotis
+		Peltophryne_lemur
+		Peltophryne_peltocephala
+		Anaxyrus_woodhousii
+		Anaxyrus_americanus
+		Anaxyrus_terrestris
+		Incilius_aucoinae
+		Incilius_coccifer
+		Incilius_coniferus
+		Rhinella_veraguensis
+		Rhinella_castaneotica
+		Rhinella_acutirostris
+		Rhinella_arenarum
+		Rhinella_icterica
+		Rhinella_marina
+		Rhinella_schneideri
+		Rhinella_jimi
+		Rhinella_crucifer
+		Rhinella_granulosa
+		Ansonia_hanitschi
+		Ansonia_mcgregori
+		Ingerophrynus_parvus
+		Schismaderma_carens
+		Strauchbufo_raddei
+		Phrynoidis_asper
+		Rentapia_hosii
+		Bufo_bufo
+		Bufo_torrenticola
+		Duttaphrynus_melanostictus
+		Duttaphrynus_stomaticus
+		Vandijkophrynus_angusticeps
+		Vandijkophrynus_gariepensis
+		Vandijkophrynus_amatolicus
+		Barbarophryne_brongersmai
+		Sclerophrys_lemairii
+		Sclerophrys_capensis
+		Sclerophrys_poweri
+		Sclerophrys_pardalis
+		Sclerophrys_pusilla
+		Sclerophrys_gutturalis
+		Sclerophrys_garmani
+		Capensibufo_tradouwi
+		Mertensophryne_micranotis
+		Werneria_bambutensis
+		Adhaerobufo_nasicus
+		Rhaebo_haematiticus
+		Rhaebo_guttatus
+		Rhaebo_glaberrimus
+		Atelopus_tricolor
+		Atelopus_nanay
+		Atelopus_zeteki
+		Frostius_pernambucensis
+		Anomaloglossus_tepuyensis
+		Allobates_grillisimilis
+		Allobates_insperatus
+		Rheobates_palmatus
+		Mannophryne_trinitatis
+		Mannophryne_herminae
+		Aromobates_saltuensis
+		Aromobates_mayorgai
+		Silverstoneia_flotator
+		Epipedobates_boulengeri
+		Epipedobates_tricolor
+		Colostethus_imbricolus
+		Ameerega_trivittata
+		Leucostethus_fraterdanieli
+		Hyloxalus_whymperi
+		Hyloxalus_subpunctatus
+		Minyobates_steyermarki
+		Excidobates_condor
+		Andinobates_bombetes
+		Ranitomeya_defleri
+		Oophaga_pumilio
+		Adelphobates_quinquevittatus
+		Adelphobates_galactonotus
+		Dendrobates_truncatus
+		Dendrobates_tinctorius
+		Phyllobates_bicolor
+		Phyllobates_aurotaenia
+		Ceratophrys_ornata
+		Ceratophrys_aurita
+		Ceratophrys_calcarata
+		Lepidobatrachus_laevis
+		Chacophrys_pierottii
+		Gastrotheca_monticola
+		Gastrotheca_riobambae
+		Fritziana_sp.
+		Flectonotus_sp.
+		Myersiohyla_chamaeleo
+		Hyloscirtus_colymba
+		Hyloscirtus_armatus
+		Boana_geographica
+		Boana_boans
+		Boana_cordobae
+		Bokermannohyla_claresignata
+		Boana_heilprini
+		Aplastodiscus_perviridis
+		Aparasphenodon_brunoi
+		Trachycephalus_resinifictrix
+		Trachycephalus_typhonius
+		Itapotihyla_langsdorffii
+		Osteopilus_septentrionalis
+		Osteopilus_dominicensis
+		Osteopilus_ocellatus
+		Osteopilus_vastus
+		Tepuihyla_edelcae
+		Osteocephalus_planiceps
+		Osteocephalus_oophagus
+		Dendropsophus_ebraccatus
+		Dendropsophus_labialis
+		Dendropsophus_marmoratus
+		Xenohyla_truncata
+		Scarthyla_vigilans
+		Scarthyla_goinorum
+		Pseudis_paradoxa
+		Pseudis_minuta
+		Charadrahyla_altipotens
+		Megastomatohyla_mixe
+		Megastomatohyla_mixomaculata
+		Ecnomiohyla_miotympanum
+		Ecnomiohyla_salvaje
+		Duellmanohyla_uranochroa
+		Duellmanohyla_rufioculis
+		Atlantihyla_spinipollex
+		Ptychohyla_hypomykter
+		Ptychohyla_zophodes
+		Duellmanohyla_salvavida
+		Duellmanohyla_soralia
+		Bromeliohyla_bromeliacia
+		Bromeliohyla_dendroscarta
+		Hyla_cinerea
+		Hyla_squirella
+		Hyla_chrysoscelis
+		Hyla_versicolor
+		Hyla_immaculata
+		Hyla_suweonensis
+		Hyla_annectans
+		Tlalocohyla_loquax
+		Isthmohyla_tica
+		Isthmohyla_rivularis
+		Isthmohyla_zeteki
+		Smilisca_baudinii
+		Smilisca_phaeota
+		Triprion_petasatus
+		Triprion_spinosus
+		Exerodonta_melanomma
+		Sarcohyla_arborescandens
+		Plectrohyla_teuchestes
+		Plectrohyla_guatemalensis
+		Acris_crepitans
+		Pseudacris_regilla
+		Pseudacris_ornata
+		Pseudacris_crucifer
+		Sphaenorhynchus_dorisae
+		Scinax_albicans
+		Scinax_nasicus
+		Scinax_ruber
+		Cruziohyla_sylviae
+		Phyllomedusa_vaillantii
+		Phyllomedusa_distincta
+		Phasmahyla_cruzi
+		Phasmahyla_guttata
+		Phasmahyla_cochranae
+		Agalychnis_callidryas
+		Agalychnis_moreletii
+		Litoria_xanthomera
+		Litoria_caerulea
+		Litoria_lesueurii
+		Litoria_nannotis
+		Litoria_rheocola
+		Litoria_nyakalensis
+		Litoria_aurea
+		Cyclorana_longipes
+		Litoria_moorei
+		Litoria_subglandulosa
+		Litoria_citropa
+		Litoria_eucnemis
+		Litoria_serrata
+		Litoria_dahlii
+		Cyclorana_australis
+		Litoria_peronii
+		Litoria_coplandi
+		Litoria_inermis
+		Litoria_adelaidensis
+		Litoria_jervisiensis
+		Litoria_electrica
+		Litoria_rubella
+		Litoria_iris
+		Litoria_booroolongensis
+		Litoria_infrafrenata
+		Nyctimystes_cheesmani
+		Hylorina_sylvatica
+		Atelognathus_reverberii
+		Batrachyla_taeniata
+		Alsodes_monticola
+		Alsodes_neuquensis
+		Alsodes_nodosus
+		Crossodactylus_gaudichaudii
+		Crossodactylus_schmidti
+		Hylodes_asper
+		Hylodes_meridionalis
+		Hylodes_phyllodes
+		Megaelosia_goeldii
+		Thoropa_megatympanum
+		Thoropa_miliaris
+		Thoropa_taophora
+		Cycloramphus_fuliginosus
+		Cycloramphus_izecksohni
+		Cycloramphus_boraceiensis
+		Calyptocephalella_gayi
+		Notaden_melanoscaphus
+		Heleioporus_sp.
+		Neobatrachus_wilsmorei
+		Neobatrachus_sudellae
+		Neobatrachus_aquilonius
+		Platyplectrum_ornatum
+		Notaden_nichollsi
+		Limnodynastes_lignarius
+		Limnodynastes_peronii
+		Limnodynastes_tasmaniensis
+		Limnodynastes_interioris
+		Limnodynastes_dumerilii
+		Taudactylus_diurnus
+		Pseudophryne_bibronii
+		Crinia_riparia
+		Crinia_signifera
+		Crinia_insignifera
+		Crinia_tasmaniensis
+		Mixophyes_schevilli
+		Mixophyes_balbus
+		Phrynomantis_annectens
+		Phrynomantis_bifasciatus
+		Ctenophryne_geayi
+		Chiasmocleis_antenori
+		Stereocyclops_incrassatus
+		Hamptophryne_alios
+		Hamptophryne_boliviana
+		Arcovomer_passarellii
+		Dermatonotus_muelleri
+		Elachistocleis_bicolor
+		Gastrophryne_carolinensis
+		Hypopachus_barberi
+		Hoplophryne_uluguruensis
+		Hoplophryne_rogersi
+		Otophryne_sp
+		Otophryne_robusta
+		Kalophrynus_sinensis
+		Siamophryne_troglodytes
+		Dyscophus_antongilii
+		Microhyla_fissipes
+		Microhyla_ornata
+		Microhyla_heymonsi
+		Microhyla_minuta
+		Microhyla_borneensis
+		Microhyla_malang
+		Microhyla_pineticola
+		Microhyla_annamensis
+		Microhyla_arboricola
+		Glyphoglossus_guttulatus
+		Glyphoglossus_molossus
+		Chaperina_fusca
+		Micryletta_inornata
+		Kaloula_pulchra
+		Paradoxophyla_palmata
+		Scaphiophryne_calcarata
+		Scaphiophryne_madagascariensis
+		Scaphiophryne_spinosa
+		Hemisus_marmoratus
+		Hemisus_guttatus
+		Kassina_cochranae
+		Kassina_senegalensis
+		Semnodactylus_wealii
+		Phlyctimantis_leonardi
+		Phlyctimantis_maculatus
+		Tachycnemis_seychellensis
+		Afrixalus_dorsalis
+		Afrixalus_delicatus
+		Hyperolius_pusillus
+		Hyperolius_marmoratus
+		Hyperolius_puncticulatus
+		Hyperolius_tuberilinguis
+		Acanthixalus_spinosus
+		Trichobatrachus_robustus
+		Astylosternus_diadematus
+		Astylosternus_rheophilus
+		Nyctibates_corrugatus
+		Cardioglossa_sp.
+		Cardioglossa_manengouba
+		Leptopelis_natalensis
+		Leptopelis_kivuensis
+		Leptopelis_vermiculatus
+		Leptopelis_boulengeri
+		Leptodactylodon_boulengeri
+		Leptodactylodon_bicolor
+		Leptodactylodon_mertensi
+		Ptychadena_mascareniensis
+		Ptychadena_anchietae
+		Phrynobatrachus_natalensis
+		Phrynobatrachus_guineensis
+		Odontobatrachus_natator
+		Odontobatrachus_fouta
+		Arthroleptides_martiensseni
+		Petropedetes_perreti
+		Conraua_robusta
+		Pyxicephalus_adspersus
+		Nothophryne_inagoensis
+		Tomopterna_cryptotis
+		Tomopterna_luganga
+		Natalobatrachus_bonebergi
+		Poyntonia_paludicola
+		Cacosternum_namaquense
+		Strongylopus_grayii
+		Amietia_fuscigula
+		Amietia_ruwenzorica
+		Amietia_vertebralis
+		Amietia_angolensis
+		Amietia_delalandii
+		Indirana_beddomii
+		Hoplobatrachus_occipitalis
+		Hoplobatrachus_tigerinus
+		Euphlyctis_cyanophlyctis
+		Sphaerotheca_breviceps
+		Minervarya_syhadrensis
+		Fejervarya_cancrivora
+		Fejervarya_limnocharis
+		Quasipaa_exilispinosa
+		Limnonectes_macrocephalus
+		Limnonectes_magnus
+		Limnonectes_leporinus
+		Limnonectes_palavanensis
+		Limnonectes_kuhlii
+		Occidozyga_laevis
+		Laliostoma_labrosum
+		Aglyptodactylus_madagascariensis
+		Boophis_albilabris
+		Boophis_sp.
+		Mantella_aurantiaca
+		Guibemantis_liber
+		Blommersia_transmarina
+		Spinomantis_fimbriatus
+		Mantidactylus_femoralis
+		Mantidactylus_majori
+		Mantidactylus_aerumnalis
+		Mantidactylus_opiparis
+		Mantidactylus_melanopleura
+		Mantidactylus_biporus
+		Mantidactylus_alutus
+		Mantidactylus_guttulatus
+		Gephyromantis_pseudoasper
+		Buergeria_japonica
+		Theloderma_leporosum
+		Theloderma_horridum
+		Nyctixalus_pictus
+		Nyctixalus_spinosum
+		Kurixalus_appendiculatus
+		Philautus_sp.
+		Chiromantis_nongkhorensis
+		Chiromantis_xerampelina
+		Polypedates_leucomystax
+		Feihyla_kajau
+		Rhacophorus_pardalis
+		Rhacophorus_baluensis
+		Leptomantis_penanorum
+		Leptomantis_angulirostris
+		Leptomantis_fasciatus
+		Zhangixalus_dulitensis
+		Zhangixalus_moltrechti
+		Staurois_parvus
+		Huia_cavitympanum
+		Clinotarsus_penelope
+		Clinotarsus_alticola
+		Wijayarana_melasma
+		Meristogenys_jerboa
+		Pelophylax_ridibundus
+		Amolops_ricketti
+		Amolops_sp.
+		Rana_sierramadrensis
+		Rana_pustulosa
+		Rana_zweifeli
+		Rana_palmipes
+		Rana_vaillanti
+		Rana_juliani
+		Rana_maculata
+		Rana_vibicaria
+		Rana_warszewitschii
+		Rana_pipiens
+		Rana_chiricahuensis
+		Rana_sphenocephala
+		Rana_berlandieri
+		Rana_neovolcanica
+		Rana_blairi
+		Rana_magnaocularis
+		Rana_yavapaiensis
+		Rana_spectabilis
+		Rana_palustris
+		Rana_virgatipes
+		Rana_catesbeiana
+		Rana_clamitans
+		Rana_septentrionalis
+		Rana_sylvatica
+		Rana_pretiosa
+		Rana_johnsi
+		Rana_sauteri
+		Rana_omeimontis
+		Rana_longicrus
+		Rana_temporaria
+		Sanguirana_mearnsi
+		Pulchrana_grandocula
+		Sylvirana_maosonensis
+		Sylvirana_nigrovittata
+		Papurana_kreffti
+		Chalcorana_megalonesa
+		Chalcorana_chalconota
+		Amnirana_albolabris
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Ascaphus_truei,
+		2	Ascaphus_montanus,
+		3	Alytes_obstetricans,
+		4	Alytes_dickhilleni,
+		5	Discoglossus_galganoi,
+		6	Discoglossus_pictus,
+		7	Bombina_orientalis,
+		8	Bombina_variegata,
+		9	Bombina_maxima,
+		10	Rhinophrynus_dorsalis,
+		11	Pipa_myersi,
+		12	Pipa_carvalhoi,
+		13	Xenopus_tropicalis,
+		14	Xenopus_laevis,
+		15	Hymenochirus_boettgeri,
+		16	Scaphiopus_holbrookii,
+		17	Spea_bombifrons,
+		18	Spea_multiplicata,
+		19	Spea_hammondii,
+		20	Spea_intermontana,
+		21	Pelodytes_caucasicus,
+		22	Pelobates_fuscus,
+		23	Pelobates_cultripes,
+		24	Leptobrachella_pelodytoides,
+		25	Leptobrachella_sp.,
+		26	Leptobrachella_gracilis,
+		27	Leptobrachium_montanum,
+		28	Leptobrachium_cf_hasseltii,
+		29	Leptobrachium_nigrops,
+		30	Scutiger_boulengeri,
+		31	Scutiger_chintingensis,
+		32	Oreolalax_rhodostigmatus,
+		33	Megophrys_montana,
+		34	Boulenophrys_minor,
+		35	Pelobatrachus_stejnegeri,
+		36	Pelobatrachus_ligayae,
+		37	Pelobatrachus_nasuta,
+		38	Hadromophryne_natalensis,
+		39	Heleophryne_purcelli,
+		40	Heleophryne_regis,
+		41	Telmatobius_macrostomus,
+		42	Telmatobius_marmoratus,
+		43	Telmatobius_peruvianus,
+		44	Telmatobius_atahualpai,
+		45	Ikakogi_ispacue,
+		46	Ikakogi_tayrona,
+		47	Hyalinobatrachium_chirripoi,
+		48	Hyalinobatrachium_fleischmanni,
+		49	Hyalinobatrachium_tricolor,
+		50	Vitreorana_uranoscopa,
+		51	Cochranella_granulosa,
+		52	Espadarana_prosoblepon,
+		53	Centrolene_geckoideum,
+		54	Centrolene_quindianum,
+		55	Nymphargus_griffithsi,
+		56	Allophryne_ruthveni,
+		57	Pleurodema_brachyops,
+		58	Pleurodema_borellii,
+		59	Pleurodema_cinereum,
+		60	Pleurodema_kriegi,
+		61	Pleurodema_bufoninum,
+		62	Pleurodema_nebulosum,
+		63	Engystomops_petersi,
+		64	Engystomops_pustulosus,
+		65	Physalaemus_cuvieri,
+		66	Physalaemus_biligonigerus,
+		67	Pseudopaludicola_falcipes,
+		68	Adenomera_hylaedactyla,
+		69	Leptodactylus_latrans,
+		70	Leptodactylus_wagneri,
+		71	Leptodactylus_podicipinus,
+		72	Leptodactylus_flavopictus,
+		73	Leptodactylus_knudseni,
+		74	Leptodactylus_lithonaetes,
+		75	Leptodactylus_mystacinus,
+		76	Leptodactylus_mystaceus,
+		77	Leptodactylus_latinasus,
+		78	Leptodactylus_gracilis,
+		79	Leptodactylus_fuscus,
+		80	Rupirana_cardosoi,
+		81	Crossodactylodes_itambe,
+		82	Paratelmatobius_mantiqueira,
+		83	Limnomedusa_macroglossa,
+		84	Proceratophrys_brauni,
+		85	Proceratophrys_bigibbosa,
+		86	Proceratophrys_appendiculata,
+		87	Proceratophrys_boiei,
+		88	Odontophrynus_occidentalis,
+		89	Odontophrynus_americanus,
+		90	Macrogenioglottus_alipioi,
+		91	Melanophryniscus_moreirae,
+		92	Melanophryniscus_pachyrhynus,
+		93	Dendrophryniscus_brevipollicatus,
+		94	Amazophrynella_minuta,
+		95	Nannophryne_cophotis,
+		96	Peltophryne_lemur,
+		97	Peltophryne_peltocephala,
+		98	Anaxyrus_woodhousii,
+		99	Anaxyrus_americanus,
+		100	Anaxyrus_terrestris,
+		101	Incilius_aucoinae,
+		102	Incilius_coccifer,
+		103	Incilius_coniferus,
+		104	Rhinella_veraguensis,
+		105	Rhinella_castaneotica,
+		106	Rhinella_acutirostris,
+		107	Rhinella_arenarum,
+		108	Rhinella_icterica,
+		109	Rhinella_marina,
+		110	Rhinella_schneideri,
+		111	Rhinella_jimi,
+		112	Rhinella_crucifer,
+		113	Rhinella_granulosa,
+		114	Ansonia_hanitschi,
+		115	Ansonia_mcgregori,
+		116	Ingerophrynus_parvus,
+		117	Schismaderma_carens,
+		118	Strauchbufo_raddei,
+		119	Phrynoidis_asper,
+		120	Rentapia_hosii,
+		121	Bufo_bufo,
+		122	Bufo_torrenticola,
+		123	Duttaphrynus_melanostictus,
+		124	Duttaphrynus_stomaticus,
+		125	Vandijkophrynus_angusticeps,
+		126	Vandijkophrynus_gariepensis,
+		127	Vandijkophrynus_amatolicus,
+		128	Barbarophryne_brongersmai,
+		129	Sclerophrys_lemairii,
+		130	Sclerophrys_capensis,
+		131	Sclerophrys_poweri,
+		132	Sclerophrys_pardalis,
+		133	Sclerophrys_pusilla,
+		134	Sclerophrys_gutturalis,
+		135	Sclerophrys_garmani,
+		136	Capensibufo_tradouwi,
+		137	Mertensophryne_micranotis,
+		138	Werneria_bambutensis,
+		139	Adhaerobufo_nasicus,
+		140	Rhaebo_haematiticus,
+		141	Rhaebo_guttatus,
+		142	Rhaebo_glaberrimus,
+		143	Atelopus_tricolor,
+		144	Atelopus_nanay,
+		145	Atelopus_zeteki,
+		146	Frostius_pernambucensis,
+		147	Anomaloglossus_tepuyensis,
+		148	Allobates_grillisimilis,
+		149	Allobates_insperatus,
+		150	Rheobates_palmatus,
+		151	Mannophryne_trinitatis,
+		152	Mannophryne_herminae,
+		153	Aromobates_saltuensis,
+		154	Aromobates_mayorgai,
+		155	Silverstoneia_flotator,
+		156	Epipedobates_boulengeri,
+		157	Epipedobates_tricolor,
+		158	Colostethus_imbricolus,
+		159	Ameerega_trivittata,
+		160	Leucostethus_fraterdanieli,
+		161	Hyloxalus_whymperi,
+		162	Hyloxalus_subpunctatus,
+		163	Minyobates_steyermarki,
+		164	Excidobates_condor,
+		165	Andinobates_bombetes,
+		166	Ranitomeya_defleri,
+		167	Oophaga_pumilio,
+		168	Adelphobates_quinquevittatus,
+		169	Adelphobates_galactonotus,
+		170	Dendrobates_truncatus,
+		171	Dendrobates_tinctorius,
+		172	Phyllobates_bicolor,
+		173	Phyllobates_aurotaenia,
+		174	Ceratophrys_ornata,
+		175	Ceratophrys_aurita,
+		176	Ceratophrys_calcarata,
+		177	Lepidobatrachus_laevis,
+		178	Chacophrys_pierottii,
+		179	Gastrotheca_monticola,
+		180	Gastrotheca_riobambae,
+		181	Fritziana_sp.,
+		182	Flectonotus_sp.,
+		183	Myersiohyla_chamaeleo,
+		184	Hyloscirtus_colymba,
+		185	Hyloscirtus_armatus,
+		186	Boana_geographica,
+		187	Boana_boans,
+		188	Boana_cordobae,
+		189	Bokermannohyla_claresignata,
+		190	Boana_heilprini,
+		191	Aplastodiscus_perviridis,
+		192	Aparasphenodon_brunoi,
+		193	Trachycephalus_resinifictrix,
+		194	Trachycephalus_typhonius,
+		195	Itapotihyla_langsdorffii,
+		196	Osteopilus_septentrionalis,
+		197	Osteopilus_dominicensis,
+		198	Osteopilus_ocellatus,
+		199	Osteopilus_vastus,
+		200	Tepuihyla_edelcae,
+		201	Osteocephalus_planiceps,
+		202	Osteocephalus_oophagus,
+		203	Dendropsophus_ebraccatus,
+		204	Dendropsophus_labialis,
+		205	Dendropsophus_marmoratus,
+		206	Xenohyla_truncata,
+		207	Scarthyla_vigilans,
+		208	Scarthyla_goinorum,
+		209	Pseudis_paradoxa,
+		210	Pseudis_minuta,
+		211	Charadrahyla_altipotens,
+		212	Megastomatohyla_mixe,
+		213	Megastomatohyla_mixomaculata,
+		214	Ecnomiohyla_miotympanum,
+		215	Ecnomiohyla_salvaje,
+		216	Duellmanohyla_uranochroa,
+		217	Duellmanohyla_rufioculis,
+		218	Atlantihyla_spinipollex,
+		219	Ptychohyla_hypomykter,
+		220	Ptychohyla_zophodes,
+		221	Duellmanohyla_salvavida,
+		222	Duellmanohyla_soralia,
+		223	Bromeliohyla_bromeliacia,
+		224	Bromeliohyla_dendroscarta,
+		225	Hyla_cinerea,
+		226	Hyla_squirella,
+		227	Hyla_chrysoscelis,
+		228	Hyla_versicolor,
+		229	Hyla_immaculata,
+		230	Hyla_suweonensis,
+		231	Hyla_annectans,
+		232	Tlalocohyla_loquax,
+		233	Isthmohyla_tica,
+		234	Isthmohyla_rivularis,
+		235	Isthmohyla_zeteki,
+		236	Smilisca_baudinii,
+		237	Smilisca_phaeota,
+		238	Triprion_petasatus,
+		239	Triprion_spinosus,
+		240	Exerodonta_melanomma,
+		241	Sarcohyla_arborescandens,
+		242	Plectrohyla_teuchestes,
+		243	Plectrohyla_guatemalensis,
+		244	Acris_crepitans,
+		245	Pseudacris_regilla,
+		246	Pseudacris_ornata,
+		247	Pseudacris_crucifer,
+		248	Sphaenorhynchus_dorisae,
+		249	Scinax_albicans,
+		250	Scinax_nasicus,
+		251	Scinax_ruber,
+		252	Cruziohyla_sylviae,
+		253	Phyllomedusa_vaillantii,
+		254	Phyllomedusa_distincta,
+		255	Phasmahyla_cruzi,
+		256	Phasmahyla_guttata,
+		257	Phasmahyla_cochranae,
+		258	Agalychnis_callidryas,
+		259	Agalychnis_moreletii,
+		260	Litoria_xanthomera,
+		261	Litoria_caerulea,
+		262	Litoria_lesueurii,
+		263	Litoria_nannotis,
+		264	Litoria_rheocola,
+		265	Litoria_nyakalensis,
+		266	Litoria_aurea,
+		267	Cyclorana_longipes,
+		268	Litoria_moorei,
+		269	Litoria_subglandulosa,
+		270	Litoria_citropa,
+		271	Litoria_eucnemis,
+		272	Litoria_serrata,
+		273	Litoria_dahlii,
+		274	Cyclorana_australis,
+		275	Litoria_peronii,
+		276	Litoria_coplandi,
+		277	Litoria_inermis,
+		278	Litoria_adelaidensis,
+		279	Litoria_jervisiensis,
+		280	Litoria_electrica,
+		281	Litoria_rubella,
+		282	Litoria_iris,
+		283	Litoria_booroolongensis,
+		284	Litoria_infrafrenata,
+		285	Nyctimystes_cheesmani,
+		286	Hylorina_sylvatica,
+		287	Atelognathus_reverberii,
+		288	Batrachyla_taeniata,
+		289	Alsodes_monticola,
+		290	Alsodes_neuquensis,
+		291	Alsodes_nodosus,
+		292	Crossodactylus_gaudichaudii,
+		293	Crossodactylus_schmidti,
+		294	Hylodes_asper,
+		295	Hylodes_meridionalis,
+		296	Hylodes_phyllodes,
+		297	Megaelosia_goeldii,
+		298	Thoropa_megatympanum,
+		299	Thoropa_miliaris,
+		300	Thoropa_taophora,
+		301	Cycloramphus_fuliginosus,
+		302	Cycloramphus_izecksohni,
+		303	Cycloramphus_boraceiensis,
+		304	Calyptocephalella_gayi,
+		305	Notaden_melanoscaphus,
+		306	Heleioporus_sp.,
+		307	Neobatrachus_wilsmorei,
+		308	Neobatrachus_sudellae,
+		309	Neobatrachus_aquilonius,
+		310	Platyplectrum_ornatum,
+		311	Notaden_nichollsi,
+		312	Limnodynastes_lignarius,
+		313	Limnodynastes_peronii,
+		314	Limnodynastes_tasmaniensis,
+		315	Limnodynastes_interioris,
+		316	Limnodynastes_dumerilii,
+		317	Taudactylus_diurnus,
+		318	Pseudophryne_bibronii,
+		319	Crinia_riparia,
+		320	Crinia_signifera,
+		321	Crinia_insignifera,
+		322	Crinia_tasmaniensis,
+		323	Mixophyes_schevilli,
+		324	Mixophyes_balbus,
+		325	Phrynomantis_annectens,
+		326	Phrynomantis_bifasciatus,
+		327	Ctenophryne_geayi,
+		328	Chiasmocleis_antenori,
+		329	Stereocyclops_incrassatus,
+		330	Hamptophryne_alios,
+		331	Hamptophryne_boliviana,
+		332	Arcovomer_passarellii,
+		333	Dermatonotus_muelleri,
+		334	Elachistocleis_bicolor,
+		335	Gastrophryne_carolinensis,
+		336	Hypopachus_barberi,
+		337	Hoplophryne_uluguruensis,
+		338	Hoplophryne_rogersi,
+		339	Otophryne_sp,
+		340	Otophryne_robusta,
+		341	Kalophrynus_sinensis,
+		342	Siamophryne_troglodytes,
+		343	Dyscophus_antongilii,
+		344	Microhyla_fissipes,
+		345	Microhyla_ornata,
+		346	Microhyla_heymonsi,
+		347	Microhyla_minuta,
+		348	Microhyla_borneensis,
+		349	Microhyla_malang,
+		350	Microhyla_pineticola,
+		351	Microhyla_annamensis,
+		352	Microhyla_arboricola,
+		353	Glyphoglossus_guttulatus,
+		354	Glyphoglossus_molossus,
+		355	Chaperina_fusca,
+		356	Micryletta_inornata,
+		357	Kaloula_pulchra,
+		358	Paradoxophyla_palmata,
+		359	Scaphiophryne_calcarata,
+		360	Scaphiophryne_madagascariensis,
+		361	Scaphiophryne_spinosa,
+		362	Hemisus_marmoratus,
+		363	Hemisus_guttatus,
+		364	Kassina_cochranae,
+		365	Kassina_senegalensis,
+		366	Semnodactylus_wealii,
+		367	Phlyctimantis_leonardi,
+		368	Phlyctimantis_maculatus,
+		369	Tachycnemis_seychellensis,
+		370	Afrixalus_dorsalis,
+		371	Afrixalus_delicatus,
+		372	Hyperolius_pusillus,
+		373	Hyperolius_marmoratus,
+		374	Hyperolius_puncticulatus,
+		375	Hyperolius_tuberilinguis,
+		376	Acanthixalus_spinosus,
+		377	Trichobatrachus_robustus,
+		378	Astylosternus_diadematus,
+		379	Astylosternus_rheophilus,
+		380	Nyctibates_corrugatus,
+		381	Cardioglossa_sp.,
+		382	Cardioglossa_manengouba,
+		383	Leptopelis_natalensis,
+		384	Leptopelis_kivuensis,
+		385	Leptopelis_vermiculatus,
+		386	Leptopelis_boulengeri,
+		387	Leptodactylodon_boulengeri,
+		388	Leptodactylodon_bicolor,
+		389	Leptodactylodon_mertensi,
+		390	Ptychadena_mascareniensis,
+		391	Ptychadena_anchietae,
+		392	Phrynobatrachus_natalensis,
+		393	Phrynobatrachus_guineensis,
+		394	Odontobatrachus_natator,
+		395	Odontobatrachus_fouta,
+		396	Arthroleptides_martiensseni,
+		397	Petropedetes_perreti,
+		398	Conraua_robusta,
+		399	Pyxicephalus_adspersus,
+		400	Nothophryne_inagoensis,
+		401	Tomopterna_cryptotis,
+		402	Tomopterna_luganga,
+		403	Natalobatrachus_bonebergi,
+		404	Poyntonia_paludicola,
+		405	Cacosternum_namaquense,
+		406	Strongylopus_grayii,
+		407	Amietia_fuscigula,
+		408	Amietia_ruwenzorica,
+		409	Amietia_vertebralis,
+		410	Amietia_angolensis,
+		411	Amietia_delalandii,
+		412	Indirana_beddomii,
+		413	Hoplobatrachus_occipitalis,
+		414	Hoplobatrachus_tigerinus,
+		415	Euphlyctis_cyanophlyctis,
+		416	Sphaerotheca_breviceps,
+		417	Minervarya_syhadrensis,
+		418	Fejervarya_cancrivora,
+		419	Fejervarya_limnocharis,
+		420	Quasipaa_exilispinosa,
+		421	Limnonectes_macrocephalus,
+		422	Limnonectes_magnus,
+		423	Limnonectes_leporinus,
+		424	Limnonectes_palavanensis,
+		425	Limnonectes_kuhlii,
+		426	Occidozyga_laevis,
+		427	Laliostoma_labrosum,
+		428	Aglyptodactylus_madagascariensis,
+		429	Boophis_albilabris,
+		430	Boophis_sp.,
+		431	Mantella_aurantiaca,
+		432	Guibemantis_liber,
+		433	Blommersia_transmarina,
+		434	Spinomantis_fimbriatus,
+		435	Mantidactylus_femoralis,
+		436	Mantidactylus_majori,
+		437	Mantidactylus_aerumnalis,
+		438	Mantidactylus_opiparis,
+		439	Mantidactylus_melanopleura,
+		440	Mantidactylus_biporus,
+		441	Mantidactylus_alutus,
+		442	Mantidactylus_guttulatus,
+		443	Gephyromantis_pseudoasper,
+		444	Buergeria_japonica,
+		445	Theloderma_leporosum,
+		446	Theloderma_horridum,
+		447	Nyctixalus_pictus,
+		448	Nyctixalus_spinosum,
+		449	Kurixalus_appendiculatus,
+		450	Philautus_sp.,
+		451	Chiromantis_nongkhorensis,
+		452	Chiromantis_xerampelina,
+		453	Polypedates_leucomystax,
+		454	Feihyla_kajau,
+		455	Rhacophorus_pardalis,
+		456	Rhacophorus_baluensis,
+		457	Leptomantis_penanorum,
+		458	Leptomantis_angulirostris,
+		459	Leptomantis_fasciatus,
+		460	Zhangixalus_dulitensis,
+		461	Zhangixalus_moltrechti,
+		462	Staurois_parvus,
+		463	Huia_cavitympanum,
+		464	Clinotarsus_penelope,
+		465	Clinotarsus_alticola,
+		466	Wijayarana_melasma,
+		467	Meristogenys_jerboa,
+		468	Pelophylax_ridibundus,
+		469	Amolops_ricketti,
+		470	Amolops_sp.,
+		471	Rana_sierramadrensis,
+		472	Rana_pustulosa,
+		473	Rana_zweifeli,
+		474	Rana_palmipes,
+		475	Rana_vaillanti,
+		476	Rana_juliani,
+		477	Rana_maculata,
+		478	Rana_vibicaria,
+		479	Rana_warszewitschii,
+		480	Rana_pipiens,
+		481	Rana_chiricahuensis,
+		482	Rana_sphenocephala,
+		483	Rana_berlandieri,
+		484	Rana_neovolcanica,
+		485	Rana_blairi,
+		486	Rana_magnaocularis,
+		487	Rana_yavapaiensis,
+		488	Rana_spectabilis,
+		489	Rana_palustris,
+		490	Rana_virgatipes,
+		491	Rana_catesbeiana,
+		492	Rana_clamitans,
+		493	Rana_septentrionalis,
+		494	Rana_sylvatica,
+		495	Rana_pretiosa,
+		496	Rana_johnsi,
+		497	Rana_sauteri,
+		498	Rana_omeimontis,
+		499	Rana_longicrus,
+		500	Rana_temporaria,
+		501	Sanguirana_mearnsi,
+		502	Pulchrana_grandocula,
+		503	Sylvirana_maosonensis,
+		504	Sylvirana_nigrovittata,
+		505	Papurana_kreffti,
+		506	Chalcorana_megalonesa,
+		507	Chalcorana_chalconota,
+		508	Amnirana_albolabris
+	;
+	TREE * UNTITLED = [&R] ((1:3.758942,2:3.758942):195.894229,((((3:13.24565,4:13.245651):88.356113,(5:19.919755,6:19.919755):81.682009):43.409816,((7:17.958123,8:17.958123):3.107786,9:21.065909):123.94567):48.549123,((10:165.390786,((11:45.038291,12:45.038291):79.391709,((13:49.715005,14:49.715005):63.209196,15:112.924202):11.505799):40.960786):23.348079,(((16:47.971408,(17:14.305049,(18:11.100544,(19:4.409522,20:4.409522):6.691022):3.204505):33.66636):103.449434,(21:141.427366,((22:18.433482,23:18.433482):100.729942,((((24:31.429085,25:31.429084):27.17873,26:58.607813):10.758216,((27:38.482862,(28:36.804826,29:36.804826):1.678036):16.446967,((30:16.915644,31:16.915645):27.633548,32:44.549192):10.380637):14.4362):15.804451,((33:39.980715,34:39.980715):17.113726,(35:32.18296,(36:26.60876,37:26.60876):5.5742):24.911482):28.076039):33.992944):22.263942):9.993476):31.051476,((38:42.677993,(39:8.369018,40:8.369018):34.308975):100.654652,((((((41:6.986579,(42:0.101646,43:0.101646):6.884933):4.44329,44:11.429869):57.070823,(((((((45:20.86858,46:20.86858):7.128731,((47:19.264631,(48:17.23305,49:17.233051):2.031582):6.669636,((50:21.531765,(51:18.72265,52:18.72265):2.809116):2.906065,((53:18.155492,54:18.155491):4.145888,55:22.30138):2.13645):1.496438):2.063044):15.512569,56:43.509881):19.199111,((((57:23.392071,(58:2.863412,59:2.863412):20.528659):9.798482,((60:7.453229,61:7.45323):20.955896,62:28.409125):4.781428):10.89395,((63:23.264867,64:23.264866):11.105835,(65:26.653117,66:26.653117):7.717585):9.713801):14.587362,(67:56.661759,((68:43.997466,(((69:28.10456,(70:21.271268,71:21.271268):6.833293):4.051548,((72:28.461693,73:28.461693):2.143394,74:30.605087):1.551022):1.728972,(75:25.310148,((76:17.447867,(77:14.70186,78:14.70186):2.746006):6.510225,79:23.958091):1.352057):8.574932):10.112387):9.323442,(80:44.158758,(81:28.252955,82:28.252956):15.905803):9.162152):3.34085):2.010105):4.037127):2.446895,((83:51.089323,(((84:13.458432,85:13.458431):7.725792,(86:12.698757,87:12.698757):8.485466):9.744322,((88:12.036467,89:12.036467):4.317961,90:16.354428):14.574117):20.160778):12.510212,((91:21.100462,92:21.100463):34.91528,(((93:37.870809,94:37.870809):5.602358,(95:34.028457,(((96:16.678139,97:16.67814):12.734502,(((((98:1.341516,99:1.341515):2.043987,100:3.385503):17.482104,(101:17.197582,(102:12.219552,103:12.219553):4.978032):3.670025):4.634387,((104:19.146211,(105:6.225802,106:6.225802):12.920408):2.12086,(((((107:2.925276,108:2.925276):2.508857,(109:1.307156,110:1.307156):4.126976):1.740389,111:7.174521):1.394113,112:8.568635):10.224127,113:18.79276):2.47431):4.234923):1.275906,(((((114:20.557556,115:20.557555):2.932807,116:23.490362):0.969762,(117:23.744506,(118:22.784543,((119:18.065619,120:18.06562):4.044004,((121:13.846833,122:13.846835):7.735441,(123:17.319759,124:17.319759):4.262515):0.527349):0.674919):0.959964):0.715617):0.175911,(((125:4.51625,(126:1.743428,127:1.743428):2.772821):18.083456,(128:21.06749,(((129:11.847418,130:11.847418):2.655017,131:14.502435):3.212185,(132:17.041101,(133:16.22618,(134:13.738537,135:13.738538):2.48764):0.814923):0.673518):3.352871):1.532216):1.250917,(136:22.944238,137:22.944239):0.906384):0.785412):0.163692,138:24.799727):1.978174):2.634741):1.462158,(139:26.829354,(140:15.867285,(141:11.597494,142:11.597494):4.269791):10.962069):4.045444):3.153659):9.444709):3.426355,((143:22.841541,(144:14.006263,145:14.006263):8.835277):21.794962,146:44.636503):2.263018):9.116221):7.583794):1.55635):2.437833,((147:38.518773,((148:18.165019,149:18.16502):18.702432,(150:35.122337,((151:17.285497,152:17.285499):11.033796,(153:9.546319,154:9.546319):18.772974):6.803043):1.745114):1.651322):6.96115,((((155:18.868838,(156:3.992159,157:3.992158):14.876679):13.311553,(158:29.645067,(159:27.244737,160:27.244736):2.40033):2.535325):9.230677,(161:36.953194,162:36.953194):4.457873):1.548034,(((163:35.446331,(164:26.804509,(165:23.032535,166:23.032534):3.771974):8.641821):0.001233,(167:33.101584,((168:18.923501,169:18.923501):12.544731,(170:14.304717,171:14.304717):17.163515):1.633353):2.345979):3.053935,(172:3.039729,173:3.039729):35.461768):4.457603):2.520821):22.113797):0.511064,(((((174:9.646236,175:9.646236):6.589833,176:16.236069):1.508016,(177:15.115539,178:15.115539):2.628546):42.192496,(((179:20.12939,180:20.12939):28.830249,181:48.959641):4.080244,182:53.039883):6.896699):2.642806,(((183:45.034641,((184:34.647902,185:34.647902):6.780154,(((186:16.010819,187:16.010819):20.260864,((188:19.072643,189:19.072643):12.909273,190:31.981916):4.289768):1.857315,191:38.128999):3.299059):3.606585):6.28087,((((192:21.988378,(193:6.14138,194:6.14138):15.846999):8.808651,(195:30.275771,(((196:21.682874,(197:20.501196,198:20.501196):1.181678):0.89838,199:22.581255):5.115189,(200:23.304101,(201:15.721347,202:15.721348):7.582755):4.392342):2.579327):0.521258):16.916249,((((203:29.828628,204:29.828628):2.753342,(205:31.687711,206:31.687712):0.894261):9.546937,((207:17.679961,208:17.679961):13.40698,(209:21.962022,210:21.962022):9.124919):11.041968):3.774794,((((211:27.706858,(212:4.221454,213:4.221454):23.485405):5.406982,((214:27.666132,215:27.666132):1.299199,((216:18.574667,217:18.574666):4.009936,((218:17.939582,(219:9.053597,220:9.053598):8.885985):2.835341,((221:14.532355,222:14.532355):5.533549,(223:15.020065,224:15.020065):5.045839):0.709019):1.80968):6.380728):4.148509):1.500189,((((225:18.393118,226:18.393118):1.816245,((227:2.326927,228:2.326927):12.432786,(229:0.746327,230:0.746327):14.013386):5.44965):7.955331,231:28.164694):2.412759,(232:30.140431,(((233:6.769414,234:6.769414):19.608246,235:26.37766):2.599488,((236:20.524373,237:20.524373):2.851908,(238:16.320725,239:16.320725):7.055556):5.600866):1.163283):0.437023):4.036576):0.470858,((240:24.021907,(241:16.481294,(242:11.355345,243:11.355345):5.125949):7.540614):6.718976,(244:26.259151,(245:22.329981,(246:20.953226,247:20.953226):1.376756):3.92917):4.481732):4.344003):10.818816):1.809575):1.451351,(248:45.284582,(249:37.31096,(250:14.472823,251:14.472823):22.838138):7.973621):3.880047):2.150883):7.763401,((252:28.607294,(((253:19.711489,254:19.711489):5.190958,((255:0.269138,256:0.269138):8.137414,257:8.406553):16.495895):1.198114,(258:9.829038,259:9.829037):16.271524):2.506733):17.208618,((((260:23.264966,261:23.264966):5.109141,(262:26.525738,((263:14.450888,(264:8.667425,265:8.667425):5.783463):11.495136,(266:22.319546,((267:15.555004,(268:14.258727,(269:12.784959,(270:12.619017,(271:9.783056,272:9.783056):2.835961):0.165942):1.473769):1.296277):2.41362,(273:14.376871,274:14.376871):3.591753):4.350922):3.626477):0.579715):1.848368):3.823429,((275:27.909602,((276:14.228006,277:14.228006):11.64087,(278:22.098876,(279:19.459008,(280:8.751102,281:8.751102):10.707907):2.639867):3.77):2.040727):2.111531,(282:26.77614,283:26.77614):3.244993):2.176403):5.232637,(284:30.494249,285:30.494249):6.935924):8.385739):13.263001):3.500474):5.525396):0.395908):1.107226,(((((286:15.508733,287:15.508733):6.477474,288:21.986207):10.94507,((289:0.343968,290:0.343968):19.280303,291:19.624271):13.307007):21.892382,((292:20.921531,293:20.921531):24.797167,((294:26.052122,(295:24.568489,296:24.56849):1.483632):6.28858,297:32.340702):13.377996):9.104961):2.857388,((298:18.574173,(299:9.304826,300:9.304826):9.269347):31.460498,(301:33.590049,(302:20.475456,303:20.475457):13.114593):16.44462):7.646378):11.92687):56.177925,(304:106.670632,(((305:48.550066,((306:39.157347,(307:26.787436,(308:21.338723,309:21.338723):5.448714):12.369911):4.603834,(310:41.489534,(311:41.149951,(312:26.379025,((313:16.156594,314:16.156594):7.725809,(315:3.36048,316:3.36048):20.521923):2.496623):14.770925):0.339583):2.271647):4.788885):35.776108,(317:68.630901,(318:52.769749,(((319:7.397208,320:7.397208):9.212956,321:16.610165):23.860021,322:40.470185):12.299565):15.861151):15.695274):2.372639,(323:19.608974,324:19.608974):67.089839):19.971819):19.115212):10.806679,(((325:33.574591,326:33.57459):20.65745,(((327:44.308757,(328:42.527584,(329:28.563491,((330:16.541551,331:16.541551):8.403579,(332:24.431531,(333:22.323368,(334:20.43754,(335:17.97748,336:17.977479):2.46006):1.88583):2.108163):0.513599):3.618361):13.964093):1.781173):6.546121,((337:16.537633,338:16.537633):31.711908,(339:8.119249,340:8.119249):40.130293):2.605336):2.263581,((341:51.708003,(342:47.793256,(343:45.868802,((((((344:1.648603,345:1.648603):15.428745,(346:15.907771,((347:9.892794,(348:4.857281,349:4.857281):5.035514):5.285007,350:15.177801):0.729971):1.169577):13.753167,(351:20.090388,352:20.090388):10.740127):1.882208,(353:11.979064,354:11.979064):20.733659):8.483799,355:41.196522):1.971878,(356:40.021915,357:40.021913):3.146486):2.700401):1.924454):3.914747):0.770013,(358:41.216064,(359:21.419919,(360:9.744353,361:9.744352):11.675567):19.796145):11.261952):0.640443):1.113581):49.6204,(((362:38.874829,363:38.87483):50.382326,(((((364:11.380905,365:11.380904):2.531583,366:13.912488):10.800639,(367:11.572424,368:11.572424):13.140703):21.307744,(((369:24.526664,(370:20.742271,371:20.742273):3.784393):3.994574,(372:22.981888,(373:20.905146,(374:15.6805,375:15.6805):5.224646):2.076743):5.539351):15.136421,376:43.65766):2.363211):23.816065,(((377:23.909392,(378:10.625601,379:10.625602):13.28379):12.786418,380:36.69581):17.740834,(((381:23.906469,382:23.906469):28.412131,(383:14.365088,((384:13.179366,385:13.179366):0.123595,386:13.302961):1.062127):37.953512):1.28417,(387:26.171179,(388:23.536174,389:23.536173):2.635006):27.43159):0.833874):15.400292):19.420218):12.772544,(((((390:42.132194,391:42.132194):31.199996,(392:44.528041,393:44.52804):28.804151):1.78126,(394:16.088974,395:16.088975):59.024477):0.635877,(((396:31.871286,397:31.871285):34.507171,398:66.378458):4.784856,(399:55.380509,((400:31.666524,(401:15.539254,402:15.539253):16.12727):10.479102,(403:34.596663,((404:27.848074,405:27.848074):5.360707,(406:18.795045,(407:16.062879,(408:13.486362,(409:9.391832,(410:8.275453,411:8.275453):1.116379):4.094531):2.576517):2.732166):14.413736):1.387882):7.548963):13.234883):15.782804):4.586016):0.419023,(412:71.308132,((((((413:27.034331,414:27.034331):5.150166,415:32.184496):10.666693,((416:37.554415,417:37.554416):1.869054,(418:31.867562,419:31.867563):7.555907):3.427721):9.799483,(420:49.528737,(((421:12.608428,422:12.608429):17.048953,(423:28.178048,424:28.178047):1.479335):5.598312,425:35.255693):14.273044):3.121935):5.270124,426:57.920797):10.082601,((((427:34.192401,428:34.1924):7.858886,((429:26.801456,430:26.801456):12.573543,((431:27.608104,(432:25.687177,433:25.687176):1.920928):4.97445,(434:30.969383,(((435:20.942502,(436:19.709966,((437:12.285211,(438:9.386068,439:9.386069):2.899142):5.102701,(440:12.698522,441:12.698522):4.689389):2.322055):1.232535):2.809965,442:23.752466):4.655302,443:28.407768):2.561615):1.613172):6.792444):2.676288):12.527531,(444:45.190822,((445:34.032068,(446:33.209626,(447:25.999992,448:25.999992):7.209634):0.822442):2.778778,((449:34.273869,450:34.273869):1.586533,((451:21.783019,452:21.783019):12.416124,((453:32.354374,454:32.354374):0.808384,((455:23.775308,456:23.77531):5.904602,(((457:8.769438,458:8.769438):15.870563,459:24.640002):3.876289,(460:25.495469,461:25.495468):3.020823):1.16362):3.482846):1.036385):1.661259):0.950443):8.379976):9.387995):7.094666,(462:44.937303,(((463:34.939376,((464:0.514829,465:0.514829):33.273351,466:33.78818):1.151196):2.537452,467:37.476828):2.191646,(468:36.792749,((469:33.067108,470:33.067108):2.596883,(((((471:19.95652,(472:14.162949,473:14.162949):5.793571):5.183295,(((474:14.725276,(475:10.055257,476:10.055257):4.670019):7.367524,(477:19.513616,(478:12.152723,479:12.152723):7.360893):2.579184):1.919548,((480:14.126502,481:14.126502):3.87522,((482:13.857817,((((483:1.536394,484:1.536394):5.985702,485:7.522095):5.633387,(486:6.840597,487:6.840597):6.314886):0.223988,488:13.37947):0.478347):1.873741,489:15.731559):2.270163):6.010626):1.127467):1.379768,((490:18.091645,((491:7.814676,492:7.814676):7.187038,493:15.001714):3.089931):5.931575,494:24.02322):2.496362):2.465337,(495:24.535555,(496:22.110112,((497:20.365699,(498:6.781922,499:6.781922):13.583777):0.740438,500:21.106136):1.003976):2.425443):4.449364):4.432755,(501:31.906656,(502:30.080568,(((503:19.053916,504:19.053917):5.837774,505:24.891689):4.361995,((506:9.100785,507:9.100786):18.786059,508:27.886845):1.366839):0.826884):1.826088):1.511018):2.246316):1.128758):2.875726):5.268828):16.736181):6.329915):3.304733):4.860222):25.861347):1.822742):32.740083):6.740122):39.139674):6.266547):4.821837):6.092469);
+	TREE * UNTITLED = [&R] ((2:3.828013,1:3.828013):194.658355,((((8:18.152315,7:18.152315):2.823766,9:20.976082):124.306652,((3:13.15936,4:13.159361):89.869166,(6:19.745668,5:19.745668):83.282859):42.254207):45.957668,((10:162.016345,((12:44.200511,11:44.200511):77.698795,((13:48.723395,14:48.723395):61.260145,15:109.98354):11.915767):40.117038):23.631669,(((16:46.308844,(18:11.738277,(17:9.135311,(20:5.048595,19:5.048595):4.086716):2.602966):34.570567):97.528669,(21:130.826194,((22:16.535441,23:16.535441):90.475504,(((26:50.687045,(25:26.827503,24:26.827504):23.859542):9.686549,((30:15.00797,31:15.007969):32.35606,(32:46.225578,(27:32.118064,(29:30.845065,28:30.845066):1.272999):14.107513):1.138452):13.009565):13.244165,((33:32.045685,34:32.045684):2.138059,(35:20.001268,(36:18.049715,37:18.049716):1.951552):14.182475):39.434016):33.393185):23.815249):13.011319):36.329097,((38:44.748573,(40:7.655514,39:7.655514):37.093059):100.552733,(((304:113.722582,((324:16.346503,323:16.346504):79.016435,(((((307:22.071331,(308:20.180655,309:20.180656):1.890676):30.531993,(310:50.866781,(((314:20.088984,313:20.088984):10.150475,(312:26.608175,(315:4.242716,316:4.242716):22.365459):3.631284):19.384771,311:49.62423):1.242551):1.736544):3.069026,306:55.672351):3.456173,305:59.128524):33.964633,((318:59.486657,((319:22.841291,(321:22.695513,320:22.695513):0.145778):23.792421,322:46.633712):12.852944):12.772371,317:72.259027):20.83413):2.269781):18.359644):16.179371,((((((287:17.639967,286:17.639966):8.069615,288:25.709582):15.561661,(83:39.370523,(291:20.951082,(289:0.81749,290:0.81749):20.133592):18.419441):1.90072):18.710391,((293:21.148098,292:21.148098):27.557373,(297:35.127377,(294:30.182424,(296:28.955751,295:28.955751):1.226674):4.944952):13.578093):11.276163):2.886536,(((303:28.102395,302:28.102395):9.514506,301:37.616901):17.098295,(298:18.287375,(299:10.179901,300:10.179901):8.107474):36.427821):8.152975):8.250187,(((41:5.858536,(42:0.580276,43:0.580276):5.278261):0.365496,44:6.224032):64.210385,((((((((154:9.192106,153:9.192106):18.71196,(151:18.326648,152:18.326648):9.577418):7.106005,((148:18.186506,149:18.186506):16.079058,(150:30.245851,147:30.24585):4.019715):0.744507):6.783158,(((173:3.122963,172:3.122963):30.075292,(((169:17.409697,168:17.409698):10.694922,((163:24.836526,167:24.836525):2.262782,(171:12.367684,170:12.367684):14.731624):1.005311):1.168867,((165:19.989981,166:19.989981):3.31475,164:23.304731):5.968755):3.92477):5.966716,((161:33.867522,162:33.867523):3.83888,(((157:4.126529,156:4.126529):13.021367,155:17.147896):12.688434,(158:28.370471,(159:26.2274,160:26.227401):2.143071):1.465859):7.870073):1.45857):2.628258):21.350493,((90:17.088915,(88:12.571014,89:12.571014):4.517901):14.976668,((84:11.953457,85:11.953457):8.972127,(86:19.729103,87:19.729104):1.19648):11.14):31.078139):2.483101,(((143:27.661055,(145:16.169429,144:16.169431):11.491625):19.596486,(146:45.446426,((95:37.557009,((139:29.933353,(140:17.144447,(142:12.875469,141:12.875469):4.268978):12.788906):5.188619,((96:20.793739,97:20.793738):13.391652,((((104:19.717403,(105:8.343606,106:8.343606):11.373796):2.740019,(113:20.67177,(112:9.713934,(((108:3.467055,107:3.467055):2.135787,(110:1.45338,109:1.45338):4.149462):2.730877,111:8.333719):1.380216):10.957835):1.785651):3.949478,(((103:12.428737,102:12.428736):5.752774,101:18.181509):4.027899,(100:3.9302,(98:1.712845,99:1.712845):2.217355):18.279211):4.19749):6.269388,((((118:23.69074,((117:21.996223,(123:18.74998,124:18.749982):3.246242):0.788651,((119:18.939496,120:18.939496):3.314671,(121:14.536088,122:14.536089):7.718078):0.530707):0.905866):1.490225,(114:22.061796,115:22.061797):3.119169):0.620039,((137:23.561967,136:23.561967):0.649804,((132:16.981118,((133:15.256642,(135:12.478568,134:12.478568):2.778075):1.297819,((130:10.382067,129:10.382067):3.654712,131:14.03678):2.517682):0.426658):5.53801,(125:4.796551,(126:2.653436,127:2.653436):2.143115):17.722578):1.692642):1.589233):2.235233,(116:26.922257,(128:25.760259,138:25.760258):1.161998):1.113981):4.64005):1.509104):0.936581):2.435037):5.754159,(94:37.710203,93:37.710202):5.600966):2.135258):1.811115):8.74842,(92:22.828661,91:22.82866):33.177301):9.620862):0.685872,((((67:54.979607,(80:46.226057,(81:28.744101,82:28.744102):17.481955):8.753549):2.768206,(68:47.067195,(((76:20.467687,(78:13.997392,77:13.997392):6.470294):5.028691,(79:22.982772,75:22.982773):2.513604):12.419275,(((71:20.727196,70:20.727195):10.855317,69:31.582513):4.890739,(74:31.994852,(73:27.963518,72:27.963518):4.031334):4.4784):1.4424):9.151542):10.680618):3.003847,((((61:7.832509,60:7.832508):19.991684,62:27.824193):5.117038,(57:25.478191,(59:2.433522,58:2.433522):23.044669):7.46304):12.788379,((64:22.768134,63:22.768134):12.080499,(65:27.36711,66:27.36711):7.481525):10.880976):15.02205):3.470982,(56:40.89138,(45:29.466435,(46:26.862508,((((54:15.994981,53:15.994981):4.138684,55:20.133664):2.646731,(50:20.368381,(51:18.411485,52:18.411485):1.956897):2.412015):1.760838,(47:17.904941,(49:17.144758,48:17.144757):0.760183):6.636293):2.321274):2.603927):11.424945):23.331263):2.090053):3.559849,((((((((186:17.875712,187:17.875713):19.201518,(190:31.989376,(189:11.901794,188:11.901793):20.087582):5.087855):2.361098,191:39.438327):4.020555,(184:35.574163,185:35.574164):7.88472):6.245384,183:49.704267):11.790282,((((192:32.454926,(194:7.780124,193:7.780124):24.674801):8.26247,(195:38.979785,((200:31.317183,(202:20.039745,201:20.039745):11.277438):6.913524,(196:30.125168,((197:28.215244,198:28.215244):1.183176,199:29.398421):0.726747):8.105539):0.749078):1.73761):18.548911,((((244:32.742622,(245:27.769487,(247:25.155588,246:25.155588):2.613898):4.973136):5.563471,(240:31.76754,((242:13.313892,243:13.313891):6.45083,241:19.764722):12.00282):6.538552):6.152029,(((232:37.405523,(((239:21.669937,238:21.669937):7.213378,(237:25.195321,236:25.195321):3.687993):7.455087,(235:33.180827,(233:7.506079,234:7.506079):25.674747):3.157575):1.067122):1.119908,((((228:3.423491,227:3.423491):16.279746,(230:0.919107,229:0.919107):18.784129):5.533778,(226:23.258824,225:23.258823):1.97819):10.377445,231:35.614459):2.910972):5.497965,(((212:4.625568,213:4.625568):32.022354,211:36.647923):5.972389,(((218:23.86062,(((222:15.433166,221:15.433166):5.644138,(217:16.909169,216:16.909169):4.168135):1.541814,(224:17.356576,223:17.356576):5.262542):1.241502):0.440161,(219:10.480671,220:10.480672):13.82011):10.528809,(214:31.753968,215:31.753967):3.075623):7.790721):1.403085):0.434726):12.766789,(((207:21.578864,208:21.578864):18.710248,(210:30.140737,209:30.140737):10.148375):12.554876,(((203:36.0208,204:36.0208):3.091632,205:39.112431):1.285423,206:40.397854):12.446134):4.380923):2.041395):1.016658,(248:56.757181,((250:19.863355,251:19.863355):30.880606,249:50.74396):6.013219):3.525784):1.211585):5.789879,((252:37.529794,((258:12.962357,259:12.962357):21.838186,((253:25.464436,254:25.464434):7.764664,((255:0.817732,256:0.817732):17.94329,257:18.761022):14.468077):1.571443):2.729253):18.345953,((284:37.925778,285:37.925778):9.30707,(((276:19.987947,277:19.987946):17.172845,((283:33.005855,282:33.005854):3.110203,(278:31.400385,((281:11.11265,280:11.11265):16.671461,(279:25.13242,275:25.132421):2.651691):3.616274):4.715673):1.044734):8.525099,((261:27.715858,260:27.715857):7.421531,(((((((269:11.470152,270:11.470152):3.224206,(271:12.600554,272:12.600554):2.093803):0.905708,268:15.600066):1.886998,267:17.487063):6.003725,274:23.490788):1.80941,273:25.300198):6.994981,((263:17.876114,(264:12.290958,265:12.290958):5.585156):13.693774,(262:25.316689,266:25.316688):6.2532):0.725292):2.842209):10.548502):1.546957):8.6429):11.408681):1.693537,((182:59.230521,(181:51.971311,(179:21.553275,180:21.553275):30.418036):7.25921):6.416342,((177:16.400791,178:16.400791):4.278792,(176:18.694358,(175:11.185694,174:11.185694):7.508664):1.985225):44.96728):3.331103):0.894579):0.561874):0.683939):58.783596):9.363932,((341:60.537507,(((343:52.557874,((356:47.375114,357:47.375116):2.842561,(355:48.077768,((353:14.722983,354:14.722982):23.480168,((352:22.773536,351:22.773537):12.461532,(((344:2.113312,345:2.113312):17.893939,(346:17.734973,(347:14.312656,(348:5.547909,349:5.54791):8.764747):3.422317):2.272278):1.035696,350:21.042947):14.192121):2.968082):9.874617):2.139908):2.340198):1.444823,342:54.002696):2.993056,((((339:6.949811,340:6.949811):43.133619,(327:42.948159,(328:41.219443,(329:27.27364,((330:15.676852,331:15.676852):8.082985,(332:23.161314,(333:21.250206,((336:16.699797,335:16.699796):2.878109,334:19.577906):1.6723):1.911109):0.598522):3.513804):13.945803):1.728716):7.135272):3.318879,((337:17.099418,338:17.099418):32.388062,(325:33.121616,326:33.121617):16.365864):3.914829):0.792748,(358:39.913715,(359:21.740552,(361:13.880798,360:13.880798):7.859753):18.173163):14.281342):2.800695):3.541754):49.544678,(((363:34.587334,362:34.587334):58.094768,(((376:45.927817,((368:12.0455,367:12.0455):12.17417,(366:8.621342,(365:8.218106,364:8.218107):0.403236):15.598327):21.708147):2.477452,((372:25.739936,((374:18.166494,375:18.166493):5.278574,373:23.445066):2.294868):5.195011,(369:26.441214,(371:21.455662,370:21.455662):4.985552):4.493732):17.470323):23.339345,((((381:25.151448,382:25.151447):29.448887,(383:18.674966,((384:13.245107,386:13.245107):2.790638,385:16.035746):2.63922):35.925367):0.800468,((389:15.420807,388:15.420808):9.878333,387:25.299141):30.101662):0.867726,(380:36.495033,(377:22.779591,(378:11.815223,379:11.815223):10.964367):13.715442):19.773495):15.476086):20.937488):15.14666,((((394:17.607558,395:17.607557):65.15323,((391:42.739266,390:42.739267):38.336769,(393:53.661507,392:53.661507):27.414529):1.684752):1.021513,((399:63.22487,((400:35.171727,(401:15.41263,402:15.41263):19.759095):14.036309,(403:41.170911,(((((410:17.927678,408:17.927678):0.313206,(409:13.276772,411:13.276772):4.964112):2.408055,407:20.648939):3.039837,406:23.688776):15.684199,(404:33.959044,405:33.959045):5.413932):1.797935):8.037126):14.016834):17.658655,((412:71.188252,(396:40.03898,397:40.03898):31.149272):6.318138,398:77.506389):3.377135):2.898776):0.56983,((426:55.193655,((((418:29.218421,419:29.218422):7.601142,(416:34.206986,417:34.206987):2.612576):3.499058,((413:26.103887,414:26.103887):5.007501,415:31.111387):9.207234):9.27828,(((((421:11.201273,422:11.201272):13.316452,423:24.517724):1.423847,424:25.941572):5.328568,425:31.27014):13.939907,420:45.210046):4.386855):5.596753):11.441024,((((427:37.969727,428:37.969727):6.881342,((429:30.638595,430:30.638596):11.545795,(((433:27.303766,432:27.303767):2.318027,431:29.621793):4.884647,(434:33.121863,(443:30.049056,(((436:22.472045,((437:16.031727,(439:11.981936,438:11.981936):4.04979):3.664376,(440:12.321123,441:12.321123):7.37498):2.775941):1.630109,435:24.102155):3.890811,442:27.992965):2.056091):3.072806):1.384577):7.677951):2.666679):10.275983,(444:44.34804,(((447:23.624204,448:23.624203):6.528875,(445:29.819391,446:29.819391):0.333688):3.830424,(((451:22.392655,452:22.392654):9.010625,((453:28.42938,454:28.42938):1.120259,(((458:7.657199,457:7.657199):15.129603,459:22.786802):2.783849,((456:18.040708,455:18.040708):6.23201,(460:21.326082,461:21.326082):2.946636):1.297934):3.978987):1.853641):1.681231,(450:31.618678,449:31.618678):1.465833):0.898991):10.364537):10.779013):7.504063,(462:48.262522,((467:40.277647,((463:36.114346,466:36.114346):2.804935,(465:0.348422,464:0.348422):38.570859):1.358367):3.362866,(468:41.416159,((469:38.504319,470:38.504318):1.765549,((((((472:15.919639,473:15.919639):5.091791,471:21.011431):5.288963,(((474:12.916252,(475:9.188783,476:9.188783):3.727469):10.670419,(477:21.471278,(479:12.873933,478:12.873933):8.597345):2.115392):2.044655,((481:13.704092,480:13.704093):4.301536,((482:14.835834,(((486:7.268156,487:7.268156):4.900974,488:12.16913):1.962707,(485:8.284375,(483:1.368708,484:1.368708):6.915667):5.847462):0.703997):1.62559,489:16.461424):1.544205):7.625697):0.669067):1.925478,(494:26.522674,(490:18.397348,(493:15,(492:7.944798,491:7.944798):7.055201):3.397348):8.125326):1.703197):3.51464,(495:26.114045,((500:22.426478,(497:21.642227,(498:8.261547,499:8.261547):13.38068):0.784249):1.059864,496:23.48634):2.627705):5.626466):6.348681,(501:36.728921,((508:34.414219,((506:11.48435,507:11.48435):22.018373,502:33.502724):0.911496):0.462398,(505:28.313136,(503:23.02348,504:23.02348):5.289657):6.563481):1.852305):1.36027):2.180675):1.146291):2.224355):4.622008):14.368595):4.003562):17.717453):23.476632):2.253422):29.1837):6.035422):34.865303):5.481404):5.592387):7.245967);
+	TREE * UNTITLED = [&R] ((1:3.650105,2:3.650105):184.035489,((((5:18.40542,6:18.40542):79.236311,(3:12.940447,4:12.940447):84.701284):39.770818,(9:19.896019,(8:16.745995,7:16.745995):3.150025):117.516529):43.561793,((10:153.303485,((11:40.978121,12:40.978122):73.821698,(15:103.329674,(13:45.976294,14:45.976294):57.353382):11.470144):38.503666):22.418944,((((17:12.743383,(18:9.867112,(20:4.919978,19:4.919978):4.947134):2.876271):32.244893,16:44.988276):95.618701,(21:131.078265,((22:20.97355,23:20.97355):89.562967,(((35:27.387155,(37:23.713269,36:23.713269):3.673886):27.752674,(34:54.32169,33:54.321691):0.818138):24.088821,((26:52.056316,(24:25.834254,25:25.834254):26.222063):9.196817,((31:14.03212,30:14.032121):29.740528,(32:42.575579,(27:29.289472,(28:27.914089,29:27.914089):1.375383):13.286106):1.197068):17.480486):17.975517):31.307866):20.541748):9.528713):29.871622,((38:47.958449,(39:8.440757,40:8.440757):39.517692):91.566049,(((((((287:16.180898,286:16.180899):6.835758,288:23.016657):15.922916,((291:20.323281,(289:0.229889,290:0.229889):20.093393):16.53227,83:36.855552):2.084021):21.132532,((((294:26.147982,(296:24.037138,295:24.037138):2.110844):4.900339,297:31.048321):11.421829,(293:19.585062,292:19.585063):22.885088):12.266629,((298:17.063788,(300:9.423291,299:9.423291):7.640497):31.020954,((303:21.602545,302:21.602544):11.068321,301:32.670865):15.413876):6.652037):5.335326):10.668707,((((43:0.131575,42:0.131575):10.144292,44:10.275867):0.002092,41:10.277959):59.78457,((((((174:9.444586,175:9.444587):7.482339,176:16.926925):2.001132,(177:15.019174,178:15.019174):3.908884):42.700336,(((179:20.13898,180:20.13898):33.474465,181:53.613445):2.006654,182:55.620098):6.008296):2.563814,(((252:30.357993,(((253:20.707038,254:20.707037):5.893514,((255:0.444653,256:0.444653):9.044139,257:9.488792):17.11176):1.60586,(258:11.400554,259:11.400554):16.805858):2.151582):16.702954,((275:26.968934,((279:20.738633,(281:8.96009,280:8.96009):11.778543):2.416407,(((278:17.283065,283:17.283065):2.822819,(276:11.577462,277:11.577462):8.528422):2.586672,282:22.692555):0.462484):3.813893):13.274002,((284:32.162681,285:32.16268):4.999443,((260:23.216344,261:23.216344):5.350679,((((263:14.492351,(264:9.751984,265:9.751984):4.740367):10.214902,266:24.707252):1.454679,((267:20.31521,(268:18.360191,((270:14.101549,269:14.101548):3.039173,(271:14.258665,272:14.258664):2.882057):1.219469):1.955019):2.372099,(273:22.590563,274:22.590564):0.096747):3.474622):1.152855,262:27.314785):1.252237):8.595101):3.080813):6.818012):13.41017,((((185:32.750408,184:32.750409):7.027238,(191:36.259841,((190:30.504645,(188:17.618724,189:17.618725):12.88592):3.531387,(186:16.257631,187:16.257631):17.7784):2.22381):3.517805):4.296567,183:44.074213):8.050213,(((((((245:22.977711,(246:20.563504,247:20.563504):2.414207):4.320324,244:27.298034):4.75651,(240:23.559471,((242:10.083473,243:10.083473):3.909612,241:13.993085):9.566387):8.495072):4.844418,(((211:28.901242,(213:3.618637,212:3.618637):25.282604):5.680104,((214:27.547702,215:27.547703):2.143654,(218:22.08875,(((219:9.012702,220:9.012701):11.954685,((222:14.305697,221:14.305697):5.84109,(216:15.623972,217:15.623971):4.522816):0.8206):0.648709,(223:15.574319,224:15.574319):6.041776):0.472655):7.602605):4.88999):1.879251,((231:29.503607,(((230:0.730049,229:0.730049):15.7837,(228:2.869553,227:2.869554):13.644195):3.867886,(226:18.530861,225:18.53086):1.850774):9.121972):2.320254,(232:31.270405,(((233:6.110819,234:6.110819):21.829576,235:27.940394):2.638193,((238:16.79273,239:16.79273):7.114593,(236:20.125771,237:20.125771):3.781551):6.671265):0.691817):0.553455):4.636736):0.438365):10.170768,((((203:30.089482,204:30.089481):1.770479,205:31.85996):3.028944,206:34.888905):8.506823,((209:23.821033,210:23.821031):8.895053,(207:18.850899,208:18.850899):13.865186):10.679642):3.674002):1.65011,((195:28.634202,((200:22.684893,(202:15.160666,201:15.160665):7.524227):5.203862,(199:21.992062,(196:21.010549,(197:20.083701,198:20.083701):0.926848):0.981512):5.896694):0.745447):0.68286,((194:6.192952,193:6.192952):15.547184,192:21.740136):7.576926):19.402777):1.391931,(248:46.986786,(249:40.694159,(251:16.227369,250:16.227369):24.466791):6.292626):3.124985):2.012655):8.346693):3.721089):5.474824,(((147:36.222523,((150:32.283689,((151:15.964745,152:15.964744):9.998973,(153:9.810855,154:9.810855):16.152862):6.319972):2.120787,(148:11.402689,149:11.402687):23.001786):1.818048):6.864932,(((173:2.502645,172:2.502645):32.453169,(((163:25.106033,(169:17.331442,168:17.331442):7.774591):4.546185,(167:28.498079,(170:12.530331,171:12.53033):15.967749):1.154139):1.514108,(164:24.859723,(166:21.612437,165:21.612438):3.247286):6.306603):3.789489):5.583829,((162:36.306176,161:36.306176):2.739527,(((157:4.333823,156:4.333824):14.831576,155:19.1654):10.705912,(158:27.946655,(159:25.150105,160:25.150105):2.79655):1.924657):9.174391):1.493941):2.547811):26.038013,(((56:43.544036,(((47:19.126726,(49:17.426192,48:17.426193):1.700534):5.898642,((55:20.62041,(53:16.713574,54:16.713573):3.906836):2.576805,(50:20.014358,(52:15.512852,51:15.51285):4.501506):3.182857):1.828153):2.391664,(45:21.265967,46:21.265967):6.151066):16.127004):19.49384,((((65:27.971628,66:27.971629):5.793565,(63:22.587024,64:22.587024):11.17817):10.145775,(((61:7.575179,60:7.57518):17.015974,62:24.591153):6.226674,(57:23.784658,(59:3.255107,58:3.255107):20.529551):7.033169):13.093142):14.967681,(((((71:21.46948,70:21.46948):8.433962,69:29.903442):5.939413,((73:30.89099,74:30.890989):2.340785,(72:29.803957,(75:24.702832,((76:16.237221,(77:13.026792,78:13.026792):3.210429):6.273566,79:22.510787):2.192045):5.101124):3.427818):2.61108):9.548542,68:45.391397):10.575936,(67:54.093552,(80:44.576399,(81:27.121775,82:27.121776):17.454624):9.517152):1.873782):2.911317):4.159226):2.440194,((((87:12.999846,86:12.999845):8.032931,(85:13.142653,84:13.142653):7.890123):9.908315,((89:10.620638,88:10.620638):5.173942,90:15.79458):15.146512):32.910725,(((143:33.097822,(145:15.812151,144:15.812151):17.285671):12.921915,(146:44.456883,((((139:26.796271,(140:14.728217,(141:11.044753,142:11.044753):3.683463):12.068054):3.146196,(((138:23.852566,(((137:22.332543,136:22.332543):0.783549,((((135:14.411224,134:14.411225):2.500671,133:16.911896):1.318011,(132:15.453725,(131:13.422196,(129:9.706398,130:9.706398):3.715798):2.031529):2.776182):4.037454,(125:5.403222,(127:1.757148,126:1.757148):3.646073):16.864139):0.848731):0.544081,(128:23.332117,((((118:20.801161,(121:13.007434,122:13.007434):7.793729):0.661266,((123:16.717416,124:16.717416):3.721203,(119:17.610561,120:17.610562):2.828058):1.023808):0.910179,117:22.372607):0.527893,(116:21.597359,(114:19.329641,115:19.32964):2.267719):1.303141):0.431616):0.328056):0.192393):2.406199,((((102:12.628746,103:12.628745):5.958353,101:18.587099):4.098061,(100:3.299595,(98:1.256073,99:1.256073):2.043522):19.385565):2.816382,((104:19.490274,(106:6.082884,105:6.082884):13.40739):2.228737,(113:19.330541,(112:9.158307,(((110:1.466429,109:1.466429):3.716625,(107:2.684709,108:2.684709):2.498343):2.508927,111:7.69198):1.466327):10.172235):2.388469):3.782531):0.757224):2.359558,(96:18.05048,97:18.050481):10.567843):1.324144):2.119372,95:32.06184):9.843328,(93:36.026924,94:36.026924):5.878243):2.551715):1.562855):9.987876,(92:21.963893,91:21.963892):34.043721):7.844203):1.626253):3.647398):0.541563):0.395497):0.678283):53.25576,(304:108.348534,((324:17.928661,323:17.928662):73.963977,((((305:57.753211,(310:55.277645,(312:34.891284,((316:5.040187,315:5.040187):26.654042,(313:18.072375,314:18.072375):13.621854):3.197055):20.386362):2.475565):0.004271,311:57.757482):1.890664,(306:59.64357,(308:20.574069,(309:19.729033,307:19.729033):0.845036):39.069501):0.004576):30.317751,(317:74.937091,(318:60.522749,(((321:18.215154,319:18.215154):4.182839,320:22.397992):24.857394,322:47.255387):13.267363):14.414341):15.028806):1.92674):16.455896):15.648037):9.654007,((((325:34.756183,326:34.756184):21.742637,(((358:39.259868,((361:12.658231,360:12.65823):5.878278,359:18.536508):20.72336):15.033993,(341:53.586008,(342:50.348982,(((355:44.475109,(((351:22.396613,352:22.396613):11.80762,(350:19.464,((346:17.505175,(347:13.13552,(349:5.432057,348:5.432057):7.703463):4.369655):1.191467,(345:2.188376,344:2.188376):16.508266):0.767357):14.740232):1.868333,(353:13.282972,354:13.282973):22.789592):8.402544):1.925453,(357:41.894297,356:41.894298):4.506265):2.39369,343:48.794252):1.554731):3.237025):0.707854):0.796215,((339:7.326237,340:7.326237):46.007441,(327:46.848997,(328:45.116936,(((330:17.784352,331:17.784352):9.574921,(332:26.76376,(333:24.472414,((336:20.234227,335:20.234226):2.480062,334:22.714288):1.758127):2.291345):0.595513):3.427542,329:30.786816):14.33012):1.732061):6.484681):1.756399):1.408744):4.48128,(338:16.974864,337:16.974864):44.005237):44.021575,(((363:31.329423,362:31.329423):58.599425,((((368:12.010051,367:12.010051):12.114637,(366:13.80023,(364:11.341488,365:11.341488):2.458741):10.324458):24.060756,(((369:27.396792,(370:23.400133,371:23.400134):3.996658):5.072241,(((375:20.005626,374:20.005626):5.034222,373:25.03985):1.804366,372:26.844215):5.624817):12.959443,376:45.428475):2.75697):23.07825,((380:34.268493,(377:20.161038,(379:12.46571,378:12.465711):7.695328):14.107454):22.120735,((387:16.179564,(389:15.291699,388:15.291699):0.887865):39.434331,((381:23.041924,382:23.041922):31.901733,(((385:15.192797,386:15.192798):2.152787,384:17.345585):4.366047,383:21.711631):33.232023):0.67024):0.775332):14.874467):18.665153):12.833753,((((394:19.610146,395:19.610147):59.83146,((390:47.589531,391:47.589532):30.430749,(393:51.533553,392:51.533553):26.486728):1.421326):0.640667,((398:69.094001,(396:32.917466,397:32.917465):36.176535):5.889576,(399:58.276626,((400:35.378682,(401:15.639234,402:15.639234):19.739447):8.104426,(403:35.315034,((406:19.363108,(407:17.257851,(((409:8.969025,411:8.969025):3.515667,410:12.484692):1.931525,408:14.416216):2.841634):2.105257):14.532242,(404:29.782835,405:29.782834):4.112515):1.419684):8.168074):14.793518):16.706951):5.098696):0.498134,(412:76.381286,((426:59.256849,((((413:27.506377,414:27.506378):4.707834,415:32.214211):10.815815,((418:32.047575,419:32.047576):7.048284,(416:37.044323,417:37.044324):2.051535):3.934167):10.756407,(420:50.654601,(425:37.059021,(424:31.078796,(423:30.062253,(421:13.837953,422:13.837953):16.224301):1.016542):5.980225):13.595581):3.131832):5.470416):11.298858,(((444:47.715542,(((447:26.969978,448:26.969978):7.443096,(446:34.002612,445:34.002611):0.410464):3.589249,((450:35.909209,449:35.909208):1.086265,((451:21.047036,452:21.047036):8.441515,((454:28.049482,453:28.049481):0.437318,((459:23.067314,(457:8.014392,458:8.014392):15.052922):3.790988,((460:22.390768,461:22.390768):3.761447,(455:21.015533,456:21.015534):5.136682):0.706086):1.628499):1.00175):7.506924):1.00685):9.713218):10.104495,((427:37.434743,428:37.434743):10.035268,(((431:31.736256,(433:29.216208,432:29.216208):2.520049):5.824929,(((442:31.672622,((436:24.795709,((440:17.137988,441:17.137988):3.814274,(437:18.620045,(439:13.242111,438:13.242111):5.377934):2.332217):3.843448):1.739914,435:26.535623):5.136998):1.70837,443:33.380992):2.488562,434:35.869554):1.69163):7.294968,(429:30.795093,430:30.795092):14.061059):2.61386):10.350025):6.471333,(462:44.972795,((((464:0.498396,465:0.498396):33.916934,(463:32.982748,466:32.982748):1.432582):2.287156,467:36.702485):2.466871,(468:36.019252,((469:31.567787,470:31.567787):3.226079,(((495:23.611816,(496:21.555982,(((498:6.881864,499:6.881864):12.414325,497:19.296188):1.252615,500:20.548804):1.007177):2.055834):4.272812,(((471:18.247583,(473:12.941078,472:12.941078):5.306505):5.440028,(((481:12.936301,480:12.936301):5.065975,(489:15.351921,(482:13.397093,((485:8.334322,(484:1.291528,483:1.291528):7.042794):4.423819,(488:11.739917,(486:6.040305,487:6.040305):5.699613):1.018223):0.638952):1.954827):2.650356):5.14522,((474:12.671649,(475:7.612807,476:7.612807):5.058842):8.745606,(477:18.686221,(478:11.763918,479:11.763918):6.922303):2.731034):1.730241):0.540114):1.552966,(494:23.061335,(490:17.369343,(493:15.001483,(492:7.823476,491:7.823476):7.178007):2.36786):5.691993):2.179241):2.644051):5.832125,(501:32.991018,(((508:31.012714,(505:26.577256,(503:20.915318,504:20.915319):5.661939):4.435457):0.383702,(507:10.579132,506:10.579133):20.817283):0.357065,502:31.753479):1.237538):0.725734):1.077114):1.225387):3.150104):5.803438):19.318575):6.264337):5.825578):4.199122):22.182194):2.239074):28.648904):5.87392):30.954102):5.243829):5.251913):6.711252);
+	TREE * UNTITLED = [&R] ((1:3.483335,2:3.483335):171.038269,((((3:11.706847,4:11.706846):75.826851,(5:16.277431,6:16.277431):71.256267):37.487439,(9:18.124588,(8:15.103525,7:15.103525):3.021062):106.896548):41.838593,((10:148.107306,((15:96.4639,(13:42.416175,14:42.416174):54.047725):10.929477,(12:36.730309,11:36.730308):70.663067):40.713929):13.055901,(((16:36.335248,(17:10.663099,(18:7.985965,(19:3.498356,20:3.498356):4.487609):2.677134):25.672149):80.83997,(21:106.770713,((22:12.568051,23:12.56805):73.751901,(((33:21.101165,34:21.101166):5.847811,(35:17.708221,(36:15.390434,37:15.390433):2.317788):9.240754):24.056364,(((25:19.890793,24:19.890792):15.2993,26:35.190093):5.678976,((31:8.939619,30:8.939618):19.150878,((29:20.272553,(28:18.808421,27:18.80842):1.464133):7.130385,32:27.402937):0.687557):12.778573):10.13627):35.314613):20.450761):10.404505):35.701188,((38:32.834341,(40:7.326161,39:7.326161):25.50818):81.370867,(((304:85.545825,((323:6.573111,324:6.573112):61.432238,(((306:38.330663,((310:34.598974,((((313:14.799219,314:14.799219):4.814674,(316:3.532068,315:3.532068):16.081825):2.241921,312:21.855814):11.422544,311:33.278358):1.320615):0.743424,(307:13.695911,(308:9.843968,309:9.843968):3.851944):21.646487):2.988266):2.133233,305:40.463896):25.708726,((318:42.850004,(((321:11.789829,320:11.789829):0.000664,319:11.790494):20.629761,322:32.420256):10.429748):12.721209,317:55.571214):10.601408):1.832728):17.540475):15.47939,(((((286:11.714594,287:11.714594):4.924098,288:16.638692):13.910274,(83:28.717434,((290:0.435284,289:0.435284):14.540949,291:14.976233):13.7412):1.831532):19.594882,(((298:15.076971,(300:7.612385,299:7.612385):7.464586):25.200914,((303:19.813964,302:19.813963):7.059681,301:26.873645):13.404242):5.663575,((292:16.484046,293:16.484046):20.516241,((294:28.51854,(295:24.998124,296:24.998124):3.520416):2.102009,297:30.620549):6.379738):8.941173):4.202388):12.038253,(((((((((262:23.324607,((((268:17.476115,((270:15.297981,(271:12.010022,272:12.010023):3.287959):0.807628,269:16.105608):1.370507):2.073769,(267:13.388432,274:13.388432):6.161452):1.155174,266:20.705057):0.769345,273:21.474403):1.850204):1.279445,(261:18.194656,260:18.194655):6.409396):3.682538,((265:8.861058,264:8.861058):5.691052,263:14.55211):13.734479):4.93442,((284:25.433146,285:25.433145):6.580814,((278:21.580649,(275:20.009728,(279:17.668256,(281:6.946412,280:6.946412):10.721844):2.341473):1.57092):2.98473,((283:19.508509,282:19.508508):4.429606,(276:12.055102,277:12.055101):11.883014):0.627263):7.448582):1.207049):5.615555,(252:24.285041,(((253:16.116029,254:16.116029):5.199704,(257:8.351537,(256:0.118153,255:0.118153):8.233384):12.964196):1.031001,(258:9.011878,259:9.011878):13.334857):1.938307):14.551524):9.411614,((183:34.205405,((184:26.016873,185:26.016873):5.352685,(191:27.989156,((190:23.265151,(189:14.244591,188:14.24459):9.020561):3.46559,(187:12.717151,186:12.717151):14.013589):1.258416):3.380401):2.835847):6.983834,((248:37.347119,((251:13.069152,250:13.069152):20.076535,249:33.145688):4.201432):2.177322,(((195:20.596049,(((201:12.048314,202:12.048314):5.037628,200:17.085942):2.819863,(((198:14.930923,197:14.930924):0.838475,196:15.769398):0.711452,199:16.48085):3.424956):0.690244):0.566561,((193:2.366104,194:2.366104):14.981769,192:17.347873):3.814738):17.068307,((((209:18.798137,210:18.798137):6.949464,(207:14.419693,208:14.419693):11.327909):7.597009,(206:25.980121,((205:21.874947,203:21.874947):1.229511,204:23.104458):2.875662):7.36449):3.422547,(((240:19.915765,((243:8.964476,242:8.964476):4.187263,241:13.151739):6.764025):4.911905,(244:21.196254,((246:16.925647,247:16.925646):1.878943,245:18.804589):2.391665):3.631416):3.972254,(((((238:13.034866,239:13.034866):5.476604,(236:16.038696,237:16.038696):2.472774):5.964041,(232:24.229337,(235:22.175683,(234:5.530037,233:5.530037):16.645647):2.053654):0.246173):0.744706,(((226:16.302837,225:16.302838):0.942716,((229:0.405318,230:0.405318):12.135867,(228:2.465503,227:2.465503):10.075682):4.704368):5.830077,231:23.07563):2.144586):3.264405,((211:23.56037,(213:3.770864,212:3.770864):19.789506):3.714708,(((219:7.861764,220:7.861764):9.422092,(((223:11.829435,224:11.829435):4.242121,((221:11.989537,222:11.989537):3.326806,(217:12.784045,216:12.784045):2.532298):0.755213):0.509099,218:16.580655):0.703201):5.478764,(214:21.2854,215:21.2854):1.47722):4.512458):1.209544):0.315301):7.967235):1.46376):1.293524):1.664797):7.058939):3.277277,(((176:13.72665,(175:7.99629,174:7.99629):5.73036):1.193774,(177:11.848844,178:11.848844):3.071581):34.043012,(182:44.282172,((180:16.180476,179:16.180476):26.663983,181:42.84446):1.437711):4.681265):2.562018):9.697431,((((((153:11.238073,154:11.238073):12.962833,(151:16.670744,152:16.670745):7.530162):6.284404,(149:17.007082,148:17.007084):13.478227):1.095332,(147:27.868228,150:27.868229):3.712414):6.289666,(((172:2.274637,173:2.274637):29.88864,((((168:16.799797,169:16.799797):9.930542,((171:11.507323,170:11.507323):13.985629,167:25.492952):1.237386):2.024609,((166:19.467446,165:19.467446):3.366318,164:22.833764):5.921183):1.834097,163:30.589044):1.574232):3.622746,((161:31.478944,162:31.478945):2.572381,((155:15.431375,(156:3.331001,157:3.331002):12.100374):10.954644,(158:24.331893,(159:22.912294,160:22.912294):1.419599):2.054126):7.665307):1.734697):2.084286):22.51183,(((((84:10.182425,85:10.182425):8.969531,(86:16.596118,87:16.596117):2.555838):8.291096,(90:14.389482,(89:9.05614,88:9.05614):5.333342):13.053569):31.665903,((91:18.740072,92:18.740071):37.267619,(((94:32.285263,93:32.285263):6.128612,(95:29.487161,((139:23.216704,(140:13.179676,(142:9.838149,141:9.838149):3.341527):10.037028):4.74786,((97:15.571664,96:15.571663):11.620526,((((104:15.263198,(105:4.165981,106:4.165981):11.097218):2.062825,((112:7.905695,(((109:1.244836,110:1.244836):3.242793,(107:2.542929,108:2.542928):1.9447):2.646055,111:7.133684):0.77201):7.694322,113:15.600017):1.726007):8.174596,((100:3.109113,(98:1.518223,99:1.518224):1.590889):14.006737,((103:9.199673,102:9.199673):3.799511,101:12.999183):4.116665):8.384771):0.364281,(138:21.516857,((((115:16.913449,114:16.913449):2.115253,116:19.028702):0.817973,(117:16.515565,(((118:14.960117,(121:10.484029,122:10.484028):4.476089):0.753276,(123:13.189979,124:13.189978):2.523415):0.319896,(120:13.446489,119:13.446489):2.5868):0.482276):3.331109):1.406052,(((128:19.25831,(((134:12.430712,135:12.430711):1.698507,133:14.129218):1.772004,((131:11.50204,(129:9.114258,130:9.114258):2.387783):3.314978,132:14.817019):1.084204):3.357087):1.093686,(125:4.206145,(126:1.228726,127:1.228726):2.977419):16.145851):0.538609,(136:19.670253,137:19.670254):1.220351):0.362122):0.26413):4.348044):1.327288):0.772375):1.522597):8.926714):3.624399,((143:24.50212,(145:13.640965,144:13.640965):10.861155):15.390142,146:39.892262):2.146012):13.969417):3.101263):0.664612,((56:35.670368,(46:21.219856,(((49:13.633275,48:13.633275):1.141284,47:14.774559):5.782926,(((54:14.563292,53:14.563292):3.507023,(55:14.109744,45:14.109743):3.960571):1.551968,(51:16.671064,(52:16.10397,50:16.10397):0.567095):2.951218):0.935202):0.662372):14.450512):16.774815,(((67:43.254174,(80:36.67058,(82:21.88788,81:21.887881):14.782699):6.583595):1.298731,(68:35.333524,((((76:13.863767,(77:9.960792,78:9.960792):3.902975):3.768758,79:17.632524):1.954593,75:19.587117):6.777242,((73:22.169075,74:22.169075):2.44527,(72:24.376455,((71:17.311348,70:17.311348):4.484317,69:21.795665):2.580789):0.23789):1.750016):8.969164):9.21938):3.001414,(((63:17.353898,64:17.353898):9.203485,(65:21.344229,66:21.344231):5.213153):8.09979,(((61:6.090159,60:6.090159):12.830378,62:18.920536):6.816566,((59:2.740214,58:2.740214):15.293359,57:18.033573):7.703528):8.92007):12.897146):4.890865):7.328383):0.608572):0.840747):0.384672,((41:4.29875,(43:0.001154,42:0.001154):4.297597):0.642345,44:4.941094):56.666462):0.574544):38.843113):7.224318,((((326:24.901329,325:24.901329):14.803246,(((341:37.500897,((((355:29.839802,((354:8.71072,353:8.71072):15.658629,(((344:1.237869,345:1.237869):12.18937,(350:12.463314,(((349:4.695835,348:4.695835):4.824848,347:9.520683):2.312596,346:11.833278):0.630035):0.963927):9.277091,(352:14.612677,351:14.612676):8.091655):1.665018):5.470452):1.358594,(356:28.059181,357:28.059182):3.139214):1.850092,343:33.048487):1.322111,342:34.370599):3.1303):0.494249,(358:27.166758,(359:13.784455,(360:8.552558,361:8.552558):5.231898):13.382303):10.828389):0.487829,((340:5.488394,339:5.488394):31.417596,(((329:21.225496,((331:12.032031,330:12.032031):6.513284,(332:18.161476,(333:16.575285,((336:13.083059,335:13.08306):2.053727,334:15.136786):1.438499):1.58619):0.383839):2.680182):10.244456,328:31.469953):1.235104,327:32.705055):4.200935):1.576985):1.221599):6.550779,(338:19.305109,337:19.305109):26.950245):35.719939,((((376:37.669311,(((364:7.817005,(365:2.873143,366:2.873143):4.943864):9.319207,(367:8.068991,368:8.068991):9.067223):20.305354,((369:19.394361,(370:16.75857,371:16.758571):2.635791):3.825866,(((375:12.769559,374:12.769559):4.619769,373:17.389328):2.212723,372:19.60205):3.618178):14.221341):0.227743):18.292734,((380:28.563386,(377:18.875505,(379:10.918651,378:10.918651):7.956854):9.687881):17.538983,((382:20.088767,381:20.088767):25.413652,((383:15.49006,(384:11.799279,(385:9.465753,386:9.465753):2.333526):3.690782):28.554617,(387:14.927145,(388:13.588137,389:13.588138):1.339007):29.117533):1.457742):0.599949):9.859676):13.09118,(362:34.753261,363:34.753261):34.299964):11.188461,((((394:13.939769,395:13.939769):47.297717,((390:30.689458,391:30.689456):29.272423,(392:38.146374,393:38.146374):21.815507):1.275605):0.670983,((399:44.169532,((400:28.679643,(401:14.100311,402:14.100311):14.579333):4.362844,(403:27.091481,((406:14.316102,(407:12.598409,(408:8.922402,(409:8.152803,(410:6.104413,411:6.104413):2.04839):0.769599):3.676007):1.717693):11.630222,(404:23.091564,405:23.091565):2.85476):1.145157):5.951006):11.127044):12.72271,((396:24.584062,397:24.584063):27.943018,398:52.527079):4.365161):5.016228):0.470779,((((((413:22.202979,414:22.202979):5.303595,415:27.506574):7.337532,((418:25.164738,419:25.164736):6.504275,(416:29.692433,417:29.692434):1.97658):3.175093):8.025898,(((423:23.789687,(424:22.376874,(421:10.150102,422:10.150103):12.226772):1.412812):4.675273,425:28.46496):10.660312,420:39.125272):3.744733):4.848769,(412:46.194454,426:46.194454):1.524319):7.064322,(((444:33.613959,((((447:18.669889,448:18.669889):4.833364,445:23.503254):1.190961,446:24.694214):1.566505,(((((460:17.816409,461:17.816409):2.804163,((459:17.035196,(457:5.56564,458:5.56564):11.469556):2.264375,(455:14.232837,456:14.232837):5.066734):1.321001):2.26375,(453:21.704016,454:21.704017):1.180305):1.326613,(451:17.362205,452:17.362204):6.848729):1.462374,(450:24.730922,449:24.730922):0.942385):0.58741):7.35324):8.2007,((428:26.71198,427:26.71198):6.865098,(((431:22.383997,(433:20.615533,432:20.615531):1.768465):3.831317,((443:22.799217,((435:16.557529,(436:15.063117,((437:9.60821,(439:7.104519,438:7.104519):2.503692):3.025559,(440:8.023017,441:8.023018):4.610753):2.429346):1.494412):2.270089,442:18.827618):3.971598):2.016946,434:24.816163):1.399152):5.251386,(430:20.652637,429:20.652638):10.814063):2.110377):8.23758):6.5344,(462:35.065995,(((463:27.098306,467:27.098306):2.346124,(466:26.361115,(464:0.490393,465:0.490393):25.870721):3.083315):2.061,(468:29.256901,((470:26.054801,469:26.054802):2.333493,(((495:22.109886,(496:20.553539,(500:19.915229,((498:5.838135,499:5.838135):12.129411,497:17.967546):1.947683):0.638311):1.556345):2.392296,(((471:16.708153,(473:12.70427,472:12.70427):4.003883):4.851677,(((489:13.345938,(482:11.087874,((485:6.009906,(484:1.455007,483:1.455007):4.554899):4.521734,((487:4.786935,486:4.786935):5.10067,488:9.887605):0.644035):0.556234):2.258064):4.656232,(481:12.286493,480:12.286493):5.715677):2.910608,(((478:9.920376,479:9.920376):6.641605,477:16.561981):2.827501,((475:9.071714,476:9.071714):3.931362,474:13.003076):6.386406):1.523296):0.647052):1.093011,(((493:15.007382,(491:6.237939,492:6.237939):8.769443):2.260535,490:17.267918):3.516559,494:20.784477):1.868364):1.849339):2.829335,(501:26.099947,(502:24.692753,(((507:6.896306,506:6.896305):16.471544,508:23.367848):0.543722,((503:16.753527,504:16.753528):4.572537,505:21.326065):2.585507):0.781181):1.407195):1.231568):1.05678):0.868606):2.248528):3.560567):13.283062):6.434036):7.596154):17.862437):1.733608):26.27424):5.955675):38.671198):8.286801):5.696523):7.661875);
+	TREE * UNTITLED = [&R] ((1:3.273356,2:3.273356):189.389624,((((5:17.998698,6:17.998698):80.239388,(3:13.852479,4:13.852479):84.385609):41.26519,(9:19.496163,(8:16.439474,7:16.439474):3.05669):120.007113):46.553571,((10:157.86012,((11:44.379234,12:44.379233):75.749839,(15:108.485393,(13:48.430226,14:48.430227):60.055167):11.643679):37.731047):23.007325,((((17:11.395851,(18:9.76693,(20:4.898681,19:4.898681):4.868249):1.628922):32.732857,16:44.128708):96.481811,(21:129.096832,((22:17.164843,23:17.164842):89.338485,(((35:22.28035,(37:19.389968,36:19.389968):2.890382):14.308362,(33:35.067136,34:35.067137):1.521576):36.632104,((26:50.36367,(24:22.357268,25:22.357269):28.006403):9.343337,((27:34.560807,(29:33.840045,28:33.840045):0.720762):14.589477,((30:13.472412,31:13.472412):24.354771,32:37.827183):11.323102):10.556723):13.51381):33.28251):22.593505):11.513686):34.660308,((38:39.908582,(39:7.614423,40:7.614423):32.294159):99.677263,((((((298:18.570655,(300:8.840929,299:8.840929):9.729726):32.910946,(301:35.774064,(303:25.614423,302:25.614423):10.15964):15.707538):9.070939,((((287:17.56136,286:17.56136):7.465609,288:25.026969):15.551511,(83:38.932007,(291:21.472649,(289:0.291358,290:0.291358):21.181291):17.459358):1.646472):17.436717,(((294:28.996109,(296:27.452817,295:27.452816):1.543292):3.101739,297:32.097848):13.950407,(293:19.382448,292:19.382448):26.665806):11.966942):2.537344):9.537684,((((43:0.129028,42:0.129028):5.395497,41:5.524525):0.617519,44:6.142043):62.590585,(((((252:31.343447,((258:11.290559,259:11.290558):17.252399,((253:21.315314,254:21.315315):6.037564,((255:0.344153,256:0.344153):8.448036,257:8.792189):18.56069):1.190079):2.80049):17.923681,((284:32.618773,285:32.618774):8.747617,(((262:28.164983,(260:24.152861,261:24.152861):4.012122):2.968045,((263:16.435335,(264:9.579486,265:9.579486):6.855849):13.145918,(((((271:14.058697,272:14.058697):2.21402,(269:14.146917,270:14.146917):2.1258):4.382549,(274:15.903861,(267:14.922156,273:14.922156):0.981705):4.751407):0.84134,268:21.496607):2.813209,266:24.309816):5.271438):1.551774):8.629213,(((282:26.020855,283:26.020855):5.343337,(((279:23.139509,(281:10.369132,280:10.369132):12.770377):1.75034,278:24.889849):5.501255,(276:14.357339,277:14.357339):16.033766):0.973087):1.167825,275:32.532016):7.230225):1.60415):7.900738):13.697739,((183:47.408666,((185:34.909904,184:34.909906):6.064919,(((186:17.850012,187:17.850012):16.336293,(190:30.052843,(188:18.125545,189:18.125548):11.927296):4.133461):1.996646,191:36.182951):4.791873):6.433842):7.01121,(((((((245:24.376769,(247:19.352831,246:19.352831):5.023939):4.206707,244:28.583476):4.68208,(240:25.672896,((242:12.511872,243:12.511872):4.442506,241:16.954379):8.718518):7.592659):4.13397,(((211:28.27843,(213:3.605815,212:3.605815):24.672614):6.742651,((214:27.105789,215:27.105789):1.770485,((223:16.745161,224:16.745161):5.734407,(((219:8.634936,220:8.634936):10.619611,218:19.254546):2.157108,((222:14.134661,221:14.134661):5.436459,(216:15.580942,217:15.580942):3.990178):1.840535):1.067914):6.396705):6.144807):1.763899,((231:29.730604,(((230:0.725664,229:0.725664):14.695729,(228:2.934711,227:2.934711):12.486682):5.583101,(226:19.290311,225:19.290311):1.714184):8.72611):2.035182,(((238:17.957864,239:17.957864):6.366166,(236:20.674755,237:20.674755):3.649276):6.389017,(232:30.172771,((233:6.153542,234:6.153542):21.404434,235:27.557976):2.614795):0.540277):1.052739):5.019192):0.614547):11.971744,((((203:30.156835,204:30.156834):2.943967,205:33.100802):1.767421,206:34.868223):10.559912,((209:24.096357,210:24.096357):11.414971,(207:22.743268,208:22.743268):12.768059):9.916807):3.943136):1.729687,(((200:24.727191,(202:15.900601,201:15.900602):8.826589):4.553545,(199:24.510539,(196:23.666229,(197:22.049303,198:22.049304):1.616925):0.84431):4.770196):4.193944,(195:24.606969,((193:5.628591,194:5.628591):16.916442,192:22.545031):2.061936):8.867711):17.626279):1.254359,(248:48.703396,(249:41.678267,(251:15.432029,250:15.432029):26.246241):7.025128):3.651921):2.064559):8.544992):3.602128,(((176:18.358393,(174:10.565933,175:10.565933):7.79246):2.060947,(177:16.05237,178:16.05237):4.36697):45.056902,((180:22.289187,179:22.289188):38.374138,(181:58.210777,182:58.210777):2.45255):4.812915):1.090753):1.592111,(((((151:17.219039,152:17.219039):11.907208,(153:10.339152,154:10.339152):18.787094):9.481189,((149:20.921332,148:20.921331):17.019061,(150:33.920598,147:33.920598):4.019793):0.667044):6.048932,(((173:2.917889,172:2.917889):33.119521,(((163:25.830685,(169:18.994642,168:18.994643):6.836042):4.104155,(167:28.604125,(170:13.204894,171:13.204894):15.399232):1.330714):1.952496,(164:25.380842,(166:22.229819,165:22.229819):3.151023):6.506493):4.150075):5.746491,((161:36.50174,162:36.50174):3.683898,(((156:3.637155,157:3.637156):15.489659,155:19.126814):11.87468,(158:28.150164,(159:25.585263,160:25.585264):2.5649):2.85133):9.184144):1.598264):2.872466):22.755517,((((86:20.907941,((85:10.767016,84:10.767015):9.186279,87:19.953295):0.954645):11.191015,((89:10.686146,88:10.686146):6.375692,90:17.061838):15.037117):24.934777,(56:41.06673,((((55:19.032362,(53:15.571467,54:15.571468):3.460894):2.967224,((51:15.558553,52:15.558552):3.201793,50:18.760345):3.239241):1.457275,(47:17.92747,(49:16.226355,48:16.226355):1.701115):5.529391):0.868454,(45:20.672249,46:20.672249):3.653066):16.741415):15.967002):8.067906,(((((66:27.624742,65:27.624743):7.057846,(63:23.708916,64:23.708916):10.973673):10.246951,(((61:7.577623,60:7.577624):17.723442,62:25.301065):6.912115,(57:24.336945,(59:2.488039,58:2.488039):21.848906):7.876235):12.71636):14.343869,((80:44.867621,(81:27.890797,82:27.890798):16.976823):11.787147,(67:53.650746,((((((77:15.484242,78:15.484242):1.508386,76:16.992627):6.034744,(79:22.291766,75:22.291766):0.735607):8.924402,((69:26.57269,(70:19.650197,71:19.650196):6.922495):4.272533,(72:27.182436,73:27.182436):3.662788):1.10655):1.121841,74:33.073615):9.742639,68:42.816254):10.834492):3.004022):2.618641):5.062522,((((((139:25.677743,(140:15.255705,(141:12.002189,142:12.002189):3.253516):10.422039):4.885682,(((138:24.26198,((117:23.822065,((116:20.990478,(115:19.641276,114:19.641276):1.349202):0.877458,((119:16.900866,120:16.900866):3.586426,((123:14.917659,124:14.91766):4.786695,((121:12.059325,122:12.059326):5.824324,118:17.883649):1.820707):0.782936):1.380644):1.95413):0.227561,((136:22.585504,137:22.585504):0.596678,((128:20.755349,(132:17.352547,((133:16.00094,(135:13.755157,134:13.755157):2.245782):0.875281,(131:13.150355,(129:10.798359,130:10.798359):2.351997):3.725865):0.476326):3.402803):1.780612,((127:2.213418,126:2.213418):2.897852,125:5.11127):17.424692):0.646219):0.867445):0.212355):2.252951,(((101:17.461332,(102:12.751755,103:12.751756):4.709576):4.165409,(100:3.100534,(98:1.495778,99:1.495778):1.604756):18.526207):3.876712,((113:17.626072,(112:8.222827,(((110:1.522572,109:1.522572):3.414006,(107:3.156405,108:3.156405):1.780173):2.10014,111:7.036718):1.18611):9.403244):1.994064,(104:18.16659,(105:7.636696,106:7.636697):10.529893):1.453545):5.883319):1.011478):2.873459,(96:17.83043,97:17.83043):11.557961):1.175034):3.34033,95:33.903756):10.097291,(93:39.786733,94:39.786733):4.214313):3.447987,((143:27.025412,(145:15.669749,144:15.669748):11.355665):17.632606,146:44.65802):2.791014):8.565262,(92:21.077452,91:21.077452):34.936844):8.321637):0.765707):2.310246):0.747221):0.573522):1.357596):53.656175,(304:106.302853,((324:17.962777,323:17.962776):69.848308,((306:54.008245,(((311:43.709718,(312:26.274503,((316:4.293394,315:4.293394):19.948544,(314:16.332535,313:16.332535):7.909403):2.032564):17.435216):2.001427,(305:42.199431,310:42.199431):3.511713):1.231884,((307:23.783285,309:23.783285):0.001122,308:23.784408):23.158622):7.065215):31.458373,(317:68.867815,(318:56.025452,(((319:17.296505,321:17.296505):3.826842,320:21.123347):14.851572,322:35.97492):20.050533):12.842362):16.598803):2.344468):18.491767):17.443546):9.279008,((((325:30.800486,326:30.800485):18.726311,(((358:35.629376,(359:17.420537,(361:10.388,360:10.388):7.032537):18.208839):11.31362,(341:46.086912,(342:42.485259,(((355:36.698074,(((351:17.25035,352:17.250348):10.127091,((346:14.487638,(350:13.831231,((349:5.749271,348:5.749271):4.683458,347:10.432728):3.398502):0.656407):1.463524,(345:1.793584,344:1.793584):14.157578):11.426277):2.426647,(353:10.963944,354:10.963944):18.840142):6.893987):1.6272,(357:34.367788,356:34.367788):3.957485):2.489144,343:40.814417):1.670842):3.601655):0.856082):1.146246,((339:6.471601,340:6.471601):39.874274,(327:41.097275,(328:39.6472,(((330:15.790082,331:15.790082):8.937156,(332:24.156567,(333:22.02516,(334:20.11529,(336:17.774092,335:17.774092):2.341198):1.90987):2.131407):0.57067):3.167287,329:27.894524):11.752675):1.450075):5.2486):1.743367):1.437556):6.333073,(338:16.47718,337:16.47718):39.38269):46.35824,(((362:28.130765,363:28.130765):60.595029,((((367:12.979814,368:12.979815):13.635477,((366:4.626302,365:4.626302):9.277714,364:13.904017):12.711274):22.672851,(((369:27.563499,(370:23.108056,371:23.108056):4.455443):4.902062,(((375:18.880591,374:18.880591):5.420037,373:24.300625):2.486887,372:26.787514):5.678046):13.197175,376:45.662736):3.625407):21.712431,((380:37.414414,((378:13.053052,379:13.053052):11.546665,377:24.599717):12.814697):18.885873,((387:19.753421,(389:18.973291,388:18.973291):0.78013):35.697674,((381:25.99474,382:25.99474):28.756786,((386:18.836369,(385:17.008092,384:17.008092):1.828278):2.242113,383:21.078483):33.673043):0.699569):0.849192):14.700287):17.72522):11.284234,(((((412:64.70305,(390:41.497783,391:41.497784):23.205267):8.438608,(393:47.358756,392:47.358755):25.782903):1.901411,(394:15.553049,395:15.553049):59.49002):0.688739,((398:64.674717,(396:31.208977,397:31.208977):33.465741):6.074786,(399:56.301808,((400:31.867741,(402:12.325885,401:12.325885):19.541857):8.602642,(403:32.796927,((406:16.500662,(407:14.348423,(((410:7.544483,411:7.544483):1.710205,409:9.254688):1.163553,408:10.41824):3.930181):2.15224):14.864835,(404:27.215871,405:27.215871):4.149625):1.43143):7.673457):15.831424):14.447697):4.982304):0.649756,((426:58.708983,((((413:27.437749,414:27.437749):4.443935,415:31.881684):11.050466,((418:31.731719,419:31.731718):7.886164,(416:36.622999,417:36.622998):2.994883):3.314268):10.431758,(420:49.899644,((((421:13.101289,422:13.101289):14.69224,423:27.793529):3.753597,424:31.547126):5.725501,425:37.272626):12.627017):3.464265):5.345075):8.952808,(((444:46.765979,((445:33.314044,((447:25.385546,448:25.385545):6.92315,446:32.308695):1.005348):3.630664,(((451:24.206018,452:24.206018):10.353731,((((457:7.70018,458:7.70018):19.112018,459:26.812198):3.569584,((460:24.588286,461:24.588285):4.89263,(455:21.761763,456:21.761763):7.719152):0.900867):2.643222,(453:31.915765,454:31.915766):1.109239):1.534745):1.509458,(450:34.877439,449:34.877439):1.191768):0.875501):9.821271):9.972833,((427:37.089067,428:37.089067):8.510214,(((431:29.685652,(433:27.889671,432:27.889673):1.795979):4.757914,(((442:27.295755,((436:21.346009,((437:15.330667,(439:10.941945,438:10.941945):4.388722):3.944102,(440:13.927828,441:13.927828):5.346939):2.071241):1.28947,435:22.635478):4.660277):2.367579,443:29.663334):3.086045,434:32.749379):1.694186):8.295331,(429:29.446768,430:29.446769):13.292128):2.860385):11.13953):6.796039,(462:47.94488,(((463:38.013748,467:38.013749):2.287827,(466:38.361004,(464:0.57269,465:0.57269):37.788314):1.940571):2.69151,(468:40.033622,((469:35.595109,470:35.595108):3.233922,(((495:25.479955,(496:22.518918,((497:20.782967,(498:7.738558,499:7.738558):13.044409):0.722484,500:21.50545):1.013466):2.961037):5.122136,(((471:21.235249,(473:16.19608,472:16.19608):5.039169):4.830477,(((481:13.99455,480:13.994551):4.005449,(489:16.219645,(482:13.791889,((488:12.229831,(485:7.226844,(484:1.896639,483:1.896639):5.330205):5.002988):0.738922,(486:5.584449,487:5.584448):7.384304):0.823136):2.427756):1.780356):7.09235,((474:14.310307,(475:9.930566,476:9.930566):4.379741):8.831127,(477:19.91742,(478:12.120415,479:12.120415):7.797005):3.224014):1.950916):0.973376):1.473679,(494:25.833435,(490:18.053828,(493:15.001612,(492:8.139872,491:8.139872):6.86174):3.052216):7.779607):1.705971):3.062685):6.366615,(501:35.75458,((((507:5.405334,506:5.405334):26.584515,508:31.989849):1.263031,(505:27.517414,(503:21.775094,504:21.775094):5.74232):5.735468):0.554282,502:33.807162):1.947416):1.214127):1.860324):1.204593):2.959463):4.951795):15.589969):4.126941):8.719773):23.628464):2.208082):30.807297):6.560438):35.684982):5.596618):5.189404):6.606132);
+	TREE * UNTITLED = [&R] ((2:3.552892,1:3.552892):193.304127,(((9:21.009526,(7:17.79412,8:17.79412):3.215407):123.422229,((3:13.049643,4:13.049643):89.46256,(5:20.587911,6:20.587911):81.924292):41.919553):46.768981,((10:163.259922,((11:43.746345,12:43.746345):79.746368,(15:111.946586,(13:50.628772,14:50.628773):61.317814):11.546127):39.767209):22.372528,((((18:11.511021,((20:4.598963,19:4.598963):3.997025,17:8.595989):2.915032):33.911146,16:45.422167):96.078503,(21:128.832548,((22:21.299629,23:21.299629):84.31256,(((26:47.605408,(24:21.176459,25:21.176459):26.428947):8.224673,((32:41.305079,(28:29.861549,(29:27.507428,27:27.507429):2.35412):11.44353):1.171674,(30:12.645333,31:12.645334):29.831419):13.353329):14.454878,((35:21.472709,(36:17.889381,37:17.889381):3.583329):13.355272,(34:31.808965,33:31.808966):3.019015):35.456978):35.32723):23.22036):12.668121):38.351202,((38:46.391635,(40:8.913613,39:8.913613):37.478021):101.444349,(((((324:12.383664,323:12.383664):82.284021,((306:52.943908,((305:45.272739,(311:44.41488,((312:29.137995,((315:5.087229,316:5.087229):20.619459,(313:19.80922,314:19.80922):5.897469):3.431307):13.754935,310:42.892931):1.521949):0.857859):1.873787,((308:18.213075,307:18.213076):2.67902,309:20.892095):26.254431):5.797382):39.320093,((318:63.568648,(((319:19.596895,321:19.596895):4.400603,320:23.997497):22.346645,322:46.344142):17.224505):12.134639,317:75.703286):16.560714):2.403684):17.629976,304:112.297661):17.448407,(((((300:9.417368,299:9.417368):10.504463,298:19.921832):33.798246,((303:26.78154,302:26.781539):10.137974,301:36.919514):16.800565):7.342352,((((286:16.974548,287:16.974549):7.615705,288:24.590253):15.483406,(83:38.319919,((289:0.447088,290:0.447088):22.247491,291:22.694579):15.62534):1.753741):18.5026,((297:34.316524,(294:31.538008,(295:28.869734,296:28.869734):2.668273):2.778517):14.784674,(293:22.212588,292:22.212589):26.88861):9.475062):2.486169):6.089867,(((((((172:2.700061,173:2.700061):33.372826,((163:31.554024,(164:25.388136,(166:22.106462,165:22.106462):3.281675):6.165887):0.719571,((168:18.803476,169:18.803477):11.898987,(167:29.179365,(170:13.928157,171:13.928157):15.251209):1.523097):1.571132):3.799292):5.881012,(((158:28.715099,(160:26.225454,159:26.225453):2.489646):2.510619,((157:4.713838,156:4.713839):14.675198,155:19.389037):11.83668):9.199828,(161:37.899175,162:37.899175):2.52637):1.528354):2.495509,(150:39.604799,(((154:9.932133,153:9.932133):19.613806,(152:16.673328,151:16.673328):12.872611):8.541194,(147:37.430852,(149:21.971489,148:21.971489):15.459363):0.656282):1.517665):4.844609):20.801839,((((68:43.875863,(((72:31.052335,((71:21.168453,70:21.168454):7.0224,69:28.190853):2.861482):1.836379,74:32.888714):1.90408,(73:32.165549,((79:22.704111,(76:18.054984,(77:16.344319,78:16.34432):1.710665):4.649127):2.280684,75:24.984794):7.180755):2.627245):9.083069):13.792942,(((((57:21.557982,(58:2.959504,59:2.959504):18.598478):9.116589,((61:7.260494,60:7.260494):17.231134,62:24.491628):6.182943):13.113635,((66:25.197584,65:25.197583):8.616336,(64:21.886332,63:21.886332):11.927587):9.974286):9.061921,67:52.850126):3.266848,(80:44.306479,(81:27.912927,82:27.912928):16.393551):11.810496):1.551831):3.924774,(((46:27.312609,((50:24.518848,(52:18.913971,51:18.91397):5.604878):1.989833,(55:23.044427,(53:17.679906,54:17.679904):5.364522):3.464254):0.803928):1.218733,(47:19.564583,(49:17.245418,48:17.245418):2.319166):8.966758):11.342548,(45:25.442451,56:25.442451):14.43144):21.719689):1.557973,(((90:16.35949,(89:10.417927,88:10.417928):5.941562):14.550542,((85:11.716524,84:11.716524):8.372638,(86:18.457252,87:18.457252):1.631909):10.820871):31.15405,((92:20.86848,91:20.86848):35.133038,(((94:38.963553,93:38.963553):4.557348,(95:32.912421,((139:24.910127,(140:15.26405,(142:12.50584,141:12.50584):2.75821):9.646078):4.897516,((96:18.508186,97:18.508186):10.030311,((138:23.26926,(((117:20.883859,((116:19.017447,(118:18.42291,(121:12.116745,122:12.116745):6.306164):0.594537):0.872976,((120:16.524663,119:16.524664):2.623526,(124:15.721595,123:15.721597):3.426593):0.742235):0.993435):0.696363,(114:17.676653,115:17.676651):3.903569):1.042851,(128:22.286749,((((133:14.596637,(134:13.590486,135:13.590485):1.006151):1.932593,(132:14.001349,(131:12.059791,(129:9.239817,130:9.239817):2.819975):1.941557):2.527881):4.311333,((127:2.683127,126:2.683127):1.672116,125:4.355243):16.485321):1.101171,(136:21.124951,137:21.124952):0.816784):0.345014):0.336323):0.646188):2.907001,(((101:17.244624,(103:12.35122,102:12.35122):4.893405):4.172038,((98:1.617972,99:1.617972):1.004133,100:2.622105):18.794556):4.090604,((113:19.255955,(112:9.901331,((108:3.520036,107:3.520036):3.079126,(111:5.339838,(110:1.845231,109:1.845231):3.494607):1.259324):3.302168):9.354625):2.17322,(104:19.582781,(105:6.803551,106:6.803551):12.77923):1.846393):4.078092):0.668995):2.362235):1.269147):3.104777):10.60848):3.459311,(146:44.637229,(143:29.144854,(144:15.882265,145:15.882264):13.262591):15.492375):2.342983):9.021306):6.062564):1.08747):2.099694):0.617885,((((177:16.000204,178:16.000204):3.682857,((175:11.447709,174:11.447709):5.995998,176:17.443707):2.239355):42.897378,(182:58.644934,((179:21.739415,180:21.739415):33.606597,181:55.346013):3.298921):3.935506):1.784502,(((((258:11.421777,259:11.421776):17.994109,((257:9.925386,(256:0.106428,255:0.106428):9.818958):18.221178,(253:23.02706,254:23.02706):5.119505):1.26932):2.388657,252:31.804542):18.444949,((284:34.107855,285:34.107855):7.988959,(((260:29.012717,261:29.012717):5.48482,(((273:29.027264,(((265:11.991405,264:11.991405):5.487981,263:17.479386):10.760447,266:28.239833):0.787431):1.593502,((268:26.018469,((272:19.153283,271:19.153282):5.011099,(270:20.216801,269:20.216801):3.94758):1.854089):1.399972,(267:18.848002,274:18.848002):8.570439):3.202324):2.550763,262:33.171529):1.326008):2.699042,((283:27.768199,282:27.768199):6.607964,((277:18.923071,276:18.923071):11.513893,((((280:6.087947,281:6.087947):5.657904,279:11.74585):0.007964,278:11.753814):6.043748,275:17.797562):12.639402):3.939198):2.820416):4.900235):8.152677):10.923812,((((184:35.350687,185:35.350687):6.496368,(((187:16.946587,186:16.946588):18.601119,((188:13.59191,189:13.59191):18.229275,190:31.821187):3.726519):1.560489,191:37.108195):4.73886):4.942076,183:46.789131):6.668042,(((((206:33.915828,(205:31.187921,(203:29.639838,204:29.639837):1.548084):2.727907):9.284022,((207:22.506118,208:22.506118):10.114324,(210:24.140771,209:24.140771):8.47967):10.579408):4.547785,(((((212:3.883737,213:3.883737):23.047336,211:26.931072):8.146458,(((224:16.235998,223:16.235998):5.978341,((((222:12.08608,221:12.08608):7.058094,(217:16.026818,216:16.026818):3.117356):0.946701,(219:9.038668,220:9.038668):11.052207):0.812276,218:20.90315):1.311189):7.898569,(215:28.468501,214:28.468501):1.644408):4.964622):1.361807,((232:30.969205,((235:27.610372,(234:6.521389,233:6.521389):21.088983):2.552441,((236:19.952383,237:19.952385):3.588588,(239:16.752985,238:16.752985):6.787987):6.621841):0.806392):0.667207,(((225:18.774243,226:18.774243):2.096035,((230:0.761548,229:0.761548):15.767446,(228:2.349977,227:2.349977):14.179018):4.341283):8.714349,231:29.584626):2.051786):4.802925):0.631896,((244:26.96589,((246:21.194206,247:21.194205):2.682221,245:23.876427):3.089462):5.143679,(((242:10.934856,243:10.934856):5.262516,241:16.197371):8.879344,240:25.076716):7.032853):4.961665):10.676402):1.895073,(((195:21.077727,192:21.077726):1.218198,(193:5.698055,194:5.698055):16.59787):7.374045,((200:22.611806,(201:15.749308,202:15.749308):6.862499):5.462433,((196:21.177762,(197:20.097166,198:20.097166):1.080596):1.028742,199:22.206504):5.867736):1.595729):19.972739):1.642122,(248:48.132907,((251:15.368784,250:15.368784):26.132258,249:41.501042):6.631865):3.151922):2.172343):7.71613):3.191638):1.50419):0.321712,(44:6.177148,((43:0.230478,42:0.230478):5.089908,41:5.320386):0.856761):60.013697):0.961454):62.59377):11.933835,(((((339:10.215173,340:10.215173):61.744149,(327:60.372202,(328:57.462159,(329:39.332471,((333:31.084891,((336:25.499439,335:25.49944):2.781169,334:28.280607):2.804282):3.313346,((331:21.527911,330:21.527911):10.980297,332:32.508208):1.890029):4.934234):18.129686):2.910044):11.58712):4.577489,((((360:12.987737,361:12.987737):12.21208,359:25.199817):27.534195,358:52.734012):23.415983,(((337:23.465127,338:23.465127):45.772083,341:69.23721):5.936987,(342:69.370907,(((356:57.432594,357:57.432593):4.903239,(355:59.025263,((353:17.097162,354:17.097162):28.75154,(((344:2.109446,345:2.109446):21.501488,(346:22.151653,(350:21.222877,(347:13.548948,(348:7.860275,349:7.860275):5.688673):7.673928):0.928776):1.459282):18.231522,(352:27.606717,351:27.606718):14.235737):4.006246):13.176562):3.310569):4.162777,343:66.49861):2.872298):5.803289):0.975798):0.386817):0.789446,(326:45.255077,325:45.255077):32.07118):35.853204,(((362:52.38225,363:52.382249):44.670854,(((380:40.81572,(377:24.42649,(379:13.154764,378:13.154763):11.271728):16.389229):20.721229,(((382:28.601008,381:28.601008):30.686365,(383:24.027544,((385:17.594134,384:17.594134):3.081317,386:20.67545):3.352094):35.25983):0.979717,(387:19.296271,(389:18.369746,388:18.369747):0.926525):40.970819):1.269858):16.254866,((376:51.662365,((367:13.026537,368:13.026538):15.457227,(366:17.07208,(365:16.594638,364:16.594638):0.477442):11.411685):23.1786):2.870341,((((375:19.766418,374:19.766418):6.477396,373:26.243814):2.751294,372:28.995109):6.146401,(369:29.633587,(370:23.605886,371:23.605884):6.027701):5.507923):19.391197):23.259108):19.261289):13.377788,(412:81.399501,((((398:65.779344,(396:32.086639,397:32.086638):33.692705):4.777173,(399:57.289407,((400:34.682292,(401:16.963969,402:16.963969):17.718323):10.549573,(403:36.537431,(((407:17.075187,(408:13.946413,((411:5.429457,410:5.429457):4.076011,409:9.505469):4.440943):3.128775):2.583646,406:19.658833):15.639653,(404:31.088527,405:31.088528):4.209958):1.238945):8.694435):12.057541):13.267111):2.927794,((394:14.96995,395:14.96995):57.666538,((390:43.363021,391:43.363021):27.545943,(393:43.350934,392:43.350934):27.558031):1.727525):0.847822):0.527333,((426:54.133798,(((415:31.082037,(414:25.03017,413:25.030171):6.051866):8.660483,((419:29.51398,418:29.513981):7.252819,(416:34.095452,417:34.095451):2.67135):2.975721):8.701461,((425:29.614405,(424:23.648024,((421:11.5638,422:11.563801):11.067761,423:22.631561):1.016464):5.966382):14.084785,420:43.69919):4.744792):5.689816):9.906612,(((((430:30.985057,429:30.985055):13.808827,((431:32.211883,(432:30.119983,433:30.119984):2.0919):6.234954,((((435:26.936153,(((437:19.286377,(438:13.207653,439:13.207653):6.078723):3.022674,(441:15.329376,440:15.329376):6.979675):3.045304,436:25.354355):1.581798):5.042697,442:31.97885):2.340807,443:34.319658):2.502498,434:36.822154):1.624683):6.347044):2.649372,(427:39.009911,428:39.009911):8.433343):8.856809,(444:47.386221,((((447:24.956714,448:24.956714):6.923862,445:31.880576):2.087043,446:33.967618):2.574151,((450:33.600849,449:33.600848):1.421123,((451:22.643915,452:22.643915):9.956846,(((455:22.669848,456:22.669848):5.489741,(((458:7.284211,457:7.284211):15.7427,459:23.02691):3.964935,(460:23.604403,461:23.604402):3.387443):1.167744):2.259672,(454:29.255351,453:29.25535):1.16391):2.1815):2.42121):1.519799):10.844451):8.913842):4.573206,(462:42.894726,((((463:32.760747,466:32.760747):1.642383,(465:0.536331,464:0.536331):33.866799):1.26157,467:35.6647):2.211894,(468:34.335443,((469:30.75034,470:30.750342):2.481305,(((495:23.585584,(496:21.627373,(500:20.745145,(497:19.460912,(499:6.595938,498:6.595938):12.864974):1.284232):0.882229):1.958211):3.443816,((((477:18.044127,(479:10.022049,478:10.022049):8.022078):2.640708,(474:13.868912,(476:8.9877,475:8.9877):4.881212):6.815924):1.957594,(((480:12.785802,481:12.785802):5.215951,((((485:6.783942,(483:1.323516,484:1.323516):5.460426):4.794588,(488:11.306835,(486:5.830037,487:5.830038):5.476798):0.271695):0.733097,482:12.311628):2.124134,489:14.435761):3.565992):4.352086,((473:14.672497,472:14.672498):3.701273,471:18.37377):3.980069):0.288589):1.879986,(494:22.568186,(490:17.758671,(493:15,(491:8.573304,492:8.573305):6.426696):2.758671):4.809515):1.954229):2.506985):4.369124,(501:29.88627,(((507:10.024062,506:10.024062):16.965624,502:26.989687):1.014834,((505:23.455983,(504:17.959317,503:17.959317):5.496666):3.141777,508:26.597762):1.406759):1.88175):1.512255):1.833121):1.103797):3.541153):5.01813):17.978544):3.167141):9.971234):7.387858):29.031389):2.74857):28.500441):6.156081):32.015888):5.780579):5.568287):5.656282);
+	TREE * UNTITLED = [&R] ((2:3.212976,1:3.212976):193.406464,((((5:20.101015,6:20.101015):83.24125,(4:14.086737,3:14.086737):89.255529):41.066298,((7:18.698713,8:18.698713):2.226236,9:20.92495):123.483614):45.426937,((10:162.340453,((12:44.896965,11:44.896965):79.801934,((13:50.571125,14:50.571126):62.728625,15:113.299751):11.399148):37.641554):21.685941,((((17:13.713032,((20:4.547412,19:4.547412):5.139897,18:9.687309):4.025722):30.690757,16:44.403788):100.69554,(21:133.731188,(((((36:21.759895,37:21.759896):4.193857,35:25.953752):19.337741,(34:36.605747,33:36.605748):8.685746):31.542653,(((27:35.278314,(29:33.578826,28:33.578826):1.699488):13.442057,(32:42.355772,(31:12.377937,30:12.377938):29.977835):6.3646):13.774392,(26:52.868955,(24:28.696276,25:28.696275):24.172679):9.625808):14.339382):34.848392,(22:21.161147,23:21.161147):90.52139):22.04865):11.368141):33.100457,((38:38.894342,(40:8.047815,39:8.047815):30.846528):104.039924,((((((41:6.010991,(43:0.191112,42:0.191112):5.819879):0.71704,44:6.728032):58.211829,(((((((260:27.323966,261:27.323966):3.351776,(262:28.866121,((((264:10.056884,265:10.056884):3.648535,263:13.70542):9.685916,266:23.391336):2.466707,(273:21.308177,((((268:10.870184,(270:8.15439,269:8.15439):2.715795):1.034668,(271:7.854516,272:7.854516):4.050336):1.367112,267:13.271964):4.809712,274:18.081676):3.226501):4.549865):3.008079):1.809621):17.242361,((((278:27.573895,282:27.573895):0.445232,283:28.019127):2.536878,((276:17.336575,277:17.336575):11.638193,((281:8.73971,280:8.73971):16.831468,(279:21.240926,275:21.240926):4.330252):3.40359):1.581236):16.24756,(285:44.704652,284:44.704652):2.098912):1.114539):4.430229,(((((255:0.457818,256:0.457818):7.407866,257:7.865685):19.155303,(253:20.696263,254:20.696263):6.324723):1.144177,(258:11.187985,259:11.187984):16.977179):2.650207,252:30.815371):21.532961):8.040866,((183:44.26016,((184:34.776049,185:34.776048):6.535555,((((189:10.352788,188:10.352787):20.749199,190:31.101988):4.977114,(187:15.8922,186:15.8922):20.186902):1.959993,191:38.039094):3.272509):2.948556):7.139429,(((((206:31.425141,(205:30.431575,(204:27.263716,203:27.263715):3.167858):0.993566):9.59232,(208:29.248157,(209:21.532635,210:21.532634):7.715523):11.769303):4.20858,(((244:25.882562,(245:21.146782,(246:19.449895,247:19.449895):1.696886):4.73578):4.295706,(240:24.596469,((242:10.263662,243:10.263662):4.856493,241:15.120154):9.476315):5.581798):4.890587,(((207:29.621551,(((219:8.948564,220:8.948563):11.36705,(218:19.534865,((223:14.483819,224:14.483819):4.247943,((217:14.532713,216:14.532713):3.322595,(221:13.662761,222:13.662761):4.192547):0.876454):0.803104):0.780748):8.025771,(215:25.858696,214:25.858697):2.482687):1.280167):3.373054,(211:25.71544,(213:3.380713,212:3.380713):22.334727):7.279166):1.380842,((232:29.364768,(((233:6.697039,234:6.697039):19.94728,235:26.644319):1.901882,((239:14.825522,238:14.825522):7.982928,(236:19.243266,237:19.243266):3.565183):5.737753):0.818566):0.550752,(231:27.926114,((225:18.290118,226:18.290117):1.695824,((228:2.957767,227:2.957766):12.56421,(230:0.946495,229:0.946495):14.575483):4.463964):7.940173):1.989405):4.459927):0.693408):10.157185):1.845845,((195:25.383409,(((196:19.192531,(197:18.393683,198:18.393682):0.798848):1.339041,199:20.531571):4.114142,(200:20.768606,(201:14.718339,202:14.718339):6.050267):3.877107):0.737696):0.485009,(192:19.877706,(193:3.058372,194:3.058373):16.819334):5.990712):21.203466):1.732708,(248:45.909415,((251:15.95536,250:15.95536):24.288527,249:40.243886):5.665527):2.895179):2.594997):8.989608):2.512753,(((176:18.015586,(175:10.305457,174:10.305457):7.710128):1.487249,(177:15.264439,178:15.264439):4.238396):41.286455,(182:57.035869,(181:53.991807,(180:20.309991,179:20.309991):33.681816):3.044062):3.75342):2.112662):1.547261,((((150:34.388882,147:34.388883):3.023989,((148:20.327377,149:20.327377):15.314117,((154:10.685646,153:10.685646):17.3992,(152:17.083069,151:17.083068):11.001777):7.556648):1.771377):6.084685,((((163:29.951045,(164:25.519773,(165:22.160157,166:22.160158):3.359616):4.431272):1.738121,((168:17.622536,169:17.622536):12.674463,((171:13.168415,170:13.168414):15.624158,167:28.792573):1.504427):1.392167):4.338211,(173:3.052196,172:3.052196):32.975182):5.424185,(((155:19.854441,(157:4.543924,156:4.543924):15.310516):13.133802,(158:31.171363,(160:29.292676,159:29.292676):1.878688):1.816879):7.187812,(162:37.230387,161:37.230388):2.945667):1.275508):2.045994):20.685894,(((((87:14.714181,86:14.71418):5.06481,(85:7.097516,84:7.097516):12.681475):9.773532,(90:15.935713,(89:10.249513,88:10.249513):5.6862):13.616809):31.540386,((92:21.327855,91:21.327856):34.694138,(((94:38.98497,93:38.98497):4.347632,(95:32.170238,(((96:17.567641,97:17.567642):11.108012,((138:23.560579,(((137:22.143433,136:22.143434):0.634232,(((127:2.864118,126:2.864117):1.538878,125:4.402996):17.238634,((((130:11.330028,129:11.330028):1.824296,131:13.154324):3.731882,(133:14.761517,(135:13.562488,134:13.562489):1.199028):2.124688):0.628846,132:17.515049):4.12658):1.136036):0.506346,((117:21.841427,((116:17.670654,(122:11.532569,121:11.532568):6.138086):0.763309,((120:13.124524,119:13.124523):2.013869,(124:12.982871,123:12.982871):2.155522):3.295571):3.407463):0.745343,(118:21.719648,(128:21.093332,(114:18.749854,115:18.749854):2.343478):0.626317):0.867121):0.697242):0.276567):2.651391,(((100:3.369616,(99:1.293005,98:1.293005):2.076611):17.019924,(101:16.486479,(102:10.76614,103:10.766141):5.720337):3.903063):5.114692,(((105:6.245789,106:6.245788):13.295379,104:19.541165):1.498984,((112:7.781879,((107:2.793993,108:2.793993):2.714204,(110:3.737414,(111:3.513805,109:3.513805):0.223608):1.770783):2.273682):11.041754,113:18.823634):2.216516):4.464081):0.707738):2.463684):1.441969,(139:25.434907,(140:14.521536,(142:11.294992,141:11.294992):3.226543):10.913372):4.682715):2.052615):11.162364):3.0035,(146:44.074347,(143:27.791229,(144:14.812532,145:14.812532):12.978697):16.283117):2.261755):9.685891):5.070916):1.160592,(((67:52.795867,(((62:22.681351,(60:9.356251,61:9.356252):13.3251):5.657165,(57:21.356531,(59:3.044352,58:3.044352):18.312179):6.981985):13.956617,((63:21.233203,64:21.233202):10.804218,(65:24.240014,66:24.240015):7.797406):10.257713):10.500734):2.802173,((((75:22.329031,(79:21.480277,(76:16.012345,(78:13.958434,77:13.958434):2.053912):5.467931):0.848754):9.479273,(74:30.382277,((72:27.42199,73:27.421992):2.329913,(69:25.926098,(70:19.544101,71:19.544101):6.381996):3.825805):0.630374):1.426027):9.304764,68:41.113066):9.45434,(80:41.837612,(81:25.602943,82:25.602944):16.234668):8.729795):5.030633):4.221843,(((47:20.845794,(48:18.027912,49:18.027911):2.817883):5.71557,(46:24.693175,((50:21.430692,(52:16.044742,51:16.044742):5.385949):2.179857,((53:18.063396,(45:11.735619,54:11.73562):6.327777):2.991661,55:21.055057):2.555492):1.082626):1.868189):14.892154,56:41.453518):18.366365):2.433617):1.92995):0.265762):0.490648):1.170842,(((298:17.270938,(299:9.3451,300:9.3451):7.925837):30.008667,(301:32.953213,(302:23.262034,303:23.262033):9.691178):14.326393):8.456861,(((83:34.705077,((289:0.28018,290:0.28018):18.082827,291:18.363007):16.342069):1.769647,((286:14.77021,287:14.77021):6.452484,288:21.222693):15.252031):16.659886,((297:27.309413,((295:19.480065,296:19.480065):3.76207,294:23.242135):4.067278):13.573794,(292:18.911765,293:18.911766):21.971441):12.251404):2.601855):10.374236):57.90522,(304:104.737883,((323:15.790456,324:15.790457):69.54142,((317:69.62502,((322:51.978413,((319:17.369627,321:17.369627):2.567097,320:19.936724):32.041689):3.958003,318:55.936414):13.688605):13.330322,(((307:23.016588,(309:23.014981,308:23.014981):0.001607):16.372417,(305:38.081359,(311:37.071735,(((313:20.402555,314:20.402555):5.760556,(312:21.576318,(315:3.293377,316:3.293377):18.282941):4.586794):10.402851,310:36.565961):0.505773):1.009623):1.307647):4.887138,306:44.276144):38.679199):2.376535):19.406006):19.278038):11.838678,(((337:19.847893,338:19.847893):35.684786,((325:29.842384,326:29.842384):18.016849,(((358:33.636064,(359:16.555254,(361:10.705322,360:10.705322):5.849932):17.08081):11.169914,(341:44.039069,((343:38.091217,((355:34.147081,((353:10.030476,354:10.030476):17.684872,(((344:1.551488,345:1.551488):13.690869,((350:13.417317,((349:4.770943,348:4.770942):5.714567,347:10.485509):2.931808):0.539525,346:13.956842):1.285514):10.965427,(351:16.91938,352:16.91938):9.288402):1.507564):6.431734):1.752596,(356:32.359412,357:32.359413):3.540265):2.19154):1.709746,342:39.800964):4.238105):0.76691):1.431511,((339:6.408533,340:6.408533):37.863112,((328:37.854398,(329:25.813671,((330:14.773972,331:14.773972):7.954026,((333:20.351962,((336:15.835475,335:15.835475):2.964917,334:18.800393):1.55157):1.924367,332:22.276328):0.451669):3.085673):12.040728):1.373446,327:39.227844):5.043802):1.965844):1.621744):7.673446):50.583903,(((((376:51.789292,((368:13.187468,367:13.187467):15.560536,((364:12.799181,365:12.799181):1.540686,366:14.339867):14.408137):23.041289):3.804552,(((370:25.614184,371:25.614185):5.579099,369:31.193283):6.277423,(372:31.83802,((375:21.984575,374:21.984575):6.758145,373:28.742719):3.095299):5.632687):18.123139):21.992024,((380:40.406284,((379:14.449219,378:14.449219):10.824084,377:25.273304):15.13298):23.599562,(((382:28.008458,381:28.008457):34.22588,((385:15.567018,(386:15.145232,384:15.145232):0.421786):5.455243,383:21.022261):41.212077):0.784712,((388:15.788399,389:15.788399):1.514489,387:17.302888):45.716161):0.986797):13.580021):15.082269,(362:48.393733,363:48.393733):44.274404):11.501879,((((398:70.818381,(396:33.378653,397:33.378653):37.439728):6.45682,(399:63.431356,(((402:17.57647,401:17.57647):20.898645,400:38.475115):11.992042,(((406:20.869338,(407:17.569168,(408:13.96547,((410:7.313733,411:7.313734):3.00779,409:10.321523):3.643948):3.603697):3.30017):17.640596,(404:32.088562,405:32.088563):6.421372):1.848298,403:40.358231):10.108926):12.964198):13.843845):1.987665,((394:15.629024,395:15.629024):62.634874,((390:43.646149,391:43.646149):32.584865,(392:45.520603,393:45.520603):30.710412):2.032884):0.998967):0.680904,((412:65.095933,(426:58.713707,((((416:37.913986,417:37.913985):1.514322,(419:32.870354,418:32.870354):6.557953):3.861374,((414:26.684244,413:26.684243):3.943778,415:30.628022):12.66166):9.887935,(420:48.468851,(425:33.330319,(424:27.772258,(423:26.458345,(421:11.876222,422:11.876222):14.582122):1.313914):5.55806):15.138532):4.708765):5.536091):6.382226):4.159506,(((((429:25.376838,430:25.376837):14.189059,(((432:25.347197,433:25.347196):2.905662,431:28.25286):4.705116,((443:28.924298,((435:21.488625,(((437:13.994582,(438:12.074493,439:12.074492):1.92009):3.686445,(441:11.00447,440:11.00447):6.676557):2.060379,436:19.741406):1.74722):2.373679,442:23.862304):5.061993):2.781868,434:31.706165):1.251808):6.607923):3.694268,(427:36.459533,428:36.459533):6.800631):13.377152,(444:47.916496,(((447:25.291381,448:25.291381):9.502217,(445:34.622661,446:34.622661):0.170936):2.577837,((450:33.208309,449:33.208309):1.790003,((452:22.933872,451:22.933871):10.327921,((454:30.12889,453:30.12889):1.209515,((456:19.943971,455:19.943971):7.838031,(((458:8.166178,457:8.166178):13.940289,459:22.106467):4.841781,(461:23.6454,460:23.645401):3.302846):0.833755):3.556402):1.923389):1.736519):2.373123):10.545061):8.72082):6.654528,(462:44.98087,((467:37.695799,((464:0.5317,465:0.5317):36.074339,(466:35.140032,463:35.140032):1.466006):1.08976):2.186252,(468:36.677694,((470:32.956722,469:32.956722):2.563499,(((495:24.769055,((500:21.434036,((499:6.76207,498:6.76207):13.301505,497:20.063574):1.370462):0.829347,496:22.263383):2.505672):4.061822,(((471:19.427035,(472:14.816579,473:14.816579):4.610456):5.497009,((((476:11.067823,475:11.067823):5.103023,474:16.170846):6.088332,((478:12.098043,479:12.098043):7.416357,477:19.5144):2.744778):1.97008,((489:15.711512,((((485:7.354378,(484:1.366765,483:1.366765):5.987614):4.986945,(486:6.577601,487:6.577601):5.763723):0.244952,488:12.586275):0.530634,482:13.11691):2.594602):2.291412,(481:13.760199,480:13.760199):4.242725):6.226333):0.694787):1.321135,((490:17.396312,((491:7.892036,492:7.892035):7.107964,493:15):2.396312):6.308555,494:23.704866):2.540313):2.585697):5.077903,(501:32.772455,(((507:11.465825,506:11.465825):18.498875,502:29.964701):0.997935,((503:21.78049,504:21.78049):7.000529,(508:28.353104,505:28.353105):0.427915):2.181616):1.809819):1.136324):1.611442):1.157474):3.204356):5.09882):18.310974):5.963593):10.688332):24.226246):1.946567):29.738017):7.079667):35.265519):5.826608):5.809107):6.783939);
+	TREE * UNTITLED = [&R] ((2:3.807071,1:3.807071):181.641284,((((4:13.480352,3:13.480352):83.640569,(5:17.532385,6:17.532386):79.588535):37.939342,((7:16.128124,8:16.128124):3.016945,9:19.14507):115.915194):43.932144,((10:150.996095,((12:40.411941,11:40.411942):71.551302,((13:45.614765,14:45.614764):54.980036,15:100.594801):11.368442):39.032852):22.343001,((((17:13.315673,((19:4.604581,20:4.604581):5.093563,18:9.698144):3.617529):29.230222,16:42.545896):91.992387,(21:123.969171,((22:20.503511,23:20.503512):82.121453,((((37:24.135396,36:24.135395):1.837442,35:25.972838):11.02171,(33:35.581193,34:35.581193):1.413354):33.0693,((26:49.06278,(24:30.634643,25:30.634645):18.428136):7.049856,((31:12.785582,30:12.785583):29.100696,(((27:27.604626,29:27.604626):1.2491,28:28.853726):11.786249,32:40.639974):1.246304):14.226358):13.951211):32.561117):21.344206):10.569111):33.094529,((38:38.53751,(39:8.403033,40:8.403033):30.134477):96.29524,((((((((289:0.330651,290:0.330651):20.010955,291:20.341606):15.919566,((287:18.771015,286:18.771016):7.597871,288:26.368886):9.892287):13.611686,83:49.872859):10.543871,((((303:24.511793,302:24.511794):7.736692,301:32.248486):16.551861,(298:17.745034,(300:9.09105,299:9.09105):8.653983):31.055314):6.129732,((292:20.387242,293:20.387242):24.27879,(297:32.18688,((295:25.922338,296:25.922337):1.43516,294:27.357498):4.829382):12.479152):10.264047):5.486651):7.726943,((44:6.066529,(41:4.35006,(42:0.059843,43:0.059843):4.290216):1.71647):61.094562,(((((252:30.387831,((258:11.731044,259:11.731043):16.475544,((254:21.178851,253:21.178852):5.601809,((256:0.697321,255:0.697321):7.362228,257:8.05955):18.72111):1.425928):2.181243):20.053043,((284:36.111517,285:36.111517):7.279907,(((283:27.153447,282:27.153447):8.663557,((277:23.85103,276:23.85103):9.774187,(275:25.450024,((279:19.027756,278:19.027756):0.336098,(280:7.838147,281:7.838147):11.525707):6.08617):8.175193):2.191787):3.382852,((260:28.916199,261:28.9162):5.910039,(262:33.195014,((273:29.849578,(266:28.47422,((264:12.370046,265:12.370046):4.396805,263:16.766851):11.707368):1.375359):1.311379,((268:26.239403,((270:15.019189,269:15.019189):9.396049,(272:16.136033,271:16.136033):8.279205):1.824165):0.799394,(267:18.46606,274:18.466059):8.572738):4.122161):2.034056):1.631224):4.373618):4.191567):7.049451):10.638585,(((248:46.24489,((250:14.163852,251:14.163852):26.140077,249:40.303928):5.940959):3.227681,((((((205:29.895152,203:29.895152):0.62419,204:30.519342):2.413999,206:32.933341):9.558867,((208:20.246212,207:20.246212):10.678028,(209:22.54684,210:22.54684):8.377401):11.567967):3.65593,(((((215:23.70352,214:23.703521):2.902199,((219:8.600451,220:8.600451):10.728644,(218:19.037857,((224:14.689057,223:14.689057):3.75261,((216:13.258015,217:13.258016):4.150376,(222:13.215059,221:13.215059):4.193333):1.033274):0.596192):0.291238):7.276625):4.623052,((213:3.10414,212:3.10414):24.09114,211:27.195281):4.033492):2.002668,((232:28.638566,(((239:15.79226,238:15.79226):6.746547,(236:19.432362,237:19.432363):3.106445):5.348173,(235:25.294035,(233:6.144042,234:6.144042):19.149993):2.592946):0.751585):0.806966,(231:26.736321,(((228:2.684889,227:2.684889):12.609856,(230:0.578847,229:0.578847):14.715898):4.272911,(225:17.893891,226:17.89389):1.673765):7.168665):2.709211):3.785908):0.738207,((244:26.198587,(245:22.796022,(246:21.134036,247:21.134036):1.661987):3.402565):4.297102,(240:24.891666,((242:10.83505,243:10.835051):4.972958,241:15.808008):9.083657):5.604024):3.473958):12.17849):1.827534,((192:22.430422,(193:4.915031,194:4.915031):17.51539):8.656044,((((196:21.896653,(197:20.649825,198:20.649824):1.246828):1.024042,199:22.920695):6.072508,((202:16.454509,201:16.454509):7.448616,200:23.903126):5.090077):1.04102,195:30.034223):1.052243):16.889206):1.496898):2.343022,(183:43.995125,((185:34.962991,184:34.96299):4.793238,((((188:12.97396,189:12.97396):16.580065,190:29.554026):3.932428,(187:16.549902,186:16.549903):16.936552):2.438442,191:35.924895):3.831334):4.238896):7.820468):9.263867):3.253915,(((178:15.646344,177:15.646344):3.710178,((174:10.413565,175:10.413565):7.963277,176:18.376842):0.97968):43.158214,(182:57.215107,((180:20.565067,179:20.565067):34.659468,181:55.224536):1.990571):5.29963):1.818638):2.450192,(((((((152:17.608203,151:17.608203):10.974675,(153:9.232246,154:9.232246):19.350632):7.059085,(147:34.94253,(149:20.162431,148:20.162432):14.7801):0.699433):1.259927,150:36.90189):5.083773,(((172:3.413372,173:3.413372):29.572721,(((163:25.193227,(168:17.112602,169:17.112601):8.080625):2.531925,((171:12.93817,170:12.93817):13.882362,167:26.820532):0.90462):1.324928,((165:20.547521,166:20.547521):3.624474,164:24.171997):4.878083):3.936014):6.384173,((((157:3.781063,156:3.781063):14.743909,155:18.524972):10.687323,(158:27.058267,(159:24.829559,160:24.829559):2.228708):2.154027):8.397582,(161:35.449892,162:35.449893):2.159985):1.760389):2.615398):20.795889,(((89:11.924383,88:11.924383):4.911143,90:16.835526):14.525568,((85:11.953432,84:11.953431):7.913517,(86:18.07724,87:18.07724):1.789709):11.494146):31.42046):2.303899,(((92:20.765938,91:20.765938):35.262941,((146:45.445088,((93:35.694987,94:35.694987):6.153379,(95:32.781331,((139:26.891712,((141:12.23015,142:12.23015):2.943513,140:15.173663):11.71805):3.642967,(((((104:18.255215,(106:8.382375,105:8.382376):9.872839):2.127911,(113:18.294785,(112:9.231944,(((107:3.108097,108:3.108098):2.487697,(109:1.400856,110:1.400856):4.194939):2.497765,111:8.093559):1.138386):9.06284):2.08834):5.117801,((100:2.697863,(98:1.54097,99:1.54097):1.156893):18.274201,((102:11.378991,103:11.378992):4.841482,101:16.220473):4.751591):4.528862):1.978514,(((132:21.555571,((133:18.964658,(135:15.215117,134:15.215117):3.749541):1.492955,(129:16.138446,(131:14.703727,130:14.703727):1.434719):4.319167):1.097958):3.720373,128:25.275944):1.538053,(((((125:5.630811,(126:1.686076,127:1.686076):3.944736):17.79225,(136:22.669733,137:22.669733):0.753329):1.457382,((115:21.267664,114:21.267665):2.562853,116:23.830516):1.049927):0.172504,138:25.052947):0.596384,(117:24.940161,(((122:13.758774,121:13.758774):7.041525,(124:10.210789,123:10.210789):10.58951):1.095902,(118:20.620504,(120:16.835678,119:16.835678):3.784826):1.275698):3.04396):0.709171):1.164665):0.665442):2.068237,(96:17.521596,97:17.521595):12.026081):0.987003):2.246651):9.067035):3.596722):0.742428,(143:29.664221,(144:18.3972,145:18.3972):11.267021):16.523296):9.841362):8.048361,(((((49:17.218953,(48:16.763346,47:16.763345):0.455607):6.973613,(55:22.748763,((53:16.718934,54:16.718933):5.325312,(50:19.993433,(51:15.806958,52:15.806957):4.186477):2.050812):0.704516):1.443804):2.594431,(45:23.157587,46:23.157587):3.62941):14.788568,56:41.575565):19.603849,((67:53.565018,((((58:2.965967,59:2.965967):20.41076,57:23.376727):6.686109,((61:7.548994,60:7.548993):16.51523,62:24.064223):5.998612):12.259894,((63:23.403001,64:23.403):9.197746,(66:26.059105,65:26.059105):6.541641):9.721984):11.242287):3.34484,((((75:24.923153,(79:22.747247,(76:17.200219,(77:13.079023,78:13.079023):4.121197):5.547027):2.175906):9.779499,(((70:23.526569,71:23.526568):5.39355,69:28.920119):4.139012,((72:28.807036,73:28.807037):2.148062,74:30.955097):2.104033):1.643521):8.323053,68:43.025706):9.968556,(80:43.753093,(81:27.54106,82:27.541061):16.212032):9.241167):3.915597):4.269557):2.897824):1.008213):1.698114):0.377525):0.982582):52.431111,(304:108.614847,(((317:70.718979,((322:41.036687,((319:15.885852,321:15.885852):2.346842,320:18.232694):22.803991):11.671575,318:52.708261):18.010717):21.978241,(((307:23.013216,(309:14.373895,308:14.373895):8.63932):30.123893,(311:47.665003,(305:47.659992,(310:46.085987,(312:28.061224,((313:21.191942,314:21.191942):5.294768,(315:3.35999,316:3.35999):23.126721):1.574514):18.024763):1.574005):0.005011):5.472106):20.095014,306:73.232122):19.465097):1.683907,(324:14.062842,323:14.062841):80.318284):14.23372):11.959938):8.083819,((((325:33.778666,326:33.778665):21.617905,(((327:44.569485,((329:27.867209,((330:15.7529,331:15.7529):8.353673,(332:23.515994,(333:21.356356,(334:19.541597,(336:16.811706,335:16.811705):2.729893):1.814759):2.159638):0.590579):3.760636):14.732044,328:42.599252):1.970233):6.747442,(339:7.758837,340:7.758837):43.558091):2.952361,((358:39.828396,(359:18.962827,(361:12.027322,360:12.027321):6.935505):20.865569):13.96052,(341:53.28941,(342:50.022561,(343:48.45774,((((354:12.225024,353:12.225024):22.170333,((350:18.805568,((344:1.713537,345:1.713537):16.177796,((347:13.666449,(349:6.24796,348:6.24796):7.418488):2.640376,346:16.306825):1.584508):0.914235):14.014204,(352:18.533774,351:18.533774):14.285997):1.575585):9.730746,355:44.126103):1.933081,(357:43.01926,356:43.01926):3.039924):2.398556):1.564822):3.266849):0.499505):0.480373):1.127282):5.647128,(337:23.201801,338:23.201801):37.841898):37.760635,(((363:36.528646,362:36.528646):46.904638,((((367:12.923267,368:12.923266):7.867616,(366:11.542206,(365:10.081888,364:10.081889):1.460317):9.248677):22.914535,(((369:24.620835,(371:20.654658,370:20.654658):3.966177):4.760749,(372:24.755868,((375:17.583708,374:17.583708):5.371498,373:22.955204):1.800662):4.625716):10.923413,376:40.304997):3.40042):20.976356,((380:34.383077,((379:15.045652,378:15.045651):7.499099,377:22.544751):11.838327):14.77611,((387:16.313431,(389:15.31664,388:15.316639):0.996792):31.911668,((382:20.40303,381:20.403032):26.903768,((383:17.289628,(385:16.529039,384:16.529037):0.760591):0.687553,386:17.977181):29.329619):0.918299):0.934088):15.522587):18.751511):13.170821,((((399:53.940962,((400:28.662933,(402:13.290336,401:13.290336):15.372598):10.599621,(((406:17.539866,(407:15.165993,(408:12.237205,(409:9.695318,(411:5.46925,410:5.46925):4.226068):2.541888):2.928788):2.373873):13.422134,(404:26.76412,405:26.76412):4.197881):1.557608,403:32.519608):6.742946):14.678407):15.819818,(398:63.994901,(396:30.810738,397:30.810739):33.184162):5.765878):3.128394,(((390:32.377497,391:32.377498):38.675662,(393:43.216802,392:43.216803):27.836356):0.908567,(394:17.760599,395:17.760599):54.201127):0.927447):0.685592,((412:64.440259,(426:55.120732,((425:33.466944,((422:10.878784,421:10.878784):18.430547,(423:27.579964,424:27.579964):1.729368):4.157613):16.573789,(420:48.886543,(((413:25.728545,414:25.728544):6.04713,415:31.775675):8.68152,((419:30.197538,418:30.197538):7.142268,(416:35.128532,417:35.128533):2.211275):3.117388):8.429348):1.154191):5.079998):9.319528):2.201044,((((428:35.833383,427:35.833383):7.378486,((430:27.180838,429:27.180839):12.843052,((434:29.897107,((((436:20.846482,(((439:10.183261,438:10.183261):3.282263,437:13.465524):3.627705,(440:12.757556,441:12.757556):4.335673):3.753253):0.597927,435:21.444408):3.747424,442:25.191833):1.16059,443:26.352422):3.544684):2.0786,(431:28.011514,(433:26.218931,432:26.218931):1.792584):3.964192):8.048184):3.187977):12.785417,(444:47.843285,((446:36.404764,((447:25.230685,448:25.230686):9.012777,445:34.243463):2.161301):2.840508,((((454:29.673097,453:29.673097):1.701793,(((457:6.10868,458:6.10868):18.389475,459:24.498155):2.239547,((461:19.808063,460:19.808064):1.841277,(455:19.763396,456:19.763395):1.885946):5.088362):4.637187):5.346484,(451:24.803415,452:24.803415):11.917958):1.672788,(450:36.843444,449:36.843444):1.550718):0.851111):8.598012):8.154001):5.905443,(462:43.52154,((467:35.948812,(463:34.618519,(466:31.913749,(464:0.510978,465:0.510978):31.402771):2.70477):1.330293):2.237033,(468:35.769676,((469:31.853175,470:31.853175):2.886505,((((490:17.497654,(493:15,(492:9.277,491:9.277):5.723):2.497654):8.373771,(494:25.3616,((471:19.802867,(472:14.862047,473:14.862047):4.940821):4.582359,(((481:13.526196,480:13.526195):4.474834,((482:13.237713,(((486:6.123269,487:6.123269):5.383281,488:11.506549):0.944048,(485:7.547365,(484:1.382952,483:1.382952):6.164414):4.903233):0.787115):2.43055,489:15.668262):2.332767):5.647348,(((475:8.91556,476:8.91556):5.746026,474:14.661586):7.216145,((478:11.723397,479:11.723397):7.341785,477:19.065182):2.812549):1.770646):0.736849):0.976373):0.509825):2.116606,(495:23.617179,((500:20.585881,(497:19.429665,(498:7.112303,499:7.112303):12.317361):1.156215):0.800263,496:21.386143):2.231036):4.370851):5.340904,(501:32.286901,(502:30.604681,(((507:9.820605,506:9.820605):19.383675,508:29.204281):0.718719,(505:26.084613,(504:20.876158,503:20.876157):5.208455):3.838387):0.681681):1.682221):1.042033):1.410746):1.029995):2.416169):5.335696):18.381189):4.738574):6.933461):23.029341):2.200227):29.85427):6.174146):32.800062):5.706285):5.653311):6.455949);
+	TREE * UNTITLED = [&R] ((1:3.943852,2:3.943852):194.536233,((((5:19.895514,6:19.895514):82.177389,(3:13.779016,4:13.779016):88.293886):42.701862,(9:21.102952,(8:18.167614,7:18.167614):2.935338):123.671814):47.565561,((10:162.680658,((11:44.961976,12:44.961976):77.040543,(15:110.292814,(13:50.053863,14:50.053863):60.238952):11.709704):40.67814):24.678542,((((17:12.806262,(18:9.906945,(20:5.271704,19:5.271704):4.63524):2.899317):31.772468,16:44.57873):97.740069,(21:129.490512,((22:16.381091,23:16.381091):88.412821,((((35:16.728768,36:16.728768):1.54614,37:18.274907):14.066763,(34:28.863037,33:28.863037):3.478633):36.883111,((26:47.683459,(24:24.651073,25:24.651072):23.032386):8.945878,((31:11.531626,30:11.531626):32.961558,(32:43.252621,(29:31.772918,(27:28.416523,28:28.416522):3.356395):11.479704):1.240562):12.136155):12.595443):35.56913):24.696601):12.828286):39.698631,((38:45.026769,(39:9.077824,40:9.077824):35.948945):109.149801,(((((((286:16.692215,287:16.692215):10.543821,288:27.236037):19.129124,((291:24.483819,(289:0.464481,290:0.464481):24.019339):19.600414,83:44.084233):2.280928):30.765527,((((294:31.800706,(296:29.527326,295:29.527325):2.273382):3.324505,297:35.125212):19.21882,(293:26.88566,292:26.885659):27.458372):14.985818,((298:21.128133,(300:9.792731,299:9.792731):11.335402):38.734729,((302:29.59982,303:29.59982):12.230913,301:41.830733):18.032129):9.466987):7.800838):33.910352,(((41:5.776586,(43:0.229423,42:0.229423):5.547163):1.680014,44:7.456599):103.043411,(((((176:17.949313,(174:11.166243,175:11.166242):6.78307):3.559489,(177:17.782259,178:17.782259):3.726542):46.69767,((179:22.251746,180:22.251746):40.165624,(182:60.14343,181:60.143431):2.27394):5.789101):2.745185,(((252:33.223963,(((253:22.531769,254:22.531768):6.926647,((255:0.203156,256:0.203156):9.731616,257:9.934772):19.523645):1.096355,(258:11.791028,259:11.791028):18.763743):2.669191):19.734614,((((276:16.782626,277:16.782627):17.179403,(282:32.495097,(((281:10.76349,280:10.76349):16.585885,(275:25.643105,279:25.643105):1.70627):2.72863,278:30.078005):2.417093):1.466932):8.565417,(284:36.326887,285:36.326886):6.200561):2.94694,(((260:29.18122,261:29.18122):4.986169,(((((274:7.824081,273:7.824082):4.805401,267:12.629484):13.905813,(268:16.326932,266:16.326932):10.208364):1.551501,((271:20.772972,272:20.772972):6.463678,(270:19.875347,269:19.875346):7.361303):0.850148):3.357624,(283:30.432517,262:30.432517):1.011905):2.722967):2.550223,(263:19.344718,(264:13.514228,265:13.514228):5.83049):17.372893):8.756777):7.484188):12.779882,((183:46.931298,((185:34.462451,184:34.462451):7.120576,(191:38.162381,((190:31.715333,(189:18.695507,188:18.695507):13.019828):3.75112,(186:16.508365,187:16.508364):18.95809):2.695927):3.420645):5.348272):6.649789,(((((((245:23.150213,(246:21.306814,247:21.306813):1.843401):3.673282,244:26.823496):4.872654,(240:24.030811,((242:10.601082,243:10.601082):5.005018,241:15.6061):8.424711):7.665339):4.425904,(((211:28.091366,(213:3.691643,212:3.691643):24.399724):6.235953,((214:26.796934,215:26.796934):2.361236,((219:9.449323,220:9.449323):10.952198,(218:19.638745,(((222:12.694545,221:12.694545):5.588238,(216:13.932129,217:13.932129):4.350654):0.857074,(223:14.726298,224:14.726298):4.41356):0.498888):0.762775):8.75665):5.169149):1.370311,((231:29.064862,(((227:2.094281,228:2.094281):13.577743,(230:0.713301,229:0.713301):14.958722):4.658878,(226:18.809352,225:18.809353):1.521549):8.73396):2.208544,(232:30.711067,(((233:7.195467,234:7.195467):20.651938,235:27.847406):2.316427,((238:16.559841,239:16.559841):6.941023,(236:20.173801,237:20.173801):3.327063):6.662967):0.547236):0.562338):4.424225):0.424424):11.048605,((206:32.292786,((203:27.699597,204:27.699597):3.272974,205:30.972571):1.320215):10.575492,((209:22.929896,210:22.929896):10.428062,(207:19.454822,208:19.454822):13.903137):9.510319):4.302382):1.974259,((195:28.500429,(((202:13.164916,201:13.164916):8.252845,200:21.417761):6.159922,((199:19.975386,196:19.975387):1.224257,(197:19.445157,198:19.445157):1.754487):6.378038):0.922746):0.782739,((193:3.162919,194:3.162919):18.016948,192:21.179868):8.1033):19.86175):1.477467,(248:47.488924,(249:41.085291,(251:15.973001,250:15.973001):25.112289):6.403633):3.133462):2.958703):12.157371):5.213198):39.224104,((((150:36.891976,147:36.891976):3.555665,(((151:18.66982,152:18.66982):12.104215,(153:9.887091,154:9.887091):20.886944):7.836893,(148:17.272266,149:17.272266):21.338663):1.836713):8.236171,(((173:3.115951,172:3.115951):33.422382,(((163:25.153821,(169:18.331236,168:18.331236):6.822585):5.489452,(167:29.354948,(171:15.833772,170:15.833772):13.521175):1.288326):1.540955,(164:25.800599,(166:22.480898,165:22.480899):3.319701):6.383629):4.354106):7.385732,((162:39.550233,161:39.550233):2.467863,(((156:3.975569,157:3.975568):16.03783,155:20.013398):12.393772,(158:29.894038,(159:28.147683,160:28.147682):1.746355):2.513133):9.610926):1.90597):4.759746):61.271054,(((56:42.055454,((47:22.497429,(49:19.099101,48:19.099101):3.398328):4.989119,((45:17.836148,46:17.836148):8.161796,((55:20.974733,(53:17.61528,54:17.61528):3.359453):3.226763,(50:20.516952,(52:16.57348,51:16.573481):3.943471):3.684544):1.796449):1.488604):14.568905):22.238524,(((((65:26.570178,66:26.570177):6.536865,(63:22.785169,64:22.78517):10.321874):10.991189,(((61:7.756833,60:7.756834):17.686977,62:25.44381):6.268769,(57:25.617732,(59:3.102007,58:3.102007):22.515725):6.094847):12.385654):12.272515,67:56.370748):3.237372,((((75:24.807239,(((78:13.822844,77:13.822845):3.473655,76:17.2965):5.803117,79:23.099616):1.707624):8.333293,(((74:29.392752,72:29.392751):1.257268,((70:20.837994,71:20.837994):6.504692,69:27.342686):3.307333):0.733332,73:31.38335):1.757182):10.649479,68:43.790012):11.181318,(80:45.333859,(81:27.597089,82:27.597089):17.73677):9.637472):4.636788):4.685859):3.666903,((((86:18.738048,87:18.738049):2.155965,(85:12.379294,84:12.379294):8.514719):11.571769,((88:12.483562,89:12.483562):5.241735,90:17.725297):14.740484):33.205678,((((143:34.786729,(145:19.316666,144:19.316667):15.470061):10.274151,146:45.06088):2.265982,((((139:27.59255,(140:15.669971,(141:12.320196,142:12.320196):3.349775):11.92258):3.247342,((((117:25.00755,138:25.00755):0.427472,(((137:23.100667,136:23.100667):1.065115,((((131:14.362503,(129:10.78881,130:10.78881):3.573692):3.074732,((135:13.980463,134:13.980462):1.408756,133:15.389218):2.048016):1.152682,132:18.589917):3.725606,((127:1.634517,126:1.634517):3.38968,125:5.024197):17.291325):1.850261):0.736783,(128:23.422861,(((119:16.811371,120:16.811371):4.28209,(((121:12.468352,122:12.468352):7.175324,118:19.643675):0.978947,(123:16.631718,124:16.631719):3.990904):0.470838):1.167272,(116:21.49746,(114:19.241722,115:19.241723):2.255737):0.763273):1.162128):1.479705):0.532456):1.849419,(((101:17.090115,(102:11.779436,103:11.779435):5.310681):4.20458,(100:3.217228,(98:1.539164,99:1.539164):1.678064):18.077468):4.210923,((104:19.926414,(105:7.048478,106:7.048478):12.877936):1.597846,(113:19.37278,(112:8.555332,((110:3.394498,(111:3.128354,109:3.128354):0.266144):2.428623,(107:3.523739,108:3.523739):2.299381):2.732211):10.817447):2.151481):3.981359):1.778821):2.537089,(96:17.278611,97:17.27861):12.542919):1.018362):2.505546,95:33.345438):9.920395,(93:36.387318,94:36.387318):6.878515):4.061029):8.686526,(92:22.29789,91:22.29789):33.715497):9.658073):2.289421):41.993985):0.220895):0.324249):0.541029):32.448794,(304:121.593115,((324:14.675259,323:14.675258):85.256874,((((310:59.244556,((312:31.776646,((316:6.458365,315:6.458365):23.203507,(313:21.232256,314:21.232256):8.429617):2.114773):24.476945,305:56.253592):2.990965):0.001776,311:59.246332):2.534992,(306:52.337279,((308:20.157208,309:20.157208):2.902344,307:23.059552):29.277728):9.444045):35.812546,(317:77.002778,(318:62.694184,(((319:17.235813,321:17.235812):3.045134,320:20.280947):27.743852,322:48.0248):14.669383):14.308595):20.591092):2.338262):21.660983):21.896719):4.945672,(((325:40.743213,326:40.743212):26.232259,(((358:46.387493,(359:23.861084,(361:14.839272,360:14.839273):9.021812):22.526408):19.161276,(((338:20.291457,337:20.291457):40.350042,341:60.641501):4.134516,(342:61.075234,(((355:52.202539,(((351:23.186969,352:23.18697):14.434137,((345:2.073403,344:2.073403):17.390623,(350:18.188245,(346:17.431816,(347:13.749861,(349:6.754746,348:6.754746):6.995115):3.681955):0.756429):1.27578):18.15708):2.773151,(353:14.873382,354:14.873382):25.520875):11.808282):2.741401,(357:50.851617,356:50.851615):4.092324):3.561765,343:58.505705):2.569529):3.700781):0.772754):0.385045,((339:9.125054,340:9.125054):53.369091,(327:53.782422,(328:51.278138,(((330:19.976521,331:19.976521):10.548251,(332:29.863362,(333:27.277857,(334:24.882121,(336:22.53591,335:22.53591):2.346211):2.395738):2.585505):0.66141):4.187169,329:34.711941):16.566196):2.504284):8.711725):3.439668):1.041658):42.446594,(((363:51.608576,362:51.608576):40.52073,((((367:10.728711,368:10.728712):14.745046,(366:14.399697,(364:12.379817,365:12.379818):2.01988):11.074061):23.827695,(((369:26.878101,(370:22.2721,371:22.272099):4.606002):4.960447,(((375:17.826527,374:17.826527):6.003987,373:23.830514):2.150201,372:25.980715):5.857834):13.652206,376:45.490754):3.810698):23.480276,((380:36.357734,(377:21.284539,(379:10.029126,378:10.029126):11.255413):15.073195):21.143695,(((388:11.707486,387:11.707487):9.105385,389:20.812872):35.625382,((381:24.098321,382:24.098319):31.391372,((385:13.709348,(386:11.82468,384:11.824681):1.884668):2.200541,383:15.90989):39.579804):0.948562):1.063175):15.280299):19.347577):14.270788,(((390:43.205928,391:43.205927):29.526619,(393:46.933909,392:46.933911):25.798638):1.197454,((394:13.932101,395:13.932101):52.314383,(((398:57.662815,(396:28.039813,397:28.039812):29.623003):4.154929,(399:49.820024,((400:29.27663,(402:12.736571,401:12.736571):16.540058):9.863548,(403:33.970253,((406:20.164516,(407:18.080872,(((410:7.10826,411:7.10826):2.589466,409:9.697726):5.709225,408:15.406951):2.673922):2.083644):12.489411,(404:28.844081,405:28.84408):3.809847):1.316326):5.169925):10.679845):11.997721):2.003584,(412:61.451419,((426:51.17669,((((413:23.615169,414:23.615168):5.821811,415:29.436979):8.443741,((418:26.799535,419:26.799535):7.825221,(416:32.486037,417:32.486038):2.138718):3.255965):8.654751,(420:43.09258,(425:30.681408,(424:25.099494,(423:23.761228,(421:10.445026,422:10.445026):13.316203):1.338266):5.581915):12.411172):3.442891):4.641218):9.392054,(((444:41.361896,(((446:27.657893,(447:22.343131,448:22.343131):5.314763):0.672741,445:28.330636):3.567511,(((454:29.588244,450:29.588244):0.430281,449:30.018525):1.144775,((451:20.41187,452:20.41187):9.470425,(453:28.749577,((459:21.044135,(457:7.755143,458:7.755143):13.288993):5.109991,((460:22.418802,461:22.418801):3.032678,(455:19.703328,456:19.703327):5.748152):0.702647):2.59545):1.132718):1.281006):0.734846):9.463749):9.809631,((427:35.431251,428:35.43125):6.614665,(((431:28.061083,(433:26.760145,432:26.760146):1.300937):4.328879,(((442:26.23198,((436:20.578456,((440:15.100556,441:15.100555):3.884381,(437:16.019295,(439:11.97841,438:11.978411):4.040884):2.965642):1.593519):2.559238,435:23.137693):3.094286):1.291943,443:27.523923):3.42881,434:30.952731):1.437229):7.150119,(429:28.098005,430:28.098005):11.442075):2.505835):9.125611):6.853921,(462:41.764196,((((464:0.62773,465:0.62773):32.128884,(463:31.961982,466:31.961982):0.794632):1.356053,467:34.112666):2.036416,(468:32.809814,((469:29.008948,470:29.008948):2.618477,(((495:23.176285,(496:21.221772,((497:19.074185,(498:6.419866,499:6.419867):12.654318):1.245611,500:20.319795):0.901977):1.954512):3.42796,((490:17.25131,(493:15.003617,(492:7.437767,491:7.437767):7.56585):2.247693):7.112386,(((471:18.902468,(473:14.237935,472:14.237935):4.664532):4.133885,(((481:13.046211,480:13.046211):4.960084,(489:15.461485,(482:13.607527,((485:7.325109,(484:1.649447,483:1.649447):5.675661):5.673328,((486:6.060087,487:6.060087):6.132001,488:12.192088):0.806349):0.60909):1.853959):2.544809):4.41719,(((475:9.350543,476:9.350543):3.286267,474:12.636809):8.159167,(477:17.930595,(478:10.578971,479:10.578971):7.351624):2.865382):1.627507):0.612869):0.872079,494:23.908432):0.455265):2.240547):3.263494,(501:27.846296,((((505:23.109446,(503:19.449491,504:19.44949):3.659956):1.759465,508:24.868912):0.614961,(507:9.719602,506:9.719602):15.76427):0.308084,502:25.791956):2.054341):2.021441):1.759687):1.182389):3.339268):5.615113):16.261253):2.543297):0.882675):2.36991):2.425155):7.683518):32.470091):3.021973):39.01344):5.741065):27.840859):5.341771):4.981125):6.139759);
+	TREE * UNTITLED = [&R] ((1:3.344633,2:3.344633):188.981927,((((3:14.048876,4:14.048876):82.827636,(5:18.787496,6:18.787496):78.089015):41.61826,(9:20.370422,(8:17.619758,7:17.619758):2.750664):118.124349):46.948677,((10:158.255893,((15:107.434463,(13:48.100328,14:48.100329):59.334135):10.752319,(12:43.670738,11:43.670738):74.516044):40.06911):22.34007,(((16:45.361937,(17:13.492655,(18:10.738673,(19:5.069299,20:5.069299):5.669374):2.753982):31.869282):96.775915,(21:131.53905,((22:21.309505,23:21.309505):87.848998,(((35:22.496223,(36:18.773067,37:18.773067):3.723157):16.306587,(34:35.39671,33:35.396711):3.4061):34.912906,(((25:28.498496,24:28.498498):21.334246,26:49.832743):9.53816,((30:14.017901,31:14.017901):32.743653,((27:31.732786,(28:24.314896,29:24.314897):7.417889):13.703549,32:45.436333):1.325222):12.609348):14.344812):35.442788):22.380546):10.598803):32.728685,((38:34.736116,(40:7.156975,39:7.156975):27.579141):104.898096,(((304:110.935213,((323:12.95714,324:12.95714):82.821469,((((((310:49.359787,(((313:20.148543,314:20.148543):7.676903,(316:3.582333,315:3.582333):24.243114):2.335551,312:30.160997):19.198789):1.369021,311:50.728808):1.2901,305:52.018908):2.449693,((308:12.860849,309:12.860849):15.000013,307:27.860861):26.607739):7.284731,306:61.753333):32.047372,((318:61.623398,(((321:21.173507,319:21.173507):5.099175,320:26.272682):20.157593,322:46.430275):15.193121):11.909448,317:73.532844):20.26786):1.977905):15.156604):13.378447,((((298:18.950707,(300:9.45856,299:9.45856):9.492147):30.978853,(301:37.750485,(302:24.532501,303:24.532499):13.217985):12.179075):10.014567,((((287:15.915528,286:15.915528):6.687248,288:22.602777):11.516563,((290:0.267943,289:0.267943):19.588288,291:19.856232):14.263107):22.736838,((293:18.282294,292:18.282294):27.670717,(((294:27.265289,296:27.265289):3.193657,295:30.458946):2.520006,297:32.978952):12.974058):10.903168):3.087949):9.699332,(((((((((265:16.917206,264:16.917206):7.585185,263:24.502391):20.700725,((261:29.823594,260:29.823594):6.507649,(262:34.115748,(273:30.496764,(((268:22.689151,(269:18.833906,270:18.833907):3.855245):3.650335,((271:19.799065,272:19.799066):4.569164,(267:19.625424,274:19.625423):4.742806):1.971257):1.366842,266:27.706329):2.790436):3.618984):2.215495):8.871872):7.155654,((285:48.669679,284:48.66968):2.588704,(275:36.066478,(((281:10.039237,280:10.039237):18.803285,(278:24.435303,279:24.435303):4.407219):4.693886,((282:27.102941,283:27.102941):4.460816,(276:18.189744,277:18.189745):13.374013):1.972652):2.53007):15.191906):1.100386):4.156938,(252:34.002599,(((253:23.253949,254:23.253949):6.106364,((256:0.205365,255:0.205365):9.242973,257:9.448338):19.911974):1.24639,(259:10.937607,258:10.937608):19.669094):3.395896):22.51311):7.668488,((183:42.554453,((184:33.553124,185:33.553124):6.059164,(191:34.90912,((190:28.742575,(188:10.701186,189:10.701187):18.04139):2.745389,(187:14.562713,186:14.562714):16.925252):3.421155):4.703168):2.942164):9.601201,((248:46.115001,((251:16.535431,250:16.535432):21.704142,249:38.239573):7.87543):3.41418,(((((193:2.905949,194:2.905949):18.310946,192:21.216894):6.181529,((200:22.065405,(201:15.260213,202:15.260214):6.805191):4.054842,((197:19.662832,198:19.662833):1.101868,(196:17.546904,199:17.546904):3.217796):5.355546):1.278177):0.815132,195:28.213555):19.631994,((((210:23.680536,209:23.680536):9.656356,(207:19.030905,208:19.030905):14.305987):8.806675,(206:32.294515,(204:27.531805,(205:26.623702,203:26.6237):0.908103):4.762711):9.849052):3.973159,(((240:26.202917,((243:12.316995,242:12.316995):5.750556,241:18.067551):8.135365):5.166081,(244:27.130374,((246:21.738169,247:21.738169):0.958853,245:22.697021):4.433354):4.238623):4.373967,(((((238:16.137012,239:16.137012):6.990693,(236:19.646752,237:19.646753):3.480952):7.011023,(232:29.247509,(235:26.412833,(234:6.346564,233:6.346564):20.066269):2.834676):0.891218):0.908376,(((226:18.777517,225:18.777517):1.546319,((229:0.95299,230:0.95299):15.119947,(228:1.862023,227:1.862023):14.210913):4.250899):8.463834,231:28.78767):2.259433):3.943899,((211:28.456974,(213:3.831347,212:3.831347):24.625628):4.502885,(((216:17.697523,217:17.697523):4.981805,(((219:8.331439,220:8.331439):10.116528,218:18.447968):1.96135,((223:15.01489,224:15.01489):4.452281,(221:14.34786,222:14.34786):5.119311):0.942147):2.27001):5.378775,(214:25.354454,215:25.354454):2.703649):4.901757):2.031143):0.751962):10.373762):1.728823):1.683634):2.626471):12.028542):2.758134,(((176:18.857279,(175:10.632678,174:10.632679):8.2246):1.463543,(177:16.021964,178:16.021964):4.298858):44.608988,(182:59.442231,(181:57.191705,(180:20.349877,179:20.349877):36.841828):2.250526):5.487579):2.01252):1.319169,((((150:36.113471,147:36.113471):3.958885,(((154:19.026436,153:19.026436):14.462327,(151:19.063344,152:19.063345):14.425419):5.161674,(149:22.388313,148:22.388312):16.262124):1.421919):4.719898,(((172:2.836736,173:2.836736):32.977593,(((163:27.388051,(168:16.955908,169:16.955908):10.432144):2.723071,((171:13.656769,170:13.656769):14.850935,167:28.507704):1.603418):1.673708,((166:22.058424,165:22.058424):3.431016,164:25.48944):6.295391):4.029499):6.142595,((161:37.002834,162:37.002833):3.295988,((155:20.391804,(156:4.024407,157:4.024406):16.367398):10.925717,(158:29.133461,(159:26.87501,160:26.875011):2.258452):2.18406):8.981299):1.658102):2.835331):22.712134,(((83:50.053067,(((85:14.313153,84:14.313153):7.146177,(86:19.820302,87:19.820301):1.639029):10.192804,(90:15.455417,(88:9.386275,89:9.386275):6.069142):16.196718):18.400932):12.694138,((91:21.726464,92:21.726464):34.274763,(((94:40.00116,93:40.00116):3.379607,(95:33.103305,((139:26.20766,(140:14.522366,(142:11.148464,141:11.148464):3.373902):11.685294):3.242971,((97:16.752617,96:16.752617):12.179376,((((104:19.932073,(105:5.869939,106:5.86994):14.062134):2.038994,((112:8.125671,(((111:2.981604,109:2.981604):0.269334,110:3.250938):1.996534,(107:3.07188,108:3.071881):2.175591):2.8782):10.166434,113:18.292106):3.678962):3.530116,((100:2.904874,(99:1.305298,98:1.305298):1.599576):17.432764,(101:16.617242,(103:11.943907,102:11.943908):4.673335):3.720395):5.163546):1.100042,((((126:6.767622,(125:5.903424,127:5.903423):0.864199):17.180974,(128:21.741747,((133:16.51808,(135:12.937839,134:12.937839):3.58024):1.614967,((131:14.253831,(129:9.418169,130:9.418169):4.835662):1.730575,132:15.984406):2.14864):3.6087):2.206849):0.692358,138:24.640954):0.205407,((((115:19.030133,114:19.030135):3.121995,116:22.152128):1.043255,((((121:12.779758,122:12.779759):6.036849,(123:11.71462,124:11.71462):7.101987):0.951092,118:19.7677):0.641091,(120:16.932759,119:16.932759):3.476031):2.786593):1.001377,(117:23.93852,(136:17.752396,137:17.752395):6.186123):0.258241):0.6496):1.754864):2.330768):0.518637):3.652674):10.277462):3.119974,((143:28.273025,(145:15.534974,144:15.534974):12.738051):15.401944,146:43.674969):2.825772):9.500486):6.745977):1.408396,((56:41.53829,(46:23.69077,(((49:15.672789,48:15.67279):1.285447,47:16.958237):5.206782,(((53:14.55498,54:14.554981):3.75789,(55:13.239629,45:13.23963):5.073241):2.190207,((51:14.600683,52:14.600682):3.123851,50:17.724533):2.778544):1.661941):1.525752):17.847519):19.710817,((67:54.303689,(68:44.216799,((((76:16.563073,(77:10.575156,78:10.575156):5.987917):5.059156,79:21.622228):1.893388,75:23.515616):10.095788,((72:30.666496,(69:27.793134,(70:21.131487,71:21.131487):6.661646):2.873363):1.299607,(73:28.910901,74:28.910902):3.055201):1.645301):10.605395):10.08689):2.940057,((((63:20.875954,64:20.875954):10.71195,(65:23.446373,66:23.446372):8.141533):10.667027,(((60:10.950742,61:10.950741):9.958982,62:20.909723):8.253903,((59:3.071937,58:3.071937):19.754082,57:22.826019):6.337607):13.091305):12.20854,(80:44.034768,(82:25.820736,81:25.820735):18.214033):10.428703):2.780275):4.005361):2.906494):3.348788):0.757109):0.534045,((41:4.49111,(43:0.081367,42:0.081367):4.409743):1.471337,44:5.962447):62.833096):0.847916):54.670202):8.492771,(((341:47.457625,(((((355:37.023313,((354:11.170747,353:11.170747):19.747688,(((344:1.635982,345:1.635982):15.098431,(346:15.336628,(350:14.873429,((349:5.806688,348:5.806688):5.571489,347:11.378176):3.495252):0.463198):1.397786):12.255027,(352:16.727277,351:16.727278):12.262162):1.928996):6.104878):1.457451,(356:35.478665,357:35.478665):3.0021):1.873801,343:40.354566):1.176322,342:41.530889):2.708419,((358:32.749424,(359:16.571515,(360:8.975952,361:8.975953):7.595562):16.17791):9.927845,(((340:6.371292,339:6.371292):33.728768,(((329:22.479755,((331:12.931295,330:12.931295):6.682509,(332:19.153207,(333:17.530016,((336:14.603691,335:14.603692):1.516947,334:16.120637):1.409378):1.623191):0.460597):2.865951):10.872634,328:33.35239):1.438513,327:34.790904):5.309155):1.925202,(326:25.744318,325:25.744318):16.280943):0.652009):1.562038):3.218318):8.200923,(338:17.306397,337:17.306397):38.352152):47.673788,(((((376:45.028837,((366:8.03427,(364:7.512478,365:7.512479):0.521792):16.860818,(367:11.6145,368:11.6145):13.280588):20.133748):1.743711,((369:26.080691,(370:22.123029,371:22.123028):3.957664):4.186345,(((374:17.69066,375:17.69066):4.691266,373:22.381925):2.274502,372:24.656427):5.610608):16.505511):21.722208,((380:35.596673,(377:22.668998,(378:8.246723,379:8.246724):14.422275):12.927675):17.440643,((389:29.43327,(387:11.123667,388:11.123667):18.309603):22.693773,((382:24.464014,381:24.464014):26.73872,((386:18.468473,(384:15.186778,385:15.186778):3.281694):2.383177,383:20.85165):30.351084):0.924308):0.910274):15.457439):19.143132,(363:34.666114,362:34.666114):52.971773):13.823338,((((394:17.417909,395:17.417909):64.839536,((390:33.458298,391:33.458298):46.884353,(392:49.471815,393:49.471814):30.870837):1.914794):0.833447,(412:80.842049,((399:61.206618,((400:37.637638,(402:15.527775,401:15.527775):22.109864):9.778402,(403:39.071601,((406:20.356617,(407:17.731578,(408:14.47421,((409:9.06106,411:9.06106):2.882808,410:11.943869):2.530341):3.257368):2.625039):17.011352,(404:31.903661,405:31.90366):5.464308):1.703632):8.344439):13.790579):17.635547,((396:35.819638,397:35.819638):36.806915,398:72.626553):6.215612):1.999884):2.248843):0.25499,((((((413:27.99522,414:27.995221):4.613845,415:32.609066):7.983126,((418:29.323935,419:29.323935):7.624259,(416:34.645678,417:34.645678):2.302516):3.643997):8.778158,((((421:12.69167,422:12.69167):16.7199,(423:28.232402,424:28.232403):1.179169):5.844769,425:35.25634):11.756033,420:47.012375):2.357975):3.738194,426:53.108542):8.167938,(((444:39.166433,(((447:20.778563,448:20.778563):6.223331,(445:26.47279,446:26.47279):0.529104):3.136461,((((454:24.558653,((456:17.274653,455:17.274653):6.022094,((460:19.359017,461:19.359018):3.251693,(459:20.23912,(457:5.400572,458:5.400572):14.838549):2.371591):0.686037):1.261905):1.110521,453:25.669173):2.406105,(451:19.754166,452:19.754166):8.321112):1.023123,(450:27.976582,449:27.976581):1.12182):1.039953):9.028077):8.941631,((428:31.363671,427:31.36367):6.222359,(((431:24.429793,(433:22.452569,432:22.452568):1.977224):4.047645,((443:24.04876,(((436:17.671166,((441:12.298538,440:12.298538):2.82694,(437:10.931335,(438:6.409089,439:6.409089):4.522246):4.194143):2.545688):0.764326,435:18.435492):2.361089,442:20.796581):3.252179):3.377112,434:27.425873):1.051565):6.137815,(429:24.307198,430:24.307198):10.308054):2.970776):10.522035):7.79384,(462:41.850264,(((463:31.589896,467:31.589896):3.21425,(466:32.968018,(464:0.3616,465:0.3616):32.606418):1.836128):2.593237,(468:34.825002,((470:30.943042,469:30.943041):2.86796,(((495:23.758107,(496:21.802028,(500:20.754214,((498:7.078759,499:7.078759):12.500346,497:19.579105):1.175108):1.047815):1.956079):4.219067,(((471:18.324366,(473:14.366129,472:14.366129):3.958237):5.722797,(((489:16.15223,(((485:6.142074,(484:1.340209,483:1.340209):4.801866):3.024539,482:9.166613):5.09235,(488:13.602235,(487:5.98907,486:5.98907):7.613165):0.656728):1.893267):1.84777,(481:13.553713,480:13.553713):4.446287):5.337756,(((478:11.466739,479:11.466739):6.625103,477:18.091842):2.934001,((475:10.005934,476:10.005934):5.763734,474:15.769668):5.256175):2.311913):0.709407):1.477345,(((493:15.007335,(491:6.975195,492:6.975195):8.03214):2.317082,490:17.324416):5.688636,494:23.013052):2.511457):2.452664):4.312374,(501:31.171145,(502:29.668736,(((507:9.298685,506:9.298684):18.770155,508:28.06884):1.344456,((503:19.505919,504:19.50592):5.076841,505:24.58276):4.830535):0.25544):1.50241):1.118402):1.521455):1.013999):2.572382):4.452881):14.051639):5.374578):22.069402):18.115343):1.871111):29.474095):6.827781):35.232325):5.729425):4.847485):6.883111);
+END;

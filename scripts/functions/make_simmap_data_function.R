@@ -100,13 +100,38 @@ make_simmap_data = function(data, tree, mode = "double binary",
         state_matrix[i,6] <- .5}
     }
     }
+  
+  if(mode == "eight_state"){
+    if(N_states != 8){
+      stop("eight state mode used, which was developed for a very specific use-case")}
+    if(length(trait_col_names) != 4){
+      stop("four binary traits needed")}
     
+    state_matrix <- matrix(0, nrow = dim(data)[1], ncol = N_states)           #empty matrix (for simmap with all zeroes)
+    rownames(state_matrix) <- rownames(data)                               #rownames for later
+    colnames(state_matrix) <- state_labels                                 #col names will reflect states
+    
+    for(i in 1:dim(data)[1]){
+      if(!anyNA(data[i,])){      
+        if(data[i,1] == 0 & data[i,2] == 0 & data[i,3] == 0 & data[i,4] == 0){
+          state_matrix[i,1] <- 1}    
+        if(data[i,1] == 0 & data[i,2] == 0 & data[i,3] == 1 & data[i,4] == 0){
+          state_matrix[i,2] <- 1}
+        if(data[i,1] == 0 & data[i,2] == 1 & data[i,3] == 0 & data[i,4] == 0){
+          state_matrix[i,3] <- 1}
+        if(data[i,1] == 0 & data[i,2] == 1 & data[i,3] == 1 & data[i,4] == 0){
+          state_matrix[i,4] <- 1}
+        if(data[i,1] == 1 & data[i,2] == 0 & data[i,3] == 0 & data[i,4] == 0){
+          state_matrix[i,5] <- 1}      
+        if(data[i,1] == 1 & data[i,2] == 1 & data[i,3] == 0 & data[i,4] == 0){
+          state_matrix[i,6] <- 1}
+        if(data[i,2] == 0 & data[i,4] == 1){
+          state_matrix[i,7] <- 1}       
+        if(data[i,2] == 1 & data[i,4] == 1){
+          state_matrix[i,8] <- 1}}}}
+  
   return(state_matrix)
 }
-
-
-
-
 
 
 

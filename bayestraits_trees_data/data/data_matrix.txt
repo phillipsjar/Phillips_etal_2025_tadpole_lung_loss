@@ -61,6 +61,7 @@ Rentapia_hosii	0	0
 Rhaebo_glaberrimus	0	0
 Rhaebo_guttatus	1	0
 Rhaebo_haematiticus	0	0
+Adhaerobufo_nasicus	0	0
 Rhinella_acutirostris	1	0
 Rhinella_amabilis	-	0
 Rhinella_arenarum	1	0
@@ -105,7 +106,7 @@ Lepidobatrachus_laevis	1	1
 Conraua_robusta	0	1
 Adelphobates_galactonotus	1	1
 Adelphobates_quinquevittatus	1	1
-Allobates_grillisimilis	-	1
+Allobates_grillisimilis	1	1
 Allobates_insperatus	1	1
 Ameerega_trivittata	1	1
 Andinobates_bombetes	1	1
@@ -355,8 +356,8 @@ Oreolalax_rhodostigmatus	1	1
 Pelobatrachus_ligayae	0	1
 Pelobatrachus_nasuta	0	1
 Pelobatrachus_stejnegeri	0	1
-Scutiger_boulengeri	0	0
-Scutiger_chintingensis	0	0
+Scutiger_boulengeri	0	1
+Scutiger_chintingensis	0	1
 Chaperina_fusca	1	1
 Glyphoglossus_guttulatus	1	1
 Glyphoglossus_molossus	1	1

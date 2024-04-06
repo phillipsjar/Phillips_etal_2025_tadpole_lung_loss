@@ -1,13 +1,10 @@
 # This script creates data matrices for Bayestraits and automates listing out taxa for
 # Bayestraits ancestral reconstruction.
-
+rm(list = ls())
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
-
-
 
 #Requires having run through the set_up script to generate the data_no_endo files and correct trees
 source("lung_loss_git/scripts/set_up/Initial_set_up.R")
-
 
 require(ape)
 
@@ -17,12 +14,18 @@ aqu_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_
 aqu_tree
 
 data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
+
+table(data_full$Genus)
+length(unique(data_full$Genus))
+
+
 full_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_full.nex")
 
 full_tree
 
 tree_set_aqu <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex")
 tree_set_full <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_full.nex")
+tree_set_six <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_six.nex")
 
 ###########################################################################
 ################## HOW TO Make Bayestraits data matrices ##################
@@ -39,13 +42,14 @@ BT_data_mat = function(data, tree, traits){
   mat[which(is.na(mat[,2])),2] <- rep("-", length(which(is.na(mat[,2])))) #allows ecology to be unknown
   return(mat)}
 
-
+data_six <- data_full[!(is.na(data_full$six_state)),]
 data_eight <- data_full[!(is.na(data_full$eight_state)),]
 
 BT_aqu_mat <- BT_data_mat(data_aqu, aqu_tree, c("ecology", "lung"))
-
+six_state_mat <- BT_data_mat(data_six, full_tree, "six_state")  #for six state data (including specialized and non-specialized lotic as two different states)
 eight_state_mat <- BT_data_mat(data_eight, full_tree, "eight_state")  #for six state data (including specialized and non-specialized lotic as two different states)
 
+table(six_state_mat[,2])
 table(eight_state_mat[,2])
 
 dim(BT_aqu_mat) # doesn't include terrestrial species 
@@ -53,11 +57,12 @@ dim(eight_state_mat) # doesn't include species missing any ecology or lung info
 
 #export tables in BT-friendly format
 write.table(BT_aqu_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/data_matrix.txt", sep = "\t",quote = FALSE)
+write.table(six_state_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
 write.table(eight_state_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/8state_data_matrix.txt", sep = "\t",quote = FALSE)
 
 
-rm(list = c("eight_state_mat", "BT_aqu_mat", "data_aqu", "data_eight",
-            "BT_data_mat", "data_full"))
+rm(list = c("eight_state_mat", "six_state_mat", "BT_aqu_mat", "data_aqu", "data_eight",
+            "data_six", "BT_data_mat", "data_full"))
 
 #########################################################################
 ## HOW TO FINISH BT COMMAND FILES with tags and nodes ##

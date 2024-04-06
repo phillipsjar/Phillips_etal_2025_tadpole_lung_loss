@@ -1,5 +1,7 @@
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
+rm(list = ls())
+
 library(phytools)
 
 source("lung_loss_git/scripts/set_up/Initial_set_up.R")
@@ -56,6 +58,13 @@ rm(list = c("four_state_col", "four_state_state", "six_state_col", "six_state_st
 cols <- setNames(c("#990099", "#3399FF", "#FF3333","#EBFFE1", "grey"), c("X_S", "Lu_S", "X_P", "Lu_P"))
 cols2 <- setNames(c("gold", "purple", "#99CCFF", "blue", "red", "#EBFFE1"), 
                   c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P"))
+
+cols3 <- setNames(c("gold", "purple", "#99CCFF", "blue", "red", "#EBFFE1",
+                          "brown", "#CC6600"), 
+                  c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P",
+                    "X_terr", "Lu_terr"))
+
+
 require(phytools)
 #tester of one run to see if colors look good
 {plotSimmap(t_indep[[1]], cols, pts=F, ftype="off", fsize = .2, 

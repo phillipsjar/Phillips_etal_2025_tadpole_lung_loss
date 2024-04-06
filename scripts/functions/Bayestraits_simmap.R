@@ -7,7 +7,7 @@
 # using the BT posterior to generate Q_matrices while incorporating uncertainty
 
 #              Draw rate matrices from 100 different runs of posterior
-BayesTraits_simmap = function(BT_output, Nruns, data, model, trees, state_labels, trait_col_names){
+BayesTraits_simmap = function(BT_output, Nruns, data, model, trees, state_labels, trait_col_names, pis){
   require(phytools)
 if(class(trees) == "phylo"){
   stop("currently implemented for Bayestraits runs that use multiple trees")
@@ -46,6 +46,16 @@ if(model == "six_state"){
   }
 }
 
+if(model == "eight_state"){
+  for(i in 0:(Nruns-1)){
+    start <- which(colnames(BT_output) == "q12")
+    end <- which(colnames(BT_output) == "q87")
+    run <- random_runs[i+1]
+    rate_values[i+1] <- list(BT_output[(run),start:end])
+  }
+}
+
+
 source("lung_loss_git/scripts/functions/custom_Q.R")
 #rate_values[[1]]
 #custom_Q(rate_values[[1]], state_labels, model)
@@ -55,9 +65,9 @@ source("lung_loss_git/scripts/functions/make_simmap_data_function.R")
 
 if(model == "dependent" | model == "independent"){mode = "double binary"}
 if(model == "six_state"){mode = model}
+if(model == "eight_state"){mode = model}
 
 sim_data <- make_simmap_data(data = data, tree = trees[[1]], mode = mode, state_labels = state_labels, trait_col_names = trait_col_names)
-
 
 master_simmap <- vector(mode = "list", length = Nruns)             # empty list to be filled with the descendents of each node of ML tree
 class(master_simmap) <- "Multiphylo"
@@ -66,20 +76,25 @@ class(master_simmap) <- "Multiphylo"
 if(model == "dependent" | model == "independent"){
     for(i in 1:Nruns){
       master_simmap[[i]] <- make.simmap(trees[[tree_numbers[i]]], sim_data, nsim = 1,
-                                   Q = custom_Q(rate_values[[i]], model = model, 
-                                   state_labels = state_labels), pi=rep(.25,4))
+                                   Q = custom_Q(rate_values[[i]], model = model)
+                                   , pi=pis)
     }
 }
-
-
 
 if(model == "six_state"){
     for(i in 1:Nruns){
       master_simmap[[i]] <- make.simmap(trees[[tree_numbers[i]]], sim_data, nsim = 1,
                             Q = custom_Q(rate_values[[i]], model = model, 
-                              state_labels = state_labels), pi=rep((1/6),6))}
+                              state_labels = state_labels), pi=pis)}
 }
 
+if(model == "eight_state"){
+  for(i in 1:Nruns){
+    master_simmap[[i]] <- make.simmap(trees[[tree_numbers[i]]], sim_data, nsim = 1,
+                                      Q = custom_Q(rate_values[[i]], 
+                                                   state_labels = state_labels), pi=pis)}
+}
+?make.simmap
 
 return(master_simmap)
 }

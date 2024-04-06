@@ -62,6 +62,7 @@ Rentapia_hosii	1
 Rhaebo_glaberrimus	1
 Rhaebo_guttatus	5
 Rhaebo_haematiticus	1
+Adhaerobufo_nasicus	2
 Rhinella_acutirostris	5
 Rhinella_arenarum	5
 Rhinella_castaneotica	5
@@ -112,6 +113,7 @@ Thoropa_miliaris	8
 Thoropa_taophora	7
 Adelphobates_galactonotus	6
 Adelphobates_quinquevittatus	6
+Allobates_grillisimilis	6
 Allobates_insperatus	6
 Allobates_nidicola	7
 Ameerega_trivittata	6
@@ -366,8 +368,8 @@ Oreolalax_rhodostigmatus	6
 Pelobatrachus_ligayae	3
 Pelobatrachus_nasuta	3
 Pelobatrachus_stejnegeri	3
-Scutiger_boulengeri	1
-Scutiger_chintingensis	1
+Scutiger_boulengeri	3
+Scutiger_chintingensis	3
 Chaperina_fusca	6
 Glyphoglossus_guttulatus	6
 Glyphoglossus_molossus	6
