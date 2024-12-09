@@ -25,7 +25,6 @@ full_tree
 
 tree_set_aqu <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex")
 tree_set_full <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_full.nex")
-tree_set_six <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_six.nex")
 
 ###########################################################################
 ################## HOW TO Make Bayestraits data matrices ##################
@@ -54,12 +53,21 @@ dim(eight_state_mat) # doesn't include species missing any ecology or lung info
 
 #export tables in BT-friendly format
 write.table(BT_aqu_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/data_matrix.txt", sep = "\t",quote = FALSE)
-write.table(six_state_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/6state_data_matrix.txt", sep = "\t",quote = FALSE)
 write.table(eight_state_mat,row.names=F, col.names=F, file = "lung_loss_git/bayestraits_trees_data/data/8state_data_matrix.txt", sep = "\t",quote = FALSE)
 
 
-rm(list = c("eight_state_mat", "six_state_mat", "BT_aqu_mat", "data_aqu", "data_eight",
-            "data_six", "BT_data_mat", "data_full"))
+rm(list = c("eight_state_mat", "BT_aqu_mat", "data_aqu", "data_eight",
+            "BT_data_mat", "data_full"))
+
+
+
+
+
+
+
+
+
+
 
 #########################################################################
 ## HOW TO FINISH BT COMMAND FILES with tags and nodes ##

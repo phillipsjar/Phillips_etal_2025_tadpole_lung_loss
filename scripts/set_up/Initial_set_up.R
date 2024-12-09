@@ -1,9 +1,10 @@
-############### full script for all analyses and visualization in Phillips et al. 2023 - Phylogenetics of Lung loss in anuran tadpoles
-### R version 
+############### script to set up all analyses and visualization in Phillips et al. 2024 - 
+###############  Lungless tadpoles breathe fresh air into hypotheses for tetrapod lung loss and trait regain
+
+### R version 4.2.2
 rm(list = ls())
 # set working directory
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
-#setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
 
 # uploading data
 {
@@ -12,15 +13,6 @@ setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
   data_original <- data_original[,match(keep_cols, colnames(data_original))] # keep only relevant columns
   
 ####################################################
-
-data_original$six_state <- rep(NA)
-data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 0)] <- 1
-data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 1)] <- 2
-data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 1 & data_original$Spec_lotic == 0)] <- 3
-data_original$six_state[which(data_original$ecology == 0 & data_original$lung == 1 & data_original$Spec_lotic == 1)] <- 4
-data_original$six_state[which(data_original$ecology == 1 & data_original$lung == 0)] <- 5
-data_original$six_state[which(data_original$ecology == 1 & data_original$lung == 1)] <- 6
-  
 
 data_original$eight_state <- rep(NA)
 data_original$eight_state[which(data_original$ecology == 0 & data_original$lung == 0 & data_original$Spec_lotic == 0)] <- 1
@@ -105,10 +97,10 @@ table(data$Genus)
 ################## upload trees ######################
 ######################################################
 require(ape)
-# MaxLH tree from Portik et al (2022) 
+# MaxLH tree from Portik et al (2023) 
 ML_tree <- read.tree("lung_loss_git/trees/original_trees/TreePL/Rooted_Anura_bestTree.tre")
 
-# set of 100 trees from the posterior distribution of tree space in Portik et al (2022)
+# set of 100 trees from the posterior distribution of tree space in Portik et al (2023)
 tree_set <- read.tree("lung_loss_git/trees/original_trees/TreePL/TreePL-Rooted_Anura_bootstraps.tre")
 
 ######################################################
@@ -132,7 +124,6 @@ dim(data)
 data_aqu <- data[which(data$terrestrial != 1),]  #remove terrestrial taxa but keep taxa with unknown ecology
 dim(data_aqu)
 
-data_six <- data[!(is.na(data$six_state)),]
 data_terr <- data[!(is.na(data$eight_state)),]
 
 
@@ -189,17 +180,6 @@ class(tree_set_full) <- "Multiphylo"
   if((i/10) == round((i/(length(tree_set_full)/10)))){print((length(tree_set_full) - i)*.1)}} # counter down to zero as loop finishes
 }
 
-{tree_set_six <- vector(mode = "list", length = 100)             # empty list to be filled with sampled trees
-  class(tree_set_six) <- "Multiphylo"
-  samples <- sample(100, length(tree_set_six))
-  
-  for(i in 1:length(tree_set_six)){
-    a <- samples[i]
-    tree_set_six[[i]] <- new_tree(tree_set[[a]], data_six[data_six$tree_names %in% tree_set[[a]]$tip.label,])
-    tree_set_six[[i]]$node.label <- NULL
-    if((i/10) == round((i/(length(tree_set_six)/10)))){print((length(tree_set_six) - i)*.1)}} # counter down to zero as loop finishes
-}
-
 
 
 
@@ -209,7 +189,6 @@ write.nexus(Full_tree, file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_
 write.nexus(aqu_tree, file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex", translate = TRUE)
 write.nexus(tree_set_full, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_full.nex", translate = TRUE)
 write.nexus(tree_set_aqu, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_aqu.nex", translate = TRUE)
-write.nexus(tree_set_six, file = "lung_loss_git/bayestraits_trees_data/trees/tree_set_six.nex", translate = TRUE)
 
 #write tree files (with node labels) to another folder for later visualization
 write.tree(Full_tree, file = "lung_loss_git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
@@ -217,18 +196,18 @@ write.tree(aqu_tree, file = "lung_loss_git/trees/edited_trees/maxLH_aqu_vis_tree
 
 
 
-rm(list = c("tree_set", "ML_tree", "i", "new_tree", "a", "samples", "tree_set_six",
+rm(list = c("tree_set", "ML_tree", "i", "new_tree", "a", "samples",
             "tree_set_aqu", "tree_set_full", "Full_tree", "aqu_tree"))
 
 write.csv(data, file = "lung_loss_git/processed_data/lung_data/full_data.csv")
 write.csv(data_aqu, file = "lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 
-rm(list = c("data", "data_aqu", "data_terr", "data_six"))
+rm(list = c("data", "data_aqu", "data_terr"))
 
 
 ####################################################################################################
 # to automatically generate Bayestraits data files and ancestral reconstruction code for 
-# command files, see BT_data_set.R in extra_scripts
+# command files, see BT_data_set_up.R 
 
 ####################################################################################################
 
