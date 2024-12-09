@@ -1,14 +1,13 @@
+#Code for supplementary figure 1
 
-rm(list = ls())
+rm(list = ls()) #clean up
 
 data_original <- read.csv("raw_data/Full_data_matrix.csv")
 keep_cols <- c("Family", "Genus", "Taxa", "Portik", "guild", "ecology", "terrestrial", "lung", "Spec_lotic")
 
 data_original <- data_original[,match(keep_cols, colnames(data_original))] # keep only relevant columns
 
-
 data_lung <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
-
 
 data_full <- data_original[which(data_original$guild != "unknown" & data_original$guild != "viviparous" & 
         data_original$guild != "direct development" & data_original$guild != 

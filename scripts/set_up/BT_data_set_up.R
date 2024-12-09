@@ -3,7 +3,7 @@
 rm(list = ls())
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
-#Requires having run through the set_up script to generate the data_no_endo files and correct trees
+#Requires having run through the set_up script to generate the data and tree files 
 source("lung_loss_git/scripts/set_up/Initial_set_up.R")
 
 require(ape)
@@ -42,14 +42,11 @@ BT_data_mat = function(data, tree, traits){
   mat[which(is.na(mat[,2])),2] <- rep("-", length(which(is.na(mat[,2])))) #allows ecology to be unknown
   return(mat)}
 
-data_six <- data_full[!(is.na(data_full$six_state)),]
 data_eight <- data_full[!(is.na(data_full$eight_state)),]
 
 BT_aqu_mat <- BT_data_mat(data_aqu, aqu_tree, c("ecology", "lung"))
-six_state_mat <- BT_data_mat(data_six, full_tree, "six_state")  #for six state data (including specialized and non-specialized lotic as two different states)
-eight_state_mat <- BT_data_mat(data_eight, full_tree, "eight_state")  #for six state data (including specialized and non-specialized lotic as two different states)
+eight_state_mat <- BT_data_mat(data_eight, full_tree, "eight_state")  #for eight state data 
 
-table(six_state_mat[,2])
 table(eight_state_mat[,2])
 
 dim(BT_aqu_mat) # doesn't include terrestrial species 

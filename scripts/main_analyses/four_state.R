@@ -127,3 +127,21 @@ BF_test
 # for model 1, and negative numbers implying varying degrees of support for model 2. 
 
 
+###################### get rate estimates for different models###############################
+
+
+source("lung_loss_git/scripts/functions/summary_posterior_function.R")
+
+read_in_model = function(model){
+  name <- paste("bayestraits/output/processed_logs/", model, ".txt", sep = "")
+  data <- read.csv(name, sep = "\t")
+  return(data)}
+
+BF_matrix
+
+{
+  model <- "dep_allzero_1"
+  summary_posterior(read_in_model(model), grep("q", colnames(read_in_model(model))))
+}
+
+

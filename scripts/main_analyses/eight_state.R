@@ -250,7 +250,11 @@ paste(BF_matrix$Model_class[which.max(BF_matrix$LogMargLik)], BF_matrix$replicat
 # (lentic, generalized lotic, specialized lotic, and terrestrial), while 
 # the final four plots show rates of regain in those contexts.
 
-vioplot(log(eight_bestmod_1[,columns]+1), colMed = "black", main = "Eight best mod",
+eight_state_bestmod_1 <- read.csv("bayestraits/output/processed_logs/eight_state_bestmod_1.txt", sep = "\t")
+columns <- match(c("q65", "q31", "q42", "q87", "q56", "q13", "q24", "q78"), colnames(eight_state_bestmod_1))
+library(vioplot)
+
+vioplot(log(eight_state_bestmod_1[,columns]+1), colMed = "black", main = "Eight best mod",
         yaxt = "n")
 axis(side = 2, at = log(c(1,2,6,21,51)), labels = c(0,.01,.05,.2,.5),
      tck = -.01, lwd.ticks = 2, lwd = 1)
@@ -264,9 +268,10 @@ colfunc <- colorRampPalette(c("#0000FF01", "#AAAAAA01", "#FF000001"))
 
 colors <- colfunc(1000)
 library(scales)
-lh_scaled <- round(rescale(eight_bestmod_1$Lh, to = c(1, 1000), from = range(eight_bestmod_1$Lh)))
+lh_scaled <- round(rescale(eight_state_bestmod_1$Lh, to = c(1, 1000), from = range(eight_state_bestmod_1$Lh)))
+# added color scheme to show higher likelihood peaks in red and lower lH valleys in blue
 
-plot(eight_bestmod_1$Iteration, eight_bestmod_1$q21, pch = 21, col = "transparent",cex = .5,
+plot(eight_state_bestmod_1$Iteration, eight_state_bestmod_1$q12, pch = 21, col = "transparent",cex = .5,
      bg = colors[lh_scaled])
 
 # this makes trusting parameter estimates from this model difficult, even if the model
@@ -274,240 +279,35 @@ plot(eight_bestmod_1$Iteration, eight_bestmod_1$q21, pch = 21, col = "transparen
 # to get potential parameter ranges. The best model that converged is the third restricted 
 # regains model iteration.
 
-vioplot(log(eight_res_3[,columns]+1), colMed = "black", main = "Eight regains res",
+eight_state_res_3 <- read.csv("bayestraits/output/processed_logs/eight_state_res_3.txt", sep = "\t")
+
+vioplot(log(eight_state_res_3[,columns]+1), colMed = "black", main = "Eight regains res",
         yaxt = "n")
 axis(side = 2, at = log(c(1,2,6,21,51)), labels = c(0,.01,.05,.2,.5),
      tck = -.01, lwd.ticks = 2, lwd = 1)
 abline(h = 0, col = "red", lty = 2)
 
-lh_scaled <- round(rescale(eight_res_3$Lh, to = c(1, 1000), from = range(eight_res_3$Lh)))
-plot(eight_res_3$Iteration, eight_res_3$q21, pch = 21, col = "transparent",cex = .5,
+lh_scaled <- round(rescale(eight_state_res_3$Lh, to = c(1, 1000), from = range(eight_state_res_3$Lh)))
+plot(eight_state_res_3$Iteration, eight_state_res_3$q21, pch = 21, col = "transparent",cex = .5,
      bg = colors[lh_scaled])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ###################### get rate estimates for different models###############################
 
+
 source("lung_loss_git/scripts/functions/summary_posterior_function.R")
-states_OI <- c("q42", "q31", "q65", "q87", "q24", "q13", "q56", "q78")
 
-summary_posterior(eight_state_full_1, states_OI)
-summary_posterior(eight_state_full_2, states_OI)
-summary_posterior(eight_state_full_3, states_OI)
+read_in_model = function(model){
+  name <- paste("bayestraits/output/processed_logs/", model, ".txt", sep = "")
+  data <- read.csv(name, sep = "\t")
+  return(data)}
 
-summary_posterior(eight_state_res_1, states_OI)
-summary_posterior(eight_state_res_2, states_OI)
-summary_posterior(eight_state_res_3, states_OI)
+BF_matrix
 
-
-mods <- c("eight_state_full", "eight_state_indep", "eight_state_nopondloss",
-          "eight_state_nostreamloss", "eight_state_nogains", "eight_state_nopondgain",
-          "eight_state_res", "eight_state_bestmod")
-
-states_OI <- c("q12", "q13", "q21", "q24", "q31", "q34", "q42", "q43")
-
-lapply()
-
-
-lung_rates <- as.data.frame(matrix(ncol = length(mods)*3, nrow = 8))
-
-colnames(lung_rates) <- paste(rep(mods, each = 3),rep(c(1,2,3)), sep = "_")
-rownames(lung_rates) <- states_OI
-
-lung_rates[1 ,grep(mods[1], colnames(lung_rates))[1]]
-
-ls()[grep(paste(mods[1],1,sep = "_"), ls())]
-
-
-for(i in 1:length(mods)){
-  for(j in 1:length(states_OI)){
-    mean1 <- 
-    
-    
-  }
+{
+model <- "eight_state_full_1"
+summary_posterior(read_in_model(model), grep("q", colnames(read_in_model(model))))
 }
-
-
-rownames(BF_matrix) <- c("Model_class", "replicate", "LogMargLik")
-
-BF_matrix$Model_class <- rep(mods, each = 3)
-
-BF_matrix$replicate <- c(rep(1:3, length(mods)))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-source("lung_loss_git/scripts/functions/combine_posteriors.R")
-
-final_eight <- combine_posteriors(eight_1, eight_2, eight_3)
-final_eight_indep <- combine_posteriors(eight_indep_1, eight_indep_2, eight_indep_3)
-final_eight_nogains <- combine_posteriors(eight_nogains_1, eight_nogains_2, eight_nogains_3)
-final_best <- combine_posteriors(eight_bestmod_1, eight_bestmod_2, eight_bestmod_3)
-final_eight_res <- combine_posteriors(eight_res_1, eight_res_2, eight_res_3)
-
-final_eight_nopondgain <- combine_posteriors(eight_nopondgain_1, eight_nopondgain_2, eight_nopondgain_3)
-
-
-plot(final_eight$Lh)
-plot(final_eight_nogains$Lh)
-plot(final_best$Lh)
-
-
-plot(eight_nogains_2$Lh)
-plot(eight_nogains_3$Lh)
-
-plot(eight_bestmod_1$Lh)
-plot(eight_bestmod_2$Lh)
-plot(eight_bestmod_3$Lh)
-
-
-final_best[which.max(final_best$Lh),]
-
-
-
-dev.off()
-
-plot(eight_bestmod$Lh)
-plot(eight_1$Lh)
-
-
-test <- eight_nogains_4[which(eight_nogains_4$Lh > -480),]
-plot(test$Lh)
-plot(test$Iteration, test$q31)
-
-colfunc <- colorRampPalette(c("#0000FF01", "#AAAAAA01", "#FF000001"))
-
-colors <- colfunc(1000)
-library(scales)
-lh_scaled <- round(rescale(eight_bestmod_1$Lh, to = c(1, 1000), from = range(eight_bestmod_1$Lh)))
-
-
-plot(eight_bestmod_1$Iteration, eight_bestmod_1$q65, pch = 21, col = "transparent",cex = .5,
-     bg = colors[lh_scaled])
-
-
-
-
-points(eight_bestmod_1$Iteration, eight_bestmod_1$q65, pch = 21, col = "transparent",cex = .5,
-       bg = colors[lh_scaled])
-
-
-lines(eight_bestmod_1$Iteration, 
-      rescale(eight_bestmod_1$Lh, to = range(eight_bestmod_1$q65), 
-              from = range(eight_bestmod_1$Lh)), lwd = .2)
-
-
-
-rates <- eight_bestmod_1[which.max(eight_bestmod_1$Lh), grep("q", colnames(eight_bestmod_1))]
-
-
-
-
-source("lung_loss_git/scripts/functions/summary_posterior_function.R")
-
-keeps <-  c("q12", "q13", "q15", "q17", "q21", "q24", "q27", "q31", "q34", 
-  "q36", "q38", "q42", "q43", "q48", "q51", "q56", "q57", "q63", 
-  "q65", "q68", "q71", "q72", "q75", "q78", "q83", "q84", "q86", "q87")
-
-
-
-rate_sum <- summary_posterior(final_eight_res, match(keeps, colnames(final_eight)))
-
-data <- final_eight
-cols <- grep("q", colnames(final_eight_res))
-
-
-length(which(final_eight$q13 == final_eight_res$q24 & final_eight_res$q13 == final_eight_res$q56
-        & final_eight_res$q13 == final_eight_res$q67))
-
-
-
-
-
-#restricted model is preferred
-
-best_eight_model <- final_eight_res
-save(eight_res_3, file = "lung_loss_git/processed_data/BT_output/best_eight_model.Rdata")
-
-rm(list = ls()) #cleanup
-load(file = "lung_loss_git/processed_data/BT_output/best_eight_model.Rdata")
-
-source("lung_loss_git/scripts/functions/Dollo_check.R")
-
-
-
-
-
-RJ_model_testing(test, model = "eight_state")
-RJ_model_testing(final_eight, model = "eight_state")
-
-# ~60% of posterior spent with regains at zero (BF = 1.46, not strong evidence that regains are impossible)
-# lentic losses possible in more than 80% of posterior (remaining posterior suggests a terrestrial route to loss)
-
-
-hist(best_eight_model$q56)
-
-
-plot(best_eight_model$q17)
-plot(best_eight_model$q17)
-
-
-plot(best_eight_model$Lh)
-
-
-plot(eight_2$Iteration, eight_3$q12)
-
-
-
-
-library(HDInterval)
-packageVersion("HDInterval")
-
-
-
-
-
 
 
 
