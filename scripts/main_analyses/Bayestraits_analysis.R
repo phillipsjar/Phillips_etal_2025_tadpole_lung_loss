@@ -36,10 +36,10 @@ library(readr) #version ‘2.1.4’ used for function read_file
 
 # master matrix of marginal likelihoods for Bayesfactor testing
 
-BF_matrix <- as.data.frame(matrix(nrow = 12, ncol = 3))
+BF_matrix <- as.data.frame(matrix(nrow = 15, ncol = 3))
 colnames(BF_matrix) <- c("Model_class", "replicate", "LogMargLik")
-BF_matrix$Model_class <- c(rep("dep", 3), rep("indep", 3), rep("six_state_dep", 3), rep("six_state_indep", 3))
-BF_matrix$replicate <- c(rep(1:3, 2))
+BF_matrix$Model_class <- c(rep("dep", 3), rep("dep_restricted", 3), rep("indep", 3), rep("eight_state", 3), rep("eight_state_res", 3))
+BF_matrix$replicate <- c(rep(1:3, 5))
 
 for(i in 1:dim(BF_matrix)[1]){
               A <- read_file(paste("bayestraits_exports/stones/", BF_matrix$Model_class[i], 
@@ -67,10 +67,15 @@ six_indep <- mean(as.numeric(BF_matrix$LogMargLik[which(BF_matrix$Model_class ==
 BF_vis = function(complex, simple){
   BF = (complex - simple)
   BF = 2*BF
+  paste("BF = ", BF, sep = "")
   if(BF < 2.2){paste("no support for complex model")}
   if(6 > BF & BF >= 2.2){paste("positive evidence for complex model")}
   if(10 > BF & BF > 6){paste("strong evidence for complex model")}
   if(BF > 10){paste("very strong evidence for complex model")}}
+
+
+2*(-338 - -335)
+
 
 BF_vis(dep, indep)
 BF_vis(six_dep, six_indep)
@@ -91,8 +96,14 @@ rm(list = c("BF_matrix", "BF", "dep", "indep", "six_dep", "six_indep", "i",
 
 source("lung_loss_git/scripts/functions/Dollo_check.R")
 
-RJ_model_testing(master_dep_export, model = "dependent")
+RJ_model_testing(, model = "dependent")
 RJ_model_testing(master_indep_export, model = "independent")
+
+RJ_model_testing(final_eight, model = "eight_state")
+RJ_model_testing(final_eight_res, model = "eight_state")
+
+RJ_model_testing(BT_output, model = "dependent")
+
 RJ_model_testing(master_six_state_dep_export, model = "six_state")
 RJ_model_testing(master_six_state_indep_export, model = "six_state")
 

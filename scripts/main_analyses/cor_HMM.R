@@ -1,20 +1,26 @@
 library(corHMM)
 library(ape)
+library(phytools)
+packageVersion("corHMM")
+
+rm(list = ls())
 
 #BT_tree_set <- read.nexus(file = "bayestraits/trees/tree_set.nex")
-BT_ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex")
+ML_tree_aqu <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex")
 
 data_aqu <- read.csv("lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
 data_aqu$ecology[is.na(data_aqu$ecology)] <- "?"
 
 #trim data to taxa present in trees
-data_corHMM <- data_aqu[data_aqu$Taxa %in% BT_ML_tree$tip.label,]
+data_corHMM <- data_aqu[data_aqu$Taxa %in% ML_tree_aqu$tip.label,]
 
 dataset_corHMM <- as.data.frame(cbind(data_corHMM$Taxa, data_corHMM$ecology, data_corHMM$lung))
 colnames(dataset_corHMM) <- c("Genus_sp", "eco", "lung")
 
+dataset_corHMM$eco[which(dataset_corHMM$eco == 1)] <- "lentic"
+dataset_corHMM$eco[which(dataset_corHMM$eco == 0)] <- "lotic"
 
-corHMMtest <- fitCorrelationTest(BT_ML_tree, dataset_corHMM, simplified_models = TRUE)
+corHMMtest <- fitCorrelationTest(ML_tree_aqu, dataset_corHMM, simplified_models = TRUE)
 
 {
 AIC_indep_simp <- corHMMtest$simplified_independent_model_fit$AIC

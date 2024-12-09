@@ -1,6 +1,6 @@
 ############### full script for all analyses and visualization in Phillips et al. 2023 - Phylogenetics of Lung loss in anuran tadpoles
 ### R version 
-
+rm(list = ls())
 # set working directory
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 #setwd("/Users/WomackLab/desktop/Jack/final_lungloss_dataspace")
@@ -45,13 +45,13 @@ rm(list = c("data_original", "keep_cols"))}
 
 table(data$eight_state)  
 
+unique(data[which(data$eight_state == 7),2])
 
-data[which(data$eight_state == 7),]
+table(data$eight_state)
+
+data[which(data$Genus == "Limnonectes"),]
 
 
-
-
-#data <- data_vis
 
 ######################################################
 ################# summarize data #####################
@@ -94,7 +94,8 @@ for(i in 1:length(genera)){
     genera[i] <- "has lungless"
   }else{genera[i] <- "lunged"}}
 length(which(genera == "lunged"))
-
+length(which(genera == "has lungless"))
+genera[which(genera == "has lungless")]
 
 # taxa distribution within genera
 table(data$Genus)
@@ -165,7 +166,7 @@ aqu_tree <- new_tree(ML_tree, data_aqu[data_aqu$tree_names %in% ML_tree$tip.labe
 
 
 # BT analysis I - set of 100 trees (no terrestrial)
-{tree_set_aqu <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+{tree_set_aqu <- vector(mode = "list", length = 100)             # empty list to be filled with sampled trees
   class(tree_set_aqu) <- "Multiphylo"
   samples <- sample(100, length(tree_set_aqu))
 
@@ -177,7 +178,7 @@ aqu_tree <- new_tree(ML_tree, data_aqu[data_aqu$tree_names %in% ML_tree$tip.labe
 }
 
 # full tree set of 100 trees (all possible taxa)
-{tree_set_full <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+{tree_set_full <- vector(mode = "list", length = 100)             # empty list to be filled with sampled trees
 class(tree_set_full) <- "Multiphylo"
   samples <- sample(100, length(tree_set_full))
 
@@ -188,7 +189,7 @@ class(tree_set_full) <- "Multiphylo"
   if((i/10) == round((i/(length(tree_set_full)/10)))){print((length(tree_set_full) - i)*.1)}} # counter down to zero as loop finishes
 }
 
-{tree_set_six <- vector(mode = "list", length = 10)             # empty list to be filled with sampled trees
+{tree_set_six <- vector(mode = "list", length = 100)             # empty list to be filled with sampled trees
   class(tree_set_six) <- "Multiphylo"
   samples <- sample(100, length(tree_set_six))
   
@@ -212,7 +213,7 @@ write.nexus(tree_set_six, file = "lung_loss_git/bayestraits_trees_data/trees/tre
 
 #write tree files (with node labels) to another folder for later visualization
 write.tree(Full_tree, file = "lung_loss_git/trees/edited_trees/All_taxa_vis_tree.tre") #includes endotrophs
-write.tree(aqu_tree, file = "lung_loss_git/trees/edited_trees/maxLH_BT_vis_tree.tre")        #removes endotrophs
+write.tree(aqu_tree, file = "lung_loss_git/trees/edited_trees/maxLH_aqu_vis_tree.tre")        #removes endotrophs
 
 
 

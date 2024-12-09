@@ -40,12 +40,13 @@ RJ_model_testing = function(data, model = "dependent"){
     output[2,1] <- output[1,1]/(1-output[1,1])
     
     return(output)}
-  if(model == "six_state"){
+  if(model == "eight_state"){
     runs <- dim(data)[1]
     output <- matrix(NA,nrow = 2, ncol = 3)
     colnames(output) <- c("No regains", "No lentic regains", "No lentic losses")
     rownames(output) <- c("posterior odds", "BayesFactor")
-    output[1,1] <- length(which(data$q13 == 0 & data$q24 == 0 & data$q56 == 0))/runs
+    output[1,1] <- length(which(data$q13 == 0 & data$q24 == 0 & data$q56 == 0 &
+                                  data$q78 == 0))/runs
     output[1,2] <- length(which(data$q56 == 0)) /runs
     output[1,3] <- length(which(data$q65 == 0)) /runs
     output[2,1] <- output[1,1]/(1-output[1,1])

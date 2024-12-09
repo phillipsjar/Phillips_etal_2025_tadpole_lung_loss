@@ -1,50 +1,43 @@
 setwd("~/Desktop/Research/Lunglessness/2021_dataspace/")
 
-# upload Bayestraits trees (MaxLH and Portik)
+# upload Bayestraits trees (used in 4-state analysis, so only binary lotic/lentic)
 require(ape)
-BT_4062_tree <- read.nexus(file = "Bayestraits/tree/maxLH_tree.nex")
-BT_portik_tree <- read.nexus(file = "Bayestraits/tree/portik_tree.nex")
+ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/MaxLh_tree_aqu.nex") 
 
-# upload lung and ecology data with no endotrophs, then remove taxa missing ecology data
-data_no_endo <- read.csv(file = "data/no_endo_lung_data.csv")
-data_no_endo <- subset(data_no_endo, ecology == "1" | ecology == "0")
-
-#trim data to taxa present in trees
-data_4062 <- data_no_endo[data_no_endo$Taxa %in% BT_4062_tree$tip.label,]
-data_portik <- data_no_endo[data_no_endo$Taxa %in% BT_portik_tree$tip.label,]
-rownames(data_4062) <- data_4062$Taxa
-rownames(data_portik) <- data_portik$Taxa
-rm(list = c("data_no_endo"))
-
-#
-length(which(data_4062$ecology == 0 & data_4062$lung == 0))
-length(which(data_4062$ecology == 0 & data_4062$lung == 1))
-length(which(data_4062$ecology == 1 & data_4062$lung == 0))
-length(which(data_4062$ecology == 1 & data_4062$lung == 1))
+# upload lung and ecology data, then remove taxa not in 4-state tree
+data <- read.csv(file = "lung_loss_git/processed_data/lung_data/full_data.csv")
+data <- data[data$Taxa %in% ML_tree$tip.label,]
+rownames(data) <- data$Taxa
 
 
-
-#trim trees to taxa present in data
-BT_4062_tree <- keep.tip(BT_4062_tree, rownames(data_4062))
-BT_portik_tree <- keep.tip(BT_portik_tree, rownames(data_portik))
-
-
-#simplest phylolm:
+#simple phyloglm:
 require(phylolm)
+packageVersion("phylolm")
 
-mod_4062 <- phyloglm(lung ~ ecology, data_4062, BT_4062_tree, method = c("logistic_MPLE"),
+mod <- phyloglm(lung ~ ecology, data, ML_tree, method = c("logistic_MPLE"),
                  start.beta=NULL, start.alpha=NULL,
                  boot = 1000, full.matrix = TRUE)
 
-summary(mod_4062)
+summary(mod)
 # ecology recovered as statistically significant (p = 0.04128) and estimated effect size = 0.269086.
 
-mod_portik <- phyloglm(lung ~ ecology, data_portik, BT_portik_tree, method = c("logistic_MPLE"),
-                 start.beta=NULL, start.alpha=NULL,
-                 boot = 100, full.matrix = TRUE)
 
-summary(mod_portik)
-# ecology recovered as statistically significant (p = 0.04044) and estimated effect size = 0.4034216.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # visualization of the binary data being input into the analyses
@@ -52,9 +45,8 @@ summary(mod_portik)
 # custom function for a phylomorphospace with flexibility for certain aesthetic properties
 source("scripts/final_scripts/extra_scripts/custom_phylomorphospace_function.R")
 
-{BT_4062_tree <- read.nexus(file = "Bayestraits/tree/maxLH_tree.nex") #reload full tree (with some missing data) for plotting ASE
-data_no_endo <- read.csv(file = "data/no_endo_lung_data.csv")
-data_4062 <- data_no_endo[data_no_endo$Taxa %in% BT_4062_tree$tip.label,]
+{ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/MaxLh_tree_aqu.nex") 
+
 tips <- as.data.frame(cbind(data_4062$ecology, data_4062$lung)) #add ecology and lung to an nx2 matrix
 rownames(tips) <- data_4062$Taxa}
 

@@ -7,6 +7,7 @@
 # using the BT posterior to generate Q_matrices while incorporating uncertainty
 
 #              Draw rate matrices from 100 different runs of posterior
+
 BayesTraits_simmap = function(BT_output, Nruns, data, model, trees, state_labels, trait_col_names, pis){
   require(phytools)
 if(class(trees) == "phylo"){
@@ -91,10 +92,11 @@ if(model == "six_state"){
 if(model == "eight_state"){
   for(i in 1:Nruns){
     master_simmap[[i]] <- make.simmap(trees[[tree_numbers[i]]], sim_data, nsim = 1,
-                                      Q = custom_Q(rate_values[[i]], 
-                                                   state_labels = state_labels), pi=pis)}
+                                         Q = custom_Q(rate_values[[i]], scale = .01,
+                                                      state_labels = state_labels,
+                                                      model = "eight_state"), pi=pis)
+    }
 }
-?make.simmap
 
 return(master_simmap)
 }

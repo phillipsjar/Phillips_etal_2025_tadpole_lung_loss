@@ -1,8 +1,6 @@
 
 rm(list = ls())
 
-
-
 data_original <- read.csv("raw_data/Full_data_matrix.csv")
 keep_cols <- c("Family", "Genus", "Taxa", "Portik", "guild", "ecology", "terrestrial", "lung", "Spec_lotic")
 
@@ -34,7 +32,7 @@ rownames(tree_table) <- ML_tree$tip.label
 colnames(tree_table) <- c("frogs", "DDs", "lung_data", "plot")
 
 tree_table[,1] <- ML_tree$tip.label
-i = 1
+
 for(i in 1:dim(tree_table)[1]){
 if(gsub("_.*", "", rownames(tree_table)[i]) %in% data_original$Genus){
   tree_table[i,1] = 1}else{tree_table[i,1] = 0}
@@ -50,12 +48,15 @@ if(gsub("_.*", "", rownames(tree_table)[i]) %in% data_original$Genus){
   }
 
 
+names(which(tree_table[,1] == 1))
+
+unique(data_original$Genus)
 
 library(phytools)
+#frog_data <- data_original[which(tree_table[,1] == 1),]
 
+frog_tree <- drop.tip(ML_tree, which(tree_table[,1] == 0))
 nodes <- rep(NA, frog_tree$Nnode)
-
-
 
 for(i in 1:length(nodes)){
 desc <- getDescendants(frog_tree, (length(frog_tree$tip.label)+i))
@@ -64,10 +65,7 @@ if("1" %in% tree_table[match(desc, rownames(tree_table)),2]){
   nodes[i] <- 0
 }else{nodes[i] <- 1}}
 
-
-frog_data <- data_original[which(tree_table[,1] == 1),]
-
-frog_tree <- drop.tip(ML_tree, which(tree_table[,1] == 0))
+#data_lung$Taxa[which(!(data_lung$Taxa %in% frog_data$Taxa[which(!(is.na(frog_data$lung)))]))]
 
 
 edges <- rep("black", Nedge(frog_tree))
@@ -85,19 +83,21 @@ edges[which(frog_tree$tip.label[frog_tree$edge[,2]] %in%
 par(mar = rep(0,4))
 plot(frog_tree, type = "fan", show.tip.label = F, lwd = 5,
      edge.color = edges)
-tips <- match(names(which(tree_table[,4] == 1)), frog_tree$tip.label)
-tiplabels(tip = tips, pch = 16, cex = .4, col = "black")
-tips <- match(names(which(tree_table[,4] == 2)), frog_tree$tip.label)
-tiplabels(tip = tips, pch = 16, cex = .4, col = "orange")
-tips <- match(names(which(tree_table[,4] == 3)), frog_tree$tip.label)
-tiplabels(tip = tips, pch = 16, cex = .4, col = "red")
+tips1 <- match(names(which(tree_table[,4] == 1)), frog_tree$tip.label)
+tiplabels(tip = tips1, pch = 16, cex = .4, col = "black")
+tips2 <- match(names(which(tree_table[,4] == 2)), frog_tree$tip.label)
+tiplabels(tip = tips2, pch = 16, cex = .4, col = "orange")
+tips3 <- match(names(which(tree_table[,4] == 3)), frog_tree$tip.label)
+tiplabels(tip = tips3, pch = 16, cex = .4, col = "red")
 dev.off()}
 
 
 
+length(tips1)
+length(tips2)
+length(tips3)
 
-
-
+length(tips1) +length(tips2) +length(tips3)
 
 
 
