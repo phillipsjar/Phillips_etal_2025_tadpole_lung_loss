@@ -1,0 +1,656 @@
+﻿,Family,Subfamily,Genus,Taxa,Portik,phylogeny notes,lung,ecology,terrestrial,endotroph,Spec_lotic
+1,Allophrynidae,,Allophryne,Allophryne_ruthveni,,,1,1,0,0,0
+2,Alsodidae,,Alsodes,Alsodes_monticola,,,1,1,0,0,0
+3,Alsodidae,,Alsodes,Alsodes_neuquensis,,,1,1,0,0,0
+4,Alsodidae,,Alsodes,Alsodes_nodosus,,,1,0,0,0,0
+5,Alsodidae,,Limnomedusa,Limnomedusa_macroglossa,,,1,1,0,0,0
+6,Alytidae,,Alytes,Alytes_dickhilleni,,,1,1,0,0,0
+7,Alytidae,,Alytes,Alytes_obstetricans,,,1,1,0,0,0
+8,Alytidae,,Discoglossus,Discoglossus_galganoi,,,1,1,0,0,0
+9,Alytidae,,Discoglossus,Discoglossus_pictus,,,1,1,0,0,0
+10,Aromobatidae,,Allobates,Allobates_grillisimilis,,,1,1,0,0,0
+11,Aromobatidae,,Allobates,Allobates_insperatus,,,1,1,0,0,0
+12,Aromobatidae,,Allobates,Allobates_nidicola,,,0,2,1,1,0
+13,Aromobatidae,,Anomaloglossus,Anomaloglossus_apiau,,,0,2,1,1,0
+14,Aromobatidae,,Anomaloglossus,Anomaloglossus_tepuyensis,,,1,0,0,0,0
+15,Aromobatidae,,Aromobates,Aromobates_mayorgai,Aromobates_meridensis,Assumed generic monophyly and only 2 members sampled,1,0,0,0,0
+16,Aromobatidae,,Aromobates,Aromobates_saltuensis,,,1,0,0,0,0
+17,Aromobatidae,,Mannophryne,Mannophryne_herminae,,,1,1,0,0,0
+18,Aromobatidae,,Mannophryne,Mannophryne_trinitatis,,,1,1,0,0,0
+19,Aromobatidae,,Rheobates,Rheobates_palmatus,,,1,0,0,0,0
+20,Arthroleptidae,,Astylosternus,Astylosternus_diadematus,,,1,0,0,0,0
+21,Arthroleptidae,,Astylosternus,Astylosternus_rheophilus,,,1,0,0,0,0
+22,Arthroleptidae,,Cardioglossa,Cardioglossa_manengouba,,,0,0,0,0,1
+23,Arthroleptidae,,Cardioglossa,Cardioglossa_sp.,Cardioglossa_schioetzi,Likely ID based on collection locality,0,0,0,0,1
+24,Arthroleptidae,,Leptodactylodon,Leptodactylodon_bicolor,,,1,0,0,0,1
+25,Arthroleptidae,,Leptodactylodon,Leptodactylodon_boulengeri,,,0,0,0,0,1
+26,Arthroleptidae,,Leptodactylodon,Leptodactylodon_mertensi,,,1,0,0,0,1
+27,Arthroleptidae,,Leptopelis,Leptopelis_boulengeri,,,1,0,0,0,0
+28,Arthroleptidae,,Leptopelis,Leptopelis_kivuensis,,,1,1,0,0,0
+29,Arthroleptidae,,Leptopelis,Leptopelis_natalensis,,,1,0,0,0,0
+30,Arthroleptidae,,Leptopelis,Leptopelis_vermiculatus,,,1,1,0,0,0
+31,Arthroleptidae,,Nyctibates,Nyctibates_corrugatus,,,1,0,0,0,1
+32,Arthroleptidae,,Trichobatrachus,Trichobatrachus_robustus,,,1,0,0,0,1
+33,Ascaphidae,,Ascaphus,Ascaphus_montanus,,,0,0,0,0,1
+34,Ascaphidae,,Ascaphus,Ascaphus_truei,,,0,0,0,0,1
+35,Batrachylidae,,Atelognathus,Atelognathus_reverberii,,,1,1,0,0,0
+36,Batrachylidae,,Batrachyla,Batrachyla_taeniata,,,1,1,0,0,0
+37,Batrachylidae,,Hylorina,Hylorina_sylvatica,,,1,1,0,0,0
+38,Bombinatoridae,,Bombina,Bombina_maxima,,,1,1,0,0,0
+39,Bombinatoridae,,Bombina,Bombina_orientalis,,,1,1,0,0,0
+40,Bombinatoridae,,Bombina,Bombina_variegata,,,1,1,0,0,0
+41,Bufonidae,,Adhaerobufo,Adhaerobufo_nasicus,Rhaebo_nasicus,taxonomy change,0,0,0,0,1
+42,Bufonidae,,Amazophrynella,Amazophrynella_minuta,,,0,1,0,0,0
+43,Bufonidae,,Anaxyrus,Anaxyrus_americanus,,,0,1,0,0,0
+44,Bufonidae,,Anaxyrus,Anaxyrus_terrestris,,,0,1,0,0,0
+45,Bufonidae,,Anaxyrus,Anaxyrus_woodhousii,,,0,1,0,0,0
+46,Bufonidae,,Ansonia,Ansonia_echinata,?,Cannot be robustly included - three members sampled,0,0,0,0,1
+47,Bufonidae,,Ansonia,Ansonia_hanitschi,,,0,0,0,0,1
+48,Bufonidae,,Ansonia,Ansonia_mcgregori,,,0,0,0,0,1
+49,Bufonidae,,Atelopus,Atelopus_nanay,,,0,0,0,0,1
+50,Bufonidae,,Atelopus,Atelopus_tricolor,,,0,0,0,0,1
+51,Bufonidae,,Atelopus,Atelopus_zeteki,,,0,0,0,0,1
+52,Bufonidae,,Barbarophryne,Barbarophryne_brongersmai,,,0,1,0,0,0
+53,Bufonidae,,Bufo,Bufo_bufo,,,0,1,0,0,0
+54,Bufonidae,,Bufo,Bufo_torrenticola,,,0,0,0,0,1
+55,Bufonidae,,Capensibufo,Capensibufo_tradouwi,,,0,1,0,0,0
+56,Bufonidae,,Dendrophryniscus,Dendrophryniscus_brevipollicatus,,,0,1,0,0,0
+57,Bufonidae,,Duttaphrynus,Duttaphrynus_melanostictus,,,0,1,0,0,0
+58,Bufonidae,,Duttaphrynus,Duttaphrynus_stomaticus,,,0,1,0,0,0
+59,Bufonidae,,Frostius,Frostius_pernambucensis,Frostius_erythrophthalmus,assumed generic monophyly and only 1 member represented,0,1,0,1,0
+60,Bufonidae,,Incilius,Incilius_aucoinae,,,0,0,0,0,0
+61,Bufonidae,,Incilius,Incilius_coccifer,,,0,1,0,0,0
+62,Bufonidae,,Incilius,Incilius_coniferus,,,0,1,0,0,0
+63,Bufonidae,,Ingerophrynus,Ingerophrynus_parvus,,,0,1,0,0,0
+64,Bufonidae,,Melanophryniscus,Melanophryniscus_moreirae,,,0,1,0,0,0
+65,Bufonidae,,Melanophryniscus,Melanophryniscus_pachyrhynus,,,0,0,0,0,0
+66,Bufonidae,,Mertensophryne,Mertensophryne_micranotis,,,0,1,0,0,0
+67,Bufonidae,,Nannophryne,Nannophryne_cophotis,,,0,1,0,0,0
+68,Bufonidae,,Osornophryne,Osornophryne_sp,Osornophryne_guacamayo,assumed generic monophyly and only 1 member represented,0,2,1,1,0
+69,Bufonidae,,Peltophryne,Peltophryne_lemur,,,0,1,0,0,0
+70,Bufonidae,,Peltophryne,Peltophryne_peltocephala,,,0,1,0,0,0
+71,Bufonidae,,Phrynoidis,Phrynoidis_asper,,,0,0,0,0,1
+72,Bufonidae,,Rentapia,Rentapia_hosii,,,0,0,0,0,0
+73,Bufonidae,,Rhaebo,Rhaebo_caeruleostictus,?,Cannot be robustly included - three members sampled,0,1,0,0,0
+74,Bufonidae,,Rhaebo,Rhaebo_glaberrimus,,,0,0,0,0,0
+75,Bufonidae,,Rhaebo,Rhaebo_guttatus,,,0,1,0,0,0
+76,Bufonidae,,Rhaebo,Rhaebo_haematiticus,,,0,0,0,0,0
+77,Bufonidae,,Rhinella,Rhinella_acutirostris,,,0,1,0,0,0
+78,Bufonidae,,Rhinella,Rhinella_amabilis,Rhinella_limensis,"Sister species with limensis, according to Pereyra et al., 2021",0,,0,0,0
+79,Bufonidae,,Rhinella,Rhinella_arenarum,,,0,1,0,0,0
+80,Bufonidae,,Rhinella,Rhinella_castaneotica,,,0,1,0,0,0
+81,Bufonidae,,Rhinella,Rhinella_chrysophora,?,Cannot be robustly included - 3+ members sampled,0,0,0,0,1
+82,Bufonidae,,Rhinella,Rhinella_crucifer,,,0,1,0,0,0
+83,Bufonidae,,Rhinella,Rhinella_granulosa,,,0,1,0,0,0
+84,Bufonidae,,Rhinella,Rhinella_icterica,,,0,1,0,0,0
+85,Bufonidae,,Rhinella,Rhinella_jimi,Rhinella_horribilis,"Sister species with horribilis, according to Pereyra et al., 2021",0,1,0,0,0
+86,Bufonidae,,Rhinella,Rhinella_marina,,,0,1,0,0,0
+87,Bufonidae,,Rhinella,Rhinella_schneideri,,,0,1,0,0,0
+88,Bufonidae,,Rhinella,Rhinella_veraguensis,,,0,0,0,0,1
+89,Bufonidae,,Schismaderma,Schismaderma_carens,,,0,1,0,0,0
+90,Bufonidae,,Sclerophrys,Sclerophrys_capensis,,,0,1,0,0,0
+91,Bufonidae,,Sclerophrys,Sclerophrys_garmani,,,0,1,0,0,0
+92,Bufonidae,,Sclerophrys,Sclerophrys_gutturalis,,,0,1,0,0,0
+93,Bufonidae,,Sclerophrys,Sclerophrys_lemairii,,,0,1,0,0,0
+94,Bufonidae,,Sclerophrys,Sclerophrys_pardalis,,,0,1,0,0,0
+95,Bufonidae,,Sclerophrys,Sclerophrys_poweri,,,0,1,0,0,0
+96,Bufonidae,,Sclerophrys,Sclerophrys_pusilla,,,0,1,0,0,0
+97,Bufonidae,,Strauchbufo,Strauchbufo_raddei,,,0,1,0,0,0
+98,Bufonidae,,Vandijkophrynus,Vandijkophrynus_amatolicus,,,0,1,0,0,0
+99,Bufonidae,,Vandijkophrynus,Vandijkophrynus_angusticeps,,,0,1,0,0,0
+100,Bufonidae,,Vandijkophrynus,Vandijkophrynus_gariepensis,,,0,1,0,0,0
+101,Bufonidae,,Werneria,Werneria_bambutensis,,,0,0,0,0,1
+102,Calyptocephalellidae,,Calyptocephalella,Calyptocephalella_gayi,,,1,1,0,0,0
+103,Centrolenidae,,Centrolene,Centrolene_geckoideum,,,0,0,0,0,1
+104,Centrolenidae,,Centrolene,Centrolene_quindianum,Centrolene_altitudinalis,"Part of ""prosoblepon"" group, according to Guayasamin et al 2006. C. altitudinalis is part of that group.",1,0,0,0,1
+105,Centrolenidae,,Cochranella,Cochranella_granulosa,,,1,0,0,0,1
+106,Centrolenidae,,Espadarana,Espadarana_prosoblepon,,,1,0,0,0,1
+107,Centrolenidae,,Hyalinobatrachium,Hyalinobatrachium_chirripoi,,,1,0,0,0,1
+108,Centrolenidae,,Hyalinobatrachium,Hyalinobatrachium_fleischmanni,,,0,0,0,0,1
+109,Centrolenidae,,Hyalinobatrachium,Hyalinobatrachium_tricolor,,,1,0,0,0,1
+110,Centrolenidae,,Ikakogi,Ikakogi_ispacue,,,0,0,0,0,1
+111,Centrolenidae,,Ikakogi,Ikakogi_tayrona,,,0,0,0,0,1
+112,Centrolenidae,,Nymphargus,Nymphargus_griffithsi,,,1,0,0,0,1
+113,Centrolenidae,,Vitreorana,Vitreorana_uranoscopa,,,1,0,0,0,1
+114,Ceratophryidae,,Ceratophrys,Ceratophrys_aurita,,,1,1,0,0,0
+115,Ceratophryidae,,Ceratophrys,Ceratophrys_calcarata,,,1,1,0,0,0
+116,Ceratophryidae,,Ceratophrys,Ceratophrys_ornata,,,1,1,0,0,0
+117,Ceratophryidae,,Chacophrys,Chacophrys_pierottii,,,1,1,0,0,0
+118,Ceratophryidae,,Lepidobatrachus,Lepidobatrachus_laevis,,,1,1,0,0,0
+119,Conrauidae,,Conraua,Conraua_robusta,,,1,0,0,0,1
+120,Cycloramphidae,,Cycloramphus,Cycloramphus_boraceiensis,,,1,0,1,0,1
+121,Cycloramphidae,,Cycloramphus,Cycloramphus_fuliginosus,,,1,0,1,0,1
+122,Cycloramphidae,,Cycloramphus,Cycloramphus_izecksohni,,,1,0,1,0,1
+123,Cycloramphidae,,Cycloramphus,Cycloramphus_stejnegeri,,,0,2,1,1,0
+124,Cycloramphidae,,Thoropa,Thoropa_megatympanum,,,1,0,1,0,1
+125,Cycloramphidae,,Thoropa,Thoropa_miliaris,,,1,0,1,0,1
+126,Cycloramphidae,,Thoropa,Thoropa_petropolitana,?,Cannot be robustly included - 3+ members sampled,0,0,1,0,1
+127,Cycloramphidae,,Thoropa,Thoropa_taophora,,,0,0,1,0,1
+128,Dendrobatidae,,Adelphobates,Adelphobates_galactonotus,,,1,1,0,0,0
+129,Dendrobatidae,,Adelphobates,Adelphobates_quinquevittatus,,,1,1,0,0,0
+130,Dendrobatidae,,Ameerega,Ameerega_trivittata,,,1,1,0,0,0
+131,Dendrobatidae,,Andinobates,Andinobates_bombetes,,,1,1,0,0,0
+132,Dendrobatidae,,Colostethus,Colostethus_dunni,?,Cannot be robustly included - genus paraphyletic,1,,,,0
+133,Dendrobatidae,,Colostethus,Colostethus_imbricolus,,,1,1,0,0,0
+134,Dendrobatidae,,Dendrobates,Dendrobates_tinctorius,,,1,1,0,0,0
+135,Dendrobatidae,,Dendrobates,Dendrobates_truncatus,,,1,1,0,0,0
+136,Dendrobatidae,,Epipedobates,Epipedobates_boulengeri,,,1,1,0,0,0
+137,Dendrobatidae,,Epipedobates,Epipedobates_tricolor,,,1,1,0,0,0
+138,Dendrobatidae,,Excidobates,Excidobates_condor,,,1,1,0,0,0
+139,Dendrobatidae,,Hyloxalus,Hyloxalus_subpunctatus,,,1,1,0,0,0
+140,Dendrobatidae,,Leucostethus,Leucostethus_fraterdanieli,Colostethus_fraterdanieli,,1,1,0,0,0
+141,Dendrobatidae,,Minyobates,Minyobates_steyermarki,,,1,1,0,0,0
+142,Dendrobatidae,,Oophaga,Oophaga_pumilio,,,1,1,0,0,0
+143,Dendrobatidae,,Paruwrobates,Hyloxalus_whymperi,Ameerega_erythromos,"Both members of ""Paruwrobates"" sensu Grant et al., 2017",1,1,0,0,0
+144,Dendrobatidae,,Phyllobates,Phyllobates_aurotaenia,,,1,1,0,0,0
+145,Dendrobatidae,,Phyllobates,Phyllobates_bicolor,,,1,1,0,0,0
+146,Dendrobatidae,,Ranitomeya,Ranitomeya_defleri,,,1,1,0,0,0
+147,Dendrobatidae,,Silverstoneia,Silverstoneia_flotator,,,1,0,0,0,0
+148,Dicroglossidae,,Euphlyctis,Euphlyctis_cyanophlyctis,,,1,1,0,0,0
+149,Dicroglossidae,,Fejervarya,Fejervarya_cancrivora,,,1,1,0,0,0
+150,Dicroglossidae,,Fejervarya,Fejervarya_limnocharis,,,1,1,0,0,0
+151,Dicroglossidae,,Hoplobatrachus,Hoplobatrachus_occipitalis,,,1,1,0,0,0
+152,Dicroglossidae,,Hoplobatrachus,Hoplobatrachus_tigerinus,,,1,1,0,0,0
+153,Dicroglossidae,,Limnonectes,Limnonectes_kuhlii,,,1,1,0,0,0
+154,Dicroglossidae,,Limnonectes,Limnonectes_leporinus,,,1,1,0,0,0
+155,Dicroglossidae,,Limnonectes,Limnonectes_macrocephalus,,,1,1,0,0,0
+156,Dicroglossidae,,Limnonectes,Limnonectes_magnus,,,1,0,0,0,0
+157,Dicroglossidae,,Limnonectes,Limnonectes_palavanensis,,,1,1,0,0,0
+158,Dicroglossidae,,Minervarya,Minervarya_syhadrensis,,,1,1,0,0,0
+159,Dicroglossidae,,Occidozyga,Occidozyga_laevis,Occidozyga_lima,Cannot be robustly included - genus paraphyletic,1,1,0,0,0
+160,Dicroglossidae,,Quasipaa,Quasipaa_exilispinosa,,,1,0,0,0,0
+161,Dicroglossidae,,Sphaerotheca,Sphaerotheca_breviceps,,,1,1,0,0,0
+162,Heleophrynidae,,Hadromophryne,Hadromophryne_natalensis,,,1,0,0,0,1
+163,Heleophrynidae,,Heleophryne,Heleophryne_hewitti,?,Cannot be robustly included,0,0,0,0,1
+164,Heleophrynidae,,Heleophryne,Heleophryne_purcelli,,,0,0,0,0,1
+165,Heleophrynidae,,Heleophryne,Heleophryne_regis,,,0,0,0,0,1
+166,Heleophrynidae,,Heleophryne,Heleophryne_rosei,?,Cannot be robustly included,0,0,0,0,1
+167,Hemiphractidae,,Flectonotus,Flectonotus_sp.,Flectonotus_pygmaeus,assumed generic monophyly and only 1 member represented,1,1,0,0,0
+168,Hemiphractidae,,Fritziana,Fritziana_sp.,Fritziana_fissilis,assumed generic monophyly and only 1 member represented,1,1,0,0,0
+169,Hemiphractidae,,Gastrotheca,Gastrotheca_monticola,,,1,1,0,0,0
+170,Hemiphractidae,,Gastrotheca,Gastrotheca_riobambae,,,1,1,0,0,0
+171,Hemisotidae,,Hemisus,Hemisus_guttatus,,,1,1,0,0,0
+172,Hemisotidae,,Hemisus,Hemisus_marmoratus,,,1,1,0,0,0
+173,Hylidae,,Acris,Acris_crepitans,,,1,1,0,0,0
+174,Hylidae,,Agalychnis,Agalychnis_callidryas,,,1,1,0,0,0
+175,Hylidae,,Agalychnis,Agalychnis_moreletii,,,1,1,0,0,0
+176,Hylidae,,Aparasphenodon,Aparasphenodon_brunoi,,,1,1,0,0,0
+177,Hylidae,,Aplastodiscus,Aplastodiscus_perviridis,,,1,1,0,0,0
+178,Hylidae,,Atlantihyla,Atlantihyla_spinipollex,,,1,0,0,0,0
+179,Hylidae,,Boana,Boana_boans,,,1,0,0,0,0
+180,Hylidae,,Boana,Boana_cordobae,,,1,0,0,0,0
+181,Hylidae,,Boana,Boana_geographica,,,1,1,0,0,0
+182,Hylidae,,Boana,Boana_heilprini,,,1,0,0,0,0
+183,Hylidae,,Bokermannohyla,Bokermannohyla_claresignata,,,1,0,0,0,0
+184,Hylidae,,Bromeliohyla,Bromeliohyla_bromeliacia,,,1,1,0,0,0
+185,Hylidae,,Bromeliohyla,Bromeliohyla_dendroscarta,Bromeliohyla_melacaena,"Assumed generic monophyly, only 2 sampled.",1,1,0,0,0
+186,Hylidae,,Charadrahyla,Charadrahyla_altipotens,Charadrahyla_taeniopus,assumed generic monophyly and only 1 member represented,1,0,0,0,0
+187,Hylidae,,Cruziohyla,Cruziohyla_sylviae,,,1,1,0,0,0
+188,Hylidae,,Cyclorana,Cyclorana_australis,,,1,1,0,0,0
+189,Hylidae,,Cyclorana,Cyclorana_longipes,,,1,1,0,0,0
+190,Hylidae,,Dendropsophus,Dendropsophus_ebraccatus,,,1,1,0,0,0
+191,Hylidae,,Dendropsophus,Dendropsophus_labialis,,,1,1,0,0,0
+192,Hylidae,,Dendropsophus,Dendropsophus_marmoratus,,,1,1,0,0,0
+193,Hylidae,,Duellmanohyla,Duellmanohyla_ignicolor,?,Cannot be robustly included,1,0,0,0,0
+194,Hylidae,,Duellmanohyla,Duellmanohyla_rufioculis,,,1,0,0,0,0
+195,Hylidae,,Duellmanohyla,Duellmanohyla_salvavida,,,1,0,0,0,0
+196,Hylidae,,Duellmanohyla,Duellmanohyla_schmidtorum,?,Cannot be robustly included,1,0,0,0,0
+197,Hylidae,,Duellmanohyla,Duellmanohyla_soralia,,,1,0,0,0,0
+198,Hylidae,,Duellmanohyla,Duellmanohyla_uranochroa,,,1,0,0,0,0
+199,Hylidae,,Ecnomiohyla,Ecnomiohyla_miotympanum,,,1,0,0,0,0
+200,Hylidae,,Ecnomiohyla,Ecnomiohyla_salvaje,Ecnomiohyla_minera,"salvaje is a fringe-limbed member of the genus, and the only other member sampled is the phylogenetically basal E. miotympanum (some place it in another Genus, Rheohyla). We use minera as a fringe-limbed standin to represent that likely monophyletic clade. See Mendelson III, J. R., Eichenbaum, A., & Campbell, J. A. (2015). Taxonomic review of the populations of the fringe-limbed treefrogs (Hylidae: Ecnomiohyla) in Mexico and nuclear Central America. South american journal of herpetology, 10(3), 187-194.",1,1,0,0,0
+201,Hylidae,,Exerodonta,Exerodonta_melanomma,,,1,0,0,0,0
+202,Hylidae,,Hyla,Hyla_annectans,,,1,1,0,0,0
+203,Hylidae,,Hyla,Hyla_chrysoscelis,,,1,1,0,0,0
+204,Hylidae,,Hyla,Hyla_cinerea,,,1,1,0,0,0
+205,Hylidae,,Hyla,Hyla_immaculata,,,1,1,0,0,0
+206,Hylidae,,Hyla,Hyla_squirella,,,1,1,0,0,0
+207,Hylidae,,Hyla,Hyla_suweonensis,,,1,1,0,0,0
+208,Hylidae,,Hyla,Hyla_versicolor,,,1,1,0,0,0
+209,Hylidae,,Hyloscirtus,Hyloscirtus_armatus,,,1,0,0,0,1
+210,Hylidae,,Hyloscirtus,Hyloscirtus_colymba,,,1,0,0,0,1
+211,Hylidae,,Isthmohyla,Isthmohyla_rivularis,,,1,0,0,0,1
+212,Hylidae,,Isthmohyla,Isthmohyla_tica,,,1,0,0,0,1
+213,Hylidae,,Isthmohyla,Isthmohyla_zeteki,,,1,1,0,0,0
+214,Hylidae,,Itapotihyla,Itapotihyla_langsdorffii,,,1,1,0,0,0
+215,Hylidae,,Litoria,Litoria_adelaidensis,,,1,1,0,0,0
+216,Hylidae,,Litoria,Litoria_aurea,,,1,1,0,0,0
+217,Hylidae,,Litoria,Litoria_booroolongensis,,,1,0,0,0,1
+218,Hylidae,,Litoria,Litoria_citropa,,,1,0,0,0,1
+219,Hylidae,,Litoria,Litoria_coplandi,,,1,0,0,0,0
+220,Hylidae,,Litoria,Litoria_dahlii,,,1,1,0,0,0
+221,Hylidae,,Litoria,Litoria_dayi,?,Cannot be robustly included,0,0,0,0,1
+222,Hylidae,,Litoria,Litoria_electrica,,,1,1,0,0,0
+223,Hylidae,,Litoria,Litoria_eucnemis,,,1,1,0,0,0
+224,Hylidae,,Litoria,Litoria_inermis,,,1,1,0,0,0
+225,Hylidae,,Litoria,Litoria_infrafrenata,,,1,1,0,0,0
+226,Hylidae,,Litoria,Litoria_iris,,,1,1,0,0,0
+227,Hylidae,,Litoria,Litoria_jervisiensis,,,1,1,0,0,0
+228,Hylidae,,Litoria,Litoria_lesueurii,,,1,0,0,0,1
+229,Hylidae,,Litoria,Litoria_moorei,,,1,1,0,0,0
+230,Hylidae,,Litoria,Litoria_nannotis,,,0,0,0,0,1
+231,Hylidae,,Litoria,Litoria_nyakalensis,,,0,0,0,0,1
+232,Hylidae,,Litoria,Litoria_peronii,,,1,1,0,0,0
+233,Hylidae,,Litoria,Litoria_rheocola,,,0,0,0,0,1
+234,Hylidae,,Litoria,Litoria_serrata,,,1,0,0,0,0
+235,Hylidae,,Litoria,Litoria_subglandulosa,,,1,0,0,0,1
+236,Hylidae,,Litoria,Litoria_xanthomera,,,1,1,0,0,0
+237,Hylidae,,Megastomatohyla,Megastomatohyla_mixe,,,0,0,0,0,1
+238,Hylidae,,Megastomatohyla,Megastomatohyla_mixomaculata,Megastomatohyla_pellita,"Assumed generic monophyly, only 2 sampled.",0,0,0,0,1
+239,Hylidae,,Myersiohyla,Myersiohyla_chamaeleo,Myersiohyla_inparquesi,assumed generic monophyly and only 1 member represented,1,0,0,0,0
+240,Hylidae,,Nyctimystes,Nyctimystes_cheesmani,,,0,0,0,0,1
+241,Hylidae,,Osteocephalus,Osteocephalus_oophagus,,,1,1,0,0,0
+242,Hylidae,,Osteocephalus,Osteocephalus_planiceps,,,1,1,0,0,0
+243,Hylidae,,Osteopilus,Osteopilus_dominicensis,,,1,1,0,0,0
+244,Hylidae,,Osteopilus,Osteopilus_ocellatus,,,1,1,0,0,0
+245,Hylidae,,Osteopilus,Osteopilus_septentrionalis,,,1,1,0,0,0
+246,Hylidae,,Osteopilus,Osteopilus_vastus,,,1,0,0,0,0
+247,Hylidae,,Phasmahyla,Phasmahyla_cochranae,,,1,1,0,0,0
+248,Hylidae,,Phasmahyla,Phasmahyla_cruzi,,,1,1,0,0,0
+249,Hylidae,,Phasmahyla,Phasmahyla_guttata,,,1,1,0,0,0
+250,Hylidae,,Phyllomedusa,Phyllomedusa_distincta,,,1,1,0,0,0
+251,Hylidae,,Phyllomedusa,Phyllomedusa_vaillantii,,,1,1,0,0,0
+252,Hylidae,,Plectrohyla,Plectrohyla_guatemalensis,,,1,0,0,0,0
+253,Hylidae,,Plectrohyla,Plectrohyla_teuchestes,Plectrohyla_matudai,"Assumed generic monophyly, only 2 sampled.",1,0,0,0,1
+254,Hylidae,,Pseudacris,Pseudacris_crucifer,,,1,1,0,0,0
+255,Hylidae,,Pseudacris,Pseudacris_ornata,,,1,1,0,0,0
+256,Hylidae,,Pseudacris,Pseudacris_regilla,,,1,1,0,0,0
+257,Hylidae,,Pseudis,Pseudis_minuta,,,1,1,0,0,0
+258,Hylidae,,Pseudis,Pseudis_paradoxa,,,1,1,0,0,0
+259,Hylidae,,Ptychohyla,Ptychohyla_hypomykter,,,1,0,0,0,0
+260,Hylidae,,Ptychohyla,Ptychohyla_zophodes,,,1,0,0,0,0
+261,Hylidae,,Ranoidea,Litoria_caerulea,,,1,1,0,0,0
+262,Hylidae,,Ranoidea,Litoria_rubella,,,1,1,0,0,0
+263,Hylidae,,Sarcohyla,Sarcohyla_arborescandens,,,1,0,0,0,0
+264,Hylidae,,Scarthyla,Scarthyla_goinorum,,,1,1,0,0,0
+265,Hylidae,,Scarthyla,Scarthyla_vigilans,,,1,1,0,0,0
+266,Hylidae,,Scinax,Scinax_albicans,,,1,0,0,0,0
+267,Hylidae,,Scinax,Scinax_nasicus,,,1,1,0,0,0
+268,Hylidae,,Scinax,Scinax_ruber,,,1,1,0,0,0
+269,Hylidae,,Smilisca,Smilisca_baudinii,,,1,1,0,0,0
+270,Hylidae,,Smilisca,Smilisca_phaeota,,,1,1,0,0,0
+271,Hylidae,,Sphaenorhynchus,Sphaenorhynchus_dorisae,,,1,1,0,0,0
+272,Hylidae,,Tepuihyla,Tepuihyla_edelcae,,,1,1,0,0,0
+273,Hylidae,,Tlalocohyla,Tlalocohyla_loquax,,,1,1,0,0,0
+274,Hylidae,,Trachycephalus,Trachycephalus_resinifictrix,,,1,1,0,0,0
+275,Hylidae,,Trachycephalus,Trachycephalus_typhonius,,,1,1,0,0,0
+276,Hylidae,,Triprion,Triprion_petasatus,,,1,1,0,0,0
+277,Hylidae,,Triprion,Triprion_spinosus,,,1,1,0,0,0
+278,Hylidae,,Xenohyla,Xenohyla_truncata,,,1,1,0,0,0
+279,Hylodidae,,Crossodactylus,Crossodactylus_gaudichaudii,,,1,0,0,0,0
+280,Hylodidae,,Crossodactylus,Crossodactylus_schmidti,,,1,0,0,0,0
+281,Hylodidae,,Hylodes,Hylodes_asper,,,1,0,0,0,0
+282,Hylodidae,,Hylodes,Hylodes_meridionalis,,,1,0,0,0,0
+283,Hylodidae,,Hylodes,Hylodes_phyllodes,,,1,0,0,0,0
+284,Hylodidae,,Megaelosia,Megaelosia_goeldii,,,1,0,0,0,0
+285,Hyperoliidae,,Acanthixalus,Acanthixalus_spinosus,,,1,1,0,0,0
+286,Hyperoliidae,,Afrixalus,Afrixalus_delicatus,,,1,1,0,0,0
+287,Hyperoliidae,,Afrixalus,Afrixalus_dorsalis,,,1,1,0,0,0
+288,Hyperoliidae,,Hyperolius,Hyperolius_marmoratus,,,1,1,0,0,0
+289,Hyperoliidae,,Hyperolius,Hyperolius_puncticulatus,,,1,1,0,0,0
+290,Hyperoliidae,,Hyperolius,Hyperolius_pusillus,,,1,1,0,0,0
+291,Hyperoliidae,,Hyperolius,Hyperolius_tuberilinguis,,,1,1,0,0,0
+292,Hyperoliidae,,Kassina,Kassina_cochranae,,,1,1,0,0,0
+293,Hyperoliidae,,Kassina,Kassina_senegalensis,,,1,1,0,0,0
+294,Hyperoliidae,,Phlyctimantis,Phlyctimantis_leonardi,,,1,1,0,0,0
+295,Hyperoliidae,,Phlyctimantis,Phlyctimantis_maculatus,,,1,1,0,0,0
+296,Hyperoliidae,,Semnodactylus,Semnodactylus_wealii,,,1,1,0,0,0
+297,Hyperoliidae,,Tachycnemis,Tachycnemis_seychellensis,,,1,0,0,0,0
+298,Leiopelmatidae,,Leiopelma,Leiopelma_hochstetteri,,,0,2,1,0,0
+299,Leptodactylidae,,Adenomera,Adenomera_hylaedactyla,,,1,2,1,1,0
+300,Leptodactylidae,,Adenomera,Adenomera_marmorata,,,1,2,1,1,0
+301,Leptodactylidae,,Crossodactylodes,Crossodactylodes_itambe,,,1,1,0,0,0
+302,Leptodactylidae,,Engystomops,Engystomops_petersi,,,1,1,0,0,0
+303,Leptodactylidae,,Engystomops,Engystomops_pustulosus,,,1,1,0,0,0
+304,Leptodactylidae,,Leptodactylus,Leptodactylus_flavopictus,,,1,0,0,0,0
+305,Leptodactylidae,,Leptodactylus,Leptodactylus_fuscus,,,1,1,0,0,0
+306,Leptodactylidae,,Leptodactylus,Leptodactylus_gracilis,,,1,1,0,0,0
+307,Leptodactylidae,,Leptodactylus,Leptodactylus_knudseni,,,1,1,0,0,0
+308,Leptodactylidae,,Leptodactylus,Leptodactylus_latinasus,,,1,1,0,0,0
+309,Leptodactylidae,,Leptodactylus,Leptodactylus_latrans,,,1,1,0,0,0
+310,Leptodactylidae,,Leptodactylus,Leptodactylus_lithonaetes,,,1,0,1,0,1
+311,Leptodactylidae,,Leptodactylus,Leptodactylus_mystaceus,,,1,1,0,0,0
+312,Leptodactylidae,,Leptodactylus,Leptodactylus_mystacinus,,,1,1,0,0,0
+313,Leptodactylidae,,Leptodactylus,Leptodactylus_podicipinus,,,1,1,0,0,0
+314,Leptodactylidae,,Leptodactylus,Leptodactylus_wagneri,,,1,1,0,0,0
+315,Leptodactylidae,,Paratelmatobius,Paratelmatobius_lutzii,?,Cannot be robustly included,1,1,0,0,0
+316,Leptodactylidae,,Paratelmatobius,Paratelmatobius_mantiqueira,Paratelmatobius_poecilogaster,"assumed generic monophyly, 2 sampled, neither in tree. ",1,1,0,0,0
+317,Leptodactylidae,,Physalaemus,Physalaemus_biligonigerus,,,1,1,0,0,0
+318,Leptodactylidae,,Physalaemus,Physalaemus_cuvieri,,,1,1,0,0,0
+319,Leptodactylidae,,Pleurodema,Pleurodema_borellii,,,1,1,0,0,0
+320,Leptodactylidae,,Pleurodema,Pleurodema_brachyops,,,1,1,0,0,0
+321,Leptodactylidae,,Pleurodema,Pleurodema_bufoninum,,,1,1,0,0,0
+322,Leptodactylidae,,Pleurodema,Pleurodema_cinereum,,,1,1,0,0,0
+323,Leptodactylidae,,Pleurodema,Pleurodema_kriegi,,,1,1,0,0,0
+324,Leptodactylidae,,Pleurodema,Pleurodema_nebulosum,,,1,1,0,0,0
+325,Leptodactylidae,,Pseudopaludicola,Pseudopaludicola_falcipes,,,1,1,0,0,0
+326,Leptodactylidae,,Rupirana,Rupirana_cardosoi,,,1,1,0,0,0
+327,Mantellidae,,Aglyptodactylus,Aglyptodactylus_madagascariensis,,,1,1,0,0,0
+328,Mantellidae,,Blommersia,Blommersia_transmarina,,,1,1,0,0,0
+329,Mantellidae,,Boophis,Boophis_albilabris,,,1,0,0,0,1
+330,Mantellidae,,Boophis,Boophis_sp.,Boophis_majori,"Assumed generic monophyly, 2 sampled, one in tree. ",1,0,0,0,1
+331,Mantellidae,,Gephyromantis,Gephyromantis_pseudoasper,,,1,0,0,0,0
+332,Mantellidae,,Guibemantis,Guibemantis_liber,,,1,1,0,0,0
+333,Mantellidae,,Laliostoma,Laliostoma_labrosum,,,1,1,0,0,0
+334,Mantellidae,,Mantella,Mantella_aurantiaca,,,1,1,0,0,0
+335,Mantellidae,,Mantidactylus,Mantidactylus_aerumnalis,,,1,0,0,0,0
+336,Mantellidae,,Mantidactylus,Mantidactylus_alutus,,,1,1,0,0,0
+337,Mantellidae,,Mantidactylus,Mantidactylus_biporus,,,1,1,0,0,0
+338,Mantellidae,,Mantidactylus,Mantidactylus_femoralis,,,1,0,0,0,1
+339,Mantellidae,,Mantidactylus,Mantidactylus_guttulatus,,,1,0,0,0,0
+340,Mantellidae,,Mantidactylus,Mantidactylus_majori,,,0,0,0,0,1
+341,Mantellidae,,Mantidactylus,Mantidactylus_melanopleura,,,1,0,0,0,0
+342,Mantellidae,,Mantidactylus,Mantidactylus_opiparis,,,1,0,0,0,0
+343,Mantellidae,,Spinomantis,Spinomantis_fimbriatus,,,1,0,0,0,0
+344,Megophryidae,,Boulenophrys,Boulenophrys_minor,,,1,0,0,0,0
+345,Megophryidae,,Leptobrachella,Leptobrachella_gracilis,,,0,0,0,0,1
+346,Megophryidae,,Leptobrachella,Leptobrachella_pelodytoides,,,0,0,0,0,1
+347,Megophryidae,,Leptobrachella,Leptobrachella_sp.,Leptobrachella_oshanensis,Collected from same region of China that oshanensis occurs in,0,0,0,0,1
+348,Megophryidae,,Leptobrachium,Leptobrachium_cf_hasseltii,Leptobrachium_hasseltii,,1,0,0,0,0
+349,Megophryidae,,Leptobrachium,Leptobrachium_montanum,,,1,0,0,0,0
+350,Megophryidae,,Leptobrachium,Leptobrachium_nigrops,,,1,0,0,0,0
+351,Megophryidae,,Megophrys,Megophrys_montana,,,1,0,0,0,0
+352,Megophryidae,,Oreolalax,Oreolalax_rhodostigmatus,,,1,1,0,0,0
+353,Megophryidae,,Pelobatrachus,Pelobatrachus_ligayae,,,1,0,0,0,0
+354,Megophryidae,,Pelobatrachus,Pelobatrachus_nasuta,,,1,0,0,0,0
+355,Megophryidae,,Pelobatrachus,Pelobatrachus_stejnegeri,,,1,0,0,0,0
+356,Megophryidae,,Scutiger,Scutiger_boulengeri,,,1,0,0,0,0
+357,Megophryidae,,Scutiger,Scutiger_chintingensis,,,1,0,0,0,0
+358,Microhylidae,Gastrophryninae,Arcovomer,Arcovomer_passarellii,,,1,1,0,0,0
+359,Microhylidae,Microhylinae,Chaperina,Chaperina_fusca,,,1,1,0,0,0
+360,Microhylidae,Gastrophryninae,Chiasmocleis,Chiasmocleis_antenori,,,1,1,0,0,0
+361,Microhylidae,Gastrophryninae,Ctenophryne,Ctenophryne_geayi,,,1,1,0,0,0
+362,Microhylidae,Gastrophryninae,Dermatonotus,Dermatonotus_muelleri,,,1,1,0,0,0
+363,Microhylidae,Dyscophinae,Dyscophus,Dyscophus_antongilii,,,1,1,0,0,0
+364,Microhylidae,Gastrophryninae,Elachistocleis,Elachistocleis_bicolor,,,1,1,0,0,0
+365,Microhylidae,Gastrophryninae,Gastrophryne,Gastrophryne_carolinensis,,,1,1,0,0,0
+366,Microhylidae,Microhylinae,Glyphoglossus,Glyphoglossus_guttulatus,,,1,1,0,0,0
+367,Microhylidae,Microhylinae,Glyphoglossus,Glyphoglossus_molossus,,,1,1,0,0,0
+368,Microhylidae,Gastrophryninae,Hamptophryne,Hamptophryne_alios,,,1,1,0,0,0
+369,Microhylidae,Gastrophryninae,Hamptophryne,Hamptophryne_boliviana,,,1,1,0,0,0
+370,Microhylidae,Hoplophryninae,Hoplophryne,Hoplophryne_rogersi,,,1,1,0,0,0
+371,Microhylidae,Hoplophryninae,Hoplophryne,Hoplophryne_uluguruensis,,,1,1,0,0,0
+372,Microhylidae,Gastrophryninae,Hypopachus,Hypopachus_barberi,,,1,1,0,0,0
+373,Microhylidae,Kalophryninae,Kalophrynus,Kalophrynus_sinensis,,,1,1,0,0,0
+374,Microhylidae,Microhylinae,Kaloula,Kaloula_pulchra,,,1,1,0,0,0
+375,Microhylidae,Microhylinae,Microhyla,Microhyla_annamensis,,,1,1,0,0,0
+376,Microhylidae,Microhylinae,Microhyla,Microhyla_arboricola,,,1,1,0,0,0
+377,Microhylidae,Microhylinae,Microhyla,Microhyla_borneensis,,,1,1,0,0,0
+378,Microhylidae,Microhylinae,Microhyla,Microhyla_fissipes,,,1,1,0,0,0
+379,Microhylidae,Microhylinae,Microhyla,Microhyla_heymonsi,,,1,1,0,0,0
+380,Microhylidae,Microhylinae,Microhyla,Microhyla_malang,,,1,1,0,0,0
+381,Microhylidae,Microhylinae,Microhyla,Microhyla_minuta,,,1,1,0,0,0
+382,Microhylidae,Microhylinae,Microhyla,Microhyla_ornata,,,1,1,0,0,0
+383,Microhylidae,Microhylinae,Microhyla,Microhyla_pineticola,,,1,1,0,0,0
+384,Microhylidae,Microhylinae,Micryletta,Micryletta_inornata,,,1,1,0,0,0
+385,Microhylidae,Otophryninae,Otophryne,Otophryne_robusta,,,0,0,0,0,1
+386,Microhylidae,Otophryninae,Otophryne,Otophryne_sp,Otophryne_pyburni,"Assumed generic monophyly, only 2 sampled.",0,0,0,0,1
+387,Microhylidae,Scaphiophryninae,Paradoxophyla,Paradoxophyla_palmata,,,1,1,0,0,0
+388,Microhylidae,Phrynomerinae,Phrynomantis,Phrynomantis_annectens,,,1,1,0,0,0
+389,Microhylidae,Phrynomerinae,Phrynomantis,Phrynomantis_bifasciatus,,,1,1,0,0,0
+390,Microhylidae,Scaphiophryninae,Scaphiophryne,Scaphiophryne_calcarata,,,1,1,0,0,0
+391,Microhylidae,Scaphiophryninae,Scaphiophryne,Scaphiophryne_madagascariensis,,,1,1,0,0,0
+392,Microhylidae,Scaphiophryninae,Scaphiophryne,Scaphiophryne_spinosa,,,1,1,0,0,0
+393,Microhylidae,Asterophryinae,Siamophryne,Siamophryne_troglodytes,,,1,1,0,0,0
+394,Microhylidae,Gastrophryninae,Stereocyclops,Stereocyclops_incrassatus,,,1,1,0,0,0
+395,Myobatrachidae,Myobatrachinae,Crinia,Crinia_insignifera,,,0,1,0,0,0
+396,Myobatrachidae,Myobatrachinae,Crinia,Crinia_riparia,,,0,0,0,0,0
+397,Myobatrachidae,Myobatrachinae,Crinia,Crinia_signifera,,,0,1,0,0,0
+398,Myobatrachidae,Myobatrachinae,Crinia,Crinia_tasmaniensis,,,0,1,0,0,0
+399,Myobatrachidae,Limnodynastinae,Heleioporus,Heleioporus_sp.,Heleioporus_australiacus,assumed generic monophyly and only 1 sampled member included,1,1,0,0,0
+400,Myobatrachidae,Limnodynastinae,Limnodynastes,Limnodynastes_dumerilii,,,1,1,0,0,0
+401,Myobatrachidae,Limnodynastinae,Limnodynastes,Limnodynastes_interioris,,,1,1,0,0,0
+402,Myobatrachidae,Limnodynastinae,Limnodynastes,Limnodynastes_lignarius,,,1,0,0,0,1
+403,Myobatrachidae,Limnodynastinae,Limnodynastes,Limnodynastes_peronii,,,1,1,0,0,0
+404,Myobatrachidae,Limnodynastinae,Limnodynastes,Limnodynastes_tasmaniensis,,,1,1,0,0,0
+405,Myobatrachidae,Myobatrachinae,Mixophyes,Mixophyes_balbus,,,1,0,0,0,1
+406,Myobatrachidae,Myobatrachinae,Mixophyes,Mixophyes_schevilli,,,1,0,0,0,1
+407,Myobatrachidae,Limnodynastinae,Neobatrachus,Neobatrachus_aquilonius,,,1,1,0,0,0
+408,Myobatrachidae,Limnodynastinae,Neobatrachus,Neobatrachus_sudellae,,,1,1,0,0,0
+409,Myobatrachidae,Limnodynastinae,Neobatrachus,Neobatrachus_wilsmorei,,,1,1,0,0,0
+410,Myobatrachidae,Limnodynastinae,Notaden,Notaden_melanoscaphus,,,1,1,0,0,0
+411,Myobatrachidae,Limnodynastinae,Notaden,Notaden_nichollsi,,,1,1,0,0,0
+412,Myobatrachidae,Limnodynastinae,Platyplectrum,Platyplectrum_ornatum,,,1,1,0,0,0
+413,Myobatrachidae,Myobatrachinae,Pseudophryne,Pseudophryne_bibronii,,,0,1,0,0,0
+414,Myobatrachidae,Myobatrachinae,Taudactylus,Taudactylus_diurnus,Taudactylus_acutirostris,assumed generic monophyly and only 1 sampled member included,1,0,0,0,0
+415,Odontobatrachidae,,Odontobatrachus,Odontobatrachus_fouta,,,0,0,0,0,1
+416,Odontobatrachidae,,Odontobatrachus,Odontobatrachus_natator,,,0,0,0,0,1
+417,Odontophrynidae,,Macrogenioglottus,Macrogenioglottus_alipioi,,,1,1,0,0,0
+418,Odontophrynidae,,Odontophrynus,Odontophrynus_americanus,,,1,1,0,0,0
+419,Odontophrynidae,,Odontophrynus,Odontophrynus_occidentalis,,,1,1,0,0,0
+420,Odontophrynidae,,Proceratophrys,Proceratophrys_appendiculata,,,1,0,0,0,0
+421,Odontophrynidae,,Proceratophrys,Proceratophrys_bigibbosa,,,1,1,0,0,0
+422,Odontophrynidae,,Proceratophrys,Proceratophrys_boiei,,,1,0,0,0,0
+423,Odontophrynidae,,Proceratophrys,Proceratophrys_brauni,,,1,0,0,0,0
+424,Pelobatidae,,Pelobates,Pelobates_cultripes,,,1,1,0,0,0
+425,Pelobatidae,,Pelobates,Pelobates_fuscus,,,1,1,0,0,0
+426,Pelodytidae,,Pelodytes,Pelodytes_caucasicus,,,1,1,0,0,0
+427,Petropedetidae,,Arthroleptides,Arthroleptides_martiensseni,,,0,0,1,0,1
+428,Petropedetidae,,Petropedetes,Petropedetes_perreti,,,1,0,1,0,1
+429,Phrynobatrachidae,,Phrynobatrachus,Phrynobatrachus_guineensis,,,1,1,0,0,0
+430,Phrynobatrachidae,,Phrynobatrachus,Phrynobatrachus_natalensis,,,1,1,0,0,0
+431,Pipidae,,Hymenochirus,Hymenochirus_boettgeri,,,1,1,0,0,0
+432,Pipidae,,Pipa,Pipa_carvalhoi,,,1,1,0,0,0
+433,Pipidae,,Pipa,Pipa_myersi,,,1,1,0,0,0
+434,Pipidae,,Xenopus,Xenopus_laevis,,,1,1,0,0,0
+435,Pipidae,,Xenopus,Xenopus_tropicalis,,,1,1,0,0,0
+436,Ptychadenidae,,Ptychadena,Ptychadena_anchietae,,,1,1,0,0,0
+437,Ptychadenidae,,Ptychadena,Ptychadena_mascareniensis,,,1,1,0,0,0
+438,Pyxicephalidae,,Amietia,Amietia_angolensis,,,1,1,0,0,0
+439,Pyxicephalidae,,Amietia,Amietia_delalandii,,,1,1,0,0,0
+440,Pyxicephalidae,,Amietia,Amietia_fuscigula,,,1,0,0,0,0
+441,Pyxicephalidae,,Amietia,Amietia_ruwenzorica,,,1,0,0,0,1
+442,Pyxicephalidae,,Amietia,Amietia_vertebralis,,,1,0,0,0,0
+443,Pyxicephalidae,,Cacosternum,Cacosternum_namaquense,,,1,1,0,0,0
+444,Pyxicephalidae,,Natalobatrachus,Natalobatrachus_bonebergi,,,1,0,0,0,0
+445,Pyxicephalidae,,Nothophryne,Nothophryne_inagoensis,Nothophryne_broadleyi,,0,0,1,0,1
+446,Pyxicephalidae,,Poyntonia,Poyntonia_paludicola,,,1,1,0,0,0
+447,Pyxicephalidae,,Pyxicephalus,Pyxicephalus_adspersus,,,1,1,0,0,0
+448,Pyxicephalidae,,Strongylopus,Strongylopus_grayii,,,1,1,0,0,0
+449,Pyxicephalidae,,Tomopterna,Tomopterna_cryptotis,,,1,1,0,0,0
+450,Pyxicephalidae,,Tomopterna,Tomopterna_luganga,,,1,1,0,0,0
+451,Ranidae,,Amnirana,Amnirana_albolabris,,,1,1,0,0,0
+452,Ranidae,,Amolops,Amolops_ricketti,,,0,0,0,0,1
+453,Ranidae,,Amolops,Amolops_sp.,Amolops_cremnobatus,"Assumed generic monophyly, 2 sampled, one in tree. Amolops technically paraphyletic due to larutensis, but that species is not found in Laos where tadpole was collected. ",0,0,0,0,1
+454,Ranidae,,Chalcorana,Chalcorana_chalconota,,,1,0,0,0,0
+455,Ranidae,,Chalcorana,Chalcorana_megalonesa,,,1,1,0,0,0
+456,Ranidae,,Clinotarsus,Clinotarsus_alticola,,,1,0,0,0,0
+457,Ranidae,,Clinotarsus,Clinotarsus_penelope,,,1,1,0,0,0
+458,Ranidae,,Huia,Huia_cavitympanum,,,0,0,0,0,1
+459,Ranidae,,Meristogenys,Meristogenys_jerboa,,,0,0,0,0,1
+460,Ranidae,,Papurana,Papurana_kreffti,,,1,1,0,0,0
+461,Ranidae,,Pelophylax,Pelophylax_ridibundus,,,1,1,0,0,0
+462,Ranidae,,Pulchrana,Pulchrana_grandocula,,,1,0,0,0,0
+463,Ranidae,,Rana,Rana_berlandieri,,,1,1,0,0,0
+464,Ranidae,,Rana,Rana_blairi,,,1,1,0,0,0
+465,Ranidae,,Rana,Rana_catesbeiana,,,1,1,0,0,0
+466,Ranidae,,Rana,Rana_chiricahuensis,,,1,1,0,0,0
+467,Ranidae,,Rana,Rana_clamitans,,,1,1,0,0,0
+468,Ranidae,,Rana,Rana_johnsi,,,1,0,0,0,0
+469,Ranidae,,Rana,Rana_juliani,,,1,0,0,0,0
+470,Ranidae,,Rana,Rana_longicrus,,,1,1,0,0,0
+471,Ranidae,,Rana,Rana_maculata,,,1,1,0,0,0
+472,Ranidae,,Rana,Rana_magnaocularis,,,1,1,0,0,0
+473,Ranidae,,Rana,Rana_neovolcanica,,,1,1,0,0,0
+474,Ranidae,,Rana,Rana_omeimontis,,,1,1,0,0,0
+475,Ranidae,,Rana,Rana_palmipes,,,1,1,0,0,0
+476,Ranidae,,Rana,Rana_palustris,,,1,1,0,0,0
+477,Ranidae,,Rana,Rana_pipiens,,,1,1,0,0,0
+478,Ranidae,,Rana,Rana_pretiosa,,,1,1,0,0,0
+479,Ranidae,,Rana,Rana_pustulosa,,,1,0,0,0,0
+480,Ranidae,,Rana,Rana_sauteri,,,1,0,0,0,1
+481,Ranidae,,Rana,Rana_septentrionalis,,,1,1,0,0,0
+482,Ranidae,,Rana,Rana_sierramadrensis,,,1,0,0,0,0
+483,Ranidae,,Rana,Rana_spectabilis,,,1,1,0,0,0
+484,Ranidae,,Rana,Rana_sphenocephala,,,1,1,0,0,0
+485,Ranidae,,Rana,Rana_sylvatica,,,1,1,0,0,0
+486,Ranidae,,Rana,Rana_temporaria,,,1,1,0,0,0
+487,Ranidae,,Rana,Rana_vaillanti,,,1,1,0,0,0
+488,Ranidae,,Rana,Rana_vibicaria,,,1,1,0,0,0
+489,Ranidae,,Rana,Rana_virgatipes,,,1,1,0,0,0
+490,Ranidae,,Rana,Rana_warszewitschii,,,1,0,0,0,0
+491,Ranidae,,Rana,Rana_yavapaiensis,,,1,1,0,0,0
+492,Ranidae,,Rana,Rana_zweifeli,,,1,1,0,0,0
+493,Ranidae,,Sanguirana,Sanguirana_mearnsi,,,1,0,0,0,0
+494,Ranidae,,Staurois,Staurois_parvus,,,1,0,0,0,1
+495,Ranidae,,Sylvirana,Sylvirana_maosonensis,,,1,1,0,0,0
+496,Ranidae,,Sylvirana,Sylvirana_nigrovittata,,,1,0,0,0,0
+497,Ranidae,,Wijayarana,Wijayarana_melasma,,,0,0,0,0,1
+498,Ranixalidae,,Indirana,Indirana_beddomii,,,0,0,1,0,1
+499,Rhacophoridae,,Buergeria,Buergeria_japonica,,,1,0,0,0,0
+500,Rhacophoridae,,Chirixalus,Chirixalus_sp.,?,Cannot be robustly included,1,,,,0
+501,Rhacophoridae,,Chiromantis,Chiromantis_nongkhorensis,,,1,1,0,0,0
+502,Rhacophoridae,,Chiromantis,Chiromantis_xerampelina,,,1,1,0,0,0
+503,Rhacophoridae,,Feihyla,Feihyla_kajau,,,1,1,0,0,0
+504,Rhacophoridae,,Kurixalus,Kurixalus_appendiculatus,,,1,1,0,0,0
+505,Rhacophoridae,,Leptomantis,Leptomantis_angulirostris,,,1,0,0,0,1
+506,Rhacophoridae,,Leptomantis,Leptomantis_fasciatus,,,1,1,0,0,0
+507,Rhacophoridae,,Leptomantis,Leptomantis_penanorum,,,1,0,0,0,1
+508,Rhacophoridae,,Nyctixalus,Nyctixalus_pictus,,,1,1,0,0,0
+509,Rhacophoridae,,Nyctixalus,Nyctixalus_spinosum,,,1,1,0,0,0
+510,Rhacophoridae,,Philautus,Philautus_sp.,Philautus_hosii,assumed generic monophyly and only 1 sampled member included,1,1,0,0,0
+511,Rhacophoridae,,Polypedates,Polypedates_leucomystax,,,1,1,0,0,0
+512,Rhacophoridae,,Rhacophorus,Rhacophorus_baluensis,,,1,1,0,0,0
+513,Rhacophoridae,,Rhacophorus,Rhacophorus_pardalis,,,1,1,0,0,0
+514,Rhacophoridae,,Theloderma,Theloderma_horridum,,,1,1,0,0,0
+515,Rhacophoridae,,Theloderma,Theloderma_leporosum,,,1,1,0,0,0
+516,Rhacophoridae,,Zhangixalus,Zhangixalus_dulitensis,,,1,1,0,0,0
+517,Rhacophoridae,,Zhangixalus,Zhangixalus_moltrechti,,,1,1,0,0,0
+518,Rhinophrynidae,,Rhinophrynus,Rhinophrynus_dorsalis,,,1,1,0,0,0
+519,Scaphiopodidae,,Scaphiopus,Scaphiopus_holbrookii,,,1,1,0,0,0
+520,Scaphiopodidae,,Spea,Spea_bombifrons,,,1,1,0,0,0
+521,Scaphiopodidae,,Spea,Spea_hammondii,,,1,1,0,0,0
+522,Scaphiopodidae,,Spea,Spea_intermontana,,,1,1,0,0,0
+523,Scaphiopodidae,,Spea,Spea_multiplicata,,,1,1,0,0,0
+524,Sooglossidae,,Sooglossus,Sooglossus_sechellensis,,,0,2,1,1,0
+525,Telmatobiidae,,Telmatobius,Telmatobius_arequipensis,?,Cannot be robustly included,1,0,0,0,0
+526,Telmatobiidae,,Telmatobius,Telmatobius_atahualpai,Telmatobius_verrucosus,"Barrionuevo, 2017",1,0,0,0,1
+527,Telmatobiidae,,Telmatobius,Telmatobius_jelskii,?,Cannot be robustly included,1,0,0,0,0
+528,Telmatobiidae,,Telmatobius,Telmatobius_macrostomus,,,1,1,0,0,0
+529,Telmatobiidae,,Telmatobius,Telmatobius_marmoratus,,,1,1,0,0,0
+530,Telmatobiidae,,Telmatobius,Telmatobius_peruvianus,,,1,0,0,0,0
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,
+,,,,,,,,, ,,

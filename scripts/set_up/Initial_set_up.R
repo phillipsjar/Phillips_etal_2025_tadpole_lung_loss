@@ -9,7 +9,7 @@ setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
 # uploading data
 {
-  data_original <- read.csv("raw_data/Supp_table_1.csv")                         #full dataset with all columns
+  data_original <- read.csv("lung_loss_git/raw_data/Supp_table_1.csv")          #full dataset
   keep_cols <- c("Family", "Genus", "Taxa", "Portik", "ecology", "terrestrial", "lung", "Spec_lotic")
   data_original <- data_original[,match(keep_cols, colnames(data_original))] # keep only relevant columns
   
