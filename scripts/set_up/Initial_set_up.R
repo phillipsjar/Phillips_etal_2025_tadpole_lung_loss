@@ -9,8 +9,8 @@ setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
 # uploading data
 {
-  data_original <- read.csv("raw_data/Full_data_matrix.csv")                         #full dataset with all columns
-  keep_cols <- c("Family", "Genus", "Taxa", "Portik", "guild", "ecology", "terrestrial", "lung", "Spec_lotic")
+  data_original <- read.csv("raw_data/Supp_table_1.csv")                         #full dataset with all columns
+  keep_cols <- c("Family", "Genus", "Taxa", "Portik", "ecology", "terrestrial", "lung", "Spec_lotic")
   data_original <- data_original[,match(keep_cols, colnames(data_original))] # keep only relevant columns
   
 ####################################################
@@ -39,10 +39,6 @@ rm(list = c("data_original", "keep_cols"))}
 table(data$eight_state)  
 
 unique(data[which(data$eight_state == 7),2])
-
-table(data$eight_state)
-
-data[which(data$Genus == "Limnonectes"),]
 
 
 ######################################################
