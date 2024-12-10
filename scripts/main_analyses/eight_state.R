@@ -201,7 +201,7 @@ BF_matrix$replicate <- c(rep(1:3, length(mods)))
 # specific naming scheme that can be called later.
 
 for(i in 1:dim(BF_matrix)[1]){
-  A <- read_file(paste("bayestraits_exports/stones/", BF_matrix$Model_class[i], 
+  A <- read_file(paste("bayestraits/output/processed_stones/", BF_matrix$Model_class[i], 
                        "_", BF_matrix$replicate[i], ".stones.txt", sep = ""))
   BF_matrix$LogMargLik[i] <- as.numeric(gsub("Log marginal likelihood:\t", "", 
                                              gsub("\r\n", "", A)))
