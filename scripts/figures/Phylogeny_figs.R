@@ -1,5 +1,7 @@
 setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
+
+
 rm(list = ls())
 library(ape)
 library(phytools)
@@ -11,6 +13,7 @@ eight_state_res_3 <- read.csv("bayestraits/output/processed_logs/eight_state_res
 eight_state_full_2 <- read.csv("bayestraits/output/processed_logs/eight_state_full_2.txt", sep = "\t")
 
 source("lung_loss_git/scripts/functions/summary_posterior_function.R")
+
 
 rate_sum <- summary_posterior(eight_bestmod_1, grep("q", colnames(eight_bestmod_1)))
 rate_sum_full <- summary_posterior(eight_state_full_2, grep("q", colnames(eight_bestmod_1)))
@@ -86,8 +89,17 @@ nodes <- match(c(node_1, node_2), rownames(ancr_A[1]$ace))
 
 
 #test out whether it worked and makes sense
+
+plot(A[[1]], colors=cols2, ftype = "off", )
+
+
 plot(A[[7]], colors=cols2, lwd=1.3, ftype="off", fsize=0.5, offset=0.5, type = "fan")
+
+
+
 nodelabels("", pie = ancr_A[1]$ace, piecol = cols2, cex = .3)
+
+
 
 
 plot(B[[7]], colors=cols1, lwd=1.3, ftype="off", fsize=0.5, offset=0.5, type = "fan")

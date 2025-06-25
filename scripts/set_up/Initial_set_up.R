@@ -50,11 +50,10 @@ dim(data)[1]
 length(which(data$lung == 0))
 length(which(data$lung == 1))
 
-# 530 species
+# 529 species
 
 # 44 families represented
 length(unique(data$Family))
-length(unique(data$Family[which(data$lung == 1)]))
 fams <- rep(NA, length(unique(data$Family)))
 names(fams) <- unique(data$Family)
 
@@ -83,7 +82,6 @@ for(i in 1:length(genera)){
   }else{genera[i] <- "lunged"}}
 length(which(genera == "lunged"))
 length(which(genera == "has lungless"))
-genera[which(genera == "has lungless")]
 
 # taxa distribution within genera
 table(data$Genus)

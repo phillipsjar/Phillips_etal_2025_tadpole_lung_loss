@@ -10,9 +10,37 @@ make_simmap_data = function(data, tree, mode = "double binary",
   if(dim(data)[1] < 1){
     stop("Rownames do not match tip labels")
   }
-  data <- data[,match(trait_col_names, colnames(data))] # keep only relevant columns
   
   N_states <- length(state_labels)
+  
+  
+  if(mode == "single"){
+    if(length(trait_col_names) != 1){
+      stop("single mode used, but number of traits does not
+           equal one")}
+    
+    data <- data[,match(trait_col_names, colnames(data))] # keep only relevant columns
+    
+    state_matrix <- matrix(0, nrow = length(data), ncol = N_states)           #empty matrix (for simmap with all zeroes)
+    rownames(state_matrix) <- names                             #rownames for later
+    colnames(state_matrix) <- state_labels                                 #col names will reflect states
+    
+    
+    for(i in 1:dim(state_matrix)[1]){
+    for(j in 1:N_states){
+      if(!anyNA(data[i])){
+        if(data[i] == j){
+          state_matrix[i,j] <- 1}}
+      if(anyNA(data[i])){
+        state_matrix[i,j] <- 1/N_states}
+    }}
+    
+    
+    
+  }
+  
+if(mode != "single"){
+  data <- data[,match(trait_col_names, colnames(data))] # keep only relevant columns
   
   if(mode == "double binary"){
     if(N_states != 4){
@@ -128,7 +156,7 @@ make_simmap_data = function(data, tree, mode = "double binary",
         if(data[i,2] == 0 & data[i,4] == 1){
           state_matrix[i,7] <- 1}       
         if(data[i,2] == 1 & data[i,4] == 1){
-          state_matrix[i,8] <- 1}}}}
+          state_matrix[i,8] <- 1}}}}}
   
   return(state_matrix)
 }

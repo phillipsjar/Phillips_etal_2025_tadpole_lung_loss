@@ -1,20 +1,28 @@
-setwd("~/Desktop/Research/Lunglessness/2021_dataspace/")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
 # upload Bayestraits trees (used in 4-state analysis, so only binary lotic/lentic)
 require(ape)
-ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/MaxLh_tree_aqu.nex") 
 
-# upload lung and ecology data, then remove taxa not in 4-state tree
-data <- read.csv(file = "lung_loss_git/processed_data/lung_data/full_data.csv")
-data <- data[data$Taxa %in% ML_tree$tip.label,]
-rownames(data) <- data$Taxa
+# upload lung and ecology data
+data_full <- read.csv("lung_loss_git/processed_data/lung_data/full_data.csv")
+full_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_full.nex")
 
 
+
+data_full <- data_full[data_full$Taxa %in% full_tree$tip.label,]
+rownames(data_full) <- data_full$Taxa
+
+data_aqua <- data_full[which(data_full$ecology != 2),]
+data_full$ecology[which(data_full$ecology == 2)] <- NA
+
+
+
+install.packages("phylolm")
 #simple phyloglm:
 require(phylolm)
 packageVersion("phylolm")
 
-mod <- phyloglm(lung ~ ecology, data, ML_tree, method = c("logistic_MPLE"),
+mod <- phyloglm(lung ~ ecology, data_aqua, full_tree, method = c("logistic_MPLE"),
                  start.beta=NULL, start.alpha=NULL,
                  boot = 1000, full.matrix = TRUE)
 
@@ -22,9 +30,58 @@ summary(mod)
 # ecology recovered as statistically significant (p = 0.04128) and estimated effect size = 0.269086.
 
 
+mod2 <- phyloglm(lung ~ Spec_lotic, data_aqua, full_tree, method = c("logistic_MPLE"),
+                start.beta=NULL, start.alpha=NULL,
+                boot = 1000, full.matrix = TRUE)
+
+
+summary(mod2)
 
 
 
+mod3 <- phyloglm(lung ~ ecology+Spec_lotic+terrestrial, data_full, full_tree, method = c("logistic_MPLE"),
+                 start.beta=NULL, start.alpha=NULL,
+                 boot = 1000, full.matrix = TRUE)
+
+summary(mod3)
+
+mod4 <- phyloglm(lung ~ terrestrial, data_full, full_tree, method = c("logistic_MPLE"),
+                 start.beta=NULL, start.alpha=NULL,
+                 boot = 1000, full.matrix = TRUE)
+
+summary(mod4)
+
+mod$aic
+mod2$aic
+mod3$aic
+
+
+
+
+
+anova(mod)
+
+
+
+car::Anova(mod, type = "3")
+
+table(data_full$ecology)
+
+table(data_full$Spec_lotic)
+table(data_aqua$ecology, data_aqua$lung)
+table(data_aqua$ecology)
+table(data_aqua$lung)
+
+data_aqua
+
+
+table(data_aqua$ecology[which(data_aqua$Family == "Bufonidae")])
+
+
+table(data_full$lung, data_full$ecology, data_full$Spec_lotic, data_full$terrestrial)
+
+
+data_full$Spec_lotic
 
 
 

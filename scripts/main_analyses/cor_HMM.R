@@ -2,6 +2,7 @@ library(corHMM)
 library(ape)
 library(phytools)
 packageVersion("corHMM")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
 
 rm(list = ls())
 
@@ -48,7 +49,7 @@ maxLH_deltas
 
 corHMMtest$simplified_hidden_Markov_correlated_model_fit
 
-
+corHMMtest$simplified_hidden_Markov_correlated_model_fit
 
 
 
