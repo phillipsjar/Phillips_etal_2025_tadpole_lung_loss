@@ -1,4 +1,4 @@
-setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2025")
 
 rm(list = ls())
 
@@ -91,8 +91,8 @@ BF_matrix$replicate <- c(rep(1:3, length(mods)))
 for(i in 1:dim(BF_matrix)[1]){
   A <- read_file(paste("bayestraits/output/processed_stones/", BF_matrix$Model_class[i], 
                        "_", BF_matrix$replicate[i], ".stones.txt", sep = ""))
-  BF_matrix$LogMargLik[i] <- as.numeric(gsub("Log marginal likelihood:\t", "", 
-                                             gsub("\r\n", "", A)))
+  BF_matrix$LogMargLik[i] <- round(as.numeric(gsub("Log marginal likelihood:\t", "", 
+                                             gsub("\r\n", "", A))),2)
 }
 
 BF_matrix
@@ -108,6 +108,10 @@ BF_matrix
 avgs <- sapply(split(BF_matrix$LogMargLik, BF_matrix$Model_class), mean) 
 SDs <- sapply(split(BF_matrix$LogMargLik, BF_matrix$Model_class), sd) 
 LMLs <- sapply(split(BF_matrix$LogMargLik, BF_matrix$Model_class), max) 
+
+cbind(round(avgs, 2), round(SDs, 2))
+
+
 # here we go through and pick the best individual run from each model group to compare
 
 BF_test <- as.data.frame(matrix("-", nrow = length(mods), ncol = length(mods)))

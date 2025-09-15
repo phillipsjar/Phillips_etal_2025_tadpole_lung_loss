@@ -5,7 +5,7 @@ make_simmap_data = function(data, tree, mode = "double binary",
   
   rownames(data) <- data$Taxa
 
-  data <- data[rownames(data) %in% tree$tip.label,] #trim data to tree
+  data <- data[rownames(data) %in% tree$tip.label, , drop = F] #trim data to tree
   names <- data$Taxa
   if(dim(data)[1] < 1){
     stop("Rownames do not match tip labels")
@@ -19,9 +19,9 @@ make_simmap_data = function(data, tree, mode = "double binary",
       stop("single mode used, but number of traits does not
            equal one")}
     
-    data <- data[,match(trait_col_names, colnames(data))] # keep only relevant columns
+    data <- data[,match(trait_col_names, colnames(data)), drop = FALSE] # keep only relevant columns
     
-    state_matrix <- matrix(0, nrow = length(data), ncol = N_states)           #empty matrix (for simmap with all zeroes)
+    state_matrix <- matrix(0, nrow = dim(data)[1], ncol = N_states)           #empty matrix (for simmap with all zeroes)
     rownames(state_matrix) <- names                             #rownames for later
     colnames(state_matrix) <- state_labels                                 #col names will reflect states
     

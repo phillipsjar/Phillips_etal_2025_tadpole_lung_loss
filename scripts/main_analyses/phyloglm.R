@@ -17,7 +17,7 @@ data_full$ecology[which(data_full$ecology == 2)] <- NA
 
 
 
-install.packages("phylolm")
+
 #simple phyloglm:
 require(phylolm)
 packageVersion("phylolm")
@@ -27,7 +27,7 @@ mod <- phyloglm(lung ~ ecology, data_aqua, full_tree, method = c("logistic_MPLE"
                  boot = 1000, full.matrix = TRUE)
 
 summary(mod)
-# ecology recovered as statistically significant (p = 0.04128) and estimated effect size = 0.269086.
+# ecology recovered as statistically significant (p = 0.03325) and estimated effect size = 2.6677e
 
 
 mod2 <- phyloglm(lung ~ Spec_lotic, data_aqua, full_tree, method = c("logistic_MPLE"),

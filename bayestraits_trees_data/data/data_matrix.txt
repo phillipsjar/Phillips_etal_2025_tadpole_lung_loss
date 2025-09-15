@@ -1,4 +1,4 @@
-Allophryne_ruthveni	1	1
+Allophryne_ruthveni	1	0
 Alsodes_monticola	1	1
 Alsodes_neuquensis	1	1
 Alsodes_nodosus	0	1
@@ -36,6 +36,7 @@ Hylorina_sylvatica	1	1
 Bombina_maxima	1	1
 Bombina_orientalis	1	1
 Bombina_variegata	1	1
+Adhaerobufo_nasicus	0	0
 Amazophrynella_minuta	1	0
 Anaxyrus_americanus	1	0
 Anaxyrus_terrestris	1	0
@@ -65,7 +66,6 @@ Peltophryne_lemur	1	0
 Peltophryne_peltocephala	1	0
 Phrynoidis_asper	0	0
 Rentapia_hosii	0	0
-Adhaerobufo_nasicus	0	0
 Rhaebo_glaberrimus	0	0
 Rhaebo_guttatus	1	0
 Rhaebo_haematiticus	0	0
@@ -243,7 +243,7 @@ Litoria_rubella	1	1
 Sarcohyla_arborescandens	0	1
 Scarthyla_goinorum	1	1
 Scarthyla_vigilans	1	1
-Scinax_albicans	1	1
+Scinax_albicans	0	1
 Scinax_nasicus	1	1
 Scinax_ruber	1	1
 Smilisca_baudinii	1	1
@@ -275,7 +275,6 @@ Phlyctimantis_leonardi	1	1
 Phlyctimantis_maculatus	1	1
 Semnodactylus_wealii	1	1
 Tachycnemis_seychellensis	0	1
-Adenomera_hylaedactyla	1	1
 Crossodactylodes_itambe	1	1
 Engystomops_petersi	1	1
 Engystomops_pustulosus	1	1

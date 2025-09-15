@@ -92,10 +92,10 @@ table(data$Genus)
 ######################################################
 require(ape)
 # MaxLH tree from Portik et al (2023) 
-ML_tree <- read.tree("lung_loss_git/trees/original_trees/TreePL/Rooted_Anura_bestTree.tre")
+ML_tree <- read.tree("lung_loss_git/trees/original_trees_from_Portik_etal_2024/TreePL/Rooted_Anura_bestTree.tre")
 
 # set of 100 trees from the posterior distribution of tree space in Portik et al (2023)
-tree_set <- read.tree("lung_loss_git/trees/original_trees/TreePL/TreePL-Rooted_Anura_bootstraps.tre")
+tree_set <- read.tree("lung_loss_git/trees/original_trees_from_Portik_etal_2024/TreePL/TreePL-Rooted_Anura_bootstraps.tre")
 
 ######################################################
 ############## match datasets to trees ###############

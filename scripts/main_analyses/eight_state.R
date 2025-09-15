@@ -1,4 +1,4 @@
-setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2025")
 
 rm(list = ls())
 par(mar = c(5,3,2,1))
@@ -36,9 +36,9 @@ eight_state_bestmod_1 <- read.csv("bayestraits/output/processed_logs/eight_state
 eight_state_bestmod_2 <- read.csv("bayestraits/output/processed_logs/eight_state_bestmod_2.txt", sep = "\t")
 eight_state_bestmod_3 <- read.csv("bayestraits/output/processed_logs/eight_state_bestmod_3.txt", sep = "\t")
 
-eight_state_nopondgain_1 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_1.txt", sep = "\t")
-eight_state_nopondgain_2 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_2.txt", sep = "\t")
-eight_state_nopondgain_3 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_3.txt", sep = "\t")
+#eight_state_nopondgain_1 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_1.txt", sep = "\t")
+#eight_state_nopondgain_2 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_2.txt", sep = "\t")
+#eight_state_nopondgain_3 <- read.csv("bayestraits/output/processed_logs/eight_state_nopondgain_3.txt", sep = "\t")
 
 }
 
@@ -189,7 +189,7 @@ library(vioplot)
 library(readr) #version ‘2.1.4’ used for function read_file
 rm(list = ls())
 mods <- c("eight_state_full", "eight_state_indep", "eight_state_nopondloss",
-          "eight_state_nostreamloss", "eight_state_nogains", "eight_state_nopondgain",
+          "eight_state_nostreamloss", "eight_state_nogains",
           "eight_state_res", "eight_state_bestmod")
 BF_matrix <- as.data.frame(matrix(nrow = length(mods)*3, ncol = 3))
 colnames(BF_matrix) <- c("Model_class", "replicate", "LogMargLik")
@@ -203,11 +203,13 @@ BF_matrix$replicate <- c(rep(1:3, length(mods)))
 for(i in 1:dim(BF_matrix)[1]){
   A <- read_file(paste("bayestraits/output/processed_stones/", BF_matrix$Model_class[i], 
                        "_", BF_matrix$replicate[i], ".stones.txt", sep = ""))
-  BF_matrix$LogMargLik[i] <- as.numeric(gsub("Log marginal likelihood:\t", "", 
-                                             gsub("\r\n", "", A)))
+  BF_matrix$LogMargLik[i] <- round(as.numeric(gsub("Log marginal likelihood:\t", "", 
+                                             gsub("\r\n", "", A))),2)
 }
 
 BF_matrix
+
+
 
 # This matrix is a simple compilation of estimated Log Marginal Likelihoods (LMLs)
 # for each individual model run in BayesTraits. The code depends on how you set
@@ -223,7 +225,12 @@ SDs <- sapply(split(BF_matrix$LogMargLik, BF_matrix$Model_class), sd)
 # SD of LML for each model type. High SDs imply that different runs are not converging
 # on a single solution.
 
+cbind(round(avgs, 2), round(SDs, 2))
+
+
 LMLs <- sapply(split(BF_matrix$LogMargLik, BF_matrix$Model_class), max) 
+
+
 # here we go through and pick the best individual run from each model group to compare
 
 BF_test <- as.data.frame(matrix("-", nrow = length(mods), ncol = length(mods)))
@@ -253,7 +260,7 @@ paste(BF_matrix$Model_class[which.max(BF_matrix$LogMargLik)], BF_matrix$replicat
 eight_state_bestmod_1 <- read.csv("bayestraits/output/processed_logs/eight_state_bestmod_1.txt", sep = "\t")
 columns <- match(c("q65", "q31", "q42", "q87", "q56", "q13", "q24", "q78"), colnames(eight_state_bestmod_1))
 library(vioplot)
-
+par(mfrow = c(1,1))
 vioplot(log(eight_state_bestmod_1[,columns]+1), colMed = "black", main = "Eight best mod",
         yaxt = "n")
 axis(side = 2, at = log(c(1,2,6,21,51)), labels = c(0,.01,.05,.2,.5),
@@ -271,7 +278,7 @@ library(scales)
 lh_scaled <- round(rescale(eight_state_bestmod_1$Lh, to = c(1, 1000), from = range(eight_state_bestmod_1$Lh)))
 # added color scheme to show higher likelihood peaks in red and lower lH valleys in blue
 
-plot(eight_state_bestmod_1$Iteration, eight_state_bestmod_1$q12, pch = 21, col = "transparent",cex = .5,
+plot(eight_state_bestmod_1$Iteration, eight_state_bestmod_1$Lh, pch = 21, col = "transparent",cex = .5,
      bg = colors[lh_scaled])
 
 # this makes trusting parameter estimates from this model difficult, even if the model
@@ -279,16 +286,16 @@ plot(eight_state_bestmod_1$Iteration, eight_state_bestmod_1$q12, pch = 21, col =
 # to get potential parameter ranges. The best model that converged is the third restricted 
 # regains model iteration.
 
-eight_state_res_3 <- read.csv("bayestraits/output/processed_logs/eight_state_res_3.txt", sep = "\t")
+eight_state_res_2 <- read.csv("bayestraits/output/processed_logs/eight_state_res_2.txt", sep = "\t")
 
-vioplot(log(eight_state_res_3[,columns]+1), colMed = "black", main = "Eight regains res",
+vioplot(log(eight_state_res_2[,columns]+1), colMed = "black", main = "Eight regains res",
         yaxt = "n")
 axis(side = 2, at = log(c(1,2,6,21,51)), labels = c(0,.01,.05,.2,.5),
      tck = -.01, lwd.ticks = 2, lwd = 1)
 abline(h = 0, col = "red", lty = 2)
 
-lh_scaled <- round(rescale(eight_state_res_3$Lh, to = c(1, 1000), from = range(eight_state_res_3$Lh)))
-plot(eight_state_res_3$Iteration, eight_state_res_3$q21, pch = 21, col = "transparent",cex = .5,
+lh_scaled <- round(rescale(eight_state_res_2$Lh, to = c(1, 1000), from = range(eight_state_res_2$Lh)))
+plot(eight_state_res_2$Iteration, eight_state_res_2$q21, pch = 21, col = "transparent",cex = .5,
      bg = colors[lh_scaled])
 
 

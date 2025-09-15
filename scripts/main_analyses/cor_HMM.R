@@ -2,7 +2,7 @@ library(corHMM)
 library(ape)
 library(phytools)
 packageVersion("corHMM")
-setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2024")
+setwd("/Users/jack/desktop/Research/lunglessness/lung_loss_Phillips_etal_2025")
 
 rm(list = ls())
 
@@ -24,30 +24,44 @@ dataset_corHMM$eco[which(dataset_corHMM$eco == 0)] <- "lotic"
 corHMMtest <- fitCorrelationTest(ML_tree_aqu, dataset_corHMM, simplified_models = TRUE)
 
 {
-AIC_indep_simp <- corHMMtest$simplified_independent_model_fit$AIC
-AIC_indep_HMM_simp <- corHMMtest$simplified_hidden_Markov_independent_model_fit$AIC
-AIC_dep_simp <- corHMMtest$simplified_correlated_model_fit$AIC
-AIC_dep_HMM_simp <- corHMMtest$simplified_hidden_Markov_correlated_model_fit$AIC
-AIC_indep <- corHMMtest$independent_model_fit$AIC
-AIC_indep_HMM <- corHMMtest$hidden_Markov_independent_model_fit$AIC
-AIC_dep <- corHMMtest$correlated_model_fit$AIC
-AIC_dep_HMM <- corHMMtest$hidden_Markov_correlated_model_fit$AIC}
+AIC_indep_simp <- round(corHMMtest$simplified_independent_model_fit$AIC,2)
+AIC_indep_HMM_simp <- round(corHMMtest$simplified_hidden_Markov_independent_model_fit$AIC,2)
+AIC_dep_simp <- round(corHMMtest$simplified_correlated_model_fit$AIC,2)
+AIC_dep_HMM_simp <- round(corHMMtest$simplified_hidden_Markov_correlated_model_fit$AIC,2)
+AIC_indep <- round(corHMMtest$independent_model_fit$AIC,2)
+AIC_indep_HMM <- round(corHMMtest$hidden_Markov_independent_model_fit$AIC,2)
+AIC_dep <- round(corHMMtest$correlated_model_fit$AIC,2)
+AIC_dep_HMM <- round(corHMMtest$hidden_Markov_correlated_model_fit$AIC,2)}
 
 
 AIC_values <- c(AIC_indep_simp, AIC_indep_HMM_simp, AIC_dep_simp, AIC_dep_HMM_simp, 
            AIC_indep, AIC_indep_HMM, AIC_dep, AIC_dep_HMM)
+
+
 names(AIC_values) <- c("AIC_indep_simp", "AIC_indep_HMM_simp", "AIC_dep_simp", "AIC_dep_HMM_simp", 
                        "AIC_indep", "AIC_indep_HMM", "AIC_dep", "AIC_dep_HMM")
 
 maxLH_deltas <- rep(NA, length(AIC_values))
 names(maxLH_deltas) <- names(AIC_values)
 for(i in 1:length(AIC_values)){
-  maxLH_deltas[i] <- AIC_values[i] - AIC_values[which.min(AIC_values)]
+  a <- AIC_values[i] - AIC_values[which.min(AIC_values)]
+  maxLH_deltas[i] <- round(a, 2)
 }
 
 maxLH_deltas
 
-corHMMtest$simplified_hidden_Markov_correlated_model_fit
+
+
+cbind(AIC_values, maxLH_deltas)
+
+corHMMtest[print(names(corHMMtest[1]))]
+
+
+
+
+
+
+corHMMtest$names(corHMMtest[1])
 
 corHMMtest$simplified_hidden_Markov_correlated_model_fit
 

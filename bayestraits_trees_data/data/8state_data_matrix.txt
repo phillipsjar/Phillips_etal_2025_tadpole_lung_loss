@@ -1,4 +1,4 @@
-Allophryne_ruthveni	6
+Allophryne_ruthveni	5
 Alsodes_monticola	6
 Alsodes_neuquensis	6
 Alsodes_nodosus	3
@@ -10,7 +10,6 @@ Discoglossus_pictus	6
 Allobates_grillisimilis	6
 Allobates_insperatus	6
 Allobates_nidicola	7
-Anomaloglossus_apiau	7
 Anomaloglossus_tepuyensis	3
 Aromobates_mayorgai	3
 Aromobates_saltuensis	3
@@ -38,6 +37,7 @@ Hylorina_sylvatica	6
 Bombina_maxima	6
 Bombina_orientalis	6
 Bombina_variegata	6
+Adhaerobufo_nasicus	2
 Amazophrynella_minuta	5
 Anaxyrus_americanus	5
 Anaxyrus_terrestris	5
@@ -68,7 +68,6 @@ Peltophryne_lemur	5
 Peltophryne_peltocephala	5
 Phrynoidis_asper	2
 Rentapia_hosii	1
-Adhaerobufo_nasicus	2
 Rhaebo_glaberrimus	1
 Rhaebo_guttatus	5
 Rhaebo_haematiticus	1
@@ -252,7 +251,7 @@ Litoria_rubella	6
 Sarcohyla_arborescandens	3
 Scarthyla_goinorum	6
 Scarthyla_vigilans	6
-Scinax_albicans	6
+Scinax_albicans	3
 Scinax_nasicus	6
 Scinax_ruber	6
 Smilisca_baudinii	6
@@ -285,7 +284,7 @@ Phlyctimantis_maculatus	6
 Semnodactylus_wealii	6
 Tachycnemis_seychellensis	3
 Leiopelma_hochstetteri	7
-Adenomera_hylaedactyla	6
+Adenomera_hylaedactyla	8
 Adenomera_marmorata	8
 Crossodactylodes_itambe	6
 Engystomops_petersi	6
