@@ -6,29 +6,37 @@ rm(list = ls())
 library(ape)
 library(phytools)
 
+# read in bayestraits posteriors for select models
+
 eight_bestmod_1 <- read.csv("bayestraits/output/processed_logs/eight_state_bestmod_1.txt", sep = "\t")
 eight_state_res_3 <- read.csv("bayestraits/output/processed_logs/eight_state_res_3.txt", sep = "\t")
-#eight_state_full_2 <- read.csv("bayestraits/output/processed_logs/eight_state_full_2.txt", sep = "\t")
 
+#load in function that extracts summary statistics from posterior
 source("lung_loss_git/scripts/functions/summary_posterior_function.R")
 
-
+#extract summary statistics for all markov parameters (eg, q12, q13)
 rate_sum <- summary_posterior(eight_bestmod_1, grep("q", colnames(eight_bestmod_1)))
 rate_sum_full <- summary_posterior(eight_state_res_3, grep("q", colnames(eight_bestmod_1)))
 
+#load in ML tree
 ML_tree <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/MaxLh_tree_full.nex") 
+
+#parameters to be used in later functions
 state_labels <- eight_state_state <- c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P", "X_terr", "Lu_terr")
 trait_col_names <- eight_state_col <- c("ecology", "lung", "Spec_lotic", "terrestrial")
 mode = "eight_state"
 model = "eight_state"
-
 Nruns <- 10
+
+#load in tip data and trim to ML tree
 data <- read.csv(file = "lung_loss_git/processed_data/lung_data/full_data.csv")
 data <- data[data$Taxa %in% ML_tree$tip.label,]
 
+#load in custom functions to create Q matrices and format tip data for simmaps
 source("lung_loss_git/scripts/functions/custom_Q.R")
 source("lung_loss_git/scripts/functions/make_simmap_data_function.R")
 
+#color scheme
 cols1 <- setNames(c("red", "purple", "white", "white", "red", "white",
                          "#8B5E3C", "white"), 
                          c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P",
@@ -38,13 +46,15 @@ cols2 <- setNames(c("gold", "purple", "#99CCFF", "blue", "red", "#B9FFB4",
                           c("X_S_unsp", "X_S_sp", "Lu_S_unsp", "Lu_S_sp", "X_P", "Lu_P",
                             "X_terr", "Lu_terr"))
 
+#make Q matrices for simmap simulations
 Q <- custom_Q(rate_sum[,2], model = "eight_state", scale = .01)
 Q_full  <- custom_Q(rate_sum_full[,1], model = "eight_state", scale = .01)
 
+#format data for simmaping
 sim_dat <- make_simmap_data(data, ML_tree, mode = "eight_state", 
                             eight_state_state, eight_state_col)
 
-
+#define some nodes to be fossilized with taxa that define a certain node
 node_1 <- c("Ascaphus_truei", "Rana_sauteri")
 node_2 <- c("Heleophryne_regis", "Rana_sauteri")
 node_3 <- c("Oophaga_pumilio", "Allobates_nidicola")
@@ -55,17 +65,21 @@ node_6 <- c("Bufo_bufo", "Melanophryniscus_pachyrhynus")
 nodes <- list(node_1, node_2, node_3, node_4, node_5, node_6)
 nodes_n <- c("tip_1", "tip_2", "tip_3", "tip_4", "tip_5", "tip_6")
 
+# add these tip data to the simmap data and ML tree
 for(i in 1:(length(nodes)-1)){
   n <- getMRCA(ML_tree, nodes[[i]])
   ML_tree <- bind.tip(ML_tree,  nodes_n[i], edge.length=0, where = n)
   sim_dat <- rbind(sim_dat, c(.25,0,.25,0,.25,.25,0,0))
 }
 
+# bind the final node, which has a different fossilization
 n <- getMRCA(ML_tree, nodes[[6]])
 ML_tree <- bind.tip(ML_tree,  nodes_n[6], edge.length=0, where = n)
 sim_dat <- rbind(sim_dat, c(.25, .25, 0, 0, .25, 0, .25, 0))
 rownames(sim_dat) <- c(rownames(sim_dat[1:(dim(sim_dat)[1]-length(nodes_n)),]), nodes_n)
 
+
+#make simmaps
 sim <- make.simmap(ML_tree, sim_dat, nsim = 100,
                  Q = Q_full, state_labels = eight_state_state, 
                  pi= c(.25, 0, .25, 0, .25, .25, 0, 0))
@@ -74,19 +88,20 @@ sim_best <- make.simmap(ML_tree, sim_dat, nsim = 100,
                    Q = Q, state_labels = eight_state_state, 
                    pi= c(.25, 0, .25, 0, .25, .25, 0, 0))
 
-
+#drop the additional tips for clearer visualizations
 sim <- lapply(sim,drop.tip.simmap,tip=nodes_n)
 sim_best <- lapply(sim,drop.tip.simmap,tip=nodes_n)
-
 class(sim)<-"multiPhylo"
 class(sim_best)<-"multiPhylo"
 
+
+#fit ML ancestral reconstructions, using the Q matrix estimated from the
+# BayesTraits posterior summary
 ancr_sim <- ancr(fitMk(ML_tree, sim_dat, fixedQ = Q_full))
 ancr_sim_b <- ancr(fitMk(ML_tree, sim_dat, fixedQ = Q))
 
+
 # this method closely follows a suggestion by Liam Revell in a phytools blog (http://blog.phytools.org/2020/06/mapping-multi-state-discrete-character.html)
-
-
 #plot black and red tree for figure 2 
 
 {png(file = "figures/figure_2_phylo.png", bg = "transparent", units = "in", res = 1000, width = 4.2, height = 4.2)
@@ -169,10 +184,8 @@ tips <- c(tips, "Litoria_subglandulosa", "Rana_sauteri", "Thoropa_miliaris", "Ka
           "Otophryne_robusta", "Phrynomantis_bifasciatus")
 
 
-
 sim_trim <- lapply(sim,keep.tip.simmap,tip=tips)
 class(sim_trim)<-"multiPhylo"
-
 
 
 # this method closely follows a suggestion by Liam Revell in a phytools blog (http://blog.phytools.org/2020/06/mapping-multi-state-discrete-character.html)
@@ -407,186 +420,6 @@ cols2 <- setNames(c("gold", "purple", "#99CCFF", "blue", "red", "#B9FFB4",
   
   dev.off()}
 
-############# Presentation Figures ##################
 
-eco_cols <- setNames(c("blue", "blue", "green", "green"), four_state_state)
-lung_cols <- setNames(c("red", "white", "red", "white"), four_state_state)
-
-
-
-{png(file = "figures/eco_simm_presentation.png", bg = "transparent", units = "in", res = 2000, width = 5, height = 12)
-par(fg="transparent",lend=1)
-plotSimmap(B[[1]], color="white", pts=F, fsize = .2, ftype="off",
-           outline = F, type = "phylogram", add=FALSE, lwd=1.4, offset=0.5)
-
-for(i in 1:100) {
-  plot(B[[i]], colors=sapply(eco_cols, make.transparent,alpha=0.02),
-       add=TRUE, lwd=1.4, ftype="off", fsize=0.35, offset=.5, type = "phylogram")
-  print(100-i) #just added so you can see your progress, counts down to zero (can take a while)
-}
-dev.off()
-}
-
-
-{png(file = "figures/lung_simm_presentation.png", bg = "transparent", units = "in", res = 2000, width = 5, height = 12)
-  par(fg="transparent",lend=1)
-  plotSimmap(B[[1]], color="white", pts=F, fsize = .2, ftype="off",
-             outline = F, type = "phylogram", add=FALSE, lwd=1.4, offset=0.5)
-  
-  for(i in 1:100) {
-    plot(B[[i]], colors=sapply(lung_cols, make.transparent,alpha=0.02),
-         add=TRUE, lwd=1.4, ftype="off", fsize=0.35, offset=.5, type = "phylogram")
-    print(100-i) #just added so you can see your progress, counts down to zero (can take a while)
-  }
-  dev.off()
-}
-
-
- plotSimmap(B[[1]], eco_cols, pts=F, fsize = .2, ftype="off",
-           outline = F, type = "phylogram", add=TRUE, lwd=2, offset=0.5)
-
-
-
-
-plotSimmap(B[[1]], eco_cols, pts=F, fsize = .2, ftype="off",
-           outline = F, type = "phylogram", add=FALSE, lwd=2, offset=0.5)
-
-
-?plotSimmap
-
-plot(B[[1]],ftype="i",fsize=0.35,offset=3, #black tree with wide edges to be outlines later
-         lwd=5, type = "fan")
-
-
-
-
-
-{jpeg(file = "figures/supp_fig_4dep_best.jpg", bg = "transparent", units = "in", res = 1200, width = 10, height = 10)
-  
-  plotTree(B[[1]],ftype="i",fsize=0.35,offset=3, #black tree with wide edges to be outlines later
-           lwd=5, type = "fan")
-  
-  par(fg="transparent",lend=1)
-  plotTree(B[[1]],ftype="i",fsize=0.35,offset=3,     #white tree to create the outline (smaller lwd)
-           lwd=3,color="white",add=TRUE, type = "fan")
-  ## now plot our 100 stochastic map trees pulled from master (same lwd as white tree)
-  ## with 99% transparency
-  
-  for(i in 1:100) {
-    plot(B[[i]], colors=sapply(cols, make.transparent,alpha=0.02),
-         add=TRUE, lwd=3, ftype="i", fsize=0.35, offset=3, type = "fan")
-    print(100-i) #just added so you can see your progress, counts down to zero (can take a while)
-  }
-  par(fg="black",lend=1)
-  nodelabels(pie = ancr_best[1]$ace, piecol = cols, cex = .2)  
-  dev.off()}
-
-
-
-
-
-
-######################################################
-# phylo code for Moey Rojas by Jack Phillips 5-12-2024
-
-library(ape)
-library(phytools)
-
-rm(list = ls())
-
-
-# load in your tree (any file type is fine - .tre, .nex, .phy)
-ML_tree_4state <- read.nexus(file = "lung_loss_git/bayestraits_trees_data/trees/maxLH_tree_aqu.nex") 
-
-# load in your dataset, which needs a column with taxon names that match the tree 
-# and a column with 0s and 1s for a trait of interest
-data_dep <- read.csv(file = "lung_loss_git/processed_data/lung_data/aqu_lung_data.csv")
-data_dep <- data_dep[data_dep$Taxa %in% ML_tree_4state$tip.label,]
-# (second line will filter out any taxa in the dataset not in your tree)
-
-
-eco <-  cbind(rep(0, dim(data_dep)[1]), rep(0, dim(data_dep)[1]))
-# this will be your simulation dataset, so I'm just matching dimensions
-
-rownames(eco) <- data_dep$Taxa
-# this is key, it won't work if the taxon names don't match the tree
-#to check, you can do some of this kinda thing:
-table(data_dep$Taxa %in% ML_tree_4state$tip.label) 
-table(ML_tree_4state$tip.label %in% data_dep$Taxa) 
-#should be only trues, no falses.
-
-
-colnames(eco) <- c("lotic", "lentic") #change to match what your states are
-
-#populate your simulation dataset
-eco[which(data_dep$ecology == 0), 1] <- 1
-eco[which(data_dep$ecology == 1), 2] <- 1
-eco[which(is.na(data_dep$ecology)), c(1,2)] <- c(.5, .5)
-# last line allows for unknown tip states, if they are NAs in your dataset. 
-# we are essentially just giving them a flat prior and letting the data decide.
-
-
-
-#lungs <-  cbind(rep(0, dim(data_dep)[1]), rep(0, dim(data_dep)[1]))
-#rownames(lungs) <- data_dep$Taxa
-#colnames(lungs) <- c("lungless", "lunged")
-#lungs[which(data_dep$lung == 0), 1] <- 1
-#lungs[which(data_dep$lung == 1), 2] <- 1
-#lungs[which(is.na(data_dep$lung)), c(1,2)] <- c(.5, .5)
-
-head(eco) 
-#head(lungs) 
-
-# here you are actually doing the simulation, with an "all rates different (ARD)" model
-# you can also try the "SYM" model, and in a paper you would want to compare them, 
-# but looking at your data, the SYM model probably won't even run it is so bad.
-# I usually do 100 simulations, but you can pick. Remember to adjust your state names again here.
-eco_simmap <- make.simmap(ML_tree_4state, eco, model = "ARD", nsim = 100, state_labels = c("lotic", "lentic"))
-
-# set up some colors for plotting, change the state names to match what you want to see
-cols <- setNames(c("blue", "green"), c("lotic", "lentic"))
-
-# do a tester on a single simulation run:
-plot(eco_simmap[[1]], cols, ftype = "off")
-
-#you can turn on tip labels like this: (on big trees I turn them off, but yours might be small enough)
-plot(eco_simmap[[1]], cols, ftype = "i")
-
-
-# to build an actual figure, you can run this block, which will produce a graded color figure that 
-# smooths out a lot of the randomness. I adjusted it to only plot 10 layers, but feel free to increase
-# that resolution by adding more iterations to the for-loop, just make sure you also lower the 
-# transparency (alpha) value when you do. 100 iterations works well with an alpha of .02
-
-
-{#first go through starting on the line starting with "plotTree.." to make sure it looks good,
-  # then run the whole thing from the bracket to make sure it works. If it is being weird, 
-  # run dev.off() until it says "null device 1", then run the whole block from the bracket
-  # and it will pop up in your directory.
-jpeg(file = "phylo_plot.jpg", bg = "transparent", units = "in", res = 1200, width = 4, height = 10)
-  
-plotTree(eco_simmap[[1]],ftype="off",fsize=0.35,offset=3, #black tree with wide edges to be outlines later
-         lwd=3.5, type = "phylogram")
-
-par(fg="transparent",lend=1)
-plotTree(eco_simmap[[1]],ftype="off",fsize=0.35,offset=3,     #white tree to create the outline (smaller lwd)
-         lwd=1.5,color="white",add=TRUE, type = "phylogram")
-
-## now plot our 100 stochastic map trees pulled from simmap object (same lwd as white tree)
-## with 99% transparency
-for(i in 1:10) { #here's where you increase iterations
-  plot(eco_simmap[[i]], colors=sapply(cols, make.transparent,alpha=0.2), #alpha on this line
-       add=TRUE, lwd=1.5, ftype="off", fsize=0.35, offset=3, type = "phylogram")
-  print(100-i) #just added so you can see your progress, counts down to zero (can take a while)
-}
-par(fg="black",lend=1)
-nodelabels(pie = ancr_best[1]$ace, piecol = cols, cex = .2)  
-dev.off() 
-
-}
-
-
-# sorry if anything is over-explained, I just always default to assuming people don't 
-# know code stuff :)
 
 
