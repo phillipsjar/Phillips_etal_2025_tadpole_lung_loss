@@ -1,5 +1,7 @@
 rm(list = ls())
 
+#load in processed Bayestraits posteriors for select models
+
 {
 BT_output <- read.csv("bayestraits/output/processed_logs/dep_allzero_1.txt", sep = "\t")
 summary <- BT_output[, 1:max(grep("q", colnames(BT_output)))]; rm(BT_output)
@@ -51,14 +53,11 @@ axis(side = 2, at = log(c(1,2,6,11,21,51)), labels = c(0,.01,.05,.10,20,50),
 dev.off()}
 
 
+# code to get median and mean parameter estimates and then rescale for plotting
+# line widths in illustrator
+
 library(scales)
 source("lung_loss_git/scripts/functions/summary_posterior_function.R")
-#a <- summary_posterior(summary, grep("q", colnames(summary)))
-#a[,2]
-#1.5/(rescale(a[,1], to = c(.25, 12), from = range(a[,1])))*100
-#
-#rescale(a[,1], to = c(.25, 12), from = range(a[,1]))
-
 
 
 a <- summary_posterior(summary, grep("q", colnames(summary)))
